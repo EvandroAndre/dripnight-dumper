@@ -1,0 +1,328 @@
+================================================================
+HIT DETECTION / HEAD-BODY PIPELINE - DEEP RELATION SCAN
+================================================================
+
+========== HitDetectColliderHelper REFERENCES ==========
+output/csharp-decompiled/COW.GamePlay/NetworkAIHoloweenBoss.cs:58:	private List<HitDetectColliderHelper> NPNPPFBODOC;
+output/csharp-decompiled/COW.GamePlay/JNHIOHFMPFN.cs:161:	private bool EDOGHMPCCOP(GMPGMPFNMFP NKEPDPFIOFJ, HitDetectColliderHelper MLAOIHOMKHL)
+output/csharp-decompiled/COW.GamePlay/LevelHitAndExplodeGiftBox.cs:28:	private HitDetectColliderHelper IBBLAOBEJOE;
+output/csharp-decompiled/COW.GamePlay/PIFLODLPKEO.cs:103:	private static bool MNHAFFBICBD(HitDetectColliderHelper MLAOIHOMKHL)
+output/csharp-decompiled/COW.GamePlay/HitDetectColliderHelper.cs:5:public class HitDetectColliderHelper : MonoBehaviour
+output/csharp-decompiled/COW.GamePlay/Vehicle.cs:427:	private HitDetectColliderHelper BLDJAONBAEI;
+output/csharp-decompiled/COW.GamePlay/FDAEPHMIEPC.cs:3482:	private ResourceID GKGHOEIMIIC(HitDetectColliderHelper PCAMLNIKFPO)
+output/csharp-decompiled/COW.GamePlay/FDAEPHMIEPC.cs:3487:	private void DDOAOJAMCGA(OKEAMEELLBB NNHKGODKFCL, HitDetectColliderHelper MLAOIHOMKHL, GLLLEDKLLDA PMMCGNJHOOA, bool FNKILOAEFMC)
+output/csharp-decompiled/COW.GamePlay/ActionSkillPawn.cs:16:	private HitDetectColliderHelper[] CNIFGAFMAEE;
+
+========== ColliderType REFERENCES ==========
+output/csharp-decompiled/COW.GamePlay/LevelDynamicCollider.cs:20:	public LMEPCDHNOAO colliderType;
+output/csharp-decompiled/COW.GamePlay/HitDetectColliderHelper.cs:7:	public LLEDPGIGCMO ColliderType;
+output/csharp-decompiled/COW/AccumulatedDamageInfo.cs:21:	public LLEDPGIGCMO ColliderType;
+
+========== JKCLPFEFMNG REFERENCES ==========
+output/csharp-decompiled/COW.GamePlay/GMPGMPFNMFP.cs:28:	public JKCLPFEFMNG FLCLOHCBJEI;
+output/csharp-decompiled/COW.GamePlay/JKCLPFEFMNG.cs:3:public enum JKCLPFEFMNG
+
+========== GMPGMPFNMFP REFERENCES ==========
+output/csharp-decompiled/COW.GamePlay/NLCOIOLCGLM.cs:10:	protected List<GMPGMPFNMFP> PJNOMOFGJBK;
+output/csharp-decompiled/COW.GamePlay/NLCOIOLCGLM.cs:12:	protected GMPGMPFNMFP NKEPDPFIOFJ;
+output/csharp-decompiled/COW.GamePlay/NLCOIOLCGLM.cs:34:	private void CJNAHMCGONB(GMPGMPFNMFP NKEPDPFIOFJ, List<GMPGMPFNMFP> HMBEKOKEHKE)
+output/csharp-decompiled/COW.GamePlay/NLCOIOLCGLM.cs:38:	private void PIBOLCBHNGI(GMPGMPFNMFP NKEPDPFIOFJ, List<GMPGMPFNMFP> HMBEKOKEHKE, List<GMPGMPFNMFP> DCCEIMDJAHK, bool PAAPOFEDMJL = false)
+output/csharp-decompiled/COW.GamePlay/NLCOIOLCGLM.cs:42:	public override GMPGMPFNMFP IICGCBOKIIH()
+output/csharp-decompiled/COW.GamePlay/NLCOIOLCGLM.cs:52:	public bool DLKPOHEAENE(ref GMPGMPFNMFP NKEPDPFIOFJ, float BCALIHCNCBA, Vector3 GFHAOJKCBFA, bool JENLLENNEEI = false, bool AOJFJPPEEON = false, bool BPHAPLMOFPO = false)
+output/csharp-decompiled/COW.GamePlay/NLCOIOLCGLM.cs:57:	protected void MLHPDKJHGBK(List<GMPGMPFNMFP> NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/NLCOIOLCGLM.cs:61:	protected virtual void LMBNLNMIGOA(GMPGMPFNMFP NKEPDPFIOFJ, Vector3 LJADOJKNALD)
+output/csharp-decompiled/COW.GamePlay/NLCOIOLCGLM.cs:65:	private LevelDWShield BDIJIEBACBH(List<GMPGMPFNMFP> FIMEGBDNGGB, GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/NLCOIOLCGLM.cs:70:	private WeaponShield IMPEFLOIDLF(List<GMPGMPFNMFP> FIMEGBDNGGB, ref GMPGMPFNMFP OFJOCPIELIF)
+output/csharp-decompiled/COW.GamePlay/NLCOIOLCGLM.cs:79:	public GMPGMPFNMFP _003C_003EiFixBaseProxy_IICGCBOKIIH()
+output/csharp-decompiled/COW.GamePlay/LGONIIMINHO.cs:77:	private GMPGMPFNMFP FBPPMDDKGGN;
+output/csharp-decompiled/COW.GamePlay/BKJMDGAOAOG.cs:9:	private GMPGMPFNMFP ACJCELIGFAN;
+output/csharp-decompiled/COW.GamePlay/LevelAutoFlightBomb.cs:59:	private GMPGMPFNMFP CIGEOCNIMJN;
+output/csharp-decompiled/COW.GamePlay/KBCJOEFJEFJ.cs:81:	private List<GMPGMPFNMFP> PMIDJLCAPHC;
+output/csharp-decompiled/COW.GamePlay/KBCJOEFJEFJ.cs:83:	private List<GMPGMPFNMFP> JCKIJNCAADK;
+output/csharp-decompiled/COW.GamePlay/KBCJOEFJEFJ.cs:85:	private List<GMPGMPFNMFP> NBAEBGGACOF;
+output/csharp-decompiled/COW.GamePlay/KBCJOEFJEFJ.cs:155:	private void GGJCEOKCIFA(List<GMPGMPFNMFP> LBJKNILJMNL)
+output/csharp-decompiled/COW.GamePlay/HPFAPHPLGKH.cs:16:	private GMPGMPFNMFP ALKNEFCKPJM;
+output/csharp-decompiled/COW.GamePlay/HPFAPHPLGKH.cs:18:	private GMPGMPFNMFP BNECFFBBGDE;
+output/csharp-decompiled/COW.GamePlay/HPFAPHPLGKH.cs:20:	private List<GMPGMPFNMFP> NCMHCFPBNLA;
+output/csharp-decompiled/COW.GamePlay/HPFAPHPLGKH.cs:22:	private List<GMPGMPFNMFP> CGNGIHAAFCG;
+output/csharp-decompiled/COW.GamePlay/HPFAPHPLGKH.cs:28:	public GMPGMPFNMFP HHOLLMGNIJO => null;
+output/csharp-decompiled/COW.GamePlay/HPFAPHPLGKH.cs:30:	public GMPGMPFNMFP FDIIAKEOOAE => null;
+output/csharp-decompiled/COW.GamePlay/HPFAPHPLGKH.cs:32:	public List<GMPGMPFNMFP> LHJADFNJAMJ => null;
+output/csharp-decompiled/COW.GamePlay/HPFAPHPLGKH.cs:57:	private static void HAJAEHDPDOF(ref List<GMPGMPFNMFP> PDIKGNNEJME)
+output/csharp-decompiled/COW.GamePlay/UGCTwoDimensionCamera.cs:15:	protected GMPGMPFNMFP PCMBDGJNBCB;
+output/csharp-decompiled/COW.GamePlay/HIMELNLIHLP.cs:9:	private GMPGMPFNMFP NNLDDDKNMAH;
+output/csharp-decompiled/COW.GamePlay/HIMELNLIHLP.cs:50:	private void CNPCCHGGFDD(GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/HIMELNLIHLP.cs:67:	public GMPGMPFNMFP MKJNKCKCIMG()
+output/csharp-decompiled/COW.GamePlay/UIHudSafezonePosMarkController.cs:25:	private GMPGMPFNMFP CIGEOCNIMJN;
+output/csharp-decompiled/COW.GamePlay/NMJIEFAJIIO.cs:9:	GMPGMPFNMFP IICGCBOKIIH();
+output/csharp-decompiled/COW.GamePlay/BALOGAELBBF.cs:17:	protected override bool PPEJJEMFNFB(GMPGMPFNMFP NKEPDPFIOFJ, out UDPClientMessageBase APHHNHEDHKD)
+output/csharp-decompiled/COW.GamePlay/FollowCamera.cs:115:	protected GMPGMPFNMFP PCMBDGJNBCB;
+output/csharp-decompiled/COW.GamePlay/FollowCamera.cs:279:	private bool LMBBNHIJDNE(GMPGMPFNMFP NBLHNPAHGNA, string OIMMPDFABCD)
+output/csharp-decompiled/COW.GamePlay/UGCLookDownCamera.cs:11:	protected GMPGMPFNMFP PCMBDGJNBCB;
+output/csharp-decompiled/COW.GamePlay/AttachmentLaserSightParticleFitter.cs:17:	private GMPGMPFNMFP FBPPMDDKGGN;
+output/csharp-decompiled/COW.GamePlay/SkydivingCamera.cs:48:	protected GMPGMPFNMFP PCMBDGJNBCB;
+output/csharp-decompiled/COW.GamePlay/LevelUGCSprayRifleBullet.cs:22:	public Action<GMPGMPFNMFP> OnHitCallback;
+output/csharp-decompiled/COW.GamePlay/LevelUGCSprayRifleBullet.cs:51:	private void NLBEGLCPKJG(GMPGMPFNMFP HDGIHCBAOEN)
+output/csharp-decompiled/COW.GamePlay/LevelUGCSprayRifleBullet.cs:55:	public void PlayHitEffect(GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/LevelCannon.cs:72:	private GMPGMPFNMFP GLDGGAEAFKC;
+output/csharp-decompiled/COW.GamePlay/ENPANOJGFEP.cs:122:	private bool BJLEDBEGEJO(GMPGMPFNMFP HDGIHCBAOEN)
+output/csharp-decompiled/COW.GamePlay/ENPANOJGFEP.cs:135:	private void HJLEPNMBNAJ(GMPGMPFNMFP HDGIHCBAOEN)
+output/csharp-decompiled/COW.GamePlay/WinterlandIslandCylinderRegionDetector.cs:34:	private GMPGMPFNMFP AALCDHONANL;
+output/csharp-decompiled/COW.GamePlay/PHFOMDNJHBK.cs:14:	protected override void NLJOGEKCFKD(int CDHEPBOJDJD, GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/PHFOMDNJHBK.cs:22:	public void _003C_003EiFixBaseProxy_NLJOGEKCFKD(int P0, GMPGMPFNMFP P1)
+output/csharp-decompiled/COW.GamePlay/BKJHGCNKOMP.cs:10:	private GMPGMPFNMFP AHICPCAGAFO;
+output/csharp-decompiled/COW.GamePlay/LevelPVEEnergyBall.cs:46:	private GMPGMPFNMFP CIGEOCNIMJN;
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:90:	public static bool IFJABDOPGED(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float NMEEAHMNACE, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:100:	public static bool FOHHPOKDOND(Vector3 OENCHMFCMMO, Vector3 MHAIPDKIHNL, uint CBCKBCPFOAI, string AEPLIJGJLJC, ref GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:105:	public static bool FOHHPOKDOND(Vector3 OENCHMFCMMO, Vector3 MHAIPDKIHNL, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:110:	public static bool KPEIJLDPGEJ(Vector3 OENCHMFCMMO, Vector3 MHAIPDKIHNL, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:115:	public static bool KIMJCEFLPPB(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, ref GMPGMPFNMFP NKEPDPFIOFJ, int NDJPACKNMOG, GameObject KOBFCJKEFNH, Func<Collider, bool> OKFPMOMLOOH = null)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:120:	public static bool KIMJCEFLPPB(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ, int NDJPACKNMOG)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:125:	public static bool FOHHPOKDOND(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:135:	public static void CNPAKEBOGHO(RaycastHit LMHJIDCOHLD, Vector3 BAFIFNKBHLC, List<GMPGMPFNMFP> HMBEKOKEHKE)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:139:	public static void GCLDHMBHCPA(RaycastHit LMHJIDCOHLD, List<GMPGMPFNMFP> HMBEKOKEHKE)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:143:	public static bool FOHHPOKDOND(Vector3 OENCHMFCMMO, Vector3 MHAIPDKIHNL, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ, GameObject KOBFCJKEFNH)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:148:	private static bool BCFHCGEIFPP(GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:153:	public static bool AJLDFGJGKIB(GMPGMPFNMFP NKEPDPFIOFJ, HashSet<uint> ICEDNEMFHLG)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:158:	public static bool FBFNKGGOEHF(GMPGMPFNMFP AJLPMBIGCPO, HashSet<uint> PLFOOEIBPFG)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:163:	public static bool AMBJPJFCMIB(GMPGMPFNMFP AJLPMBIGCPO, bool BGFLFBDJCGM = false)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:168:	public static bool BOEJALMNJNJ(GMPGMPFNMFP AJLPMBIGCPO)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:173:	public static bool HLECILAAEEA(GMPGMPFNMFP AJLPMBIGCPO)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:178:	public static bool MCGMKBCECGK(GMPGMPFNMFP AJLPMBIGCPO)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:208:	public static bool EFHINEOIIBK(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ, GameObject KOBFCJKEFNH, ref List<GMPGMPFNMFP> PJNOMOFGJBK, ref List<GMPGMPFNMFP> HMBEKOKEHKE)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:213:	public static bool DEGKKEPOJLH(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ, GameObject KOBFCJKEFNH, ref List<GMPGMPFNMFP> PJNOMOFGJBK, ref List<GMPGMPFNMFP> HMBEKOKEHKE)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:218:	public static bool JECBGLLGJCG(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ, GameObject KOBFCJKEFNH, ref List<GMPGMPFNMFP> PJNOMOFGJBK, ref List<GMPGMPFNMFP> HMBEKOKEHKE)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:223:	public static bool JEEKABKBDEN(GMPGMPFNMFP DKLOHOCENPN, GMPGMPFNMFP KGLBAJCFANP, bool BGFLFBDJCGM = false)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:233:	private static void FFEHKEGDKGH(GMPGMPFNMFP POGCPNKGOMJ, GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:237:	public static bool KHGDIBEFMKP(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP HFAKMBIJGEF, GameObject KOBFCJKEFNH, ref List<GMPGMPFNMFP> PJNOMOFGJBK, ref List<GMPGMPFNMFP> IKLEPNGEFIN, ref List<GMPGMPFNMFP> HMBEKOKEHKE, bool BGFLFBDJCGM = false, Func<Collider, bool> OKFPMOMLOOH = null)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:242:	public static bool EPGNGBNPCHB(GMPGMPFNMFP OHMOIFPABPC, Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, Vector3 CNGBHLLKOFA, float LKFAJHMHJON, HashSet<uint> MPICMELEJLD, HashSet<uint> BNCLKDOIPKH, ref List<GMPGMPFNMFP> IKLEPNGEFIN)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:247:	private static bool FMGLFDKOAFB(GMPGMPFNMFP AICLJKKMMPF, GMPGMPFNMFP DCLKDFBAABJ)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:252:	public static bool ABBHJIHFPFF(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP HFAKMBIJGEF, GameObject KOBFCJKEFNH, ref List<GMPGMPFNMFP> PJNOMOFGJBK, ref List<GMPGMPFNMFP> IKLEPNGEFIN, ref List<GMPGMPFNMFP> HMBEKOKEHKE, HashSet<uint> MPICMELEJLD = null, HashSet<uint> BNCLKDOIPKH = null)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:257:	public static bool IGFMBBDFIHB(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP HFAKMBIJGEF, GameObject KOBFCJKEFNH, ref List<GMPGMPFNMFP> PJNOMOFGJBK, ref List<GMPGMPFNMFP> IKLEPNGEFIN, ref List<GMPGMPFNMFP> HMBEKOKEHKE, HashSet<uint> MPICMELEJLD = null, HashSet<uint> BNCLKDOIPKH = null)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:262:	public static bool KNLMFOFIHCJ(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP HFAKMBIJGEF, GameObject KOBFCJKEFNH, ref List<GMPGMPFNMFP> PJNOMOFGJBK, ref List<GMPGMPFNMFP> DCCEIMDJAHK, ref List<GMPGMPFNMFP> HMBEKOKEHKE)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:267:	public static bool JPFJMILDGBG(ref GMPGMPFNMFP AJLPMBIGCPO, RaycastHit IHGHIONENFM, Vector3 OMKGIPPPAKB, Vector3 OENCHMFCMMO, ref Vector3 JBKDKPCDGBB, ref List<GMPGMPFNMFP> PJNOMOFGJBK, Vector3 CNGBHLLKOFA, float LKFAJHMHJON, ref float CEMJPNGDFBM, ref float CGGPBJKCDEG, int NDJPACKNMOG, ref bool NLFKHDJIODI, List<GMPGMPFNMFP> HMBEKOKEHKE)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:272:	public static bool BNBIFAKMHNM(ref GMPGMPFNMFP AJLPMBIGCPO, RaycastHit IHGHIONENFM, Vector3 OMKGIPPPAKB, Vector3 OENCHMFCMMO, ref Vector3 JBKDKPCDGBB, ref List<GMPGMPFNMFP> PJNOMOFGJBK, Vector3 CNGBHLLKOFA, float LKFAJHMHJON, ref float CEMJPNGDFBM, ref float CGGPBJKCDEG, int NDJPACKNMOG, int CKCIEENHABE, ref bool NLFKHDJIODI, List<GMPGMPFNMFP> HMBEKOKEHKE, bool EPLDFIAEIIC = false)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:277:	public static bool GLGFCNIONLD(ref GMPGMPFNMFP AJLPMBIGCPO, RaycastHit IHGHIONENFM, Vector3 OMKGIPPPAKB, Vector3 OENCHMFCMMO, ref Vector3 JBKDKPCDGBB, ref List<GMPGMPFNMFP> PJNOMOFGJBK, Vector3 CNGBHLLKOFA, float LKFAJHMHJON, ref float CEMJPNGDFBM, ref float CGGPBJKCDEG, int NDJPACKNMOG, int CKCIEENHABE, ref bool NLFKHDJIODI, List<GMPGMPFNMFP> HMBEKOKEHKE, bool EPLDFIAEIIC = false)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:287:	private static void DHODALGJGLM(ref RaycastHit LMHJIDCOHLD, GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:291:	private static void APNDNGOECMI(GMPGMPFNMFP DPNDJMMENDJ, GMPGMPFNMFP EFEHDKCHGKE)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:300:	public static bool KPEIJLDPGEJ(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ, GameObject KOBFCJKEFNH, Func<Collider, bool> OKFPMOMLOOH = null)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:305:	public static bool FOHHPOKDOND(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ, GameObject KOBFCJKEFNH, Func<Collider, bool> OKFPMOMLOOH = null)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:310:	public static bool HAOHMLJFLKG(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, Vector3 BBDNMILKLAK, int EOHOFEIBCPH, ref GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:335:	public static bool HAKLPHPOJLL(Vector3 OENCHMFCMMO, Vector3 MHAIPDKIHNL, uint CBCKBCPFOAI, ref List<GMPGMPFNMFP> AKECDKJDHKP, bool LNAKJGHFKHA = false)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:340:	public static bool HAKLPHPOJLL(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref List<GMPGMPFNMFP> AKECDKJDHKP, bool LNAKJGHFKHA = false)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:345:	public static void EHPCFLNBBEO(List<GMPGMPFNMFP> AKECDKJDHKP)
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs:385:	public static bool EIPAGEBLKHE(Vector3 JBJGKFICFEG, Vector3 LJADOJKNALD, ref GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/LevelProjectile.cs:135:	private GMPGMPFNMFP NKEPDPFIOFJ;
+output/csharp-decompiled/COW.GamePlay/LevelProjectile.cs:137:	private GMPGMPFNMFP GPNAIMKENKD;
+output/csharp-decompiled/COW.GamePlay/LevelProjectile.cs:139:	private GMPGMPFNMFP HDDNFBFKNEN;
+output/csharp-decompiled/COW.GamePlay/LevelProjectile.cs:223:	private List<GMPGMPFNMFP> PJNOMOFGJBK;
+output/csharp-decompiled/COW.GamePlay/LevelProjectile.cs:225:	private List<GMPGMPFNMFP> HMBEKOKEHKE;
+output/csharp-decompiled/COW.GamePlay/LevelProjectile.cs:255:	private GMPGMPFNMFP NNGCMHGJCBD => null;
+output/csharp-decompiled/COW.GamePlay/LevelProjectile.cs:257:	private GMPGMPFNMFP OHPFLAOADKI => null;
+output/csharp-decompiled/COW.GamePlay/LevelProjectile.cs:427:	protected virtual void FIHBEJPIMDE(GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/LevelProjectile.cs:431:	protected bool EHMLDADFDHE(GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/LevelProjectile.cs:436:	protected bool OPGKADLIBLE(GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/LevelProjectile.cs:441:	public void OnPlayHitEffect(GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/LevelProjectile.cs:449:	private bool PONKFEIMEHB(Vector3 MOEFFAIDCBP, Vector3 MDHOFOMOHKF, float CCFIKGCBPJM, uint NDJPACKNMOG, ref GMPGMPFNMFP NKEPDPFIOFJ, GameObject CNGEDFMHEBI, Func<Collider, bool> OKFPMOMLOOH = null)
+output/csharp-decompiled/COW.GamePlay/MBCGHBMMLBJ.cs:16:	private GMPGMPFNMFP ACJCELIGFAN;
+output/csharp-decompiled/COW.GamePlay/DEIFMNAAPMM.cs:21:	private GMPGMPFNMFP KKNCBCALGKC;
+output/csharp-decompiled/COW.GamePlay/EPKCIHHNJNB.cs:13:	public GMPGMPFNMFP DNPCAIJBOFD;
+output/csharp-decompiled/COW.GamePlay/EPKCIHHNJNB.cs:54:	public GMPGMPFNMFP IICGCBOKIIH()
+output/csharp-decompiled/COW.GamePlay/EPKCIHHNJNB.cs:163:	protected void DGOMHIINKAP(GMPGMPFNMFP FPDIEEGKBPB)
+output/csharp-decompiled/COW.GamePlay/LevelObjectWinterLandIsland.cs:53:	private GMPGMPFNMFP APLILNDHKKP;
+output/csharp-decompiled/COW.GamePlay/ONBCCHPDDBM.cs:43:	private void CNPCCHGGFDD(GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/KIDGFPLCBCP.cs:23:	private GMPGMPFNMFP AKFLHNOIHED;
+output/csharp-decompiled/COW.GamePlay/JNHIOHFMPFN.cs:111:	public static void LHNMOHJDGNK(GMPGMPFNMFP NKEPDPFIOFJ, ResourceID OMKJDJBIIAC)
+output/csharp-decompiled/COW.GamePlay/JNHIOHFMPFN.cs:115:	public static void PFJMMPJLEKE(GMPGMPFNMFP NKEPDPFIOFJ, ResourceID OMKJDJBIIAC, Player JMHONOJOEFA, float INNIDEIFIFN = 0f)
+output/csharp-decompiled/COW.GamePlay/JNHIOHFMPFN.cs:127:	public virtual void BKABANBIJHB(GMPGMPFNMFP NKEPDPFIOFJ, MonoBehaviour HACIJIFIDKM, float OBNPLABHICH, bool PCEAPDGDIDJ = false)
+output/csharp-decompiled/COW.GamePlay/JNHIOHFMPFN.cs:135:	private void NFJOAOIKAKF(GMPGMPFNMFP NKEPDPFIOFJ, Vector3 IJKBFICPDNF, ref ResourceID KIEPAOGMGFB, ref ResourceID MJBGDADDHKK, ref ResourceID CIOJIHBKICA)
+output/csharp-decompiled/COW.GamePlay/JNHIOHFMPFN.cs:156:	private bool DOFHABFGFGC(GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/JNHIOHFMPFN.cs:161:	private bool EDOGHMPCCOP(GMPGMPFNMFP NKEPDPFIOFJ, HitDetectColliderHelper MLAOIHOMKHL)
+output/csharp-decompiled/COW.GamePlay/LNKDGIEGJLD.cs:30:	public override GMPGMPFNMFP IICGCBOKIIH()
+output/csharp-decompiled/COW.GamePlay/LNKDGIEGJLD.cs:47:	public new GMPGMPFNMFP _003C_003EiFixBaseProxy_IICGCBOKIIH()
+output/csharp-decompiled/COW.GamePlay/UGCPerformanceCamera.cs:19:	protected GMPGMPFNMFP PCMBDGJNBCB;
+output/csharp-decompiled/COW.GamePlay/JFPPEJHPMNH.cs:65:	public virtual GMPGMPFNMFP IICGCBOKIIH()
+output/csharp-decompiled/COW.GamePlay/Player.cs:4941:	private GMPGMPFNMFP GGKLDGMAFHN;
+output/csharp-decompiled/COW.GamePlay/Player.cs:4945:	private GMPGMPFNMFP NFKMINKONNC;
+output/csharp-decompiled/COW.GamePlay/Player.cs:5235:	private GMPGMPFNMFP AKFLHNOIHED;
+output/csharp-decompiled/COW.GamePlay/Player.cs:5237:	private GMPGMPFNMFP PJGMLPMAMGN;
+output/csharp-decompiled/COW.GamePlay/Player.cs:5987:	private GMPGMPFNMFP CCMNEJMBKPA;
+output/csharp-decompiled/COW.GamePlay/Player.cs:6097:	private GMPGMPFNMFP AJEFPDDLNHC;
+output/csharp-decompiled/COW.GamePlay/Player.cs:6351:	private GMPGMPFNMFP FHCDIAEFCEG;
+output/csharp-decompiled/COW.GamePlay/Player.cs:7007:	private GMPGMPFNMFP FBPPMDDKGGN;
+output/csharp-decompiled/COW.GamePlay/Player.cs:7073:	private GMPGMPFNMFP DOMABMJBJLN;
+output/csharp-decompiled/COW.GamePlay/Player.cs:8745:	public GMPGMPFNMFP DNPCAIJBOFD => null;
+output/csharp-decompiled/COW.GamePlay/Player.cs:8747:	public GMPGMPFNMFP LAPNDMNLICD => null;
+output/csharp-decompiled/COW.GamePlay/Player.cs:9318:	public GMPGMPFNMFP OCEOEJEOLBI => null;
+output/csharp-decompiled/COW.GamePlay/Player.cs:13428:	private OKEAMEELLBB KNBEPECEJEP(GMPGMPFNMFP NFODGJEILKL = null)
+output/csharp-decompiled/COW.GamePlay/ILDAMIIJDGI.cs:21:	private GMPGMPFNMFP OKEJFNPKEOJ;
+output/csharp-decompiled/COW.GamePlay/ILDAMIIJDGI.cs:111:	private void CNPCCHGGFDD(GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/ILDAMIIJDGI.cs:255:	public GMPGMPFNMFP MHDCEAIOCKM()
+output/csharp-decompiled/COW.GamePlay/FHOBIEOOKHO.cs:18:	public override GMPGMPFNMFP IICGCBOKIIH()
+output/csharp-decompiled/COW.GamePlay/FHOBIEOOKHO.cs:28:	protected override void LMBNLNMIGOA(GMPGMPFNMFP NKEPDPFIOFJ, Vector3 LJADOJKNALD)
+output/csharp-decompiled/COW.GamePlay/FHOBIEOOKHO.cs:36:	public new GMPGMPFNMFP _003C_003EiFixBaseProxy_IICGCBOKIIH()
+output/csharp-decompiled/COW.GamePlay/FHOBIEOOKHO.cs:46:	public void _003C_003EiFixBaseProxy_LMBNLNMIGOA(GMPGMPFNMFP P0, Vector3 P1)
+output/csharp-decompiled/COW.GamePlay/BALIDGAPBGA.cs:53:	private void CNPCCHGGFDD(GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/NLEEJPMBBEM.cs:48:	private void CNPCCHGGFDD(GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/GMPGMPFNMFP.cs:6:public class GMPGMPFNMFP : ObjectPoolCallbackBase
+output/csharp-decompiled/COW.GamePlay/GMPGMPFNMFP.cs:8:	private static ObjectPool<GMPGMPFNMFP> GMDLHKIGEHH;
+output/csharp-decompiled/COW.GamePlay/GMPGMPFNMFP.cs:44:	public static GMPGMPFNMFP HEJLOEGAHAK()
+output/csharp-decompiled/COW.GamePlay/GMPGMPFNMFP.cs:49:	public static void NFOKKGMCNGL(GMPGMPFNMFP HACIJIFIDKM)
+output/csharp-decompiled/COW.GamePlay/GMPGMPFNMFP.cs:65:	public static GMPGMPFNMFP DJAOGCKMOFJ(GMPGMPFNMFP DPNDJMMENDJ)
+output/csharp-decompiled/COW.GamePlay/LevelFootball.cs:57:	private GMPGMPFNMFP CIGEOCNIMJN;
+output/csharp-decompiled/COW.GamePlay/LevelSwingSpider.cs:36:	private GMPGMPFNMFP HAJANADDJJK;
+output/csharp-decompiled/COW.GamePlay/MountableAnimal.cs:72:	private GMPGMPFNMFP IDKDAHNCILH;
+output/csharp-decompiled/COW.GamePlay/LevelGrapplingHook.cs:37:	private GMPGMPFNMFP HAJANADDJJK;
+output/csharp-decompiled/COW.GamePlay/AutoFireWeapon.cs:84:	private void MBLEOAIJBBL(ref RaycastHit LMHJIDCOHLD, GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/LevelThrowSilenceBall.cs:18:	private GMPGMPFNMFP NKEPDPFIOFJ;
+output/csharp-decompiled/COW.GamePlay/PIFLODLPKEO.cs:20:	protected abstract bool PPEJJEMFNFB(GMPGMPFNMFP NKEPDPFIOFJ, out UDPClientMessageBase APHHNHEDHKD);
+output/csharp-decompiled/COW.GamePlay/PIFLODLPKEO.cs:22:	protected virtual KHNPBMNGMDP LFBFLCILIPI(GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/PIFLODLPKEO.cs:75:	protected void NCMABGNPLAE(GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/PIFLODLPKEO.cs:88:	private bool GNMLMAPAEPG(GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/Helicopter.cs:204:	private GMPGMPFNMFP GLDGGAEAFKC;
+output/csharp-decompiled/COW.GamePlay/BlowUpIceWallBallSinglePlayerHelper.cs:29:	private static GMPGMPFNMFP FBPPMDDKGGN;
+output/csharp-decompiled/COW.GamePlay/MNDHKHJINOG.cs:348:	private GMPGMPFNMFP MDFFFNCIFNH;
+output/csharp-decompiled/COW.GamePlay/MNDHKHJINOG.cs:370:	private GMPGMPFNMFP MCNDPEHBJDH;
+output/csharp-decompiled/COW.GamePlay/MOAADOOALGE.cs:73:	private GMPGMPFNMFP FBPPMDDKGGN;
+output/csharp-decompiled/COW.GamePlay/GEAGMJLHPIO.cs:24:	private GMPGMPFNMFP APBHKCAGLGE;
+output/csharp-decompiled/COW.GamePlay/GLLNACNKHHK.cs:18:	protected new virtual GMPGMPFNMFP IICGCBOKIIH()
+output/csharp-decompiled/COW.GamePlay/UIHUDUGC_CameraRayCastController.cs:12:	private GMPGMPFNMFP CIGEOCNIMJN;
+output/csharp-decompiled/COW.GamePlay/JGBCNLBHGBK.cs:45:	public override int PCNDPPAEIIP(GMPGMPFNMFP NKEPDPFIOFJ, MonoBehaviour HACIJIFIDKM = null, float OBNPLABHICH = 0f)
+output/csharp-decompiled/COW.GamePlay/JGBCNLBHGBK.cs:81:	public int _003C_003EiFixBaseProxy_PCNDPPAEIIP(GMPGMPFNMFP P0, MonoBehaviour P1, float P2)
+output/csharp-decompiled/COW.GamePlay/FHDCOACBPBO.cs:13:	public void MPCNHNJPACN(GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/BPBNNBHGEIF.cs:17:	protected override bool PPEJJEMFNFB(GMPGMPFNMFP NKEPDPFIOFJ, out UDPClientMessageBase APHHNHEDHKD)
+output/csharp-decompiled/COW.GamePlay/BOLGEPDPCEP.cs:55:	private void CNPCCHGGFDD(GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/EKALAKAIGMP.cs:38:	private void NLBEGLCPKJG(GMPGMPFNMFP HDGIHCBAOEN)
+output/csharp-decompiled/COW.GamePlay/AGAKNOFPIKI.cs:7:	void MPCNHNJPACN(GMPGMPFNMFP FPDIEEGKBPB);
+output/csharp-decompiled/COW.GamePlay/IKBPGGAHNLP.cs:12:	private List<GMPGMPFNMFP> PJNOMOFGJBK;
+output/csharp-decompiled/COW.GamePlay/IKBPGGAHNLP.cs:29:	protected new virtual GMPGMPFNMFP IICGCBOKIIH()
+output/csharp-decompiled/COW.GamePlay/IKBPGGAHNLP.cs:38:	protected bool BBFEHLPPOJM(GMPGMPFNMFP NKEPDPFIOFJ, Vector3 BAFIFNKBHLC)
+output/csharp-decompiled/COW.GamePlay/IKBPGGAHNLP.cs:43:	protected void MLHPDKJHGBK(List<GMPGMPFNMFP> NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/IKBPGGAHNLP.cs:47:	private LevelDWShield BDIJIEBACBH(List<GMPGMPFNMFP> FIMEGBDNGGB, GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/IMGMMDEFOKG.cs:192:	private bool KNMGAIKDEEJ(Player FFHGOACBDMH, Player CNNNNDMKHPA, Vector3 FDNLPBPDPBB, bool LEICEFCMAPN, float MOBKPJLBLBG, ref GMPGMPFNMFP FPDIEEGKBPB)
+output/csharp-decompiled/COW.GamePlay/IMGMMDEFOKG.cs:197:	private bool AGJFGBNICHI(Player FFHGOACBDMH, ref GMPGMPFNMFP FPDIEEGKBPB)
+output/csharp-decompiled/COW.GamePlay/VehicleCameraBase.cs:39:	protected GMPGMPFNMFP PCMBDGJNBCB;
+output/csharp-decompiled/COW.GamePlay/BJNJMBNMHGE.cs:58:	public bool NNJBGFABEJI(GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/KLOIMOEPMIO.cs:46:	protected GMPGMPFNMFP NKEPDPFIOFJ;
+output/csharp-decompiled/COW.GamePlay/KLOIMOEPMIO.cs:48:	private List<GMPGMPFNMFP> PJNOMOFGJBK;
+output/csharp-decompiled/COW.GamePlay/KLOIMOEPMIO.cs:50:	private List<GMPGMPFNMFP> HMBEKOKEHKE;
+output/csharp-decompiled/COW.GamePlay/FCKEJLMLEIF.cs:73:	public virtual void NGMDDMHPJLB(bool JLJIOPKMPMH, GMPGMPFNMFP NKEPDPFIOFJ, Vector3 BAFIFNKBHLC)
+output/csharp-decompiled/COW.GamePlay/FDAEPHMIEPC.cs:2796:	public virtual int PCNDPPAEIIP(GMPGMPFNMFP NKEPDPFIOFJ, MonoBehaviour HACIJIFIDKM = null, float OBNPLABHICH = 0f)
+output/csharp-decompiled/COW.GamePlay/FDAEPHMIEPC.cs:2801:	public void JKHABBNBFDG(GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/FDAEPHMIEPC.cs:2820:	public void KDIPAEGAIFL(GMPGMPFNMFP NKEPDPFIOFJ, MonoBehaviour HACIJIFIDKM, float OBNPLABHICH)
+output/csharp-decompiled/COW.GamePlay/FDAEPHMIEPC.cs:2837:	protected int KOODEKEKFEK(GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/FDAEPHMIEPC.cs:3073:	public bool DOFHABFGFGC(GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/CNPMDIBICLI.cs:71:	protected void CCOJDHGBLPL(Vector3 EEEICFEPEMM, GMPGMPFNMFP NKEPDPFIOFJ, Vector3 LJADOJKNALD)
+output/csharp-decompiled/COW.GamePlay/CNPMDIBICLI.cs:75:	protected override void LMBNLNMIGOA(GMPGMPFNMFP NKEPDPFIOFJ, Vector3 LJADOJKNALD)
+output/csharp-decompiled/COW.GamePlay/CNPMDIBICLI.cs:79:	protected virtual void NLJOGEKCFKD(int CDHEPBOJDJD, GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/CNPMDIBICLI.cs:99:	public void _003C_003EiFixBaseProxy_LMBNLNMIGOA(GMPGMPFNMFP P0, Vector3 P1)
+output/csharp-decompiled/COW/CatapultLaunchLineWithHitDetection.cs:30:	private GMPGMPFNMFP m_HitObjectInfo;
+output/csharp-decompiled/COW/GrenadeLine.cs:56:	private GMPGMPFNMFP m_HitObjectInfo;
+output/csharp-decompiled/COW/CheckBoxPlayerOverlapTrigger.cs:7:	private GMPGMPFNMFP m_CacheHitInfo;
+output/csharp-decompiled/COW/UIHudElectricGirlAimTargetController.cs:18:	private GMPGMPFNMFP m_HitObjectInfoCache;
+
+========== WEAPON HIT METHODS ==========
+2796:	public virtual int PCNDPPAEIIP(GMPGMPFNMFP NKEPDPFIOFJ, MonoBehaviour HACIJIFIDKM = null, float OBNPLABHICH = 0f)
+2801:	public void JKHABBNBFDG(GMPGMPFNMFP NKEPDPFIOFJ)
+2820:	public void KDIPAEGAIFL(GMPGMPFNMFP NKEPDPFIOFJ, MonoBehaviour HACIJIFIDKM, float OBNPLABHICH)
+2837:	protected int KOODEKEKFEK(GMPGMPFNMFP NKEPDPFIOFJ)
+3073:	public bool DOFHABFGFGC(GMPGMPFNMFP NKEPDPFIOFJ)
+3091:	private List<float> LKHKGOFALIB(OKEAMEELLBB HNMMPKNLJBH, Collider NPEMKNFIIHL, bool OMMJNLDFCCE = false, GLLLEDKLLDA PMMCGNJHOOA = null)
+3482:	private ResourceID GKGHOEIMIIC(HitDetectColliderHelper PCAMLNIKFPO)
+3487:	private void DDOAOJAMCGA(OKEAMEELLBB NNHKGODKFCL, HitDetectColliderHelper MLAOIHOMKHL, GLLLEDKLLDA PMMCGNJHOOA, bool FNKILOAEFMC)
+
+========== POSSIBLE COLLIDER ASSIGNMENTS ==========
+
+========== PLAYER HEAD FUNCTIONS ==========
+892:		private BigHeadComponent KHMHJPMEHND;
+927:		public void UpdateBigHeadScale(float GPFPIAMCEMI)
+931:		public void SetBigHeadNeckRevertScaleMult(Vector3 FDOKAOIEDFD)
+4235:	private EmoteLeaderCollider OBMFEMDHGEP;
+4547:	protected Collider NFDNMIOPILM;
+4569:	protected BigHeadComponent KHMHJPMEHND;
+4571:	protected BigHeadDataConfig IHHAAEMCFFL;
+4679:	private Collider ABAJFENKLEO;
+4949:	private CapsuleCollider HOKDPBIKHGH;
+4959:	private List<CapsuleCollider> CGMPIMANBNC;
+5249:	private Func<Collider, bool> PIIPNDDFGFD;
+5729:	private Dictionary<int, HashSet<Collider>> AGPNOKNHKMD;
+5833:	private PlayerBigHeadPreHangUpdater OLBKKGPHAMO;
+5963:	private List<Collider> MBCJBNIAFLG;
+6025:	private DuoEmoteInviteCollider HGFEMLHKLEG;
+6027:	private CooperateEmoteCollider MMJPLKBFIBL;
+6177:	protected SphereCollider NAIFBFJHGGA;
+6469:	private ControllerColliderHit EDLEEEKFEHC;
+6905:	private SuperEmoteCollider FFNOCPEKEGB;
+6999:	protected Collider IGOLCJINKHF;
+7061:	private Collider[] GBAFHGNCGCI;
+7885:	public virtual Collider HPOEJIGALCP => null;
+8427:	public List<CapsuleCollider> NJLFHKEFDMN => null;
+9107:	public List<Collider> ALBHEDPFBBE => null;
+10784:	public ResourceID GetBuffKingVisualHead()
+10908:	private void GFJBAAHMIMF(Collider GLJGHEAPBOF)
+10912:	private void LKELBAJPLAP(Collider GLJGHEAPBOF)
+11001:	void LJJABOHJEIN.OnControllerColliderHit(ControllerColliderHit HDGIHCBAOEN)
+11005:	void LJJABOHJEIN.OnGroundHit(Collider NPEMKNFIIHL, Vector3 IJKBFICPDNF, Vector3 AFNNMPBCDCG)
+11009:	void LJJABOHJEIN.OnMovementHit(Collider NPEMKNFIIHL, Vector3 IJKBFICPDNF, Vector3 AFNNMPBCDCG)
+11378:	public void SetSniperFireCollider(CapsuleCollider IIHDALCNINP)
+11382:	internal static void CBHAACNMKJF(Collider IIHDALCNINP)
+11504:	public void EnableSniperCollider(bool NFFIGPEDIEH)
+11508:	public void EnableCharactorCollider(bool NFFIGPEDIEH)
+11632:	public void InitCollider()
+11983:	public void CapsuleHumanTriggerEnter(Collider GLJGHEAPBOF)
+11991:	public void CapsuleHumanTriggerStay(Collider GLJGHEAPBOF)
+11995:	public void CapsuleHumanTriggerExit(Collider GLJGHEAPBOF)
+11999:	private bool EPOKJHJJFIP(Collider GLJGHEAPBOF)
+12014:	public virtual void OnTriggerEnter(Collider GLJGHEAPBOF)
+12062:	public virtual void OnTriggerExit(Collider GLJGHEAPBOF)
+12083:	protected void CBCCGIKPIHN(Collider GLJGHEAPBOF)
+12087:	protected void IAOGOIFBGDD(Collider GLJGHEAPBOF)
+12576:	public bool IsAmimingSelfGunShield(Collider NPEMKNFIIHL)
+12581:	public bool IsAimmingViewBlockTransparent(Collider NPEMKNFIIHL)
+12586:	public bool IsAmimingSelfVehicleShield(Collider NPEMKNFIIHL)
+12591:	public bool IsAmimingLevelSpaceShield(Collider NPEMKNFIIHL)
+13354:	public virtual void ResizeSniperFireCollider(float IFDHHGECCCM, float NMEEAHMNACE, float ACKFAKHNEHA = -1f, bool DOJMKMJFBMI = false)
+13358:	public virtual void ResizeCapsuleCollider(float IFDHHGECCCM, float NMEEAHMNACE = -1f, float JJIAFNNDEFP = 0f, float JDLBJHACCAD = 0f)
+13378:	public virtual Transform GetHeadTF()
+14436:	public virtual void PlayBigHeadHypeEffect()
+14444:	public virtual void PlayBigHeadLevelUpEffect()
+14799:	public bool IsInNoHeadShotState()
+15188:	protected void IEIDLIFFDFJ(Collider GLJGHEAPBOF)
+15192:	protected void NFLDCCIMPHE(Collider GLJGHEAPBOF)
+15684:	public void OnEnterRevivePointBuffShop(Collider GLJGHEAPBOF)
+15688:	public void OnExitRevivePointBuffShop(Collider GLJGHEAPBOF)
+16093:	private void ICAFNIJBEBK(Collider GLJGHEAPBOF)
+16097:	private void MMDEDKKEEPE(Collider GLJGHEAPBOF)
+16101:	private void IDODAPPDEGC(Collider GLJGHEAPBOF)
+16105:	private void MDPNBNAPPPD(Collider GLJGHEAPBOF)
+16872:	public bool IsInBigHeadScale()
+16877:	public bool ApplyBigHeadScalePreHangLateUpdate()
+16882:	private PlayerBigHeadPreHangUpdater LDGKMJOGJNB()
+17456:	public bool CheckDamageHitHead(EECMIDPHCKN JCONDDPFBKK)
+17725:	public void SetCooperateEmoteColliderState(bool CLNIIBNMGKF)
+18541:	public void OnFootstepTriggerEnter(Collider GLJGHEAPBOF)
+18545:	public void OnFootstepTriggerExit(Collider GLJGHEAPBOF)
+19010:	public void OnEnterDancePoolArea(Collider GLJGHEAPBOF)
+19014:	public void OnExitDancePoolArea(Collider GLJGHEAPBOF)
+19018:	public void OnEnterCarryArea(Collider GLJGHEAPBOF)
+19022:	public void OnExitCarryArea(Collider GLJGHEAPBOF)
+19026:	public void OnEnterDancePoolDJTrigger(Collider GLJGHEAPBOF)
+19030:	public void OnExitDancePoolDJTrigger(Collider GLJGHEAPBOF)
+19034:	public void OnEnterLobbyLWInteractTrigger(Collider GLJGHEAPBOF)
+19038:	public void OnExitLobbyLWInteractTrigger(Collider GLJGHEAPBOF)
+19138:	public void OnEnterSubgameLobbyLW(Collider GLJGHEAPBOF)
+19142:	public void OnExitSubgameLobbyLW(Collider GLJGHEAPBOF)
+20841:	public void EnableCapsuleCollider(bool HCLGHJNEFIC)
+21270:	public void OnEnterSnowSlideWay(Collider GLJGHEAPBOF)
+21274:	public void OnExitSnowSlideWay(Collider GLJGHEAPBOF)
+21278:	public void OnEnterSnowSlideWayAutoJumpTrigger(Collider GLJGHEAPBOF)
+21310:	public bool IsHeadScaleUp(uint CLLNGCEEBDL)
+21315:	public bool IsHeadScaleDown(uint CLLNGCEEBDL)
+21375:	public void RequestBigHeadOrSocialLobbyDeformHangSetupAfterAvatarChanged()
+22269:	private void MMNNLGFABKG(Collider GLJGHEAPBOF)
+22277:	public bool CheckCanOpenTreasureHuntUnderTreasury(Collider GLJGHEAPBOF)
+22313:	private bool KIIFMDKLJKM(Collider IIHDALCNINP)
+22391:	private void OnControllerColliderHit(ControllerColliderHit HDGIHCBAOEN)
+22395:	private void JLNAFOKBILH(ControllerColliderHit HDGIHCBAOEN)
+22399:	private bool PFICPMGNFDL(Collider OKHAGMOAOAI, string OKBOIDEDKEA, out string LBNANAJJMHD)
+22527:	private static bool CAJPBGLNNMN(Collider NPEMKNFIIHL)

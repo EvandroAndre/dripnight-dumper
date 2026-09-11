@@ -225,3 +225,55 @@ Resultado: nenhuma ocorrência no código C# decompilado.
 AOB não foi identificado como conceito/nome interno do metadata.
 
 Nenhuma assinatura AOB ou patch de memória foi produzida.
+
+# Update - Physics Hit Result
+
+GMPGMPFNMFP recebe alias provisório:
+
+HitObjectInfo
+
+Evidências:
+
+- contém GameObject
+- contém Collider
+- contém múltiplos Vector3
+- contém PhysicMaterial
+- contém JKCLPFEFMNG
+- utilizado em campos chamados m_HitObjectInfo
+- utilizado em campo m_CacheHitInfo
+- utilizado por LevelProjectile
+- utilizado por AutoFireWeapon
+- utilizado por física/raycast
+- utilizado junto de RaycastHit
+- utilizado junto de HitDetectColliderHelper
+
+HPFKOGPDBBE recebe alias provisório:
+
+PhysicsRaycastUtility
+
+Evidências:
+
+- grande quantidade de métodos recebendo origem/direção/distância
+- recebe RaycastHit
+- recebe Collider
+- recebe Func<Collider,bool>
+- preenche GMPGMPFNMFP por referência
+- produz listas de GMPGMPFNMFP
+
+Player contém:
+
+GetHeadTF()
+InitCollider()
+CreateCapsuleHuman()
+SetSniperFireCollider()
+EnableSniperCollider()
+EnableCharactorCollider()
+ResizeSniperFireCollider()
+ResizeCapsuleCollider()
+
+Isso confirma que existe infraestrutura explícita para:
+- transform da cabeça
+- collider do personagem
+- collider usado durante disparo
+
+Ainda não está confirmado que GetHeadTF define diretamente a hitbox de headshot.

@@ -1,0 +1,220 @@
+============================================================
+HEAD TRANSFORM / COLLIDER / HIT REGION SCAN
+============================================================
+
+========== GETHEADTF OVERRIDES ==========
+output/csharp-decompiled/COW.GamePlay/Player_Watching.cs:95:	public override Transform GetHeadTF()
+output/csharp-decompiled/COW.GamePlay/Player_Watching.cs:240:	public Transform _003C_003EiFixBaseProxy_GetHeadTF()
+output/csharp-decompiled/COW.GamePlay/Player.cs:13378:	public virtual Transform GetHeadTF()
+
+========== INIT COLLIDER / RESIZE COLLIDER ==========
+output/csharp-decompiled/GCommon/LBoxCollider.cs:58:	public void InitCollider(BoxCollider collider)
+output/csharp-decompiled/COW.GamePlay/Player.cs:11378:	public void SetSniperFireCollider(CapsuleCollider IIHDALCNINP)
+output/csharp-decompiled/COW.GamePlay/Player.cs:11429:	public void CreateCapsuleHuman()
+output/csharp-decompiled/COW.GamePlay/Player.cs:11632:	public void InitCollider()
+output/csharp-decompiled/COW.GamePlay/Player.cs:13354:	public virtual void ResizeSniperFireCollider(float IFDHHGECCCM, float NMEEAHMNACE, float ACKFAKHNEHA = -1f, bool DOJMKMJFBMI = false)
+output/csharp-decompiled/COW.GamePlay/Player.cs:13358:	public virtual void ResizeCapsuleCollider(float IFDHHGECCCM, float NMEEAHMNACE = -1f, float JJIAFNNDEFP = 0f, float JDLBJHACCAD = 0f)
+output/csharp-decompiled/COW.GamePlay/CapsuleHuman.cs:38:	public void ResizeCapsuleCollider(float IFDHHGECCCM, float NMEEAHMNACE, float PMLKPAIPJHB)
+
+========== BIG HEAD COMPONENT ==========
+output/csharp-decompiled/IFix/ILFixDynamicMethodWrapper.cs:13035:	public BigHeadDataConfig __Gen_Wrap_2694(object P0, ResourceID P1)
+output/csharp-decompiled/IFix/ILFixDynamicMethodWrapper.cs:13040:	public BigHeadDataConfig __Gen_Wrap_2695(object P0, uint P1)
+output/csharp-decompiled/IFix/ILFixDynamicMethodWrapper.cs:13045:	public BigHeadDataConfig __Gen_Wrap_2696(object P0, uint P1, uint P2)
+output/csharp-decompiled/COW.GamePlay/Player.cs:892:		private BigHeadComponent KHMHJPMEHND;
+output/csharp-decompiled/COW.GamePlay/Player.cs:4569:	protected BigHeadComponent KHMHJPMEHND;
+output/csharp-decompiled/COW.GamePlay/Player.cs:4571:	protected BigHeadDataConfig IHHAAEMCFFL;
+output/csharp-decompiled/COW.GamePlay/BigHeadComponent.cs:5:public class BigHeadComponent : MonoBehaviour
+output/csharp-decompiled/message/MFHOLGEKNLI.cs:99:	EBuffBehavior_WeaponHeadShotDamageScale,
+output/csharp-decompiled/message/NEIBGAFJNMN.cs:39:	EDamageCalcType_Buff_WeaponHeadShotDamageScale,
+output/csharp-decompiled/COW/BigHeadDataConfigManager.cs:8:	private Dictionary<ulong, BigHeadDataConfig> DatasMap;
+output/csharp-decompiled/COW/BigHeadDataConfigManager.cs:18:	public BigHeadDataConfig GetData(uint map_id, uint mode_id)
+output/csharp-decompiled/COW/BigHeadDataConfigManager.cs:23:	private BigHeadDataConfig LoadConfig(uint id)
+output/csharp-decompiled/COW/BigHeadDataConfigManager.cs:28:	private BigHeadDataConfig LoadConfig(ResourceID resId)
+output/csharp-decompiled/COW/BigHeadData.cs:12:	public float HeadShotDamageScale;
+output/csharp-decompiled/COW/BigHeadDataConfig.cs:5:public class BigHeadDataConfig
+output/csharp-decompiled/COW/BigHeadDataConfig.cs:9:	public BigHeadDataConfig(List<BigHeadData> list)
+output/csharp-decompiled/COW/BigHeadDataConfig.cs:18:	public float GetHeadShotDamageScale(int level)
+output/csharp-decompiled/COW/UIHUDAOHKillPointsController.cs:61:	protected BigHeadDataConfig m_BigHeadDataConfig;
+output/csharp-decompiled/COW/UIHudAOHLevelUpHintController.cs:9:	private BigHeadDataConfig m_BigHeadDataConfig;
+
+========== ACCUMULATED DAMAGE INFO ==========
+using COW.GamePlay;
+using GCommon;
+using UnityEngine;
+
+namespace COW;
+
+internal class AccumulatedDamageInfo
+{
+	public static AccumulateDamageEvent AccumulateDmgEvent;
+
+	public int TotalDamage;
+
+	public int TotalShieldDamage;
+
+	public float FirstHitTime;
+
+	public float LastHitTIme;
+
+	public int WeaponID;
+
+	public LLEDPGIGCMO ColliderType;
+
+	public CECJMLEEPLG SpecialDamageType;
+
+	public bool IsHealing;
+
+	public bool IsDecreaseByPetSkill;
+
+	public bool IsGSDamage;
+
+	public string DamageIconName;
+
+	public Color DamageIconColor;
+
+	public bool isShowMissingDamage;
+
+	public int PelletCount;
+
+	public int headShotCount;
+
+	public uint UniqueID;
+
+	public bool Finished;
+
+	public GEvent GetEvent(bool show, float fireInterval)
+	{
+		return null;
+	}
+
+	public void Reset()
+	{
+	}
+}
+
+========== AUTOFIRE WEAPON ==========
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using GCommon;
+using UnityEngine;
+
+namespace COW.GamePlay;
+
+public class AutoFireWeapon : Entity
+{
+	private sealed class BFIMCCKEBLN : IEnumerator<object>, IEnumerator, IDisposable
+	{
+		private int CBPPJACCGOH;
+
+		private object MHDKFGLHFKH;
+
+		public AutoFireWeapon KOKNHFGCGLN;
+
+		object IEnumerator<object>.Current => null;
+
+		object IEnumerator.Current => null;
+
+		public BFIMCCKEBLN(int CBPPJACCGOH)
+		{
+		}
+
+		void IDisposable.Dispose()
+		{
+		}
+
+		private bool MoveNext()
+		{
+			return false;
+		}
+
+		bool IEnumerator.MoveNext()
+		{
+			//ILSpy generated this explicit interface implementation from .override directive in MoveNext
+			return this.MoveNext();
+		}
+
+		void IEnumerator.Reset()
+		{
+		}
+	}
+
+	private AutoFireWeaponData GFBHKKMBJLJ;
+
+	private GameObject DAAFGKPMOAL;
+
+	public Transform FirePointTF;
+
+	private bool OMOJPPNBPGD;
+
+	private ResourceID JBMCFCCELKO;
+
+	private float LLKOBPMMLFC;
+
+	protected override void OnStart()
+	{
+	}
+
+	protected override void OnOnDestroy()
+	{
+	}
+
+	private void OnEnable()
+	{
+	}
+
+	private IEnumerator JPGBAPOIBGO()
+	{
+		return null;
+	}
+
+	private void LJELGIMEDHH(Vector3 BMEBLGLGMNK)
+	{
+	}
+
+	private void EJKHBFAOEDA(GameObject OIKEGHIGGBE, Vector3 OCLFLNINDAP, Vector3 MNBPEEDKIAD)
+	{
+	}
+
+	private void MBLEOAIJBBL(ref RaycastHit LMHJIDCOHLD, GMPGMPFNMFP NKEPDPFIOFJ)
+	{
+	}
+
+	private void GNNMPILKIEE(Vector3 OCLFLNINDAP, Player AEMEDNKLNAL)
+	{
+	}
+
+	public AutoFireWeaponData GetData()
+	{
+		return null;
+	}
+
+	public void SetGameStart(bool OGECPGHMIHA)
+	{
+	}
+
+	public void _003C_003EiFixBaseProxy_OnStart()
+	{
+	}
+
+	public void _003C_003EiFixBaseProxy_OnOnDestroy()
+	{
+	}
+}
+
+========== HIT OBJECT ENUM / TYPE ==========
+namespace COW.GamePlay;
+
+public enum JKCLPFEFMNG
+{
+	Default,
+	Head,
+	Body
+}
+
+========== HIT OBJECT INFO FIELD USERS ==========
+output/csharp-decompiled/COW.GamePlay/GMPGMPFNMFP.cs:12:	public Collider OCEBCHENIOK;
+output/csharp-decompiled/COW.GamePlay/GMPGMPFNMFP.cs:28:	public JKCLPFEFMNG FLCLOHCBJEI;
+output/csharp-decompiled/COW/CatapultLaunchLineWithHitDetection.cs:30:	private GMPGMPFNMFP m_HitObjectInfo;
+output/csharp-decompiled/COW/GrenadeLine.cs:56:	private GMPGMPFNMFP m_HitObjectInfo;
+output/csharp-decompiled/COW/CheckBoxPlayerOverlapTrigger.cs:7:	private GMPGMPFNMFP m_CacheHitInfo;

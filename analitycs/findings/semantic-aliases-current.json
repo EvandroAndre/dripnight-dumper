@@ -1,0 +1,20 @@
+{
+  "IGJPHDANPJD": "PlayerMovementState",
+  "EOGPGNIDOKF": "PlayerPhysXPose",
+  "BHGGAEEHJCO": "EntityID",
+  "LJJABOHJEIN": "CharacterMovementController",
+  "CNMHJGNKOOF": "UGCEntityIdentity",
+  "JKADJKOFGEM": "PlayerNetworkSync",
+  "MNIJCDHGGEC": "KeyedFloatModifier",
+  "FBNAAHOLKBH": "TimedSpeedModifier",
+  "EJNFNOJNCPE": "WeaponAttachmentConfig",
+  "LAGLGLHKHJJ": "ShieldDamageReduction",
+  "FDAEPHMIEPC": "WeaponBase",
+  "GLLLEDKLLDA": "DamageContext",
+  "EECMIDPHCKN": "DamageEvaluationContext",
+  "KOBBCCENPBG": "DamageModifierType",
+  "LLEDPGIGCMO": "HitRegionType",
+  "CECJMLEEPLG": "DamageEffectType",
+  "GMPGMPFNMFP": "HitObjectInfo",
+  "HPFKOGPDBBE": "PhysicsRaycastUtility"
+}
