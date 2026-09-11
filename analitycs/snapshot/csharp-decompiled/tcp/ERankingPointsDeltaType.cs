@@ -1,0 +1,8 @@
+namespace tcp;
+
+public enum ERankingPointsDeltaType
+{
+	RANKING_POINTS_DELTA_TYPE_UNKNOWN,
+	RANKING_POINTS_DELTA_TYPE_CS,
+	RANKING_POINTS_DELTA_TYPE_BR
+}

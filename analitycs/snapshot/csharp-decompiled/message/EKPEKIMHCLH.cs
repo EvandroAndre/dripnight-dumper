@@ -1,0 +1,9 @@
+namespace message;
+
+public enum EKPEKIMHCLH : uint
+{
+	EScheduledReviveCancelReason_TargetNotInPending,
+	EScheduledReviveCancelReason_CancelledByHandler,
+	EScheduledReviveCancelReason_CancelledOnHandlerRemoval,
+	EScheduledReviveCancelReason_CannotBuyRevive
+}

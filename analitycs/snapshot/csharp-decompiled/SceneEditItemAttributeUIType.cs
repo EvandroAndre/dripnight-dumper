@@ -1,0 +1,27 @@
+public enum SceneEditItemAttributeUIType
+{
+	ItemUIType_Sub_Input_Plus,
+	ItemUIType_HorizontalSelect,
+	ItemUIType_PopMenu,
+	ItemUIType_SliderBar,
+	ItemUIType_ToggleButton,
+	ItemUIType_InputText,
+	ItemUIType_Color,
+	ItemUIType_Texture,
+	ItemUIType_Sprite,
+	ItemUIType_Selector,
+	ItemUIType_Button,
+	ItemUIType_Children,
+	ItemUIType_Collider,
+	ItemUIType_ShowSecToMs,
+	ItemUIType_ReadOnlyTxt,
+	ItemUIType_Numerbic,
+	ItemUIType_Vector3,
+	ItemUIType_Quaternion,
+	ItemUIType_EntitySelector,
+	ItemUIType_NPCAnimClipSelector,
+	ItemUIType_LevelObjectSelector,
+	ItemUIType_EventClip,
+	ItemUIType_DynamicAssetSelector,
+	ItemUIType_RigidbodyAxisLock
+}

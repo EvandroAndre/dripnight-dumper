@@ -1,0 +1,35 @@
+namespace message;
+
+public enum BMLKMJHLEDP : uint
+{
+	EAIType_Null,
+	EAIType_Bot,
+	EAIType_ZombieWandering,
+	EAIType_ZombieAttPlayer,
+	EAIType_ZombieWoodCutter,
+	EAIType_ZombieThrow,
+	EAIType_ZombieExplosive,
+	EAIType_ZombieEvent,
+	EAIType_BossTyrant,
+	EAIType_ZombieThrowDot,
+	EAIType_BossMystery,
+	EAIType_ZombieTank03,
+	EAIType_ZombieBurrow,
+	EAIType_BossSumurai,
+	EAIType_BossGiant,
+	EAIType_WaitingDummy,
+	EAIType_PartyGameNPC,
+	EAIType_ZombieTDGeneral,
+	EAIType_UGCCommonAI,
+	EAIType_BossHoloween,
+	EAIType_MetropolisNPC,
+	EAIType_FlyBombBat,
+	EAIType_BossOniQuest,
+	EAIType_BossDragon,
+	EAIType_BossOniMystery,
+	EAIType_ZombieWanderingHC,
+	EAIType_BossMysteryHC,
+	EAIType_HippoCrisisHuman,
+	EAIType_WolfAlpha,
+	EAIType_Wolf
+}

@@ -1,0 +1,16 @@
+namespace message;
+
+public enum KDLKDFOABMM : uint
+{
+	ECarryPlayerFailReason_None,
+	ECarryPlayerFailReason_InvalidTarget,
+	ECarryPlayerFailReason_SelfNotWalking,
+	ECarryPlayerFailReason_TargetNotWalking,
+	ECarryPlayerFailReason_SelfMoving,
+	ECarryPlayerFailReason_TargetMoving,
+	ECarryPlayerFailReason_SelfInInteraction,
+	ECarryPlayerFailReason_TargetInInteraction,
+	ECarryPlayerFailReason_AlreadyCarrying,
+	ECarryPlayerFailReason_TargetBeingCarried,
+	ECarryPlayerFailReason_TargetReleaseCooldown
+}

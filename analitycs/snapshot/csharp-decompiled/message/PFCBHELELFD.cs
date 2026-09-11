@@ -1,0 +1,12 @@
+namespace message;
+
+public enum PFCBHELELFD
+{
+	ERoomCustomParamsDataType_None,
+	ERoomCustomParamsDataType_Bool,
+	ERoomCustomParamsDataType_SliderInt,
+	ERoomCustomParamsDataType_SliderFloat,
+	ERoomCustomParamsDataType_SingleChooseInt,
+	ERoomCustomParamsDataType_MultiChooseInt,
+	ERoomCustomParamsDataType_SingleChooseFloat
+}

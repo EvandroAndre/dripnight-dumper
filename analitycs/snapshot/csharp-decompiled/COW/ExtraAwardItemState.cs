@@ -1,0 +1,9 @@
+namespace COW;
+
+public enum ExtraAwardItemState
+{
+	STATE_NONE,
+	STATE_ALREADY_RECEIVE,
+	STATE_CAN_RECEIVE,
+	STATE_CANNOT_RECEIVE
+}

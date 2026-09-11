@@ -1,0 +1,23 @@
+using GCommon;
+using UnityEngine;
+
+namespace COW;
+
+public class UICommonSocialHighlightView : UIBaseView
+{
+	public UILabel Label;
+
+	public UISprite Bg;
+
+	public UISprite Icon;
+
+	public UILabel WinStreak;
+
+	protected override void OnInit(Transform holder)
+	{
+	}
+
+	public void _003C_003EiFixBaseProxy_OnInit(Transform P0)
+	{
+	}
+}

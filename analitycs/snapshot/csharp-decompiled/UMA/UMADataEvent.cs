@@ -1,0 +1,16 @@
+using System;
+using UnityEngine.Events;
+
+namespace UMA;
+
+[Serializable]
+public class UMADataEvent : UnityEvent<UMAData>
+{
+	public UMADataEvent()
+	{
+	}
+
+	public UMADataEvent(UMADataEvent source)
+	{
+	}
+}

@@ -1,0 +1,11 @@
+namespace message;
+
+public enum JMJGFNCIPMI : uint
+{
+	EWereWolvesGameOverState_NoOver,
+	EWereWolvesGameOverState_HumanWinFinishAllTask,
+	EWereWolvesGameOverState_HumanWinKillAllWolf,
+	EWereWolvesGameOverState_WolfWinCount,
+	EWereWolvesGameOverState_WolfWinTimeOut,
+	EWereWolvesGameOverState_WolfWinTaskTimeOut
+}

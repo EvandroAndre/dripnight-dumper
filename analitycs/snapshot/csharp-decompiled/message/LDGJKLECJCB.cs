@@ -1,0 +1,10 @@
+namespace message;
+
+public class LDGJKLECJCB
+{
+	public KCEOCGOLEAD LEGLEFICFDP;
+
+	public KCEOCGOLEAD JBHENAIINDC;
+
+	public KCEOCGOLEAD IFEMIOECNLN;
+}

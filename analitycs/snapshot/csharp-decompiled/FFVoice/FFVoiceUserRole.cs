@@ -1,0 +1,12 @@
+namespace FFVoice;
+
+public enum FFVoiceUserRole
+{
+	FFVoice_USER_NONE,
+	FFVoice_USER_TALKER_FREE,
+	FFVoice_USER_TALKER_ON_DEMAND,
+	FFVoice_USER_LISTENER,
+	FFVoice_USER_COMMANDER,
+	FFVoice_USER_HOST,
+	FFVoice_USER_GUSET
+}

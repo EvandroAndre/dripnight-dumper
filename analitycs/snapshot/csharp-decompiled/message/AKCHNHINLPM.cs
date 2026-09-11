@@ -1,0 +1,7 @@
+namespace message;
+
+public enum AKCHNHINLPM : uint
+{
+	EWISHINGTREE_STATE_NORMAL,
+	EWISHINGTREE_STATE_BEING_USED
+}

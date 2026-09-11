@@ -1,0 +1,33 @@
+namespace tcp;
+
+public class EInventory
+{
+	public enum Proto
+	{
+		Proto_NONE,
+		Proto_TOPUP_NTF,
+		Proto_MONEY_UPDATE_NTF,
+		Proto_NEW_ITEMS_NTF,
+		proto_REBATECARD_NTF,
+		proto_REBATECARD_REDEEM_NTF,
+		proto_ITEM_CHANGE,
+		proto_SELECTED_ITEMS_CHANGE,
+		proto_EP_CARD_NTF,
+		Proto_INSTALLMENT_ITEMS_NEW_NTF,
+		Proto_INSTALLMENT_ITEMS_CHANGE_NTF,
+		Proto_INSTALLMENT_ITEMS_DELETE_NTF,
+		Proto_INSTALLMENT_PAY_NTF,
+		Proto_LIMITED_AVATAR_OUT_EXPIRE_NTF,
+		Proto_VIRTUAL_BRAND_NTF,
+		Proto_TAILOR_CHANGE_NTF,
+		Proto_LIMITED_PET_OUT_EXPIRE_NTF,
+		Proto_COINS_OUT_GAME_NTF,
+		Proto_Exceed_MAX_NUM_ITEMS_NTF,
+		Proto_WISH_LIST_OUT_NTF
+	}
+
+	public enum ErrCode
+	{
+		ErrCode_SUSS
+	}
+}

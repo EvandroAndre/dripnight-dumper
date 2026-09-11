@@ -1,0 +1,20 @@
+using GCommon;
+
+namespace message;
+
+public class MBPDBIKPFDN : UDPClientMessageBase
+{
+	public uint MOGLMABHGNB;
+
+	public override void Serialize(FastBinaryWriter CDKHIDGNFDE)
+	{
+	}
+
+	public override void UnSerialize(FastBinaryReader HICKLIEHMND)
+	{
+	}
+
+	public override void Recycle()
+	{
+	}
+}

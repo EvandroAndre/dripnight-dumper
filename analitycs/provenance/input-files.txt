@@ -1,0 +1,4 @@
+total 257M
+-rw-rw-rw- 1 codespace codespace  54M Sep 10 23:32 global-metadata.dat
+-rw-rw-rw- 1 codespace codespace 184M Sep 10 23:34 libil2cpp.so
+-rw-rw-rw- 1 codespace codespace  21M Sep 10 23:41 libunity.so

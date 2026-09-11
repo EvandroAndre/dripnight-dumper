@@ -1,0 +1,2050 @@
+   19  find tools/cpp2il -maxdepth 3 -type f -printf '%p\n'
+   20  CPP2IL="$(find "$PWD/tools/cpp2il" -type f -name 'Cpp2IL' -print -quit)"
+   21  echo "$CPP2IL"
+   22  chmod +x "$CPP2IL"
+   23  "$CPP2IL" --help
+   24  ls -lh input/
+   25  file input/libil2cpp.so
+   26  readelf -h input/libil2cpp.so | grep -E "Class:|Machine:"
+   27  "$CPP2IL" --list-output-formats
+   28  "$CPP2IL" --list-processors
+   29  ls -lh input/
+   30  strings -a input/libunity.so | grep -aoE '[0-9]{4}\.[0-9]+\.[0-9]+[abcfxp][0-9]+' | sort -Vu
+   31  file input/libunity.so
+   32  file input/libil2cpp.so
+   33  readelf -h input/libunity.so | grep -E "Class:|Machine:"
+   34  readelf -h input/libil2cpp.so | grep -E "Class:|Machine:"
+   35  python3 - <<'PY'
+   36  import struct
+   37  p = "input/global-metadata.dat"
+   38  with open(p, "rb") as f:
+   39      magic, version = struct.unpack("<II", f.read(8))
+   40  print(f"Magic: 0x{magic:08X}")
+   41  print(f"Metadata version: {version}")
+   42  PY
+   43  ls -lh input/
+   44  strings -a input/libunity.so | grep -aoE '[0-9]{4}\.[0-9]+\.[0-9]+[abcfxp][0-9]+' | sort -Vu
+   45  file input/libunity.so
+   46  file input/libil2cpp.so
+   47  "$CPP2IL" --list-output-formats
+   48  cat > .gitignore <<'EOF'
+   49  input/
+   50  output/
+   51  tools/
+   52  *.log
+   53  *.zip
+   54  *.tar.gz
+   55  EOF
+   56  git status
+   57  cat > .gitignore <<'EOF'
+   58  input/
+   59  output/
+   60  tools/
+   61  *.log
+   62  *.zip
+   63  *.tar.gz
+   64  EOF
+   65  git status
+   66  UNITY="2022.3.47f1"
+   67  rm -rf output/test
+   68  mkdir -p output/test
+   69  set -o pipefail
+   70  "$CPP2IL"   --force-binary-path "$PWD/input/libil2cpp.so"   --force-metadata-path "$PWD/input/global-metadata.dat"   --force-unity-version "$UNITY"   --output-as dummydll   --output-to "$PWD/output/test"   --low-memory-mode   --verbose 2>&1 | tee "$PWD/cpp2il_test.log"
+   71  echo "Cpp2IL exit code: $?"
+   72  du -sh output/test
+   73  find output/test -type f | head -50
+   74  tail -n 120 cpp2il_test.log
+   75  clear
+   76  echo "========== MEMORIA =========="
+   77  free -h
+   78  echo
+   79  grep -E 'MemTotal|MemAvailable|SwapTotal|SwapFree' /proc/meminfo
+   80  echo
+   81  echo "========== HASHES =========="
+   82  sha256sum input/libil2cpp.so input/libunity.so input/global-metadata.dat
+   83  echo
+   84  echo "========== PONTOS CRITICOS CPP2IL =========="
+   85  grep -aE "Metadata version|Metadata Version|Using actual|Got Binary codereg|Initializing Binary|Reading generic instances|Reading generic method pointers|Reading field offsets|Reading types|Reading type definition sizes|Reading code gen modules|Reading generic method tables|Reading method specifications|Reading generic methods|OutOfMemory" cpp2il_test.log
+   86  echo
+   87  echo "========== PRIMEIROS MODULOS ESTRANHOS =========="
+   88  grep -a "Read module data for" cpp2il_test.log | head -80
+   89  grep -a "Got Binary codereg" cpp2il_test.log
+   90  clear
+   91  python3 -m pip install --user pyelftools -q
+   92  python3 - <<'PY'
+   93  from elftools.elf.elffile import ELFFile
+   94  import struct
+   95  import heapq
+   96  BIN = "input/libil2cpp.so"
+   97  CODEREG = 0xAB41858
+   98  METAREG = 0xAD10B38
+   99  f = open(BIN, "rb")
+  100  elf = ELFFile(f)
+  101  def find_segment(va):
+  102      for seg in elf.iter_segments():
+  103          if seg["p_type"] != "PT_LOAD":
+  104              continue
+  105          start = int(seg["p_vaddr"])
+  106          filesz = int(seg["p_filesz"])
+  107          if start <= va < start + filesz:
+  108              return seg
+  109      return None
+  110  def va_to_offset(va):
+  111      seg = find_segment(va)
+  112      if seg is None:
+  113          raise RuntimeError(
+  114              f"VA 0x{va:X} não está em nenhum PT_LOAD file-backed"
+  115          )
+  116      return int(seg["p_offset"]) + (va - int(seg["p_vaddr"]))
+  117  def read_qwords(va, count):
+  118      off = va_to_offset(va)
+  119      f.seek(off)
+  120      data = f.read(count * 8)
+  121      if len(data) != count * 8:
+  122          raise RuntimeError("Leitura incompleta")
+  123      return struct.unpack("<" + "Q" * count, data)
+  124  print("========== CODE REGISTRATION ==========")
+  125  cr = read_qwords(CODEREG, 17)
+  126  code_labels = [
+  127      "reversePInvokeWrapperCount",
+  128      "reversePInvokeWrappers",
+  129      "genericMethodPointersCount",
+  130      "genericMethodPointers",
+  131      "genericAdjustorThunks",
+  132      "invokerPointersCount",
+  133      "invokerPointers",
+  134      "unresolvedVirtualCallCount",
+  135      "unresolvedVirtualCallPointers",
+  136      "unresolvedInstanceCallPointers",
+  137      "unresolvedStaticCallPointers",
+  138      "interopDataCount",
+  139      "interopData",
+  140      "windowsRuntimeFactoryCount",
+  141      "windowsRuntimeFactoryTable",
+  142      "codeGenModulesCount",
+  143      "addrCodeGenModulePtrs",
+  144  ]
+  145  for name, value in zip(code_labels, cr):
+  146      print(f"{name:35} = {value} / 0x{value:X}")
+  147  print("\n========== METADATA REGISTRATION ==========")
+  148  mr = read_qwords(METAREG, 16)
+  149  meta_labels = [
+  150      "genericClassesCount",
+  151      "genericClasses",
+  152      "genericInstsCount",
+  153      "genericInsts",
+  154      "genericMethodTableCount",
+  155      "genericMethodTable",
+  156      "numTypes",
+  157      "typeAddressListAddress",
+  158      "methodSpecsCount",
+  159      "methodSpecs",
+  160      "fieldOffsetsCount",
+  161      "fieldOffsetListAddress",
+  162      "typeDefinitionsSizesCount",
+  163      "typeDefinitionsSizes",
+  164      "metadataUsagesCount",
+  165      "metadataUsages",
+  166  ]
+  167  for name, value in zip(meta_labels, mr):
+  168      print(f"{name:35} = {value} / 0x{value:X}")
+  169  gm_ptr_count = cr[2]
+  170  adjustor_ptr = cr[4]
+  171  table_count = mr[4]
+  172  table_ptr = mr[5]
+  173  print("\n========== GENERIC METHOD TABLE ==========")
+  174  print("genericMethodPointersCount :", gm_ptr_count)
+  175  print("genericAdjustorThunks ptr  :", hex(adjustor_ptr))
+  176  print("genericMethodTableCount    :", table_count)
+  177  print("genericMethodTable ptr     :", hex(table_ptr))
+  178  if table_count > 5_000_000:
+  179      print("\n!!! genericMethodTableCount ABSURDAMENTE ALTO !!!")
+  180      raise SystemExit
+  181  table_offset = va_to_offset(table_ptr)
+  182  f.seek(table_offset)
+  183  max_adj = -1
+  184  min_adj = 2**31 - 1
+  185  max_method_index = -1
+  186  min_method_index = 2**31 - 1
+  187  negative_weird = 0
+  188  method_oob = 0
+  189  top = []
+  190  samples = []
+  191  for i in range(table_count):
+  192      data = f.read(16)
+  193      if len(data) != 16:
+  194          print("Tabela terminou prematuramente na entrada", i)
+  195          break
+  196      generic_index, method_index, invoker_index, adjustor = \
+  197          struct.unpack("<iiii", data)
+  198      if i < 10:
+  199          samples.append(
+  200              (i, generic_index, method_index, invoker_index, adjustor)
+  201          )
+  202      max_adj = max(max_adj, adjustor)
+  203      min_adj = min(min_adj, adjustor)
+  204      max_method_index = max(max_method_index, method_index)
+  205      min_method_index = min(min_method_index, method_index)
+  206      if adjustor < -1:
+  207          negative_weird += 1
+  208      if method_index >= gm_ptr_count:
+  209          method_oob += 1
+  210      if len(top) < 20:
+  211          heapq.heappush(
+  212              top,
+  213              (adjustor, i, generic_index, method_index, invoker_index)
+  214          )
+  215      elif adjustor > top[0][0]:
+  216          heapq.heapreplace(
+  217              top,
+  218              (adjustor, i, generic_index, method_index, invoker_index)
+  219          )
+  220  print("\nPrimeiras 10 entradas:")
+  221  for x in samples:
+  222      print(x)
+  223  print("\n========== RESULTADO CRITICO ==========")
+  224  print("MIN adjustorThunk     :", min_adj)
+  225  print("MAX adjustorThunk     :", max_adj)
+  226  print("MIN methodIndex       :", min_method_index)
+  227  print("MAX methodIndex       :", max_method_index)
+  228  print("adjustorThunk < -1    :", negative_weird)
+  229  print("methodIndex fora range:", method_oob)
+  230  if max_adj >= 0:
+  231      ptr_count = max_adj + 1
+  232      bytes_needed = ptr_count * 8
+  233      print()
+  234      print("Cpp2IL tentaria ler ponteiros :", ptr_count)
+  235      print("Memória mínima só desse array :", f"{bytes_needed / 1024**3:.3f} GiB")
+  236      seg = find_segment(adjustor_ptr)
+  237      if seg:
+  238          available = (
+  239              int(seg["p_filesz"])
+  240              - (adjustor_ptr - int(seg["p_vaddr"]))
+  241          )
+  242          print(
+  243              "Ponteiros file-backed restantes no segmento:",
+  244              available // 8
+  245          )
+  246          if bytes_needed > available:
+  247              print(
+  248                  "!!! O ARRAY PEDIDO ULTRAPASSA O SEGMENTO ELF: "
+  249                  "índice claramente inconsistente !!!"
+  250              )
+  251      else:
+  252          print(
+  253              "!!! genericAdjustorThunks nem está em um "
+  254              "segmento PT_LOAD válido !!!"
+  255          )
+  256  print("\n20 maiores adjustorThunk encontrados:")
+  257  for row in sorted(top, reverse=True):
+  258      adj, idx, generic_idx, method_idx, invoker_idx = row
+  259      print(
+  260          f"entry={idx:8} "
+  261          f"adjustor={adj:12} "
+  262          f"generic={generic_idx:12} "
+  263          f"method={method_idx:12} "
+  264          f"invoker={invoker_idx:12}"
+  265      )
+  266  f.close()
+  267  PY
+  268  dotnet --version
+  269  dotnet --list-sdks
+  270  cd /workspaces/dripnight-dumper
+  271  rm -rf tools/cpp2il-src
+  272  git clone --depth 1   --branch development   https://github.com/SamboyCoding/Cpp2IL.git   tools/cpp2il-src
+  273  cd tools/cpp2il-src
+  274  git fetch --depth 1 origin 5fb20304df698ffd3d0e664b2a698cd911dc9d57
+  275  git checkout 5fb20304df698ffd3d0e664b2a698cd911dc9d57
+  276  git rev-parse HEAD
+  277  python3 - <<'PY'
+  278  from pathlib import Path
+  279  p = Path("LibCpp2IL/Il2CppBinary.cs")
+  280  s = p.read_text()
+  281  old = """            var maxAdjustorThunkIndex = metadata.genericMethodTables.Length == 0 ? -1 : metadata.genericMethodTables.Max(t => t.adjustorThunk);
+  282              var adjustorThunkPointers = _codeRegistration.genericAdjustorThunks != 0 && maxAdjustorThunkIndex >= 0
+  283                  ? ReadNUintArrayAtVirtualAddress(_codeRegistration.genericAdjustorThunks, maxAdjustorThunkIndex + 1)
+  284                  : [];
+  285  """
+  286  new = """            var maxAdjustorThunkIndex = metadata.genericMethodTables.Length == 0 ? -1 : metadata.genericMethodTables.Max(t => t.adjustorThunk);
+  287              LibLogger.InfoNewline($"[DRIP-DIAG] genericMethodTables.Length = {metadata.genericMethodTables.Length}");
+  288              LibLogger.InfoNewline($"[DRIP-DIAG] genericMethodPointers.Length = {_genericMethodPointers.Length}");
+  289              LibLogger.InfoNewline($"[DRIP-DIAG] genericAdjustorThunks = 0x{_codeRegistration.genericAdjustorThunks:X}");
+  290              LibLogger.InfoNewline($"[DRIP-DIAG] maxAdjustorThunkIndex = {maxAdjustorThunkIndex}");
+  291              foreach (var x in metadata.genericMethodTables
+  292                           .Select((t, i) => new { Table = t, Index = i })
+  293                           .OrderByDescending(x => x.Table.adjustorThunk)
+  294                           .Take(20))
+  295              {
+  296                  LibLogger.InfoNewline(
+  297                      $"[DRIP-DIAG] table[{x.Index}] " +
+  298                      $"generic={x.Table.GenericMethodIndex} " +
+  299                      $"method={x.Table.methodIndex} " +
+  300                      $"invoker={x.Table.invokerIndex} " +
+  301                      $"adjustor={x.Table.adjustorThunk}");
+  302              }
+  303              var adjustorThunkPointers = _codeRegistration.genericAdjustorThunks != 0 && maxAdjustorThunkIndex >= 0
+  304                  ? ReadNUintArrayAtVirtualAddress(_codeRegistration.genericAdjustorThunks, maxAdjustorThunkIndex + 1)
+  305                  : [];
+  306  """
+  307  if old not in s:
+  308      raise SystemExit("ERRO: trecho esperado não encontrado. Não alterei o arquivo.")
+  309  p.write_text(s.replace(old, new))
+  310  print("Patch aplicado corretamente.")
+  311  PY
+  312  grep -n "DRIP-DIAG" LibCpp2IL/Il2CppBinary.cs
+  313  dotnet build Cpp2IL/Cpp2IL.csproj   -c Release   -f net10.0
+  314  cd /workspaces/dripnight-dumper
+  315  rm -rf output/diag
+  316  mkdir -p output/diag
+  317  dotnet tools/cpp2il-src/Cpp2IL/bin/Release/net10.0/Cpp2IL.dll   --force-binary-path "$PWD/input/libil2cpp.so"   --force-metadata-path "$PWD/input/global-metadata.dat"   --force-unity-version "2022.3.47f1"   --output-as dummydll   --output-to "$PWD/output/diag"   --low-memory-mode   --verbose 2>&1 | tee cpp2il_diag.log
+  318  grep -a "DRIP-DIAG" cpp2il_diag.log
+  319  /workspaces/dripnight-dumper/tools/cpp2il-src
+  320  cd /workspaces/dripnight-dumper/tools/cpp2il-src
+  321  cp LibCpp2IL/Il2CppBinary.cs LibCpp2IL/Il2CppBinary.cs.before-sanitize
+  322  python3 - <<'PY'
+  323  from pathlib import Path
+  324  p = Path("LibCpp2IL/Il2CppBinary.cs")
+  325  s = p.read_text()
+  326  start_marker = "            var maxAdjustorThunkIndex ="
+  327  end_marker = "            foreach (var table in metadata.genericMethodTables)"
+  328  start = s.find(start_marker)
+  329  end = s.find(end_marker, start)
+  330  if start == -1 or end == -1:
+  331      raise SystemExit("ERRO: não encontrei o bloco esperado.")
+  332  replacement = r'''            var originalGenericMethodTableCount = metadata.genericMethodTables.Length;
+  333              var saneGenericMethodTables = metadata.genericMethodTables
+  334                  .Where(t =>
+  335                      t.GenericMethodIndex >= 0 &&
+  336                      t.GenericMethodIndex < metadata.methodSpecs.Length &&
+  337                      t.methodIndex >= -1 &&
+  338                      t.methodIndex < _genericMethodPointers.Length &&
+  339                      t.invokerIndex >= -1 &&
+  340                      t.invokerIndex < (long)_codeRegistration.invokerPointersCount &&
+  341                      t.adjustorThunk >= -1 &&
+  342                      t.adjustorThunk < _genericMethodPointers.Length)
+  343                  .ToArray();
+  344              LibLogger.InfoNewline(
+  345                  $"[DRIP-SANITIZE] generic tables original = {originalGenericMethodTableCount}");
+  346              LibLogger.InfoNewline(
+  347                  $"[DRIP-SANITIZE] generic tables valid    = {saneGenericMethodTables.Length}");
+  348              LibLogger.InfoNewline(
+  349                  $"[DRIP-SANITIZE] generic tables skipped  = {originalGenericMethodTableCount - saneGenericMethodTables.Length}");
+  350              metadata.genericMethodTables = saneGenericMethodTables;
+  351              var maxAdjustorThunkIndex =
+  352                  metadata.genericMethodTables.Length == 0
+  353                      ? -1
+  354                      : metadata.genericMethodTables.Max(t => t.adjustorThunk);
+  355              LibLogger.InfoNewline(
+  356                  $"[DRIP-SANITIZE] max sane adjustorThunk = {maxAdjustorThunkIndex}");
+  357              var adjustorThunkPointers =
+  358                  _codeRegistration.genericAdjustorThunks != 0 &&
+  359                  maxAdjustorThunkIndex >= 0
+  360                      ? ReadNUintArrayAtVirtualAddress(
+  361                          _codeRegistration.genericAdjustorThunks,
+  362                          maxAdjustorThunkIndex + 1)
+  363                      : [];
+  364  '''
+  365  s = s[:start] + replacement + s[end:]
+  366  # Corrige também um edge case do código original:
+  367  # methodIndex == -1 não pode ser usado para indexar _genericMethodPointers.
+  368  old = """if (!_genericMethodDictionary.ContainsKey(methodDefIndex) && genericMethodPointerIndex < _genericMethodPointers.Length)"""
+  369  new = """if (!_genericMethodDictionary.ContainsKey(methodDefIndex) &&
+  370                      genericMethodPointerIndex >= 0 &&
+  371                      genericMethodPointerIndex < _genericMethodPointers.Length)"""
+  372  if old in s:
+  373      s = s.replace(old, new)
+  374  p.write_text(s)
+  375  print("Patch SANITIZE aplicado.")
+  376  PY
+  377  grep -n "DRIP-SANITIZE" LibCpp2IL/Il2CppBinary.cs
+  378  dotnet build Cpp2IL/Cpp2IL.csproj   -c Release   -f net10.0
+  379  cd /workspaces/dripnight-dumper
+  380  rm -rf output/sanitized
+  381  mkdir -p output/sanitized
+  382  dotnet tools/cpp2il-src/Cpp2IL/bin/Release/net10.0/Cpp2IL.dll   --force-binary-path "$PWD/input/libil2cpp.so"   --force-metadata-path "$PWD/input/global-metadata.dat"   --force-unity-version "2022.3.47f1"   --output-as dummydll   --output-to "$PWD/output/sanitized"   --low-memory-mode 2>&1 | tee cpp2il_sanitized.log
+  383  grep -a "DRIP-SANITIZE" cpp2il_sanitized.log
+  384  tail -n 80 cpp2il_sanitized.log
+  385  du -sh output/sanitized
+  386  find output/sanitized -type f | head -30
+  387  cd /workspaces/dripnight-dumper/tools/cpp2il-src
+  388  python3 - <<'PY'
+  389  from pathlib import Path
+  390  p = Path("LibCpp2IL/Il2CppBinary.cs")
+  391  s = p.read_text()
+  392  start_marker = "            var saneGenericMethodTables = metadata.genericMethodTables"
+  393  start = s.find(start_marker)
+  394  if start == -1:
+  395      raise SystemExit("ERRO: não encontrei o filtro SANITIZE atual.")
+  396  end = s.find("            LibLogger.InfoNewline(", start)
+  397  if end == -1:
+  398      raise SystemExit("ERRO: não encontrei o final do filtro.")
+  399  new = r'''            var badTableIndices = 0;
+  400              var badMethodDefinitions = 0;
+  401              var badClassGenericInsts = 0;
+  402              var badMethodGenericInsts = 0;
+  403              var saneGenericMethodTables = metadata.genericMethodTables
+  404                  .Where(t =>
+  405                  {
+  406                      // Primeiro nível: índices armazenados diretamente na
+  407                      // Il2CppGenericMethodFunctionsDefinitions.
+  408                      if (t.GenericMethodIndex < 0 ||
+  409                          t.GenericMethodIndex >= metadata.methodSpecs.Length ||
+  410                          t.methodIndex < -1 ||
+  411                          t.methodIndex >= _genericMethodPointers.Length ||
+  412                          t.invokerIndex < -1 ||
+  413                          t.invokerIndex >= (long)_codeRegistration.invokerPointersCount ||
+  414                          t.adjustorThunk < -1 ||
+  415                          t.adjustorThunk >= _genericMethodPointers.Length)
+  416                      {
+  417                          badTableIndices++;
+  418                          return false;
+  419                      }
+  420                      // Segundo nível: validar o MethodSpec apontado pela tabela.
+  421                      var spec = metadata.methodSpecs[t.GenericMethodIndex];
+  422                      if (spec.methodDefinitionIndex.IsNull ||
+  423                          spec.methodDefinitionIndex.Value < 0 ||
+  424                          spec.methodDefinitionIndex.Value >= metadata.MethodDefinitionCount)
+  425                      {
+  426                          badMethodDefinitions++;
+  427                          return false;
+  428                      }
+  429                      // Terceiro nível: GenericInsts usados pelo MethodSpec.
+  430                      if (!spec.classIndexIndex.IsNull &&
+  431                          (spec.classIndexIndex.Value < 0 ||
+  432                           spec.classIndexIndex.Value >= _genericInsts.Length))
+  433                      {
+  434                          badClassGenericInsts++;
+  435                          return false;
+  436                      }
+  437                      if (!spec.methodIndexIndex.IsNull &&
+  438                          (spec.methodIndexIndex.Value < 0 ||
+  439                           spec.methodIndexIndex.Value >= _genericInsts.Length))
+  440                      {
+  441                          badMethodGenericInsts++;
+  442                          return false;
+  443                      }
+  444                      return true;
+  445                  })
+  446                  .ToArray();
+  447              LibLogger.InfoNewline(
+  448                  $"[DRIP-SANITIZE] method definitions total = {metadata.MethodDefinitionCount}");
+  449              LibLogger.InfoNewline(
+  450                  $"[DRIP-SANITIZE] method specs total       = {metadata.methodSpecs.Length}");
+  451              LibLogger.InfoNewline(
+  452                  $"[DRIP-SANITIZE] generic insts total     = {_genericInsts.Length}");
+  453              LibLogger.InfoNewline(
+  454                  $"[DRIP-SANITIZE] bad table indices       = {badTableIndices}");
+  455              LibLogger.InfoNewline(
+  456                  $"[DRIP-SANITIZE] bad method definitions  = {badMethodDefinitions}");
+  457              LibLogger.InfoNewline(
+  458                  $"[DRIP-SANITIZE] bad class generic inst  = {badClassGenericInsts}");
+  459              LibLogger.InfoNewline(
+  460                  $"[DRIP-SANITIZE] bad method generic inst = {badMethodGenericInsts}");
+  461  '''
+  462  p.write_text(s[:start] + new + s[end:])
+  463  print("SANITIZE nível 2 aplicado.")
+  464  PY
+  465  grep -n "bad method definitions\|bad class generic\|bad method generic" LibCpp2IL/Il2CppBinary.cs
+  466  dotnet build Cpp2IL/Cpp2IL.csproj -c Release -f net10.0
+  467  cd /workspaces/dripnight-dumper
+  468  rm -rf output/sanitized2
+  469  mkdir -p output/sanitized2
+  470  dotnet tools/cpp2il-src/Cpp2IL/bin/Release/net10.0/Cpp2IL.dll   --force-binary-path "$PWD/input/libil2cpp.so"   --force-metadata-path "$PWD/input/global-metadata.dat"   --force-unity-version "2022.3.47f1"   --output-as dummydll   --output-to "$PWD/output/sanitized2"   --low-memory-mode 2>&1 | tee cpp2il_sanitized2.log
+  471  grep -a "DRIP-SANITIZE" cpp2il_sanitized2.log
+  472  tail -n 50 cpp2il_sanitized2.log
+  473  du -sh output/sanitized2
+  474  find output/sanitized2 -type f | head -30
+  475  clear
+  476  cd /workspaces/dripnight-dumper/tools/cpp2il-src
+  477  git show HEAD:LibCpp2IL/Il2CppBinary.cs > LibCpp2IL/Il2CppBinary.cs
+  478  grep -n "DRIP-DIAG\|DRIP-SANITIZE" LibCpp2IL/Il2CppBinary.cs || echo "Il2CppBinary restaurado ✅"
+  479  cp LibCpp2IL/LibCpp2IlContextBuilder.cs    LibCpp2IL/LibCpp2IlContextBuilder.cs.before-nomap
+  480  python3 - <<'PY'
+  481  from pathlib import Path
+  482  p = Path("LibCpp2IL/LibCpp2IlContextBuilder.cs")
+  483  s = p.read_text()
+  484  old = """DisableMethodPointerMapping = LibCpp2IlMain.Settings.DisableMethodPointerMapping,"""
+  485  new = """DisableMethodPointerMapping = true, // DRIP: metadata-only recovery mode"""
+  486  if old not in s:
+  487      raise SystemExit("ERRO: linha DisableMethodPointerMapping não encontrada.")
+  488  p.write_text(s.replace(old, new, 1))
+  489  print("Method pointer mapping desativado ✅")
+  490  PY
+  491  python3 - <<'PY'
+  492  from pathlib import Path
+  493  p = Path("LibCpp2IL/Il2CppBinary.cs")
+  494  s = p.read_text()
+  495  old = """        if (_genericMethodPointers.Length > 0)
+  496          {
+  497              LibLogger.Verbose("\\tReading generic methods...");"""
+  498  new = """        if (_genericMethodPointers.Length > 0 &&
+  499              !(_context?.Settings.DisableMethodPointerMapping ?? false))
+  500          {
+  501              LibLogger.Verbose("\\tReading generic methods...");"""
+  502  if old not in s:
+  503      raise SystemExit("ERRO: bloco de generic method mapping não encontrado.")
+  504  s = s.replace(old, new, 1)
+  505  old_else = """        else
+  506          {
+  507              LibLogger.WarnNewline("\\tNo generic method pointer data found, skipping generic mapping.");
+  508          }"""
+  509  new_else = """        else
+  510          {
+  511              if (_context?.Settings.DisableMethodPointerMapping ?? false)
+  512                  LibLogger.InfoNewline("\\t[DRIP-NOMAP] Generic native pointer mapping disabled.");
+  513              else
+  514                  LibLogger.WarnNewline("\\tNo generic method pointer data found, skipping generic mapping.");
+  515          }"""
+  516  if old_else not in s:
+  517      raise SystemExit("ERRO: bloco else não encontrado.")
+  518  p.write_text(s.replace(old_else, new_else, 1))
+  519  print("Generic pointer mapping desativado no modo NOMAP ✅")
+  520  PY
+  521  grep -n "DRIP-NOMAP\|DisableMethodPointerMapping"   LibCpp2IL/Il2CppBinary.cs   LibCpp2IL/LibCpp2IlContextBuilder.cs
+  522  cd /workspaces/dripnight-dumper
+  523  rm -rf output/nomap
+  524  mkdir -p output/nomap
+  525  dotnet tools/cpp2il-src/Cpp2IL/bin/Release/net10.0/Cpp2IL.dll   --force-binary-path "$PWD/input/libil2cpp.so"   --force-metadata-path "$PWD/input/global-metadata.dat"   --force-unity-version "2022.3.47f1"   --output-as dummydll   --output-to "$PWD/output/nomap"   --low-memory-mode 2>&1 | tee cpp2il_nomap.log
+  526  tail -n 60 cpp2il_nomap.log
+  527  du -sh output/nomap
+  528  find output/nomap -type f | head -40
+  529  @EvandroAndre ➜ /workspaces/dripnight-dumper (main) $ cd /workspaces/dripnight-dumper/tools/cpp2il-src
+  530  @EvandroAndre ➜ /workspaces/dripnight-dumper/tools/cpp2il-src (5fb2030) $ git show HEAD:LibCpp2IL/Il2CppBinary.cs > LibCpp2IL/Il2CppBinary.cs
+  531  @EvandroAndre ➜ /workspaces/dripnight-dumper/tools/cpp2il-src (5fb2030) $ grep -n "DRIP-DIAG\|DRIP-SANITIZE" LibCpp2IL/Il2CppBinary.cs || echo "Il2CppBinary restaurado ✅"
+  532  Il2CppBinary restaurado ✅
+  533  @EvandroAndre ➜ /workspaces/dripnight-dumper/tools/cpp2il-src (5fb2030) $ cp LibCpp2IL/LibCpp2IlContextBuilder.cs \
+  534  @EvandroAndre ➜ /workspaces/dripnight-dumper/tools/cpp2il-src (5fb2030) $ python3 - <<'PY'
+  535  from pathlib import Path
+  536  p = Path("LibCpp2IL/LibCpp2IlContextBuilder.cs")
+  537  s = p.read_text()
+  538  old = """DisableMethodPointerMapping = LibCpp2IlMain.Settings.DisableMethodPointerMapping,"""
+  539  new = """DisableMethodPointerMapping = true, // DRIP: metadata-only recovery mode"""
+  540  if old not in s:;     raise SystemExit("ERRO: linha DisableMethodPointerMapping não encontrada.")
+  541  p.write_text(s.replace(old, new, 1))
+  542  PYint("Method pointer mapping desativado ✅")
+  543  Method pointer mapping desativado ✅
+  544  @EvandroAndre ➜ /workspaces/dripnight-dumper/tools/cpp2il-src (5fb2030) $ python3 - <<'PY'
+  545  from pathlib import Path
+  546  p = Path("LibCpp2IL/Il2CppBinary.cs")
+  547  s = p.read_text()
+  548  old = """        if (_genericMethodPointers.Length > 0)
+  549          {
+  550              LibLogger.Verbose("\\tReading generic methods...");"""
+  551  new = """        if (_genericMethodPointers.Length > 0 &&
+  552              !(_context?.Settings.DisableMethodPointerMapping ?? false))
+  553          {
+  554              LibLogger.Verbose("\\tReading generic methods...");"""
+  555  if old not in s:; PYint("Generic pointer mapping desativado no modo NOMAP ✅")pointer data found, skipp
+  556  Generic pointer mapping desativado no modo NOMAP ✅
+  557  @EvandroAndre ➜ /workspaces/dripnight-dumper/tools/cpp2il-src (5fb2030) $ grep -n "DRIP-NOMAP\|DisableMethodPointerMapping" \
+  558  LibCpp2IL/Il2CppBinary.cs:308:            !(_context?.Settings.DisableMethodPointerMapping ?? false))
+  559  LibCpp2IL/Il2CppBinary.cs:340:            if (_context?.Settings.DisableMethodPointerMapping ?? false)
+  560  LibCpp2IL/Il2CppBinary.cs:341:                LibLogger.InfoNewline("\t[DRIP-NOMAP] Generic native pointer mapping disabled.");
+  561  LibCpp2IL/LibCpp2IlContextBuilder.cs:16:            DisableMethodPointerMapping = true, // DRIP: metadata-only recovery mode
+  562  @EvandroAndre ➜ /workspaces/dripnight-dumper/tools/cpp2il-src (5fb2030) $ cd /workspaces/dripnight-dumper
+  563  rm -rf output/nomap
+  564  mkdir -p output/nomap
+  565  dotnet tools/cpp2il-src/Cpp2IL/bin/Release/net10.0/Cpp2IL.dll   --force-binary-path "$PWD/input/libil2cpp.so"   --force-metadata-path "$PWD/input/global-metadata.dat"   --force-unity-version "2022.3.47f1"   --output-as dummydll   --output-to "$PWD/output/nomap"   --low-memory-mode 2>&1 | tee cpp2il_nomap.log
+  566  ===Cpp2IL by Samboy063===
+  567  A Tool to Reverse Unity's "il2cpp" Build Process.
+  568  Version 2022.1.0+5fb20304df698ffd3d0e664b2a698cd911dc9d57
+  569  [Info] [Program] Running on Unix
+  570  [Info] [Plugins] Loading plugins from /workspaces/dripnight-dumper/Plugins...
+  571  [Info] [Plugins] Using Plugin: Cpp2IL Built-In
+  572  [Warn] [Program] Using force options, I sure hope you know what you're doing!
+  573  [Info] [Library] Initializing Metadata...
+  574  [Info] [Library]        Using actual IL2CPP Metadata version 31.1
+  575  [Info] [Library] Initialized Metadata in 1710ms
+  576  [Info] [Library] Using binary type ELF (from LibCpp2IL)
+  577  [Fail] [Library]        Caught OverflowException processing symbols! Attempting to continue without symbol information (no exports, for example)...
+  578  [Info] [Library] Searching Binary for Required Data...
+  579  [Info] [Library] Got Binary codereg: 0xAB41858, metareg: 0xAD10B38 in 278ms.
+  580  [Info] [Library] Initializing Binary...
+  581  [Info] [Library] [DRIP-SANITIZE] method definitions total = 345746
+  582  [Info] [Library] [DRIP-SANITIZE] method specs total       = 161670
+  583  [Info] [Library] [DRIP-SANITIZE] generic insts total     = 22036
+  584  [Info] [Library] [DRIP-SANITIZE] bad table indices       = 21719
+  585  [Info] [Library] [DRIP-SANITIZE] bad method definitions  = 16345
+  586  [Info] [Library] [DRIP-SANITIZE] bad class generic inst  = 1
+  587  [Info] [Library] [DRIP-SANITIZE] bad method generic inst = 4
+  588  [Info] [Library] [DRIP-SANITIZE] generic tables original = 87844
+  589  [Info] [Library] [DRIP-SANITIZE] generic tables valid    = 49775
+  590  [Info] [Library] [DRIP-SANITIZE] generic tables skipped  = 38069
+  591  [Info] [Library] [DRIP-SANITIZE] max sane adjustorThunk = 15001
+  592  [Info] [Library] Initialized Binary in 291ms
+  593  [Info] [Library] Mapping pointers to Il2CppMethodDefinitions...
+  594  Cpp2IL.Core.Exceptions.LibCpp2ILInitializationException: Fatal Exception initializing LibCpp2IL!
+  595  Waiting for you to preclear
+  596  clear
+  597  cd /workspaces/dripnight-dumper/tools/cpp2il-src
+  598  dotnet clean Cpp2IL/Cpp2IL.csproj -c Release -f net10.0
+  599  dotnet build Cpp2IL/Cpp2IL.csproj -c Release -f net10.0
+  600  strings -el LibCpp2IL/bin/Release/net10.0/LibCpp2IL.dll | grep -E "DRIP-NOMAP|Generic native pointer mapping"
+  601  strings LibCpp2IL/bin/Release/net10.0/LibCpp2IL.dll | grep -E "DRIP-NOMAP|Generic native pointer mapping"
+  602  cd /workspaces/dripnight-dumper
+  603  rm -rf output/nomap2
+  604  mkdir -p output/nomap2
+  605  dotnet tools/cpp2il-src/Cpp2IL/bin/Release/net10.0/Cpp2IL.dll   --force-binary-path "$PWD/input/libil2cpp.so"   --force-metadata-path "$PWD/input/global-metadata.dat"   --force-unity-version "2022.3.47f1"   --output-as dummydll   --output-to "$PWD/output/nomap2"   --low-memory-mode 2>&1 | tee cpp2il_nomap2.log
+  606  grep -aE "DRIP-NOMAP|DRIP-SANITIZE|Mapping pointers|Initialized Binary|Writing|Output|Exception|Fail" cpp2il_nomap2.log
+  607  du -sh output/nomap2
+  608  find output/nomap2 -type f | head -40
+  609  clear
+  610  cd /workspaces/dripnight-dumper/tools/cpp2il-src
+  611  cp LibCpp2IL/Il2CppBinary.cs    LibCpp2IL/Il2CppBinary.cs.before-safe-cgm
+  612  python3 - <<'PY'
+  613  from pathlib import Path
+  614  p = Path("LibCpp2IL/Il2CppBinary.cs")
+  615  s = p.read_text()
+  616  old = """public Il2CppCodeGenModule? GetCodegenModuleByName(string name) => _codeGenModulesByName[name];"""
+  617  new = """public Il2CppCodeGenModule? GetCodegenModuleByName(string name) =>
+  618          _codeGenModulesByName.TryGetValue(name, out var module) ? module : null;"""
+  619  if old not in s:
+  620      raise SystemExit("ERRO: GetCodegenModuleByName esperado não encontrado.")
+  621  p.write_text(s.replace(old, new, 1))
+  622  print("Lookup seguro de CodeGenModule aplicado ✅")
+  623  PY
+  624  grep -n -A2 "GetCodegenModuleByName" LibCpp2IL/Il2CppBinary.cs
+  625  dotnet clean Cpp2IL/Cpp2IL.csproj -c Release -f net10.0
+  626  dotnet build Cpp2IL/Cpp2IL.csproj -c Release -f net10.0
+  627  cd /workspaces/dripnight-dumper
+  628  rm -rf output/nomap3
+  629  mkdir -p output/nomap3
+  630  dotnet tools/cpp2il-src/Cpp2IL/bin/Release/net10.0/Cpp2IL.dll   --force-binary-path "$PWD/input/libil2cpp.so"   --force-metadata-path "$PWD/input/global-metadata.dat"   --force-unity-version "2022.3.47f1"   --output-as dummydll   --output-to "$PWD/output/nomap3"   --low-memory-mode 2>&1 | tee cpp2il_nomap3.log
+  631  grep -aE "DRIP-NOMAP|Creating application model|Outputting|Writing|Saving|Completed|Exception|Fail" cpp2il_nomap3.log
+  632  tail -n 60 cpp2il_nomap3.log
+  633  du -sh output/nomap3
+  634  find output/nomap3 -type f | head -40
+  635  clear
+  636  cd /workspaces/dripnight-dumper/tools/cpp2il-src
+  637  cp LibCpp2IL/Il2CppBinary.cs    LibCpp2IL/Il2CppBinary.cs.before-nomap-methodptr
+  638  python3 - <<'PY'
+  639  from pathlib import Path
+  640  p = Path("LibCpp2IL/Il2CppBinary.cs")
+  641  s = p.read_text()
+  642  old = """    public ulong GetMethodPointer(int methodIndex, Il2CppVariableWidthIndex<Il2CppMethodDefinition> methodDefinitionIndex, int imageIndex, uint methodToken)
+  643      {
+  644          if (MetadataVersion >= 24.2f)
+  645  """
+  646  new = """    public ulong GetMethodPointer(int methodIndex, Il2CppVariableWidthIndex<Il2CppMethodDefinition> methodDefinitionIndex, int imageIndex, uint methodToken)
+  647      {
+  648          // DRIP metadata-only recovery:
+  649          // Native method pointers are intentionally unavailable/untrusted.
+  650          if (_context?.Settings.DisableMethodPointerMapping ?? false)
+  651              return 0;
+  652          if (MetadataVersion >= 24.2f)
+  653  """
+  654  if old not in s:
+  655      raise SystemExit("ERRO: GetMethodPointer esperado não encontrado.")
+  656  p.write_text(s.replace(old, new, 1))
+  657  print("GetMethodPointer protegido pelo modo NOMAP ✅")
+  658  PY
+  659  grep -n -A10 "public ulong GetMethodPointer" LibCpp2IL/Il2CppBinary.cs
+  660  if (_context?.Settings.DisableMethodPointerMapping ?? false);     return 0; dotnet clean Cpp2IL/Cpp2IL.csproj -c Release -f net10.0; dotnet build Cpp2IL/Cpp2IL.csproj -c Release -f net10.0; clear; dotnet clean Cpp2IL/Cpp2IL.csproj -c Release -f net10.0; dotnet build Cpp2IL/Cpp2IL.csproj -c Release -f net10.0dotnet clean Cpp2IL/Cpp2IL.csproj -c Release -f net10.0; dotnet build Cpp2IL/Cpp2IL.csproj -c Release -f net10.0
+  661  cd /workspaces/dripnight-dumper/tools/cpp2il-src
+  662  cp LibCpp2IL/Il2CppBinary.cs    LibCpp2IL/Il2CppBinary.cs.before-nomap-methodptr
+  663  python3 - <<'PY'
+  664  from pathlib import Path
+  665  p = Path("LibCpp2IL/Il2CppBinary.cs")
+  666  s = p.read_text()
+  667  old = """    public ulong GetMethodPointer(int methodIndex, Il2CppVariableWidthIndex<Il2CppMethodDefinition> methodDefinitionIndex, int imageIndex, uint methodToken)
+  668      {
+  669          if (MetadataVersion >= 24.2f)
+  670  """
+  671  new = """    public ulong GetMethodPointer(int methodIndex, Il2CppVariableWidthIndex<Il2CppMethodDefinition> methodDefinitionIndex, int imageIndex, uint methodToken)
+  672      {
+  673          // DRIP metadata-only recovery:
+  674          // Native method pointers are intentionally unavailable/untrusted.
+  675          if (_context?.Settings.DisableMethodPointerMapping ?? false)
+  676              return 0;
+  677          if (MetadataVersion >= 24.2f)
+  678  """
+  679  if old not in s:
+  680      raise SystemExit("ERRO: GetMethodPointer esperado não encontrado.")
+  681  p.write_text(s.replace(old, new, 1))
+  682  print("GetMethodPointer protegido pelo modo NOMAP ✅")
+  683  PY
+  684  grep -n -A10 "public ulong GetMethodPointer" LibCpp2IL/Il2CppBinary.cs
+  685  dotnet clean Cpp2IL/Cpp2IL.csproj -c Release -f net10.0
+  686  dotnet build Cpp2IL/Cpp2IL.csproj -c Release -f net10.0
+  687  cd /workspaces/dripnight-dumper
+  688  rm -rf output/nomap4
+  689  mkdir -p output/nomap4
+  690  dotnet tools/cpp2il-src/Cpp2IL/bin/Release/net10.0/Cpp2IL.dll   --force-binary-path "$PWD/input/libil2cpp.so"   --force-metadata-path "$PWD/input/global-metadata.dat"   --force-unity-version "2022.3.47f1"   --output-as dummydll   --output-to "$PWD/output/nomap4"   --low-memory-mode 2>&1 | tee cpp2il_nomap4.log
+  691  grep -aE "DRIP-NOMAP|Creating application model|Processing|Outputting|Writing|Completed|Exception|Fail" cpp2il_nomap4.log
+  692  tail -n 60 cpp2il_nomap4.log
+  693  du -sh output/nomap4
+  694  find output/nomap4 -type f | head -40
+  695  clear
+  696  cd /workspaces/dripnight-dumper/tools/cpp2il-src
+  697  cp Cpp2IL.Core/OutputFormats/AsmResolverDllOutputFormat.cs    Cpp2IL.Core/OutputFormats/AsmResolverDllOutputFormat.cs.before-invalid-size
+  698  python3 - <<'PY'
+  699  from pathlib import Path
+  700  p = Path("Cpp2IL.Core/OutputFormats/AsmResolverDllOutputFormat.cs")
+  701  s = p.read_text()
+  702  old = '''            if (il2CppDefinition.Size > 1 << 30)
+  703                  throw new Exception($"Got invalid size for type {il2CppDefinition}: {il2CppDefinition.RawSizes}");
+  704              if (il2CppDefinition.Size != -1)
+  705                  classSize = (uint)il2CppDefinition.Size;
+  706  '''
+  707  new = '''            // DRIP metadata-only recovery:
+  708              // Corrupted/protected size information must not prevent
+  709              // generation of otherwise usable dummy assemblies.
+  710              if (il2CppDefinition.Size < -1 || il2CppDefinition.Size > 1 << 30)
+  711                  return;
+  712              if (il2CppDefinition.Size != -1)
+  713                  classSize = (uint)il2CppDefinition.Size;
+  714  '''
+  715  if old not in s:
+  716      raise SystemExit("ERRO: bloco de validação de tamanho não encontrado.")
+  717  p.write_text(s.replace(old, new, 1))
+  718  print("Proteção contra TypeDefinition.Size inválido aplicada ✅")
+  719  PY
+  720  grep -n -A12 "DRIP metadata-only recovery" Cpp2IL.Core/OutputFormats/AsmResolverDllOutputFormat.cs
+  721  dotnet clean Cpp2IL/Cpp2IL.csproj -c Release -f net10.0
+  722  dotnet build Cpp2IL/Cpp2IL.csproj -c Release -f net10.0
+  723  cd /workspaces/dripnight-dumper
+  724  rm -rf output/nomap5
+  725  mkdir -p output/nomap5
+  726  dotnet tools/cpp2il-src/Cpp2IL/bin/Release/net10.0/Cpp2IL.dll   --force-binary-path "$PWD/input/libil2cpp.so"   --force-metadata-path "$PWD/input/global-metadata.dat"   --force-unity-version "2022.3.47f1"   --output-as dummydll   --output-to "$PWD/output/nomap5"   --low-memory-mode 2>&1 | tee cpp2il_nomap5.log
+  727  tail -n 70 cpp2il_nomap5.log
+  728  du -sh output/nomap5
+  729  find output/nomap5 -type f | head -50
+  730  find output/nomap5 -type f -iname "*.dll" | wc -l
+  731  cd /workspaces/dripnight-dumper/tools/cpp2il-src
+  732  python3 - <<'PY'
+  733  from pathlib import Path
+  734  import re
+  735  p = Path("Cpp2IL.Core/OutputFormats/AsmResolverDllOutputFormat.cs")
+  736  s = p.read_text()
+  737  pattern = re.compile(
+  738      r'''(?P<indent>[ \t]*)if \(il2CppDefinition\.Size > 1 << 30\)\s*
+  739  (?P=indent)[ \t]+throw new Exception\(\$"Got invalid size for type \{il2CppDefinition\}: \{il2CppDefinition\.RawSizes\}"\);\s*
+  740  (?P=indent)if \(il2CppDefinition\.Size != -1\)\s*
+  741  (?P=indent)[ \t]+classSize = \(uint\)il2CppDefinition\.Size;\s*
+  742  (?P=indent)else\s*
+  743  (?P=indent)[ \t]+classSize = 0; //Not sure what this value actually implies but it seems to work'''
+  744  )
+  745  replacement = '''            if (il2CppDefinition.Size < -1 || il2CppDefinition.Size > 1 << 30)
+  746              {
+  747                  // DRIP metadata-only recovery:
+  748                  // Ignore corrupted class-size data but preserve any valid packing information.
+  749                  classSize = 0;
+  750              }
+  751              else if (il2CppDefinition.Size != -1)
+  752                  classSize = (uint)il2CppDefinition.Size;
+  753              else
+  754                  classSize = 0; //Unknown/default size
+  755  '''
+  756  new_s, count = pattern.subn(replacement, s, count=1)
+  757  if count != 1:
+  758      raise SystemExit(f"ERRO: substituições realizadas = {count}. Não alterei o arquivo.")
+  759  p.write_text(new_s)
+  760  print("Patch de tamanho inválido aplicado ✅")
+  761  PY
+  762  clear
+  763  cd /workspaces/dripnight-dumper/tools/cpp2il-src
+  764  python3 - <<'PY'
+  765  from pathlib import Path
+  766  import re
+  767  p = Path("Cpp2IL.Core/OutputFormats/AsmResolverDllOutputFormat.cs")
+  768  s = p.read_text()
+  769  pattern = re.compile(
+  770      r'''(?P<indent>[ \t]*)if \(il2CppDefinition\.Size > 1 << 30\)\s*
+  771  (?P=indent)[ \t]+throw new Exception\(\$"Got invalid size for type \{il2CppDefinition\}: \{il2CppDefinition\.RawSizes\}"\);\s*
+  772  (?P=indent)if \(il2CppDefinition\.Size != -1\)\s*
+  773  (?P=indent)[ \t]+classSize = \(uint\)il2CppDefinition\.Size;\s*
+  774  (?P=indent)else\s*
+  775  (?P=indent)[ \t]+classSize = 0; //Not sure what this value actually implies but it seems to work'''
+  776  )
+  777  replacement = '''            if (il2CppDefinition.Size < -1 || il2CppDefinition.Size > 1 << 30)
+  778              {
+  779                  // DRIP metadata-only recovery:
+  780                  // Ignore corrupted class-size data but preserve any valid packing information.
+  781                  classSize = 0;
+  782              }
+  783              else if (il2CppDefinition.Size != -1)
+  784                  classSize = (uint)il2CppDefinition.Size;
+  785              else
+  786                  classSize = 0; //Unknown/default size
+  787  '''
+  788  new_s, count = pattern.subn(replacement, s, count=1)
+  789  if count != 1:
+  790      raise SystemExit(f"ERRO: substituições realizadas = {count}. Não alterei o arquivo.")
+  791  p.write_text(new_s)
+  792  print("Patch de tamanho inválido aplicado ✅")
+  793  PY
+  794  nl -ba Cpp2IL.Core/OutputFormats/AsmResolverDllOutputFormat.cs | sed -n '285,315p'
+  795  grep -n "DRIP metadata-only recovery" Cpp2IL.Core/OutputFormats/AsmResolverDllOutputFormat.cs
+  796  grep -n "DRIP metadata-only recovery" Cpp2IL.Core/OutputFormats/AsmResolverDllOutputFormat.cs
+  797  dotnet clean Cpp2IL/Cpp2IL.csproj -c Release -f net10.0
+  798  dotnet build Cpp2IL/Cpp2IL.csproj -c Release -f net10.0
+  799  cd /workspaces/dripnight-dumper
+  800  rm -rf output/nomap6
+  801  mkdir -p output/nomap6
+  802  dotnet tools/cpp2il-src/Cpp2IL/bin/Release/net10.0/Cpp2IL.dll   --force-binary-path "$PWD/input/libil2cpp.so"   --force-metadata-path "$PWD/input/global-metadata.dat"   --force-unity-version "2022.3.47f1"   --output-as dummydll   --output-to "$PWD/output/nomap6"   --low-memory-mode 2>&1 | tee cpp2il_nomap6.log
+  803  tail -n 60 cpp2il_nomap6.log
+  804  du -sh output/nomap6
+  805  find output/nomap6 -type f -iname "*.dll" | wc -l
+  806  find output/nomap6 -type f | head -40
+  807  clear
+  808  cd /workspaces/dripnight-dumper
+  809  ls -lh   output/nomap6/Assembly-CSharp.dll   output/nomap6/Assembly-CSharp-firstpass.dll   output/nomap6/mscorlib.dll
+  810  file output/nomap6/Assembly-CSharp.dll
+  811  sha256sum output/nomap6/Assembly-CSharp.dll
+  812  strings -el output/nomap6/Assembly-CSharp.dll | grep -E "Player|Weapon|Character|Camera|Damage|Game" | head -80
+  813  strings -el output/nomap6/Assembly-CSharp.dll | grep -E "Player|Weapon|Character|Camera|Damage|Game" | head -80
+  814  clear
+  815  cd /workspaces/dripnight-dumper
+  816  dotnet tool install --global ilspycmd
+  817  dotnet tool update --global ilspycmd
+  818  ilspycmd --version
+  819  rm -rf output/csharp-decompiled
+  820  mkdir -p output/csharp-decompiled
+  821  ilspycmd   -p   -o output/csharp-decompiled   output/nomap6/Assembly-CSharp.dll
+  822  cd /workspaces/dripnight-dumper
+  823  dotnet tool install --global ilspycmd
+  824  du -sh output/csharp-decompiled
+  825  find output/csharp-decompiled -type f | wc -l
+  826  find output/csharp-decompiled -type f | head -40
+  827  grep -RIl   -E "class Player|class Weapon|enum DamageType|class BasicCamera|class PlayerBehavior"   output/csharp-decompiled | head -50
+  828  grep -RIl "class Player" output/csharp-decompiled | head -20
+  829  cd /workspaces/dripnight-dumper
+  830  sed -n '1,240p' 'output/csharp-decompiled/COW.GamePlay/Player.cs'
+  831  grep -nE '^[[:space:]]*(public|private|protected|internal|static|virtual|override|abstract|sealed|readonly|const).*[;(={]' 'output/csharp-decompiled/COW.GamePlay/Player.cs' | head -150
+  832  wc -l 'output/csharp-decompiled/COW.GamePlay/Player.cs'
+  833  clear
+  834  cd /workspaces/dripnight-dumper
+  835  sed -n '1,240p' 'output/csharp-decompiled/COW.GamePlay/Player.cs'
+  836  grep -nE '^[[:space:]]*(public|private|protected|internal|static|virtual|override|abstract|sealed|readonly|const).*[;(={]' 'output/csharp-decompiled/COW.GamePlay/Player.cs' | head -150
+  837  wc -l 'output/csharp-decompiled/COW.GamePlay/Player.cs'
+  838  cd /workspaces/dripnight-dumper
+  839  python3 - <<'PY'
+from pathlib import Path
+import re
+
+p = Path("output/csharp-decompiled/COW.GamePlay/Player.cs")
+lines = p.read_text(errors="replace").splitlines()
+
+class_line = None
+for i, line in enumerate(lines):
+    if re.search(r'\bclass\s+Player\b', line):
+        class_line = i
+        break
+
+if class_line is None:
+    raise SystemExit("class Player não encontrada")
+
+depth = 0
+started = False
+members = []
+
+for i in range(class_line, len(lines)):
+    line = lines[i]
+
+    opens = line.count("{")
+    closes = line.count("}")
+
+    if not started:
+        if opens:
+            started = True
+            depth += opens - closes
+        continue
+
+    # depth 1 = membro direto de Player
+    stripped = line.strip()
+
+    if depth == 1 and stripped:
+        if re.match(
+            r'(public|private|protected|internal|static|virtual|override|'
+            r'abstract|sealed|readonly|const|event)\b',
+            stripped
+        ):
+            members.append((i + 1, stripped))
+
+    depth += opens - closes
+
+    if started and depth <= 0:
+        break
+
+print("=== MEMBROS DIRETOS DE Player ===")
+print("Total:", len(members))
+print()
+
+for ln, text in members[:300]:
+    print(f"{ln:6}: {text}")
+PY
+
+  840  find output/csharp-decompiled -type f   \( -name 'PlayerAttributes.cs'      -o -name 'PlayerControl.cs'      -o -name 'PlayerNetwork.cs'      -o -name 'AttackableEntity.cs'      -o -name 'Weapon.cs' \)   -print
+  841  wc -l   output/csharp-decompiled/COW.GamePlay/Player.cs   output/csharp-decompiled/COW.GamePlay/PlayerAttributes.cs   output/csharp-decompiled/COW.GamePlay/PlayerControl.cs   output/csharp-decompiled/COW.GamePlay/PlayerNetwork.cs   output/csharp-decompiled/COW.GamePlay/AttackableEntity.cs   output/csharp-decompiled/COW.GamePlay/Weapon.cs 2>/dev/null
+  842  clear
+  843  cd /workspaces/dripnight-dumper
+  844  echo "=== HEADERS PRINCIPAIS ==="
+  845  for f in   "output/csharp-decompiled/COW.GamePlay/PlayerAttributes.cs"   "output/csharp-decompiled/COW.GamePlay/PlayerNetwork.cs"   "output/csharp-decompiled/COW.GamePlay/PlayerControl.cs"   "output/csharp-decompiled/COW.GamePlay/AttackableEntity.cs"; do     echo;     echo "===== $f =====";     grep -nE '^(public|internal|protected|private|abstract|sealed|static).*(class|struct|interface|enum) ' "$f" | head -20; done
+  846  grep -RInE '^(public|internal|protected|private|abstract|sealed|static).*(class|struct)[[:space:]]+Weapon([[:space:]:{<]|$)' output/csharp-decompiled | head -30
+  847  grep -RInE '\bclass[[:space:]]+Weapon\b' output/csharp-decompiled | head -30
+  848  sed -n '1,500p' 'output/csharp-decompiled/COW.GamePlay/PlayerAttributes.cs'
+  849  clear
+  850  cd /workspaces/dripnight-dumper
+  851  grep -nE '\bPlayerAttributes\b' 'output/csharp-decompiled/COW.GamePlay/Player.cs' | head -80
+  852  python3 - <<'PY'
+from pathlib import Path
+import re
+
+p = Path("output/csharp-decompiled/COW.GamePlay/PlayerAttributes.cs")
+lines = p.read_text(errors="replace").splitlines()
+
+class_line = next(
+    (i for i, line in enumerate(lines)
+     if re.search(r'\bclass\s+PlayerAttributes\b', line)),
+    None
+)
+
+if class_line is None:
+    raise SystemExit("PlayerAttributes não encontrada.")
+
+depth = 0
+started = False
+members = []
+
+for i in range(class_line, len(lines)):
+    line = lines[i]
+    stripped = line.strip()
+
+    if not started:
+        depth += line.count("{") - line.count("}")
+        if "{" in line:
+            started = True
+        continue
+
+    if depth == 1 and stripped:
+        if re.match(
+            r'(public|private|protected|internal|static|virtual|override|'
+            r'abstract|sealed|readonly|const|event)\b',
+            stripped
+        ):
+            members.append((i + 1, stripped))
+
+    depth += line.count("{") - line.count("}")
+
+    if depth <= 0:
+        break
+
+print("=== PlayerAttributes: membros diretos ===")
+print("Total:", len(members))
+print()
+
+for ln, text in members[:400]:
+    print(f"{ln:5}: {text}")
+PY
+
+  853  grep -RInE '\b(class|struct|interface|enum)[[:space:]]+Weapon\b' output/csharp-decompiled | head -50
+  854  grep -RInE '^(public|internal|private|protected).*(class|struct|interface|enum)[[:space:]][A-Za-z0-9_]*Weapon[A-Za-z0-9_]*' output/csharp-decompiled/COW.GamePlay | head -100
+  855  clear
+  856  cd /workspaces/dripnight-dumper
+  857  grep -RInE '\b(class|struct|interface|enum)[[:space:]]+FDAEPHMIEPC\b' output/csharp-decompiled | head -30
+  858  grep -RIn '\bFDAEPHMIEPC\b' output/csharp-decompiled/COW.GamePlay | head -100
+  859  grep -RInE '\bDBENAPILEBC\b' output/csharp-decompiled | head -100
+  860  sed -n '1,220p' 'output/csharp-decompiled/COW.GamePlay/AttackableEntity.cs'
+  861  grep -RInE '\b(enum|class|struct)[[:space:]]+[A-Za-z0-9_]*Damage[A-Za-z0-9_]*\b' output/csharp-decompiled/COW.GamePlay | head -100
+  862  clear
+  863  cd /workspaces/dripnight-dumper
+  864  wc -l 'output/csharp-decompiled/COW.GamePlay/FDAEPHMIEPC.cs'
+  865  sed -n '1,500p' 'output/csharp-decompiled/COW.GamePlay/FDAEPHMIEPC.cs'
+  866  grep -nE '^[[:space:]]*(public|private|protected|internal).*(enum|class|struct|interface|delegate)[[:space:]]' 'output/csharp-decompiled/COW.GamePlay/FDAEPHMIEPC.cs' | head -150
+  867  grep -n -A120 -B10 'enum DBENAPILEBC' 'output/csharp-decompiled/COW.GamePlay/FDAEPHMIEPC.cs'
+  868  grep -nEi 'fire|shoot|reload|ammo|bullet|damage|scatter|recoil|range|weapon|aim|scope|clip|projectile|grenade|melee' 'output/csharp-decompiled/COW.GamePlay/FDAEPHMIEPC.cs' | head -250
+  869  grep -RInE '\b(class|struct)[[:space:]]+GLLLEDKLLDA\b' output/csharp-decompiled | head -20
+  870  sed -n '1,400p' 'output/csharp-decompiled/COW.GamePlay/GLLLEDKLLDA.cs'
+  871  clear
+  872  cd /workspaces/dripnight-dumper
+  873  python3 - <<'PY'
+from pathlib import Path
+import re
+
+root = Path("output/csharp-decompiled/COW.GamePlay")
+
+results = []
+
+for p in root.glob("*.cs"):
+    text = p.read_text(errors="replace")
+
+    m = re.search(
+        r'(?m)^(?:public|internal|private|protected)?\s*'
+        r'(?:abstract\s+|sealed\s+)?class\s+([A-Za-z0-9_]+)'
+        r'\s*:\s*([^{\n]+)',
+        text
+    )
+
+    if not m:
+        continue
+
+    cls = m.group(1)
+    bases = m.group(2).strip()
+
+    if re.search(r'\bFDAEPHMIEPC\b', bases):
+        # Somente metadata estrutural confiável:
+        readable = sorted(set(re.findall(
+            r'\b(?:Weapon|Fire|Shoot|Reload|Ammo|Bullet|Grenade|'
+            r'Melee|Aim|Sight|Scope|Projectile|Charge|Throw|'
+            r'Sniper|ShotGun|Rifle|Damage)[A-Za-z0-9_]*\b',
+            text,
+            flags=re.I
+        )))
+
+        results.append((cls, bases, readable[:15], p.name))
+
+print("=== SUBCLASSES DIRETAS DE FDAEPHMIEPC ===")
+print("Total:", len(results))
+print()
+
+for cls, bases, readable, file in sorted(results):
+    print(f"{cls:20} <- {bases}")
+    print(f"  arquivo: {file}")
+    if readable:
+        print("  pistas :", ", ".join(readable))
+    print()
+PY
+
+  874  grep -nE '^[[:space:]]*(public|protected).*(Weapon|Fire|Shoot|Reload|Ammo|Bullet|Damage|Scatter|Recoil|Range|Aim|Sight|Scope|Clip|Projectile|Grenade|Melee)' 'output/csharp-decompiled/COW.GamePlay/FDAEPHMIEPC.cs' | head -250
+  875  grep -RInE '\b(enum|class|struct)[[:space:]]+(LLEDPGIGCMO|CECJMLEEPLG)\b' output/csharp-decompiled | head -30
+  876  sed -n '1,260p' output/csharp-decompiled/COW.GamePlay/LLEDPGIGCMO.cs 2>/dev/null
+  877  sed -n '1,260p' output/csharp-decompiled/COW.GamePlay/CECJMLEEPLG.cs 2>/dev/null
+  878  clear
+  879  cd /workspaces/dripnight-dumper
+  880  wc -l 'output/csharp-decompiled/COW.GamePlay/AGACNOCEEFP.cs'
+  881  sed -n '1,500p' 'output/csharp-decompiled/COW.GamePlay/AGACNOCEEFP.cs'
+  882  grep -nEi 'weapon|damage|range|fire|shoot|reload|ammo|clip|scatter|recoil|aim|scope|bullet|projectile|speed|armor|penetr|head|body' 'output/csharp-decompiled/COW.GamePlay/AGACNOCEEFP.cs' | head -250
+  883  grep -n 'GLLLEDKLLDA' 'output/csharp-decompiled/COW.GamePlay/Player.cs' | head -100
+  884  grep -RInE '\b(enum|class|struct|interface)[[:space:]]+KOBBCCENPBG\b' output/csharp-decompiled | head -20
+  885  sed -n '1,300p' 'output/csharp-decompiled/COW.GamePlay/KOBBCCENPBG.cs'
+  886  clear
+  887  cd /workspaces/dripnight-dumper
+  888  grep -n -A8 -B8 'KOBBCCENPBG' 'output/csharp-decompiled/COW.GamePlay/PlayerAttributes.cs'
+  889  grep -RIn '\bKOBBCCENPBG\b' output/csharp-decompiled/COW.GamePlay | head -200
+  890  for t in LOAEBBHPMEK BOBNJPOLFKF GPKIJNDCLPD EECMIDPHCKN; do     echo;     echo "=== $t ===";     grep -RInE     "\b(enum|class|struct|interface)[[:space:]]+$t\b"     output/csharp-decompiled     | head -10; done
+  891  clear
+  892  cd /workspaces/dripnight-dumper
+  893  for f in   LOAEBBHPMEK   BOBNJPOLFKF   GPKIJNDCLPD   EECMIDPHCKN; do     echo;     echo "================ $f ================";     wc -l "output/csharp-decompiled/COW.GamePlay/$f.cs";     sed -n '1,320p' "output/csharp-decompiled/COW.GamePlay/$f.cs"; done
+  894  grep -nEi 'damage|armor|head|body|limb|weapon|hit|skill|buff|reduce|increase|scale|ratio|hp|ep|attack|critical|penetr' output/csharp-decompiled/COW.GamePlay/{LOAEBBHPMEK,BOBNJPOLFKF,GPKIJNDCLPD,EECMIDPHCKN}.cs | head -300
+  895  grep -RIn '\bBOBNJPOLFKF\b' output/csharp-decompiled/COW.GamePlay | head -150
+  896  clear
+  897  cd /workspaces/dripnight-dumper
+  898  python3 - <<'PY'
+from pathlib import Path
+import re, csv
+
+root = Path("output/csharp-decompiled")
+out_csv = Path("output/architecture-index.csv")
+out_md  = Path("output/architecture-summary.md")
+
+rows = []
+
+type_re = re.compile(
+    r'(?m)^(public|internal|private|protected)?\s*'
+    r'(abstract\s+|sealed\s+|static\s+)?'
+    r'(class|struct|interface|enum)\s+([A-Za-z0-9_]+)'
+    r'(?:\s*:\s*([^{\n]+))?'
+)
+
+for p in root.rglob("*.cs"):
+    text = p.read_text(errors="replace")
+
+    ns = ""
+    mns = re.search(r'(?m)^namespace\s+([^;{]+)', text)
+    if mns:
+        ns = mns.group(1).strip()
+
+    mt = type_re.search(text)
+    if not mt:
+        continue
+
+    kind = mt.group(3)
+    name = mt.group(4)
+    bases = (mt.group(5) or "").strip()
+
+    methods = len(re.findall(
+        r'(?m)^[ \t]+(?:public|private|protected|internal)\s+'
+        r'(?:static\s+|virtual\s+|override\s+|abstract\s+|sealed\s+|async\s+)*'
+        r'[\w<>\[\],.?]+\s+[A-Za-z0-9_]+\s*\(',
+        text
+    ))
+
+    fields = len(re.findall(
+        r'(?m)^[ \t]+(?:public|private|protected|internal)\s+'
+        r'(?:static\s+|readonly\s+|const\s+)*'
+        r'[\w<>\[\],.?]+\s+[A-Za-z0-9_]+\s*;',
+        text
+    ))
+
+    refs = []
+    for core in [
+        "Player",
+        "PlayerAttributes",
+        "PlayerNetwork",
+        "FDAEPHMIEPC",
+        "GLLLEDKLLDA",
+        "KOBBCCENPBG",
+        "LLEDPGIGCMO",
+        "EECMIDPHCKN"
+    ]:
+        if re.search(rf'\b{re.escape(core)}\b', text):
+            refs.append(core)
+
+    flags = []
+    for token in [
+        "TakeDamage",
+        "TakeHealing",
+        "GetWeaponOnHand",
+        "StartFiring",
+        "StopFire",
+        "GetDamageScale",
+        "AddDamageScale"
+    ]:
+        if token in text:
+            flags.append(token)
+
+    rows.append({
+        "namespace": ns,
+        "type": name,
+        "kind": kind,
+        "bases": bases,
+        "methods": methods,
+        "fields": fields,
+        "references": ",".join(refs),
+        "flags": ",".join(flags),
+        "file": str(p.relative_to(root))
+    })
+
+rows.sort(key=lambda x: (x["namespace"], x["type"]))
+
+with out_csv.open("w", newline="") as f:
+    w = csv.DictWriter(f, fieldnames=rows[0].keys())
+    w.writeheader()
+    w.writerows(rows)
+
+important = sorted(
+    rows,
+    key=lambda x: (len(x["references"].split(",")) if x["references"] else 0,
+                   x["methods"] + x["fields"]),
+    reverse=True
+)
+
+with out_md.open("w") as f:
+    f.write("# Architecture Index\n\n")
+    f.write(f"Total de tipos: {len(rows)}\n\n")
+    f.write("## Tipos mais conectados aos sistemas principais\n\n")
+    f.write("| Tipo | Namespace | Base | Métodos | Campos | Referências |\n")
+    f.write("|---|---|---|---:|---:|---|\n")
+
+    for r in important[:150]:
+        f.write(
+            f"| {r['type']} | {r['namespace']} | "
+            f"{r['bases'].replace('|','/')} | "
+            f"{r['methods']} | {r['fields']} | "
+            f"{r['references']} |\n"
+        )
+
+print("Índice criado ✅")
+print("Tipos indexados:", len(rows))
+print(out_csv)
+print(out_md)
+PY
+
+  899  wc -l output/architecture-index.csv
+  900  ls -lh output/architecture-index.csv output/architecture-summary.md
+  901  python3 - <<'PY'
+import csv
+
+rows = list(csv.DictReader(open("output/architecture-index.csv")))
+
+cores = {
+    "Player",
+    "PlayerAttributes",
+    "PlayerNetwork",
+    "FDAEPHMIEPC",
+    "GLLLEDKLLDA",
+    "KOBBCCENPBG",
+    "LLEDPGIGCMO",
+    "EECMIDPHCKN",
+}
+
+def score(r):
+    refs = set(filter(None, r["references"].split(",")))
+    return (
+        len(refs & cores) * 1000
+        + int(r["methods"])
+        + int(r["fields"])
+    )
+
+rows = sorted(rows, key=score, reverse=True)
+
+for r in rows[:30]:
+    print(
+        f"{r['type']:28} "
+        f"methods={r['methods']:>4} "
+        f"fields={r['fields']:>4} "
+        f"refs=[{r['references']}]"
+    )
+PY
+
+  902  python3 - <<'PY'
+import csv
+
+rows = list(csv.DictReader(open("output/architecture-index.csv")))
+
+cores = {
+    "Player",
+    "PlayerAttributes",
+    "PlayerNetwork",
+    "FDAEPHMIEPC",
+    "GLLLEDKLLDA",
+    "KOBBCCENPBG",
+    "LLEDPGIGCMO",
+    "EECMIDPHCKN",
+}
+
+def score(r):
+    refs = set(filter(None, r["references"].split(",")))
+    return (
+        len(refs & cores) * 1000
+        + int(r["methods"])
+        + int(r["fields"])
+    )
+
+rows = sorted(rows, key=score, reverse=True)
+
+for r in rows[:30]:
+    print(
+        f"{r['type']:28} "
+        f"methods={r['methods']:>4} "
+        f"fields={r['fields']:>4} "
+        f"refs=[{r['references']}]"
+    )
+PY
+
+  903  cd /workspaces/dripnight-dumper
+  904  python3 - <<'PY'
+import csv
+
+rows = list(csv.DictReader(open("output/architecture-index.csv")))
+
+cores = {
+    "Player",
+    "PlayerAttributes",
+    "PlayerNetwork",
+    "FDAEPHMIEPC",
+    "GLLLEDKLLDA",
+    "KOBBCCENPBG",
+    "LLEDPGIGCMO",
+    "EECMIDPHCKN",
+}
+
+def score(r):
+    refs = set(filter(None, r["references"].split(",")))
+    return (
+        len(refs & cores) * 1000
+        + int(r["methods"])
+        + int(r["fields"])
+    )
+
+rows = sorted(rows, key=score, reverse=True)
+
+for r in rows[:30]:
+    print(
+        f"{r['type']:28} "
+        f"methods={r['methods']:>4} "
+        f"fields={r['fields']:>4} "
+        f"refs=[{r['references']}]"
+    )
+PY
+
+  905  clear
+  906  cd /workspaces/dripnight-dumper
+  907  python3 - <<'PY'
+import csv
+
+rows = list(csv.DictReader(open("output/architecture-index.csv")))
+
+cores = {
+    "Player",
+    "PlayerAttributes",
+    "PlayerNetwork",
+    "FDAEPHMIEPC",
+    "GLLLEDKLLDA",
+    "KOBBCCENPBG",
+    "LLEDPGIGCMO",
+    "EECMIDPHCKN",
+}
+
+def score(r):
+    refs = set(filter(None, r["references"].split(",")))
+    return (
+        len(refs & cores) * 1000
+        + int(r["methods"])
+        + int(r["fields"])
+    )
+
+rows = sorted(rows, key=score, reverse=True)
+
+for r in rows[:30]:
+    print(
+        f"{r['type']:28} "
+        f"methods={r['methods']:>4} "
+        f"fields={r['fields']:>4} "
+        f"refs=[{r['references']}]"
+    )
+PY
+
+  908  clear
+  909  cd /workspaces/dripnight-dumper
+  910  python3 - <<'PY'
+import csv
+from pathlib import Path
+
+src = Path("output/architecture-index.csv")
+dst = Path("output/core-architecture.md")
+
+rows = list(csv.DictReader(src.open()))
+
+cores = {
+    "Player",
+    "PlayerAttributes",
+    "PlayerNetwork",
+    "FDAEPHMIEPC",
+    "GLLLEDKLLDA",
+    "KOBBCCENPBG",
+    "LLEDPGIGCMO",
+    "EECMIDPHCKN",
+}
+
+ignore_names = {
+    "ILFixDynamicMethodWrapper",
+    "ResourceIDDef",
+    "GameVarDef",
+    "EventLogger",
+}
+
+def ignored(r):
+    if r["type"] in ignore_names:
+        return True
+
+    if r["namespace"].startswith("IFix"):
+        return True
+
+    n = r["type"].lower()
+
+    if "wrapper" in n:
+        return True
+
+    return False
+
+def score(r):
+    refs = set(filter(None, r["references"].split(",")))
+    connected = len(refs & cores)
+
+    return (
+        connected * 10000
+        + min(int(r["methods"]), 1000)
+        + min(int(r["fields"]), 1000)
+    )
+
+clean = [r for r in rows if not ignored(r)]
+clean.sort(key=score, reverse=True)
+
+print("=== TOP 40 - NÚCLEO DE GAMEPLAY LIMPO ===")
+print()
+
+for i, r in enumerate(clean[:40], 1):
+    print(
+        f"{i:02}. {r['type']:30} "
+        f"methods={r['methods']:>4} "
+        f"fields={r['fields']:>4} "
+        f"refs=[{r['references']}] "
+        f"base=[{r['bases']}]"
+    )
+
+with dst.open("w") as f:
+    f.write("# Core Gameplay Architecture\n\n")
+    f.write("Ranking estrutural filtrado do Assembly-CSharp metadata-only.\n\n")
+
+    for i, r in enumerate(clean[:100], 1):
+        f.write(f"## {i}. {r['type']}\n\n")
+        f.write(f"- Namespace: `{r['namespace']}`\n")
+        f.write(f"- Base/interfaces: `{r['bases']}`\n")
+        f.write(f"- Métodos: {r['methods']}\n")
+        f.write(f"- Campos: {r['fields']}\n")
+        f.write(f"- Referências núcleo: `{r['references']}`\n")
+        f.write(f"- Arquivo: `{r['file']}`\n\n")
+
+print()
+print("Relatório criado:", dst)
+PY
+
+  911  ls -lh output/core-architecture.md
+  912  sed -n '1,220p' output/core-architecture.md
+  913  clear
+  914  cd /workspaces/dripnight-dumper
+  915  python3 - <<'PY'
+from pathlib import Path
+import re
+from collections import Counter, defaultdict
+
+root = Path("output/csharp-decompiled/COW.GamePlay")
+out = Path("output/core-relations.md")
+
+targets = [
+    "Player",
+    "PlayerAttributes",
+    "PlayerNetwork",
+    "PlayerControl",
+    "AttackableEntity",
+    "FDAEPHMIEPC",
+    "GLLLEDKLLDA",
+    "EECMIDPHCKN",
+    "NetworkAIPawn",
+    "WeaponShield",
+]
+
+ignore = {
+    "int","uint","short","ushort","long","ulong","float","double","bool",
+    "byte","sbyte","string","object","void","char","decimal",
+    "List","Dictionary","HashSet","Array","Action","Func",
+    "Vector2","Vector3","Vector4","Quaternion","GameObject","Transform",
+    "MonoBehaviour","Collider","ResourceID"
+}
+
+type_token = re.compile(r'\b[A-Z][A-Za-z0-9_]*\b')
+
+relations = defaultdict(Counter)
+
+for name in targets:
+    p = root / f"{name}.cs"
+    if not p.exists():
+        print(f"[SKIP] {name}: arquivo não encontrado")
+        continue
+
+    text = p.read_text(errors="replace")
+
+    # Base/interfaces
+    m = re.search(
+        rf'(?m)^(?:public|internal|private|protected)?\s*'
+        rf'(?:abstract\s+|sealed\s+|static\s+)?class\s+{re.escape(name)}'
+        rf'(?:\s*:\s*([^\n{{]+))?',
+        text
+    )
+
+    if m and m.group(1):
+        for token in type_token.findall(m.group(1)):
+            if token not in ignore and token != name:
+                relations[name][token] += 20
+
+    # Assinaturas, campos e propriedades
+    for line in text.splitlines():
+        s = line.strip()
+
+        if not s:
+            continue
+
+        if not re.match(
+            r'(public|private|protected|internal|static|virtual|override|readonly|const)\b',
+            s
+        ):
+            continue
+
+        for token in type_token.findall(s):
+            if token in ignore or token == name:
+                continue
+
+            # palavras que não são tipos
+            if token in {
+                "Get","Set","Start","Stop","Update","Reset","Add","Remove",
+                "Init","None","Default","True","False"
+            }:
+                continue
+
+            relations[name][token] += 1
+
+with out.open("w") as f:
+    f.write("# Core Type Relations\n\n")
+
+    for source in targets:
+        if source not in relations:
+            continue
+
+        f.write(f"## {source}\n\n")
+
+        for target, count in relations[source].most_common(40):
+            f.write(f"- `{target}` — score {count}\n")
+
+        f.write("\n")
+
+print("=== RELAÇÕES MAIS FORTES ===")
+print()
+
+for source in targets:
+    if source not in relations:
+        continue
+
+    print(f"\n[{source}]")
+
+    for target, count in relations[source].most_common(20):
+        print(f"  {target:32} {count}")
+
+print()
+print("Relatório criado:", out)
+PY
+
+  916  ls -lh output/core-relations.md
+  917  sed -n '1,260p' output/core-relations.md
+  918  cd /workspaces/dripnight-dumper
+  919  python3 - <<'PY'
+from pathlib import Path
+import re
+from collections import Counter, defaultdict
+
+root = Path("output/csharp-decompiled")
+game_root = root / "COW.GamePlay"
+out = Path("output/core-relations-v2.md")
+
+targets = [
+    "Player",
+    "PlayerAttributes",
+    "PlayerNetwork",
+    "PlayerControl",
+    "AttackableEntity",
+    "FDAEPHMIEPC",
+    "GLLLEDKLLDA",
+    "EECMIDPHCKN",
+    "NetworkAIPawn",
+    "WeaponShield",
+]
+
+# ------------------------------------------------------------
+# 1. Descobre nomes que REALMENTE são tipos
+# ------------------------------------------------------------
+
+decl_re = re.compile(
+    r'\b(?:class|struct|interface|enum|delegate)\s+([A-Za-z_][A-Za-z0-9_]*)'
+)
+
+known_types = set()
+type_files = defaultdict(list)
+
+for p in root.rglob("*.cs"):
+    try:
+        text = p.read_text(errors="replace")
+    except Exception:
+        continue
+
+    for name in decl_re.findall(text):
+        known_types.add(name)
+        type_files[name].append(str(p.relative_to(root)))
+
+print("Tipos reais encontrados:", len(known_types))
+
+# ------------------------------------------------------------
+# 2. Mapeia herança e referências somente para tipos conhecidos
+# ------------------------------------------------------------
+
+relations = defaultdict(Counter)
+
+class_header_re = re.compile(
+    r'(?m)^(?:public|internal|private|protected)?\s*'
+    r'(?:abstract\s+|sealed\s+|static\s+)?'
+    r'class\s+([A-Za-z_][A-Za-z0-9_]*)'
+    r'(?:\s*:\s*([^{\n]+))?'
+)
+
+token_re = re.compile(r'\b[A-Za-z_][A-Za-z0-9_]*\b')
+
+for source in targets:
+    p = game_root / f"{source}.cs"
+
+    if not p.exists():
+        print(f"[SKIP] {source}: não encontrado")
+        continue
+
+    text = p.read_text(errors="replace")
+
+    # Herança/interfaces recebem peso alto
+    mh = class_header_re.search(text)
+    if mh and mh.group(2):
+        for token in token_re.findall(mh.group(2)):
+            if token in known_types and token != source:
+                relations[source][token] += 100
+
+    # Referências reais no arquivo
+    counts = Counter(token_re.findall(text))
+
+    for token, count in counts.items():
+        if token not in known_types:
+            continue
+        if token == source:
+            continue
+
+        relations[source][token] += count
+
+# ------------------------------------------------------------
+# 3. Exibe resultado
+# ------------------------------------------------------------
+
+with out.open("w") as f:
+    f.write("# Core Type Relations V2\n\n")
+    f.write("Somente tipos realmente declarados no projeto.\n\n")
+
+    for source in targets:
+        f.write(f"## {source}\n\n")
+
+        for target, score in relations[source].most_common(40):
+            files = type_files.get(target, [])
+            path = files[0] if files else "?"
+
+            f.write(
+                f"- `{target}` — score {score} — `{path}`\n"
+            )
+
+        f.write("\n")
+
+print()
+print("=== RELAÇÕES REAIS V2 ===")
+
+for source in targets:
+    print(f"\n[{source}]")
+
+    for target, score in relations[source].most_common(20):
+        files = type_files.get(target, [])
+        path = files[0] if files else "?"
+
+        print(
+            f"  {target:34} "
+            f"score={score:<5} "
+            f"file={path}"
+        )
+
+print()
+print("Relatório criado:", out)
+PY
+
+  920  ls -lh output/core-relations-v2.md
+  921  clear
+  922  cd /workspaces/dripnight-dumper
+  923  python3 - <<'PY'
+from pathlib import Path
+import re
+from collections import Counter, defaultdict
+
+root = Path("output/csharp-decompiled")
+game_root = root / "COW.GamePlay"
+out = Path("output/core-relations-v3.md")
+
+targets = [
+    "Player",
+    "PlayerAttributes",
+    "PlayerNetwork",
+    "PlayerControl",
+    "AttackableEntity",
+    "FDAEPHMIEPC",
+    "GLLLEDKLLDA",
+    "EECMIDPHCKN",
+    "NetworkAIPawn",
+    "WeaponShield",
+]
+
+# Tipos que nunca devem entrar no ranking.
+ignore = {
+    "void", "bool", "byte", "sbyte", "short", "ushort",
+    "int", "uint", "long", "ulong", "float", "double",
+    "decimal", "char", "string", "object", "dynamic",
+
+    "List", "Dictionary", "HashSet", "SortedList",
+    "IEnumerable", "IEnumerator", "ICollection",
+    "Action", "Func", "Nullable",
+
+    "Vector2", "Vector3", "Vector4", "Quaternion",
+    "Transform", "GameObject", "Collider",
+    "RuntimeAnimatorController", "Object",
+}
+
+# ------------------------------------------------------------
+# 1. Descobre tipos realmente declarados.
+# ------------------------------------------------------------
+
+normal_decl = re.compile(
+    r'(?m)^[ \t]*(?:public|internal|private|protected)?[ \t]*'
+    r'(?:abstract[ \t]+|sealed[ \t]+|static[ \t]+|readonly[ \t]+|partial[ \t]+)*'
+    r'(?:class|struct|interface|enum)[ \t]+'
+    r'([A-Za-z_][A-Za-z0-9_]*)'
+)
+
+# delegate tem RETURN TYPE antes do nome:
+# public delegate bool MeuDelegate(...)
+delegate_decl = re.compile(
+    r'(?m)^[ \t]*(?:public|internal|private|protected)?[ \t]*'
+    r'delegate[ \t]+'
+    r'[A-Za-z_][A-Za-z0-9_<>,.\[\]? \t]*[ \t]+'
+    r'([A-Za-z_][A-Za-z0-9_]*)[ \t]*\('
+)
+
+known_types = set()
+type_files = defaultdict(list)
+
+for p in root.rglob("*.cs"):
+    text = p.read_text(errors="replace")
+
+    names = normal_decl.findall(text)
+    names += delegate_decl.findall(text)
+
+    for name in names:
+        if name in ignore:
+            continue
+
+        known_types.add(name)
+        type_files[name].append(str(p.relative_to(root)))
+
+print("Tipos reais encontrados:", len(known_types))
+
+# ------------------------------------------------------------
+# 2. Analisa somente referências para tipos reais.
+# ------------------------------------------------------------
+
+relations = defaultdict(Counter)
+
+class_header = re.compile(
+    r'(?m)^[ \t]*(?:public|internal|private|protected)?[ \t]*'
+    r'(?:abstract[ \t]+|sealed[ \t]+|static[ \t]+|partial[ \t]+)*'
+    r'class[ \t]+([A-Za-z_][A-Za-z0-9_]*)'
+    r'(?:[ \t]*:[ \t]*([^{\n]+))?'
+)
+
+token_re = re.compile(r'\b[A-Za-z_][A-Za-z0-9_]*\b')
+
+for source in targets:
+    p = game_root / f"{source}.cs"
+
+    if not p.exists():
+        print(f"[SKIP] {source}: arquivo não encontrado")
+        continue
+
+    text = p.read_text(errors="replace")
+
+    # Base/interfaces = peso 100.
+    mh = class_header.search(text)
+
+    if mh and mh.group(2):
+        for token in token_re.findall(mh.group(2)):
+            if token in known_types and token != source:
+                relations[source][token] += 100
+
+    # Uso real dentro do arquivo.
+    counts = Counter(token_re.findall(text))
+
+    for token, count in counts.items():
+        if token == source:
+            continue
+        if token in ignore:
+            continue
+        if token not in known_types:
+            continue
+
+        relations[source][token] += count
+
+# ------------------------------------------------------------
+# 3. Output
+# ------------------------------------------------------------
+
+with out.open("w") as f:
+    f.write("# Core Type Relations V3\n\n")
+    f.write("Somente tipos declarados, com primitivas e falsos delegates removidos.\n\n")
+
+    for source in targets:
+        f.write(f"## {source}\n\n")
+
+        for target, score in relations[source].most_common(40):
+            files = type_files[target]
+            path = files[0] if files else "?"
+            f.write(f"- `{target}` — score {score} — `{path}`\n")
+
+        f.write("\n")
+
+print()
+print("=== RELAÇÕES REAIS V3 ===")
+
+for source in targets:
+    print()
+    print(f"[{source}]")
+
+    for target, score in relations[source].most_common(20):
+        files = type_files[target]
+        path = files[0] if files else "?"
+
+        print(
+            f"  {target:34} "
+            f"score={score:<5} "
+            f"file={path}"
+        )
+
+print()
+print("Relatório criado:", out)
+PY
+
+  924  ls -lh output/core-relations-v3.md
+  925  clear
+  926  cd /workspaces/dripnight-dumper
+  927  python3 - <<'PY'
+from pathlib import Path
+import re
+from collections import Counter
+
+root = Path("output/csharp-decompiled")
+out = Path("output/obfuscated-core-dossiers.md")
+
+targets = [
+    "IGJPHDANPJD",
+    "EOGPGNIDOKF",
+    "BHGGAEEHJCO",
+    "LJJABOHJEIN",
+    "CNMHJGNKOOF",
+    "JKADJKOFGEM",
+    "EJOKDFLEONG",
+    "MNIJCDHGGEC",
+    "FBNAAHOLKBH",
+    "EJNFNOJNCPE",
+    "LAGLGLHKHJJ",
+]
+
+decl_re_tpl = r'\b(class|struct|interface|enum|delegate)\s+{name}\b'
+
+def refs_for(name):
+    hits = []
+    pat = re.compile(rf'\b{re.escape(name)}\b')
+
+    for p in root.rglob("*.cs"):
+        text = p.read_text(errors="replace")
+        count = len(pat.findall(text))
+        if count:
+            hits.append((count, p))
+
+    return sorted(hits, reverse=True, key=lambda x: x[0])
+
+with out.open("w") as f:
+    f.write("# Obfuscated Core Type Dossiers\n\n")
+
+    for name in targets:
+        print()
+        print("=" * 70)
+        print(name)
+        print("=" * 70)
+
+        decl_pat = re.compile(
+            decl_re_tpl.format(name=re.escape(name))
+        )
+
+        declaration_found = False
+
+        for p in root.rglob("*.cs"):
+            lines = p.read_text(errors="replace").splitlines()
+
+            for i, line in enumerate(lines):
+                if not decl_pat.search(line):
+                    continue
+
+                declaration_found = True
+
+                rel = p.relative_to(root)
+
+                print(f"DECLARAÇÃO: {rel}:{i+1}")
+                print("  " + line.strip())
+
+                f.write(f"## {name}\n\n")
+                f.write(f"- Declaração: `{rel}:{i+1}`\n")
+                f.write(f"- Header: `{line.strip()}`\n\n")
+
+                # Mostra contexto próximo da declaração.
+                start = max(0, i)
+                end = min(len(lines), i + 80)
+
+                print()
+                print("CONTEXTO:")
+                for n in range(start, end):
+                    print(f"{n+1:6}: {lines[n]}")
+
+                f.write("### Contexto\n\n```csharp\n")
+                for n in range(start, end):
+                    f.write(lines[n] + "\n")
+                f.write("```\n\n")
+
+                break
+
+            if declaration_found:
+                break
+
+        refs = refs_for(name)
+
+        print()
+        print("TOP REFERÊNCIAS:")
+
+        f.write("### Arquivos que mais referenciam\n\n")
+
+        for count, p in refs[:15]:
+            rel = p.relative_to(root)
+            print(f"  {count:4}  {rel}")
+            f.write(f"- {count}x — `{rel}`\n")
+
+        f.write("\n")
+
+        if not declaration_found:
+            print("Declaração não localizada.")
+
+print()
+print("Dossiê criado:", out)
+PY
+
+  928  ls -lh output/obfuscated-core-dossiers.md
+  929  clear
+  930  cd /workspaces/dripnight-dumper
+  931  cat > output/semantic-aliases.json <<'EOF'
+{
+  "IGJPHDANPJD": "PlayerMovementState",
+  "EOGPGNIDOKF": "PlayerPhysXPose",
+  "BHGGAEEHJCO": "EntityID",
+  "LJJABOHJEIN": "CharacterMovementController",
+  "CNMHJGNKOOF": "UGCEntityIdentity",
+  "JKADJKOFGEM": "PlayerNetworkSync",
+  "MNIJCDHGGEC": "KeyedFloatModifier",
+  "FBNAAHOLKBH": "TimedSpeedModifier",
+  "EJNFNOJNCPE": "WeaponAttachmentConfig",
+  "LAGLGLHKHJJ": "ShieldDamageReduction",
+  "FDAEPHMIEPC": "WeaponBase",
+  "GLLLEDKLLDA": "DamageContext",
+  "EECMIDPHCKN": "DamageEvaluationContext",
+  "KOBBCCENPBG": "DamageModifierType",
+  "LLEDPGIGCMO": "HitRegionType",
+  "CECJMLEEPLG": "DamageEffectType"
+}
+EOF
+
+  932  cat output/semantic-aliases.json
+  933  grep -nEi '^[[:space:]]*(public|protected|internal).*\b(move|run|walk|jump|fall|dash|crouch|creep|swim|fire|shoot|reload|weapon|damage|hit|health|hp|revive|knock|aim|sync|network|position|rotation)[A-Za-z0-9_]*[[:space:]]*\(' output/csharp-decompiled/COW.GamePlay/Player.cs | head -300
+  934  grep -nEi '^[[:space:]]*(public|protected|internal).*\b(sync|fire|reload|weapon|damage|hit|position|state|inventory|equipment|revive|knock|move)[A-Za-z0-9_]*[[:space:]]*\(' output/csharp-decompiled/COW.GamePlay/PlayerNetwork.cs | head -300
+  935  sed -n '1,320p' output/csharp-decompiled/COW.GamePlay/JKADJKOFGEM.cs
+  936  clear
+  937  cd /workspaces/dripnight-dumper
+  938  grep -RniE '\b(Head|HeadShot|Headshot|HitHead|HeadHit|HeadBone|HeadCollider|HitBox|Hitbox|BodyPart|HitRegion|ShootingTargetHead)\b' output/csharp-decompiled/COW.GamePlay output/csharp-decompiled/COW | head -400
+  939  cat output/csharp-decompiled/COW.GamePlay/LLEDPGIGCMO.cs
+  940  grep -RniE 'LLEDPGIGCMO\.(Head|Body|Limb)|ShootingTargetHead|HitHead|HeadShot|Headshot' output/csharp-decompiled | head -400
+  941  grep -RniEi '\bAOB\b|ArrayOfBytes|Array Of Bytes|BytePattern|Byte Pattern|SignaturePattern' output/csharp-decompiled | head -300
+  942  clear
+  943  cd /workspaces/dripnight-dumper
+  944  sed -n '14740,14840p' output/csharp-decompiled/COW.GamePlay/Player.cs
+  945  echo
+  946  echo "================ CHECK DAMAGE HIT HEAD ================"
+  947  echo
+  948  sed -n '17390,17530p' output/csharp-decompiled/COW.GamePlay/Player.cs
+  949  echo
+  950  echo "================ HUD HEAD COLLIDER ================"
+  951  echo
+  952  sed -n '190,270p' output/csharp-decompiled/COW.HUD/UIHudNameEnemyController.cs
+  953  echo
+  954  echo "================ DAMAGE MODIFIER TYPES ================"
+  955  echo
+  956  cat output/csharp-decompiled/COW.GamePlay/KOBBCCENPBG.cs
+  957  echo
+  958  echo "================ DAMAGE CALC ENUM ================"
+  959  echo
+  960  cat output/csharp-decompiled/message/NEIBGAFJNMN.cs
+  961  clear
+  962  cd /workspaces/dripnight-dumper
+  963  python3 - <<'PY'
+from pathlib import Path
+import re
+
+root = Path("output/csharp-decompiled")
+
+needles = {
+    "region": re.compile(r"\bLLEDPGIGCMO\b"),
+    "collider": re.compile(r"\b(Collider|ColliderT|colliderT|collider_type|HitBox|Hitbox)\b", re.I),
+    "damagectx": re.compile(r"\b(EECMIDPHCKN|GLLLEDKLLDA)\b"),
+    "head": re.compile(r"\b(Head|HeadShot|Headshot|HitHead)\b", re.I),
+}
+
+hits = []
+
+for p in root.rglob("*.cs"):
+    text = p.read_text(errors="replace")
+
+    found = {k for k, rx in needles.items() if rx.search(text)}
+
+    # prioridade para arquivos que juntam região + collider/head/dano
+    if "region" in found and len(found) >= 2:
+        score = 0
+        score += 10 if "region" in found else 0
+        score += 8 if "collider" in found else 0
+        score += 6 if "damagectx" in found else 0
+        score += 4 if "head" in found else 0
+
+        hits.append((score, p, found))
+
+hits.sort(key=lambda x: (-x[0], str(x[1])))
+
+print("=== CANDIDATOS HEAD/HITBOX ===")
+print()
+
+for score, p, found in hits[:50]:
+    print(f"{score:02}  {str(p.relative_to(root)):70}  {','.join(sorted(found))}")
+PY
+
+  964  grep -RniE 'CheckDamageHitHead|IsHeadShotCollider|GetHitDamagePos|LLEDPGIGCMO[[:space:]]+[A-Za-z_]|Collider.*LLEDPGIGCMO|LLEDPGIGCMO.*Collider' output/csharp-decompiled/COW.GamePlay output/csharp-decompiled/COW.HUD | head -300
+  965  clear
+  966  cd /workspaces/dripnight-dumper
+  967  echo "========== HIT DETECT COLLIDER HELPER =========="
+  968  cat output/csharp-decompiled/COW.GamePlay/HitDetectColliderHelper.cs
+  969  echo
+  970  echo "========== TODAS AS REFERÊNCIAS =========="
+  971  grep -RniE '\bHitDetectColliderHelper\b|\.ColliderType\b|ColliderType[[:space:]]*=' output/csharp-decompiled | head -400
+  972  echo "========== PLAYER HIT STRUCTURE =========="
+  973  sed -n '330,450p' output/csharp-decompiled/COW.GamePlay/Player.cs
+  974  echo
+  975  echo "========== DAMAGE CONTEXT =========="
+  976  cat output/csharp-decompiled/COW.GamePlay/EECMIDPHCKN.cs
+  977  echo
+  978  cat output/csharp-decompiled/COW.GamePlay/GLLLEDKLLDA.cs
+  979  echo "========== HEAD/BODY/LIMB ENUMS =========="
+  980  cat output/csharp-decompiled/COW.GamePlay/NBOLADIFKCG.cs
+  981  echo
+  982  cat output/csharp-decompiled/COW.GamePlay/JKCLPFEFMNG.cs
+  983  echo
+  984  echo "========== USOS DESSES TIPOS =========="
+  985  grep -RniE '\b(NBOLADIFKCG|JKCLPFEFMNG|HitDetectColliderHelper)\b' output/csharp-decompiled/COW.GamePlay output/csharp-decompiled/COW | head -400
+  986  clear
+  987  cd /workspaces/dripnight-dumper
+  988  echo "========== WEAPON + COLLIDER + DAMAGE =========="
+  989  sed -n '3420,3525p' output/csharp-decompiled/COW.GamePlay/FDAEPHMIEPC.cs
+  990  echo
+  991  echo "========== JNHIOHFMPFN =========="
+  992  sed -n '110,210p' output/csharp-decompiled/COW.GamePlay/JNHIOHFMPFN.cs
+  993  echo
+  994  echo "========== PIFLODLPKEO =========="
+  995  sed -n '60,140p' output/csharp-decompiled/COW.GamePlay/PIFLODLPKEO.cs
+  996  echo
+  997  echo "========== GMPGMPFNMFP =========="
+  998  cat output/csharp-decompiled/COW.GamePlay/GMPGMPFNMFP.cs
+  999  grep -Rni '\bNBOLADIFKCG\b' output/csharp-decompiled | head -100
+ 1000  clear
+ 1001  cd /workspaces/dripnight-dumper
+ 1002  mkdir -p   analitycs/snapshot   analitycs/logs   analitycs/provenance   analitycs/patches   analitycs/findings   analitycs/sessions
+ 1003  echo "=== COPIANDO TODO O OUTPUT ==="
+ 1004  rsync -a output/ analitycs/snapshot/
+ 1005  echo "=== COPIANDO LOGS ==="
+ 1006  find . -maxdepth 1 -type f -name '*.log' -exec cp -a {} analitycs/logs/ \;
+ 1007  echo "=== HASHES DOS INPUTS ORIGINAIS ==="
+ 1008  sha256sum input/* > analitycs/provenance/input-sha256.txt
+ 1009  ls -lh input/ > analitycs/provenance/input-files.txt
+ 1010  file input/*.so > analitycs/provenance/input-file-types.txt
+ 1011  echo "=== VERSÃO DO CPP2IL ==="
+ 1012  tools/cpp2il/Cpp2IL --version   > analitycs/provenance/cpp2il-version.txt 2>&1 || true
+ 1013  echo "=== COMMIT EXATO DO CPP2IL MODIFICADO ==="
+ 1014  git -C tools/cpp2il-src rev-parse HEAD   > analitycs/provenance/cpp2il-source-commit.txt
+ 1015  echo "=== PATCH COMPLETO DAS NOSSAS MODIFICAÇÕES NO CPP2IL ==="
+ 1016  git -C tools/cpp2il-src diff   > analitycs/patches/cpp2il-nomap-complete.patch
+ 1017  echo "=== HISTÓRICO ATUAL DO TERMINAL ==="
+ 1018  history > analitycs/sessions/terminal-history.txt 2>/dev/null || true

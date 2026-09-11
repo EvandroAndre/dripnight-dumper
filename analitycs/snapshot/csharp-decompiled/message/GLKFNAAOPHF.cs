@@ -1,0 +1,16 @@
+namespace message;
+
+public enum GLKFNAAOPHF : uint
+{
+	EFightClubGRI_MAX_ROUND = 1u,
+	EFightClubGRI_CURRENT_ROUND,
+	EFightClubGRI_SHOP_FLOW,
+	EFightClubGRI_CURRENT_PHASE,
+	EFightClubGRI_MATCH_POINT,
+	EFightClubGRI_GAMEZONE_INDEX,
+	EFightClubGRI_MATCH_DRAW,
+	EFightClubGRI_DRAW_EXIT,
+	EFightClubGRI_MATCH_SHOP_BUFF,
+	EFightClubGRI_MATCH_SCORE,
+	EFightClubGRI_NB
+}

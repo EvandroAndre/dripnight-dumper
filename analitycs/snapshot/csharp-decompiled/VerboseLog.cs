@@ -1,0 +1,26 @@
+public enum VerboseLog
+{
+	FrontEndPreview = 1,
+	UIWaiting,
+	IAP,
+	PlatformPromotionProducts,
+	RebateCard,
+	LocalNotify,
+	InterApp,
+	Firebase,
+	Mambet,
+	UGC,
+	UserInput,
+	GameVoiceEngine,
+	KillNotification,
+	OptionalDownload,
+	AutoPickup,
+	Audio,
+	Privacy,
+	PGS,
+	AppIcon,
+	AgeCtrl,
+	HippoCrisis,
+	Album,
+	Calendar
+}

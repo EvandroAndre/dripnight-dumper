@@ -1,0 +1,10 @@
+namespace message;
+
+public class CMPMHCMIMBI
+{
+	public DGMAMBBLJNO FKFGOMAINHM;
+
+	public CLMPMGMIDGD MBLLBIHDFIK;
+
+	public AJLAEHOEGKN LMEJGGLEJJK;
+}

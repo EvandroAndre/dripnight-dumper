@@ -1,0 +1,19 @@
+namespace message;
+
+public enum OAHGGAPGKFC : uint
+{
+	EGameMissionEndState_SuccessOK,
+	EGameMissionEndState_SuccessWithToken,
+	EGameMissionEndState_SuccessKillLast,
+	EGameMissionEndState_SuccessTargetDead,
+	EGameMissionEndState_TimeOut,
+	EGameMissionEndState_TargetDead,
+	EGameMissionEndState_Unknow,
+	EGameMissionEndState_SuccessHighRevive,
+	EGameMissionEndState_SuccessRevive,
+	EGameMissionEndState_FailTeammateRevive,
+	EGameMissionEndState_SuccessTreasure,
+	EGameMissionEndState_FailWanted,
+	EGameMissionEndState_FailHippoSupply,
+	EGameMissionEndState_LeavePOIMissionArea
+}

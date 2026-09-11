@@ -1,0 +1,24 @@
+namespace message;
+
+public class IADHEGIIALD
+{
+	public AMHPJNGNEFB KBCNGJOHFDE;
+
+	public int KKEOBBFDMFM;
+
+	public int JOAPDOFPKBB;
+
+	public int DLMIPCKEHBB;
+
+	public BHHFHBEKKFJ GCKGCKFKIIJ;
+
+	public BHHFHBEKKFJ JHEAOLAKKMH;
+
+	public int OGEPEOKKKAE;
+
+	public BHHFHBEKKFJ MPGHHPPMIME;
+
+	public BHHFHBEKKFJ BMFKHKNKFGP;
+
+	public int MGOOEAPNEBO;
+}

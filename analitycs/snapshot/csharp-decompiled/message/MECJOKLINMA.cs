@@ -1,0 +1,25 @@
+namespace message;
+
+public enum MECJOKLINMA : uint
+{
+	EGameTickModuleType_BooyahBountyRanking,
+	EGameTickModuleType_TechBuildConstruction,
+	EGameTickModuleType_TechBuildRoundConstruction,
+	EGameTickModuleType_Naru2NBGP_Game,
+	EGameTickModuleType_Naru2NBGP_RoundGame,
+	EGameTickModuleType_HitAndExplodeGiftBox,
+	EGameTickModuleType_IIVGP,
+	EGameTickModuleType_FFWS2025GamePlay,
+	EGameTickModuleType_RoutePlanning,
+	EGameTickModuleType_TreasureHunt,
+	EGameTickModuleType_Shibuya,
+	EGameTickModuleType_GB_GP,
+	EGameTickModuleType_BlueTears,
+	EGameTickModuleType_SunMoon,
+	EGameTickModuleType_FoldWingMachine,
+	EGameTickModuleType_BRPostMatchAnalysis,
+	EGameTickModuleType_POIMission,
+	EGameTickModuleType_SkillMightyPowerUp,
+	EGameTickModuleType_Bloodmoon_GP,
+	EGameTickModuleType_Count
+}

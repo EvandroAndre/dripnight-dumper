@@ -1,0 +1,16 @@
+namespace COW.Gameplay.UGC.BlockEdit;
+
+public enum ValueType : byte
+{
+	TYPE_INT32 = 1,
+	TYPE_STRING,
+	TYPE_BOOL,
+	TYPE_FLOAT,
+	TYPE_INT64,
+	TYPE_VECTOR2,
+	TYPE_VECTOR3,
+	TYPE_LIST,
+	TYPE_MAP,
+	TYPE_INT8,
+	TYPE_INT16
+}

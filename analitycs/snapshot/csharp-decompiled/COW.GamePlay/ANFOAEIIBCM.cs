@@ -1,0 +1,67 @@
+using UnityEngine;
+
+namespace COW.GamePlay;
+
+internal abstract class ANFOAEIIBCM
+{
+	public enum PNMNALINFHM
+	{
+		NONE,
+		FIRING,
+		CANCEL
+	}
+
+	public enum OEJFOJHEEIN
+	{
+		MANUL,
+		AUTO,
+		ICEWALLSMARTFIRE,
+		WEAPON_ABILITY_FIRE
+	}
+
+	public enum GGFELPKJNAM
+	{
+		Off,
+		On
+	}
+
+	private PNMNALINFHM BONPPEDCAFK;
+
+	private OEJFOJHEEIN AINDGJHAMPD;
+
+	private GGFELPKJNAM HGNDCOOHJHO;
+
+	public bool HAFFDHDEIKB;
+
+	public bool APKCEIMKBJK;
+
+	public static bool JECKGLKEFJH;
+
+	public static bool EIKDNDMHCEB;
+
+	public static bool FCAOKHJFLNF;
+
+	public Vector3 ICHKNLFJIFP;
+
+	public Vector3 COEAFNJKHDP;
+
+	public BJOOFOAFGAI FNFFANDKKNG;
+
+	public int MBLNKAHIFLF;
+
+	public PNMNALINFHM ANFKHGDOHCH => PNMNALINFHM.NONE;
+
+	public OEJFOJHEEIN MPLCOLIEEEF => OEJFOJHEEIN.MANUL;
+
+	public GGFELPKJNAM KGAOKLAMBHD => GGFELPKJNAM.Off;
+
+	public void AMFGGNMPFFI(PNMNALINFHM MJOPBDGPEHP, OEJFOJHEEIN IMEOGAMKHFI = OEJFOJHEEIN.MANUL)
+	{
+	}
+
+	public void KGCLNEOIGKJ(GGFELPKJNAM CCNBNLAPJFM)
+	{
+	}
+
+	public abstract EDNCLDKBFFF JGGBLEJGGLD();
+}

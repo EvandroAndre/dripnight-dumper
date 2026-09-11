@@ -1,0 +1,7 @@
+namespace message;
+
+public enum BMDOLMJFELG : uint
+{
+	ELUCKYDRAWBOX_STATE_NORMAL,
+	ELUCKYDRAWBOX_STATE_BEING_USED
+}

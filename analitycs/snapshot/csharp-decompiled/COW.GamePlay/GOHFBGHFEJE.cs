@@ -1,0 +1,18 @@
+namespace COW.GamePlay;
+
+internal interface GOHFBGHFEJE
+{
+	void GGDFPGGOCBF(object DHCIHCPEPIM);
+
+	void IBKDAFFFKJD(object DHCIHCPEPIM);
+
+	void LDECENOLNLD();
+
+	bool BEOFFODNAKJ(object DHCIHCPEPIM);
+
+	HDAEFOANBGJ GIOGBMGIONI();
+
+	object KLPBHDNNPFI(int IJEAILJPPEI);
+
+	object DBKOJBIIMAK(uint JDHNCLHNJIP);
+}

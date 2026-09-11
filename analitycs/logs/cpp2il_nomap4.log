@@ -1,0 +1,33 @@
+===Cpp2IL by Samboy063===
+A Tool to Reverse Unity's "il2cpp" Build Process.
+Version 2022.1.0+5fb20304df698ffd3d0e664b2a698cd911dc9d57
+
+[38;2;173;216;230m[Info] [Program] [0m[38;2;173;216;230mRunning on Unix
+[0m[38;2;173;216;230m[Info] [Plugins] [0m[38;2;173;216;230mLoading plugins from /workspaces/dripnight-dumper/Plugins...
+[0m[38;2;173;216;230m[Info] [Plugins] [0m[38;2;173;216;230mUsing Plugin: Cpp2IL Built-In
+[0m[38;2;255;255;0m[Warn] [Program] [0m[38;2;255;255;0mUsing force options, I sure hope you know what you're doing!
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230mInitializing Metadata...
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230m	Using actual IL2CPP Metadata version 31.1
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230mInitialized Metadata in 2074ms
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230mUsing binary type ELF (from LibCpp2IL)
+[0m[38;2;139;0;0m[Fail] [Library] [0m[38;2;139;0;0m	Caught OverflowException processing symbols! Attempting to continue without symbol information (no exports, for example)...
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230mSearching Binary for Required Data...
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230mGot Binary codereg: 0xAB41858, metareg: 0xAD10B38 in 375ms.
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230mInitializing Binary...
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230m	[DRIP-NOMAP] Generic native pointer mapping disabled.
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230mInitialized Binary in 128ms
+[0m[38;2;173;216;230m[Info] [Program] [0m[38;2;173;216;230mCreating application model...
+[0m[38;2;173;216;230m[Info] [Program] [0m[38;2;173;216;230mApplication model created in 69780.1572ms
+[0m[38;2;173;216;230m[Info] [Program] [0m[38;2;173;216;230mPre-processing processing layers...
+[0m[38;2;173;216;230m[Info] [Program] [0m[38;2;173;216;230mInvoking processing layers...
+[0m[38;2;173;216;230m[Info] [Program] [0m[38;2;173;216;230mOutputting as DLL output format for backwards compatibility. to /workspaces/dripnight-dumper/output/nomap4...
+[0mUnhandled exception. System.Exception: Got invalid size for type Il2CppTypeDefinition[namespace='', name='MonoClass', parentType=System.ValueType, assembly=Il2CppImageDefinition[Name=mscorlib.dll]]: Il2Cpp TypeDefinition Size Data {InstanceSize=1482184808, NativeSize=1482184824, StaticFieldsSize=1482184792, Thread StaticFieldsSize=1482184792}
+   at Cpp2IL.Core.OutputFormats.AsmResolverDllOutputFormat.ConfigureTypeSize(Il2CppTypeDefinition il2CppDefinition, TypeDefinition asmResolverDefinition) in /workspaces/dripnight-dumper/tools/cpp2il-src/Cpp2IL.Core/OutputFormats/AsmResolverDllOutputFormat.cs:line 294
+   at Cpp2IL.Core.OutputFormats.AsmResolverDllOutputFormat.BuildStubType(TypeAnalysisContext typeContext) in /workspaces/dripnight-dumper/tools/cpp2il-src/Cpp2IL.Core/OutputFormats/AsmResolverDllOutputFormat.cs:line 269
+   at Cpp2IL.Core.OutputFormats.AsmResolverDllOutputFormat.BuildStubType(TypeAnalysisContext typeContext) in /workspaces/dripnight-dumper/tools/cpp2il-src/Cpp2IL.Core/OutputFormats/AsmResolverDllOutputFormat.cs:line 273
+   at Cpp2IL.Core.OutputFormats.AsmResolverDllOutputFormat.BuildStubAssembly(AssemblyAnalysisContext assemblyContext, AssemblyDefinition corLib, RuntimeContext runtimeContext) in /workspaces/dripnight-dumper/tools/cpp2il-src/Cpp2IL.Core/OutputFormats/AsmResolverDllOutputFormat.cs:line 237
+   at Cpp2IL.Core.OutputFormats.AsmResolverDllOutputFormat.BuildStubAssemblies(ApplicationAnalysisContext context) in /workspaces/dripnight-dumper/tools/cpp2il-src/Cpp2IL.Core/OutputFormats/AsmResolverDllOutputFormat.cs:line 194
+   at Cpp2IL.Core.OutputFormats.AsmResolverDllOutputFormat.BuildAssemblies(ApplicationAnalysisContext context) in /workspaces/dripnight-dumper/tools/cpp2il-src/Cpp2IL.Core/OutputFormats/AsmResolverDllOutputFormat.cs:line 100
+   at Cpp2IL.Core.OutputFormats.AsmResolverDllOutputFormat.DoOutput(ApplicationAnalysisContext context, String outputRoot) in /workspaces/dripnight-dumper/tools/cpp2il-src/Cpp2IL.Core/OutputFormats/AsmResolverDllOutputFormat.cs:line 46
+   at Cpp2IL.Program.MainWithArgs(Cpp2IlRuntimeArgs runtimeArgs) in /workspaces/dripnight-dumper/tools/cpp2il-src/Cpp2IL/Program.cs:line 710
+   at Cpp2IL.Program.Main(String[] args) in /workspaces/dripnight-dumper/tools/cpp2il-src/Cpp2IL/Program.cs:line 615

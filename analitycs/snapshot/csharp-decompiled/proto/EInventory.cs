@@ -1,0 +1,767 @@
+namespace proto;
+
+public class EInventory
+{
+	public enum ItemType
+	{
+		ItemType_NONE = 0,
+		ItemType_AVATAR = 1,
+		ItemType_CLOTHES = 2,
+		ItemType_LIMITEDCARD = 3,
+		ItemType_TREASUREBOX = 4,
+		ItemType_LOADOUTBOX = 5,
+		ItemType_ROOMCARD = 6,
+		ItemType_BUNDLE = 7,
+		ItemType_DEBRIS = 8,
+		ItemType_COLLECTION = 9,
+		ItemType_VIRTUAL = 10,
+		ItemType_BONUSCARD = 11,
+		ItemType_STICKER = 12,
+		ItemType_PET = 13,
+		ItemType_BATTLEFLAG = 14,
+		ItemType_EP_DEBRIS = 15,
+		ItemType_OPTIONAL_BUNDLE = 17,
+		ItemType_HYPERBOOK = 18,
+		ItemType_TAILOR_EFFECT = 19,
+		ItemType_BP_EXP = 20,
+		ItemType_BR_RANKING_POINTS = 21,
+		ItemType_CS_PROTECT_POINTS = 22,
+		ItemType_COLLAB = 23,
+		ItemType_SPARKPET = 24
+	}
+
+	public enum ItemSubType
+	{
+		ItemSubType_NONE = 0,
+		ItemSubType_LOTTERYTOKEN = 2,
+		ItemSubType_ELITEPASS = 3,
+		ItemSubType_VOUCHER = 4,
+		ItemSubType_RENAMECARD = 5,
+		ItemSubType_REDENVELOPE = 6,
+		ItemSubType_PETFOOD = 7,
+		ItemSubType_FORGECURRENCY = 8,
+		ItemSubType_PETACTION = 9,
+		ItemSubType_PETSKIN = 10,
+		ItemSubType_REVIVETOKEN = 11,
+		ItemSubType_AVATARLEVELCARD = 12,
+		ItemSubType_CHIP = 13,
+		ItemSubType_GUILD_TOKEN = 14,
+		ItemSubType_PETSKILL = 15,
+		ItemSubType_CRATE = 16,
+		ItemSubType_GENERAL_DEBRIS = 17,
+		ItemSubType_LIMITED_EVENT_POINTS = 18,
+		ItemSubType_TIME_LIMITED_LOTTERYTOKEN = 19,
+		ItemSubType_LIMITED_EVENT_BOUNTY_TOKEN = 20,
+		ItemSubType_TRAINING_TOKEN = 21,
+		ItemSubType_ROOMCARD_NORMAL = 22,
+		ItemSubType_ROOMCARD_ADVANCED = 23,
+		ItemSubType_ROOMCARD_WEREWOLVES = 24,
+		ItemSubType_ROOMCARD_WORKSHOP = 25,
+		ItemSubType_ROOMCARD_RUSHING_PETS = 26,
+		ItemSubType_VIPCARD_RESIGN_CARD = 27,
+		ItemSubType_ROOMCARD_WORKSHOP_FREE = 28,
+		ItemSubType_FLASH_GEM = 29,
+		ItemSubType_KEEP_SCORE_CARD = 30,
+		ItemSubType_DOUBLE_BONUS_CARD = 31,
+		ItemSubType_LIMITED_CARD_ALLAVATAR = 32,
+		ItemSubType_SKILL_MAX_LEVEL_CARD = 33,
+		ItemSubType_CS_KEEP_SCORE_CARD = 34,
+		ItemSubType_LINK_AVATAR_LIMITED_CARD_EXTRA = 35,
+		ItemSubType_TAILOR_TRIGGER_EFFECT = 36,
+		ItemSubType_TAILOR_SPOTLIGHT_EFFECT = 37,
+		ItemSubType_TAILOR_HALO_EFFECT = 38,
+		ItemSubType_TAILOR_PERMANENT_EFFECT = 39,
+		ItemSubType_CUSTOM_EVENT_SHARE_TOKEN = 40,
+		ItemSubType_ELITEPASS_PP2 = 41,
+		ItemSubType_LIMITED_CARD_ALLPET = 42,
+		ItemSubType_LIMITED_CARD_ALLLOADOUT = 43,
+		ItemSubType_METROPOLIS_TOKEN = 44,
+		ItemSubType_WORKSHOP_TOKEN = 45,
+		ItemSubType_PVE_REVIVE_TOKEN = 46,
+		ItemSubType_PVE_ONE_TIME_BUFF = 47,
+		ItemSubType_KEEP_RANK_CARD = 48,
+		ItemSubType_CS_KEEP_RANK_CARD = 49,
+		ItemSubType_EVOGUN_TOKEN = 50,
+		ItemSubType_HYPERBOOK_TOKEN = 51,
+		ItemSubType_TAILOR_TOKEN = 52,
+		ItemSubType_ROOMCARD_CLAN = 53,
+		ItemSubType_CLAN_BONUS_RANK_CARD = 54,
+		ItemSubType_GROUP_NO_DEDUCT_CARD = 55,
+		ItemSubType_MONSTER_INVASION_BOSS_TOKEN = 56,
+		ItemSubType_MONSTER_INVASION_DRAGON_TOKEN = 57,
+		ItemSubType_WORKSHOP_VIP_WEEKLY_CARD = 58,
+		ItemSubType_WORKSHOP_VIP_MONTHLY_CARD = 59,
+		ItemSubType_ICE_WALL_GLOO_MODULE = 60,
+		ItemSubType_LOTTERY_DOUBLEWHEEL_KEY = 61,
+		ItemSubType_ROOMCARD_ADVANCED_PRIVILEGE = 62,
+		ItemSubType_MEMBERSHIP = 63,
+		ItemSubType_DOUBLE_BONUS_CARD_NEW_BR = 64,
+		ItemSubType_DOUBLE_BONUS_CARD_NEW_CS = 65,
+		ItemSubType_DRAWSHOP_TIME_LIMIT_COUPON = 66,
+		ItemSubType_SPARKPET_ACCESSORY = 67,
+		ItemSubType_SOCIAL_HALL_PRIVILEGE_ITEM = 68,
+		ItemSubType_SPARKPET_COLOR = 69
+	}
+
+	public enum CollectionType
+	{
+		CollectionType_NONE = 0,
+		CollectionType_BANNER = 1,
+		CollectionType_HEADPIC = 2,
+		CollectionType_LOOTBOX = 3,
+		CollectionType_GAMEBAG = 4,
+		CollectionType_PARACHUTE = 5,
+		CollectionType_SKATE = 6,
+		CollectionType_WEAPON_SKIN = 7,
+		CollectionType_VIHICLE_SKIN = 8,
+		CollectionType_EMOTE = 9,
+		CollectionType_PIN = 10,
+		CollectionType_Flight = 11,
+		CollectionType_GROUPANIM = 12,
+		CollectionType_MUSIC = 13,
+		CollectionType_TRANSFORM_EMOTE = 14,
+		CollectionType_TITLE = 16,
+		CollectionType_ACTION_JUMP = 17,
+		CollectionType_ACTION_FIRST_AID_KIT = 18,
+		CollectionType_ACTION_CROSS_WINDOW = 19,
+		CollectionType_ACTION_FALL = 20,
+		CollectionType_QUICK_CHAT = 21,
+		CollectionType_SKILL_SKIN = 22,
+		CollectionType_FINAL_SHOT = 23,
+		CollectionType_SUPER_EMOTE = 24,
+		CollectionType_LOADING_CARD = 25,
+		CollectionType_PHOTO_FRAME = 26,
+		CollectionType_AVATAR_FRAME = 27,
+		CollectionType_GROUP_PHOTO = 28,
+		CollectionType_STICKER = 29,
+		CollectionType_FINISH_MOVE = 30
+	}
+
+	public enum ClothesType
+	{
+		ClothesType_NONE = 0,
+		ClothesType_HEAD = 1,
+		ClothesType_GLOVE = 2,
+		ClothesType_COAT = 3,
+		ClothesType_PANTS = 4,
+		ClothesType_SHOE = 5,
+		ClothesType_WAIST = 6,
+		ClothesType_EYE = 7,
+		ClothesType_FACE = 8,
+		ClothesType_PARACHUTE = 9,
+		ClothesType_PARACHUTE_BAG = 10,
+		ClothesType_HAIR = 11,
+		ClothesType_SET = 12,
+		ClothesType_HEAD_ADDITIVE = 14
+	}
+
+	public enum GenderType
+	{
+		GenderType_NONE,
+		GenderType_WOMAN,
+		GenderType_MAN
+	}
+
+	public enum AwardType
+	{
+		AwardType_NONE = 0,
+		AwardType_ITEM = 1,
+		AwardType_COINS = 2,
+		AwardType_GEMS = 3,
+		AwardType_SKILL = 4,
+		AwardType_EXP = 5,
+		AwardType_ACTIVENESS = 6,
+		AwardType_ACCELERATORS = 7,
+		AwardType_LIMITED_EVENT_BADGE = 8,
+		AwardType_LIKE_ITEM = 10,
+		AwardType_CUSTOM_CARD = 11,
+		AWardType_ACTIVE_POINTS = 12,
+		AwardType_BR_RANKING_POINTS = 13,
+		AwardType_CS_PROTECT_POINTS = 14,
+		AwardType_HIPPO_MONEY = 15,
+		AwardType_HIPPO_ITEM = 16,
+		AwardType_SPARK_GACHA_DRAW_COUNT = 17
+	}
+
+	public enum LikeItemType
+	{
+		LikeItemType_NONE,
+		LikeItemType_UGC_ROOM_TIMES
+	}
+
+	public enum CurrencyType
+	{
+		CurrencyType_NONE,
+		CurrencyType_COINS,
+		CurrencyType_GEMS
+	}
+
+	public enum LimitedCardType
+	{
+		LimitedCardType_NONE,
+		LimitedCardType_ITEM_TIME,
+		LimitedCardType_ITEM_NUM,
+		LimitedCardType_DISCOUNT
+	}
+
+	public enum BonusCardType
+	{
+		BonusCardType_NONE,
+		BonusCardType_GOLD,
+		BonusCardType_EXP,
+		BonusCardType_EPDEBRIS,
+		BonusCardType_MENTORING_INTIMACY,
+		BonusCardType_PROFILE_LINK
+	}
+
+	public enum VoucherType
+	{
+		VoucherType_NONE,
+		VoucherType_COINS,
+		VoucherType_GEMS
+	}
+
+	public enum TransReason
+	{
+		TransReason_NONE = 0,
+		TransReason_USECARD = 1,
+		TransReason_PURCHASE = 2,
+		TransReason_TREASUREBOX = 3,
+		TransReason_LOADOUT = 4,
+		TransReason_MATCH = 5,
+		TransReason_CBT_GIFTS = 6,
+		TransReason_ATTENDANCE = 7,
+		TransReason_NEWPLAYERSIGNIN = 8,
+		TransReason_ACTIVITY = 9,
+		TransReason_LEVEL_REWARD = 10,
+		TransReason_MAIL_ATTACHMENT = 11,
+		TransReason_TOPUP = 12,
+		TransReason_CLAN = 13,
+		TransReason_ADMIN = 14,
+		TransReason_BUNDLE = 15,
+		TransReason_EXTERNAL_CALL = 16,
+		TransReason_UNLOCK_PROFIILE = 17,
+		TransReason_UNLOCK_PROFIILE_REWARD = 18,
+		TransReason_RENAME = 19,
+		TransReason_REISSUE = 20,
+		TransReason_RANK_REWARD = 21,
+		TransReason_SEASON_REWARD = 22,
+		TransReason_EPPURCHASE = 23,
+		TransReason_EPUNLOCK = 24,
+		TransReason_EPPURCHASE_BADGE = 25,
+		TransReason_EPCHALLENGE = 26,
+		TransReason_LOTTERY = 27,
+		TransReason_LOTTERY_EXTRA_REWARD = 28,
+		TransReason_UNLOCK_SKILL_SLOT = 29,
+		TransReason_SEND_GIFT = 30,
+		TransReason_EPPURCHASE_BUNDLE = 31,
+		TransReason_EXCHANGESTORE_PURCHASE = 32,
+		TransReason_CARD = 33,
+		TransReason_IAPPURCHASE = 34,
+		TransReason_VETERAN_RETURN = 35,
+		TransReason_ROOMCARD = 36,
+		TransReason_CLAN_SIGN_IN = 37,
+		TransReason_EPPREORDER = 38,
+		TransReason_CLAN_RACE_UNLOCK = 39,
+		TransReason_CLAN_RACE_ALL_MEMBER = 40,
+		TransReason_GIFT_RANK_REWARD = 41,
+		TransReason_LOTTERY_SPECIAL_EXCHANGE = 42,
+		TransReason_CHAT_ITEMS = 43,
+		TransReason_PET_RENAME = 44,
+		TransReason_FEED_PET = 45,
+		TransReason_PVE_CARD = 46,
+		TransReason_DISCOUNTSTORE_PURCHASE = 47,
+		TransReason_PET_LEVEL_UP = 48,
+		TransReason_PAY_BUNDLE_WINDOW_PURCHASE = 49,
+		TransReason_FESTIVAL_ATTENDANCE = 50,
+		TransReason_AVATAR_LEVEL_CARD = 51,
+		TransReason_FINISH_BINGO_ACTIVITY = 52,
+		TransReason_BINGO_ACTIVITY_REWARDS = 53,
+		TransReason_CLAN_LUCKY_BAG = 54,
+		TransReason_EPSUBSCRIPTION = 55,
+		TransReason_REBATESUBSCRIPTION = 56,
+		TransReason_MANUAL_WEAPON = 57,
+		TransReason_MANUAL_MAP = 58,
+		TransReason_MYSTERY_BONUS = 59,
+		TransReason_INSTALLMENT_PURCHASE = 60,
+		TransReason_LOTTERY_DROPUP_BUFF = 61,
+		TransReason_BOX_REWARD = 62,
+		TransReason_FRESH_ACTIVITY = 63,
+		TransReason_INSTALLMENT_MODIFY_ITEMS = 64,
+		TransReason_LINKAGE_ACTIVITY = 65,
+		TransReason_SWAP_ACCOUNTS = 66,
+		TransReason_SUBSCRIPTION_BONUS = 67,
+		TransReason_SUBSCRIPTION = 68,
+		TransReason_EPTREASUREBOX = 69,
+		TransReason_VETERAN_TASK = 70,
+		TransReason_OFFER_PURCHASE = 71,
+		TransReason_PROFILE_AWAKEN_TASK_REWARDS = 72,
+		TransReason_NEW_PALAYER_LEVEL_UP_TASK = 73,
+		TransReason_TRANSFORM_GENERAL_DEBRIS = 74,
+		TransReason_CS_RANK_REWARD = 75,
+		TransReason_EP_DEBRIS = 76,
+		TransReason_CC_LIVE_REWARDS = 77,
+		TransReason_CC_GUESS_REWARDS = 78,
+		TransReason_CC_SUPPORT_REWARDS = 79,
+		TransReason_CC_SUPPORT_PRIX = 80,
+		TransReason_LIMITED_EVENT_STORE_PURCHASE = 81,
+		TransReason_LIMITED_EVENT_CLAIM_NODE_REWARD = 82,
+		TransReason_MYSTERY_STORE_PURCHASE = 83,
+		TransReason_MYSTERY_STORE_UNLOCK_POOL = 84,
+		TransReason_LIMITED_EVENT_ACCELERATE_CASHPRINTER = 86,
+		TransReason_PAYLEVELREWARD = 87,
+		TransReason_LIMITED_EVENT_MONEY_HEIST_HELP = 88,
+		TransReason_LIMITED_EVENT_MONEY_HEIST_REWARDS = 89,
+		TransReason_PETREISSUE = 90,
+		TransReason_ROLE_DEBRIS_PURCHASE = 91,
+		TransReason_UPGRADE_WEAPON_SKIN = 92,
+		TransReason_LIMITED_EVENT_BOOYAH_DAY_SIGN = 93,
+		TransReason_MINI_GAME = 94,
+		TransReason_LIMITED_EVENT_BOOYAH_DAY_PROCESS = 95,
+		TransReason_LIMITED_EVENT_BERMUDA_PROGRESS = 96,
+		TransReason_EP_WEEKLY_PROCESS_REWARDS = 97,
+		TransReason_COMPLETION_GACHA_BACKPACK = 98,
+		TransReason_LIMITED_EVENT_MVP_PROCESS = 99,
+		TransReason_LIMITED_EVENT_GOLIATH_REWARD = 100,
+		TransReason_INTIMACY_RANK_AWARD = 101,
+		TransReason_INTIMACY_CREATE_SPECIAL_RELATION = 102,
+		TransReason_LIMITED_EVENT_SUPERFIGHTER_CONSUME = 103,
+		TransReason_LIMITED_EVENT_SUPERFIGHTER_REWARD = 104,
+		TransReason_LIMITED_EVENT_SUPERCAR = 105,
+		TransReason_LIMITED_EVENT_FFWS = 106,
+		TransReason_OPTIONAL_BUNDLE = 107,
+		TransReason_AVATAR_AWAKEN_COMIC = 108,
+		TransReason_GET_AWAKEN_AVATAR = 109,
+		TransReason_REFRESH_AWAKEN_TASK = 110,
+		TransReason_LIMITED_EVENT_SUTORITO_CONSUME = 111,
+		TransReason_LIMITED_EVENT_SUTORITO_REWARD = 112,
+		TransReason_LIMITED_EVENT_FOURSYMBOLS_ROAD = 113,
+		TransReason_CUP_CLAIM_REWARDS = 114,
+		TransReason_LUCKY_WHEEL_REFRESH = 115,
+		TransReason_LUCKY_WHEEL_PURCHASE = 116,
+		TransReason_CUP_USE_TICKET = 117,
+		TransReason_LIMITED_EVENT_FOURSYMBOLS_SIGNIN = 118,
+		TransReason_LIMITED_EVENT_FOURSYMBOLS_CLAIM_ACCUMULATIVE_AWARD = 119,
+		TransReason_LIMITED_EVENT_MUSICFEST_USE_TOKEN = 120,
+		TransReason_LIMITED_EVENT_MUSICFEST_SEND_TOKEN = 121,
+		TransReason_LIMITED_EVENT_MUSICFEST_RECEIVE_TOKEN = 122,
+		TransReason_LIMITED_EVENT_MUSICFEST_PUZZLE_PROGRESS_REWARD = 123,
+		TransReason_LIMITED_EVENT_MUSICFEST_PUZZLE_RANGE_REWARD = 124,
+		TransReason_LIMITED_EVENT_MUSICFEST_CARD_REWARD = 125,
+		TransReason_LIMITED_EVENT_MOCO_MONTH_GAME = 126,
+		TransReason_WORKSHOP_UNLOCK_SLOT = 127,
+		TransReason_CLAN_WAR_TEAM_REWARD = 128,
+		TransReason_CLAN_WAR_PERSONAL_REWARD = 129,
+		TransReason_VIPCARD_INIT_REWARD = 130,
+		TransReason_VIPCARD_DAILY_REWARD = 131,
+		TransReason_VIPCARD_STORE_PURCHASE = 132,
+		TransReason_LIMITED_EVENT_BOOYAHDAY21_PROCESS = 133,
+		TransReason_CUSTOM_EVENT_PROCESS = 134,
+		TransReason_CLAN_BADGE = 135,
+		TransReason_VIPCARD_RETURN_GEMS = 136,
+		TransReason_LIMITED_EVENT_FFWS03 = 137,
+		TransReason_VIPCARD_RESIGN_DAILY_REWARD = 138,
+		TransReason_POOL_LEADERBOARD_CLAIM_AWARDS = 139,
+		TransReason_LIMITED_CHEST = 140,
+		TransReason_LIMITED_EVENT_JUMPSUIT = 141,
+		TransReason_LIMITED_EVENT_WINTERFEST21B = 142,
+		TransReason_CHUMMY_CLAIM_INTIMACY_AWARDS = 143,
+		TransReason_PERIODIC_RANK_REWARD = 144,
+		TransReason_UNLOCK_FITTING_SLOT = 145,
+		TransReason_LIMITED_EVENT_HURRICANEB = 146,
+		TransReason_LIMITED_EVENT_HOODEDKILLERB = 147,
+		TransReason_LIMITED_EVENT_EP = 148,
+		TransReason_QUICK_PURCHASE = 149,
+		TransReason_LIMITED_EVENT_BOYBANDB = 150,
+		TransReason_CUSTOM_EVENT_STORE = 151,
+		TransReason_CREDIT_SCORE_REWARD = 152,
+		TransReason_UPDATE_EXCHANGE_LINK = 153,
+		TransReason_CLAIM_LINK_PROFILE = 154,
+		TransReason_LIMITED_EVENT_RAMPAGE4B = 155,
+		TransReason_HYPER_BOOK_UNLOCK = 156,
+		TransReason_HYPER_BOOK_SPIN = 157,
+		TransReason_NEWBIE_GUIDE = 158,
+		TransReason_RANK_RESET_REWARD = 159,
+		TransReason_CS_RANK_RESET_REWARD = 160,
+		TransReason_PERIODIC_RANK_RESET_REWARD = 161,
+		TransReason_RANKINGTASK = 162,
+		TransReason_WEAPON_SKIN_UPGRADE_TOKEN_EXCHANGE = 163,
+		TransReason_ROOM_WORKSHOP_LOADING_TIMEOUT = 164,
+		TransReason_EP_DAILY_PROCESS_REWARDS = 165,
+		TransReason_FLASHSTORE_PURCHASE = 166,
+		TransReason_AUTO_EXCHANGE = 167,
+		TransReason_WORKSHOP_LEVEL_REWARD = 168,
+		TransReason_LIMITED_EVENT_DIGITALUNIVERSEB_STARCRAFT = 169,
+		TransReason_LIMITED_EVENT_DIGITALUNIVERSEB = 170,
+		TransReason_LIMITED_EVENT_DIGITALUNIVERSEB_SINGERSB = 171,
+		TransReason_LIMITED_EVENT_POTENTIAB_STAR_AWARD = 172,
+		TransReason_LIMITED_EVENT_POTENTIAB_FRIEND_LEADERBOARD_AWARD = 173,
+		TransReason_CUSTOM_EVENT_MATCH_NPC = 174,
+		TransReason_VIRTUAL_BRAND_COLLECTION_REWARD = 175,
+		TransReason_VIRTUAL_BRAND_LIKE_REWARD = 176,
+		TransReason_VETERAN_STAGE = 177,
+		TransReason_USE_LINK_AVATR_LIMITED_CARD = 178,
+		TransReason_LIMITED_EVENT_FFWS2022B_GUESSING = 179,
+		TransReason_LIMITED_EVENT_NEWAGEB_PROGRESS_AWARD = 180,
+		TransReason_LIMITED_EVENT_NEWAGEB_EXCHANGE = 181,
+		TransReason_TAILOR_UNLOCK_REWARD = 182,
+		TransReason_TAILOR_UNLOCK_BUY = 183,
+		TransReason_PVE_HUNTING_GROUND = 184,
+		TransReason_LIMITED_EVENT_FFWS2022B_TOKEN = 185,
+		TransReason_LIMITED_EVENT_FFWS2022B_BOX_AWARD = 186,
+		TransReason_LIMITED_EVENT_FFWS2022B_CARD_AWARD = 187,
+		TransReason_WEAPON_EXP_CLAIM_AWARD = 188,
+		TransReason_BP_PURCHASE_RETURN_AWARDS = 189,
+		TransReason_BP_IAP_PURCHASE = 190,
+		TransReason_PREVETERAN_TASK = 191,
+		TransReason_ACHIEVEMENT_ENTRY_REWARD = 192,
+		TransReason_ACHIEVEMENT_LEVEL_REWARD = 193,
+		TransReason_LIMITED_EVENT_KITCHENB_PROGRESS_AWARD = 194,
+		TransReason_LIMITED_EVENT_KITCHENB_TOKEN = 195,
+		TransReason_LIMITED_EVENT_TRENDAGENTB_VOTE_AWARD = 196,
+		TransReason_CUSTOM_CARD_DRAW_CONSUME_TOKEN = 197,
+		TransReason_CUSTOM_CARD_ADD_WISH_VALUE = 198,
+		TransReason_CUSTOM_CARD_CONSUME_WISH_VALUE = 199,
+		TransReason_CUSTOM_CARD_DRAW_AWARD = 200,
+		TransReason_CUSTOM_CARD_PROGRESS_AWARD = 201,
+		TransReason_CUSTOM_CARD_FLOOR_AWARD = 202,
+		TransReason_LIMITED_EVENT_VILLAINB_PROGRESS_AWARD = 203,
+		TransReason_LIMITED_EVENT_VILLAINB_CONSUME_TOKEN = 204,
+		TransReason_CSRANKING_TASK = 205,
+		TransReason_AVATAR_PROFICIENCY_LEVEL_AWARD = 206,
+		TransReason_VETERAN_SPECIAL_STAGE_PURCHASE = 207,
+		TransReason_VETERAN_SPECIAL_STAGE_AWARD = 208,
+		TransReason_BP_CARD_PP2 = 209,
+		TransReason_USE_PLAY_ITEM_LIMITED_CARD = 210,
+		TransReason_BATCH_OPEN_BUNDLE = 211,
+		TransReason_BATCH_PET_LEVEL_UP = 212,
+		TransReason_LIMITED_EVENT_SIXTHB_PROGRESS_AWARD = 213,
+		TransReason_LIMITED_EVENT_SIXTHB_CONSUME_TOKEN = 214,
+		TransReason_WEAPON_SKIN_GRATITUDE = 215,
+		TransReason_LIMITED_EVENT_SIXTHB_DISTRIBUTION = 216,
+		TransReason_LIMITED_EVENT_SIXTHB_FIRST_DISTRIBUTION_AWARD = 217,
+		TransReason_LIMITED_EVENT_DAILY_CHECKIN = 218,
+		TransReason_UGC_MATCH = 219,
+		TransReason_TAILOR_TOKEN_EXCHANGE = 220,
+		TransReason_PVE_REWARD_CLAIM = 221,
+		TransReason_PVE_TALENT_DAILY_REWARDS = 222,
+		TransReason_CUSTOM_TC_CONSUME_TOKEN = 223,
+		TransReason_CUSTOM_TC_PIECE_REWARD = 224,
+		TransReason_LIMITED_EVENT_WINTERLAND23B_PROGRESS_AWARD = 225,
+		TransReason_LIMITED_EVENT_WINTERLAND23B_CONSUME_TOKEN = 226,
+		TransReason_CLAN_CLAN_ACTIVENESS = 227,
+		TransReason_BR_FIRST_RANK_REWARD = 228,
+		TransReason_CS_FIRST_RANK_REWARD = 229,
+		TransReason_CLAN_PERSONAL_ACTIVENESS = 230,
+		TransReason_GUILD_WAR_AWARD = 231,
+		TransReason_HYPER_BOOK_GENERAL_TOKEN = 232,
+		TransReason_VETERAN_STORE_PURCHASE = 233,
+		TransReason_LIMITED_EVENT_CHAOS24B_PROGRESS_AWARD = 234,
+		TransReason_LIMITED_EVENT_CHAOS24B_CONSUME_TOKEN = 235,
+		TransReason_CUSTOM_MILESTONE_CONSUME_TOKEN = 236,
+		TransReason_CUSTOM_MILESTONE_STAGE_REWARD = 237,
+		TransReason_PLAYER_CALLBACK_TASK = 238,
+		TransReason_LIMITED_EVENT_PERSONAB_PROGRESS_AWARD = 239,
+		TransReason_MEMBERSHIP_FIRST_SUBSCRIBE_BONUS = 240,
+		TransReason_MEMBERSHIP_REWARD = 241,
+		TransReason_GUILD_WAR_ROUND_AWARD = 242,
+		TransReason_LIMITED_EVENT_SEVENTHB_PROGRESS_AWARD = 243,
+		TransReason_LIMITED_EVENT_SEVENTHB_CONSUME_TOKEN = 244,
+		TransReason_LIMITED_EVENT_SEVENTHB_DISTRIBUTION = 245,
+		TransReason_LIMITED_EVENT_SEVENTHB_FIRST_DISTRIBUTION_AWARD = 246,
+		TransReason_CSRANKING_WIN_PASS = 247,
+		TransReason_RANKING_WIN_PASS = 248,
+		TransReason_LIMITED_EVENT_GLOOWORLD_PROGRESS_AWARD = 249,
+		TransReason_LIMITED_EVENT_BOOYAHDAY24B_PROGRESS_AWARD = 250,
+		TransReason_LIMITED_EVENT_BOOYAHDAY24B_CONSUME_TOKEN = 251,
+		TransReason_LIMITED_EVENT_BOOYAHDAY24B_BR_STAR_AWARD = 252,
+		TransReason_LIMITED_EVENT_BOOYAHDAY24B_CS_STAR_AWARD = 253,
+		TransReason_STARTSTORE_PURCHASE = 254,
+		TransReason_PROFILE_GIVE_AWAKEN_AVATAR_BY_SYSTEM = 255,
+		TransReason_LIMITED_EVENT_NCOLOR24B_PROGRESS_AWARD = 256,
+		TransReason_LIMITED_EVENT_NCOLOR24B_CONSUME_TOKEN = 257,
+		TransReason_LIMITED_EVENT_NCOLOR24B_COLLECTION_AWARD = 258,
+		TransReason_LIMITED_EVENT_WINTERLAND24B_PROGRESS_AWARD = 259,
+		TransReason_LIMITED_EVENT_WINTERLAND24B_FRIEND_TOKEN = 260,
+		TransReason_LIMITED_EVENT_WINTERLAND24B_EVENT_AWARD = 261,
+		TransReason_NEWBIE_PRESET = 262,
+		TransReason_SPECTATE_REWARD = 263,
+		TransReason_SPECTATE_REWARD_RECV = 264,
+		TransReason_CONSUME_WORKSHOP_VIP_CARD = 265,
+		TransReason_LIMITED_EVENT_RAMADAN25B_PROGRESS_AWARD = 266,
+		TransReason_LIMITED_EVENT_CITYHEROBOY25B_PROGRESS_AWARD = 267,
+		TransReason_LIMITED_EVENT_CREATE25B_PROGRESS_AWARD = 268,
+		TransReason_LIMITED_EVENT_CREATE25B_CONSUME_TOKEN = 269,
+		TransReason_LIMITED_EVENT_CREATE25B_BUILD_AWARD = 270,
+		TransReason_HIPPOINVENTORY_PURCHASES = 271,
+		TransReason_HIPPOINVENTORY_WAREHOUSE_UPGRADE = 272,
+		TransReason_PURCHASE_CLAN_PRIVILEGE = 273,
+		TransReason_CLAIM_CLAN_PRIVILEGE_AWARD = 274,
+		TransReason_LEAVE_CLAN_REMOVE_PRIVILEGE = 275,
+		TransReason_GUILD_WAR_TOURNAMENT_QUALIFICATION_AWARD = 276,
+		TransReason_GUILD_WAR_TOURNAMENT_ELIMINATION_AWARD = 277,
+		TransReason_HIPPO_RANK_REWARD = 278,
+		TransReason_HIPPO_RANK_RESET_REWARD = 279,
+		TransReason_FRIEND_CALLBACK_PROCESS_AWARD = 280,
+		TransReason_LIMITED_EVENT_PONY25B_PROGRESS_AWARD = 281,
+		TransReason_LIMITED_EVENT_EIGHTHB_PROGRESS_AWARD = 282,
+		TransReason_LIMITED_EVENT_EIGHTHB_CONSUME_TOKEN = 283,
+		TransReason_LIMITED_EVENT_EIGHTHB_PROGRESS_DRAW_AWARD = 284,
+		TransReason_LIMITED_EVENT_EIGHTHB_DISTRIBUTION = 285,
+		TransReason_LIMITED_EVENT_EIGHTHB_FIRST_DISTRIBUTION_AWARD = 286,
+		TransReason_LIMITED_EVENT_EIGHTHB_LINKAGE_TOKEN = 287,
+		TransReason_PRIMESTORE_PURCHASE = 288,
+		TransReason_PRIME_UPGRADE_AWARD = 289,
+		TransReason_LIMITED_EVENT_NCOLOR25B_PROGRESS_AWARD = 290,
+		TransReason_LIMITED_EVENT_NCOLOR25B_CONSUME_TOKEN = 291,
+		TransReason_LIMITED_EVENT_NCOLOR25B_COLLECTION_AWARD = 292,
+		TransReason_NEWBIE_EXPLORE = 293,
+		TransReason_PRIME_FESTIVAL_AWARD = 294,
+		TransReason_PRIME_SEND_GIFT = 295,
+		TransReason_LIMITED_EVENT_SF50B_PROGRESS_AWARD = 296,
+		TransReason_LIMITED_EVENT_SF50B_CARCEER_TOKEN = 297,
+		TransReason_LIMITED_EVENT_DIWALI25B_PROGRESS_AWARD = 298,
+		TransReason_LIMITED_EVENT_DIWALI25B_CONSUME_TOKEN = 299,
+		TransReason_TEAM_TOP_UP_CLAIM_REWARD = 300,
+		TransReason_TEAM_TOP_UP_UNCLAIMED_REWARD = 301,
+		TransReason_CS_PEAK_POINT_AWARD = 302,
+		TransReason_LIMITED_EVENT_WINTERLAND25B_PROGRESS_AWARD = 303,
+		TransReason_LIMITED_EVENT_WINTERLAND25B_MINI_GAME_PROGRESS_AWARD = 304,
+		TransReason_LIMITED_EVENT_FLAME25B_PROGRESS_AWARD = 305,
+		TransReason_ESPORTS_SELF_SPONSOR_AWARD_DEDUCT = 306,
+		TransReason_ESPORTS_SELF_SPONSOR_AWARD_RETURN = 307,
+		TransReason_LIMITED_EVENT_IIVSYS_PROGRESS_AWARD = 308,
+		TransReason_LIMITED_EVENT_IIVSYS_CONSUME_TOKEN = 309,
+		TransReason_LIMITED_EVENT_IIVSYS_COLLECTION_AWARD = 310,
+		TransReason_LIMITED_EVENT_IIVSYS_LOADING_CARD_AWARD = 311,
+		TransReason_RELAY_MART_PURCHASE = 312,
+		TransReason_LIMITED_EVENT_CARNI25B_PROGRESS_AWARD = 313,
+		TransReason_RELAY_MART_REBATE = 314,
+		TransReason_LIMITED_EVENT_TREA25B_PROGRESS_AWARD = 315,
+		TransReason_LIMITED_EVENT_TREA25B_GRID_AWARD = 316,
+		TransReason_LIMITED_EVENT_TREA25B_HELP_AWARD = 317,
+		TransReason_BATCH_OPEN_TREASURE_BOX = 318,
+		TransReason_ADMIN_ACTIVITY_GEMS = 319,
+		TransReason_RESTORE_DATA = 320,
+		TransReason_LIMITED_EVENT_BLUETEARS26B_PROGRESS_AWARD = 321,
+		TransReason_LIMITED_EVENT_BLUETEARS26B_COLLECTION_AWARD = 322,
+		TransReason_LIMITED_EVENT_BLUETEARS26B_DAILY_AWARD = 323,
+		TransReason_LIMITED_EVENT_GBSYS_PROGRESS_AWARD = 324,
+		TransReason_DRAW_SHOP_WHEEL_PURCHASE = 325,
+		TransReason_DRAW_SHOP_WHEEL_EXCHANGE = 326,
+		TransReason_DRAW_SHOP_TOWER_PURCHASE = 327,
+		TransReason_DRAW_SHOP_TOWER_EXCHANGE = 328,
+		TransReason_DRAW_SHOP_LIMITED_POOL_PURCHASE = 329,
+		TransReason_LIMITED_EVENT_ECLIPSE26B_PROGRESS_AWARD = 330,
+		TransReason_LIMITED_EVENT_ECLIPSE26B_CONSUME_TOKEN = 331,
+		TransReason_EXCHANGE_WORKSHOP_TOKEN = 332,
+		TransReason_EXCHANGE_WORKSHOP_TOKEN_REFUND = 333,
+		TransReason_SPARK_LEVEL_AWARD = 334,
+		TransReason_DRAW_SHOP_TOWER_PURCHASE_TOKEN = 335,
+		TransReason_LIMITED_EVENT_NINTHSYS_PROGRESS_AWARD = 336,
+		TransReason_LIMITED_EVENT_NINTHSYS_DRAW_AWARD = 337,
+		TransReason_LIMITED_EVENT_BM26SYS_PROGRESS_AWARD = 338,
+		TransReason_WORKSHOP_CREATOR_AWARD = 339,
+		TransReason_SOCIALHALL_ARENA_BET = 340,
+		TransReason_SOCIALHALL_ARENA_BET_WIN = 341,
+		TransReason_DRAW_SHARED_GACHA = 342,
+		TransReason_SHARED_GACHA_COLLECT_REWARDS = 343,
+		TransReason_ROOKIE_ANSWER = 344,
+		TransReason_SOCIALHALL_PRIVILEGE_ITEM_UPDATE = 345,
+		TransReason_REVERSE_WORKSHOP_TOKEN = 346,
+		TransReason_COMPANION_SITE_TRADE_DELETE = 347,
+		TransReason_SPARK_GACHA_POOL_AWARD = 348
+	}
+
+	public enum DeleteReason
+	{
+		DeleteReason_NONE,
+		DeleteReason_ZERO_CNT,
+		DeleteReason_OUT_EXPIRE,
+		DeleteReason_NO_ITEM_ID,
+		DeleteReason_NO_USED
+	}
+
+	public enum ClanTransSubReason
+	{
+		ClanTransSubReason_NONE,
+		ClanTransSubReason_CREATE,
+		ClanTransSubReason_EXPAND,
+		ClanTransSubReason_CLAN_RENAME,
+		ClanTransSubReason_PROMOTION
+	}
+
+	public enum BatchOpenBoxSubReason
+	{
+		BatchOpenBoxSubReason_NONE,
+		BatchOpenBoxSubReason_OPENALL,
+		BatchOpenBoxSubReason_OPENSELECTED
+	}
+
+	public enum ItemStatus
+	{
+		ItemStatus_NONE,
+		ItemStatus_PERMANENT,
+		ItemStatus_INEXPIRE,
+		ItemStatus_OUTEXPIRE
+	}
+
+	public enum StoreTag
+	{
+		StoreTag_NONE,
+		StoreTag_DISCOUNT,
+		StoreTag_HOT,
+		StoreTag_NEW,
+		StoreTag_LIMITEDTIME,
+		StoreTag_PURCHASELIMITED,
+		StoreTag_EARLY_ACCESS,
+		StoreTag_DISPLAY_LEFTTIME
+	}
+
+	public enum TopupTxnType
+	{
+		TopupTxnType_NONE,
+		TopupTxnType_INGAME,
+		TopupTxnType_MSHOP,
+		TopupTxnType_ADMIN,
+		TopupTxnType_PROMO,
+		TopupTxnType_REBATE
+	}
+
+	public enum RareType
+	{
+		RareType_NONE,
+		RareType_White,
+		RareType_Green,
+		RareType_Blue,
+		RareType_Purple,
+		RareType_Orange,
+		RareType_Card,
+		RareType_Red,
+		RareType_Purple_Plus,
+		RareType_Oranage_Plus
+	}
+
+	public enum EPCardErrorType
+	{
+		EPCardErrorType_NONE,
+		EPCardErrorType_DISABLE,
+		EPCardErrorType_NO_RETURN,
+		EPCardErrorType_ACTIVE
+	}
+
+	public enum StorePromotionType
+	{
+		StorePromotionType_NORMAL,
+		StorePromotionType_DISCOUNT
+	}
+
+	public enum ItemSourceType
+	{
+		ItemSourceType_DEFAULT = 0,
+		ItemSourceType_BUNDLE = 1,
+		ItemSourceType_GIFTMAIL = 2,
+		ItemSourceType_WEBPAGE = 3,
+		ItemSourceType_STORE = 4,
+		ItemSourceType_ACTIVITY = 5,
+		ItemSourceType_LOTTERY = 6,
+		ItemSourceType_BACKPACK = 7,
+		ItemSourceType_TREASUREBOX = 8,
+		ItemSourceType_FRESH_ACTIVITY = 9,
+		ItemSourceType_LINKAGE_ACTIVITY = 10,
+		ItemSourceType_PROFILE = 11,
+		ItemSourceType_COMPETITION = 12,
+		ItemSourceType_MYSTERYSHOP = 13,
+		ItemSourceType_LIMITED_EVENT = 14,
+		ItemSourceType_INTIMACY = 15,
+		ItemSourceType_OPTIONAL_BUNDLE = 17,
+		ItemSourceType_LUCKYWHEEL = 18,
+		ItemSourceType_VIPCARD = 19,
+		ItemSourceType_POOL_LEADERBOARD = 20,
+		ItemSourceType_LIMITED_CHEST = 21,
+		ItemSourceType_CREDIT_SCORE = 22,
+		ItemSourceType_VIRTUAL_BRAND = 23,
+		ItemSourceType_TAILOR = 24,
+		ItemSourceType_ACHIEVEMENT = 25,
+		ItemSourceType_VETERAN_STORE = 26,
+		ItemSourceType_MEMBERSHIP = 27,
+		ItemSourceType_HIPPOINVENTORY = 28,
+		ItemSourceType_PRIME = 29,
+		ItemSourceType_TEAM_TOP_UP = 30,
+		ItemSourceType_DRAW_SHOP = 31,
+		ItemSourceType_SHARED_GACHA = 32,
+		ItemSourceType_SOCIAL_HALL = 33
+	}
+
+	public enum MaterialItemType
+	{
+		MaterialItemType_NONE,
+		MaterialItemType_ITEMS,
+		MaterialItemType_COINS,
+		MaterialItemType_GEMS
+	}
+
+	public enum TopupEvent
+	{
+		TopupEvent_NONE,
+		TopupEvent_MYSTERY_BONUS,
+		TopupEvent_DIAMOND_SPEND
+	}
+
+	public enum ItemWishPoolOperationType
+	{
+		ItemWishPoolOperationType_SET,
+		ItemWishPoolOperationType_ADD
+	}
+
+	public enum MysterySwitchActivateReason
+	{
+		MysterySwitchActivateReason_NONE,
+		MysterySwitchActivateReason_COSTGEMS,
+		MysterySwitchActivateReason_PURCHASEITEM
+	}
+
+	public enum LegendClothCdtType
+	{
+		LegendClothCdtType_NONE,
+		LegendClothCdtType_Rank
+	}
+
+	public enum FittingSlotCdtType
+	{
+		FittingSlotCdtType_NONE,
+		FittingSlotCdtType_DEFAULT,
+		FittingSlotCdtType_LEVEL,
+		FittingSlotCdtType_COINS,
+		FittingSlotCdtType_GEMS,
+		FittingSlotCdtType_MEMBERSHIP,
+		FittingSlotCdtType_PRIME
+	}
+
+	public enum AvatarType
+	{
+		AvatarType_NONE,
+		AvatarType_DEFAULT,
+		AvatarType_NORMAL,
+		AvatarType_UNSKILLED,
+		AvatarType_INVISIBLE
+	}
+
+	public enum SlotChooseType
+	{
+		SlotChooseType_NONE,
+		SlotChooseType_SINGLE,
+		SlotChooseType_RANDOM
+	}
+
+	public enum SwitchVarType
+	{
+		SwitchVarType_NONE,
+		SwitchVarType_NEWLOADOUTOPEN,
+		SwitchVarType_LOADOUTSHOW,
+		SwitchVarType_NEWLOADOUTOPENTIME,
+		SwitchVarType_NEWLOADOUTENDTIME,
+		SwitchVarType_MATCHROOMOPEN,
+		SwitchVarType_LOADOUTSHOWENDTIME
+	}
+}

@@ -1,0 +1,17 @@
+namespace message;
+
+public enum EKLALLOELLG : uint
+{
+	EUavMapIconStyle_Default,
+	EUavMapIconStyle_FourSymbolsPurple,
+	EUavMapIconStyle_FourSymbolsBlue,
+	EUavMapIconStyle_FourSymbolsGreen,
+	EUavMapIconStyle_FourSymbolsRed,
+	EUavMapIconStyle_GameplayAffixCSRound,
+	EUavMapIconStyle_GameplayAffixAirline,
+	EUavMapIconStyle_GameGlobalMission,
+	EUavMapIconStyle_CyberMushroomScoutUAV,
+	EUavMapIconStyle_BooyahBountyUAV,
+	EUavMapIconStyle_BooyahBountyRankingStatueUAV,
+	EUavMapIconStyle_HomerSkill
+}

@@ -1,0 +1,7 @@
+namespace message;
+
+public enum DCNKCHPIMAB : uint
+{
+	ELEVELINSTRUMENT_STATE_IDLE,
+	ELEVELINSTRUMENT_STATE_USING
+}

@@ -1,0 +1,7 @@
+namespace message;
+
+public enum LJBOHMMHBIF : uint
+{
+	EPRI_ENERGYDEVICEBATTERY_USESTATUS,
+	EPRI_ENERGYDEVICEBATTERY_NB
+}

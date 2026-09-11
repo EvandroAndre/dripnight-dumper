@@ -1,0 +1,17 @@
+namespace message;
+
+public enum MEGJPFALIBF : uint
+{
+	EBuildWithTechBuildPointResult_OK,
+	EBuildWithTechBuildPointResult_PointNotFound,
+	EBuildWithTechBuildPointResult_PlayerNotFound,
+	EBuildWithTechBuildPointResult_InteractionNotAllowed,
+	EBuildWithTechBuildPointResult_PointOccupiedByOthers,
+	EBuildWithTechBuildPointResult_OptionNotFound,
+	EBuildWithTechBuildPointResult_OptionNotAvailable,
+	EBuildWithTechBuildPointResult_FundsNotEnough,
+	EBuildWithTechBuildPointResult_SpawnPointNotFound,
+	EBuildWithTechBuildPointResult_OverlapWithActors,
+	EBuildWithTechBuildPointResult_SpawnConstructionFailed,
+	EBuildWithTechBuildPointResult_AlreadySpawned
+}

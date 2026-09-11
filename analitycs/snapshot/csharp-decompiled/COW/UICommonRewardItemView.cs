@@ -1,0 +1,111 @@
+using GCommon;
+using UnityEngine;
+
+namespace COW;
+
+public class UICommonRewardItemView : UIBaseView
+{
+	public TweenScale UICommonRewardItem;
+
+	public Animation UICommonRewardItemAnimation;
+
+	public GameObject RewardItem;
+
+	public UILabel LimitLabel;
+
+	public UIToggle RewardToggle;
+
+	public UISprite SelectedSprite;
+
+	public UISprite UnSelectedSprite;
+
+	public UILabel QuantityLabel;
+
+	public UIToggle OptionalToggle;
+
+	public GameObject ExchangeVoucher;
+
+	public UISprite VoucherSprite;
+
+	public UILabel VoucherCntLabel;
+
+	public TweenAlpha VoucherTweenAnim;
+
+	public TweenAlphaWatcher VoucherTweenWatcher;
+
+	public GameObject GotoGroup;
+
+	public UILabel GotoPageName;
+
+	public UIButton GotoPageBtn;
+
+	public UISprite GotoPageIcon;
+
+	public GameObject UsedCoverGroup;
+
+	public UIProgressBar BeforBar;
+
+	public UIProgressBar AfterBar;
+
+	public UILabel OptionalCount;
+
+	public GameObject UnPermanent;
+
+	public GameObject Permanent;
+
+	public UILabel BeforeLbl;
+
+	public UILabel AfterLbl;
+
+	public GameObject AfterBarVFX;
+
+	public UIButton TipsBtn;
+
+	public Transform TipsPos;
+
+	public UIButton Preview;
+
+	public GameObject CantSeleted;
+
+	public UIButton ButtonCantSelected;
+
+	public UISprite UnPermanentIcon;
+
+	public GameObject Finished;
+
+	public GameObject NewCharacterContainer;
+
+	public UILabel ClanPrivilegeTimeLabel;
+
+	public GameObject ClanPrivilegeContainer;
+
+	public GameObject PermanentContainer;
+
+	public Transform PermenentVFXContainer;
+
+	public GameObject GotoVault;
+
+	public UIButton GotoVaultBtn;
+
+	public UIButton GotoPhotoGroupBtn;
+
+	public GameObject GotoPhotoGroup;
+
+	public GameObject GotoWeapon;
+
+	public UIButton GotoWeaponBtn;
+
+	public GameObject BeforeOpenBundleVFX;
+
+	public GameObject AfterOpenBundleVFX;
+
+	public GameObject BonusIndicator;
+
+	protected override void OnInit(Transform holder)
+	{
+	}
+
+	public void _003C_003EiFixBaseProxy_OnInit(Transform P0)
+	{
+	}
+}

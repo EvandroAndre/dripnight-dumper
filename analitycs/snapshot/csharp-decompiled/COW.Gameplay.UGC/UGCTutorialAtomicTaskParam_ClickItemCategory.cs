@@ -1,0 +1,9 @@
+using System;
+
+namespace COW.Gameplay.UGC;
+
+[Serializable]
+public class UGCTutorialAtomicTaskParam_ClickItemCategory
+{
+	public string categoryIndex;
+}

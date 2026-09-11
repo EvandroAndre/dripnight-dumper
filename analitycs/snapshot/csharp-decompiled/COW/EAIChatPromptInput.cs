@@ -1,0 +1,35 @@
+namespace COW;
+
+public enum EAIChatPromptInput
+{
+	None,
+	NickName,
+	Region,
+	GameMode,
+	GroupMode,
+	MapName,
+	MatchId,
+	BeKilledDistance,
+	BeDamagedFrom,
+	MyWeapon,
+	MyActiveSkill,
+	MyPassiveSkills,
+	MyPetSkill,
+	KillingDistance,
+	MyKillCount,
+	MyDeathCount,
+	MyAssistCount,
+	MyDamage,
+	DamagingRate,
+	PlayerKillMe,
+	HeadShotKillRate,
+	IceWallResistDamage,
+	IceWallUse,
+	RescueTimes,
+	ReviveTeammateTimes,
+	HpAdded,
+	PlayerResistDamageRate,
+	ThrowingKillNum,
+	MovingDistance,
+	ActiveSkillDamage
+}

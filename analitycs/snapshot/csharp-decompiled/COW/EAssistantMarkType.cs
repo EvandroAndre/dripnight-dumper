@@ -1,0 +1,7 @@
+namespace COW;
+
+public enum EAssistantMarkType
+{
+	ASSISTANT_MARK_USE_MUSHROOM = 8,
+	ASSISTANT_MARK_USE_ARMORTOOL_OR_INFOBOX = 11
+}

@@ -1,0 +1,38 @@
+namespace COW;
+
+public enum EngineSwitch
+{
+	Unknown = 0,
+	UnloadAllEmbeddedSceneObjects = 1,
+	EnableLODShader = 2,
+	EnableEnsureTransformHierarchyExists = 4,
+	EnableShaderVariantCount = 8,
+	EnableShaderKeywordStrip = 16,
+	EnableShaderRuntimeReload = 32,
+	EnableParticleMemOpt = 64,
+	EnableParticleMemOpt2 = 128,
+	EnableSkinnedCompress = 256,
+	ClostNegScaleColliderWarning = 512,
+	EnablePackFontTextureOpt = 1024,
+	EnableShaderKeywordStripAllLOD = 2048,
+	EnableShaderStripAB = 4096,
+	EnableShaderRecordMaterials = 8192,
+	EnableShaderStripAllLOD = 16384,
+	EnableShaderKeywordStripFallBack = 32768,
+	EnableShaderKeywordStripBRNight = 65536,
+	EnableShaderForceUseAPK = 131072,
+	EnableRecordABPath = 262144,
+	EnableShaderLoadPathConfig = 524288,
+	EnableRefindShadowCaster = 1048576,
+	EnableParticleSyncFix = 2097152,
+	EnableLightSpaceConsiderShadowCaster = 4194304,
+	EnableSetGpuProgramsDequeueInterruptCallback = 8388608,
+	EnableForceClearAllIntermediateRenderers = 16777216,
+	EnableMonoScriptOptimize = 33554432,
+	EnableFileCacherReadOpt = 67108864,
+	EnableShaderSubProgramMoveConstructor = 134217728,
+	CloseResourceMgrCache = 268435456,
+	EnableShaderLabHashPropertyMap = 536870912,
+	EnableUnloadSubProgramSourceCode = 1073741824,
+	EnableExtraLayer = int.MinValue
+}

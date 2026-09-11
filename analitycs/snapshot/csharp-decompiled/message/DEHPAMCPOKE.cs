@@ -1,0 +1,10 @@
+namespace message;
+
+public enum DEHPAMCPOKE : uint
+{
+	EStartUsingTechBuildPointResult_OK,
+	EStartUsingTechBuildPointResult_PointNotFound,
+	EStartUsingTechBuildPointResult_PlayerNotFound,
+	EStartUsingTechBuildPointResult_InteractionNotAllowed,
+	EStartUsingTechBuildPointResult_PointOccupiedByOthers
+}

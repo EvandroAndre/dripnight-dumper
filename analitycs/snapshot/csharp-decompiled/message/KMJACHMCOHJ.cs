@@ -1,0 +1,14 @@
+namespace message;
+
+public enum KMJACHMCOHJ : uint
+{
+	EPlayerForceSyncType_NoServerLock,
+	EPlayerForceSyncType_NormalForce,
+	EPlayerForceSyncType_Teleport,
+	EPlayerForceSyncType_ReParachute,
+	EPlayerForceSyncType_FreezeTeleport,
+	EPlayerForceSyncType_NormalForceWithRotation,
+	EPlayerForceSyncType_SetOnBoard,
+	EPlayerForceSyncType_NormalForceWithRotationAndAim,
+	EPlayerForceSyncType_ServerFollow
+}

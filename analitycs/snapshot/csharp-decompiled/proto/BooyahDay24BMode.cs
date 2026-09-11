@@ -1,0 +1,8 @@
+namespace proto;
+
+public enum BooyahDay24BMode
+{
+	BOOYAHDAY24B_NONE,
+	BOOYAHDAY24B_BRMODE,
+	BOOYAHDAY24B_CSMODE
+}

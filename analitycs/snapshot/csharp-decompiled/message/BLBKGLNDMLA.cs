@@ -1,0 +1,11 @@
+namespace message;
+
+public enum BLBKGLNDMLA : uint
+{
+	ECSStrikeOutGRI_TEAMSHP = 1u,
+	ECSStrikeOutGRI_CURRENT_ROUND,
+	ECSStrikeOutGRI_LASTROUNDRANKLIST,
+	ECSStrikeOutGRI_RANKLIST,
+	ECSStrikeOutGRI_CURRENT_PHASE,
+	ECSStrikeOutGRI_NB
+}

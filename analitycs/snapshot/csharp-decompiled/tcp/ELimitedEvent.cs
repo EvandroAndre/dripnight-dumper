@@ -1,0 +1,36 @@
+namespace tcp;
+
+public class ELimitedEvent
+{
+	public enum Proto
+	{
+		Proto_NONE = 0,
+		Proto_RAMPAGE_POINTS_UPDATE_NTF = 1,
+		Proto_ADD_MONEY_HEIST_HELP_NTF = 2,
+		Proto_SPEED_FROM_TASK_CHANGE_NTF = 3,
+		Proto_GOLIATH_AFK_GROUP_UPDATE_NTF = 4,
+		Proto_SUPERCAR_RECEIVE_HELP_NTF = 7,
+		Proto_JUMPSUIT_RECEIVE_HELP_NTF = 8,
+		Proto_DIGITALUNIVERSEB_TIME_ATTACK_START_NTF = 9,
+		Proto_SIXTHB_NTF = 10,
+		Proto_SIXTHB_POWER_CHANGE_NTF = 11,
+		Proto_CHAOS24B_TOKEN_CHANGE = 12,
+		Proto_PERSONAB_PROGRESS_CHANGE_NTF = 13,
+		Proto_TOKEN_CHANGE_NTF = 14,
+		Proto_SEVENTHB_NTF = 15,
+		Proto_BOOYAHDAY24B_NTF = 16,
+		Proto_GLOOWORLD_NTF = 17,
+		Proto_WINTERLAND24B_NTF = 18,
+		Proto_CITYHEROBOY25B_PROGRESS_CHANGE_NTF = 19,
+		Proto_CREATE25B_NTF = 20,
+		Proto_EIGHTHB_NTF = 21,
+		Proto_SF50B_NTF = 22,
+		Proto_FLAME25B_NTF = 23,
+		Proto_TREA25B_NTF = 24
+	}
+
+	public enum ErrCode
+	{
+		ErrCode_SUSS
+	}
+}

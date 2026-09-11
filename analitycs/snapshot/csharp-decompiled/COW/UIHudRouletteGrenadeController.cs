@@ -1,0 +1,169 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using GCommon;
+using UnityEngine;
+
+namespace COW;
+
+internal class UIHudRouletteGrenadeController : UIBaseController
+{
+	[Serializable]
+	private sealed class _003C_003Ec
+	{
+		public static readonly _003C_003Ec _003C_003E9;
+
+		public static Action _003C_003E9__22_0;
+
+		public static Action _003C_003E9__22_1;
+
+		internal void _003CSetControllerCursorEvent_003Eb__22_0()
+		{
+		}
+
+		internal void _003CSetControllerCursorEvent_003Eb__22_1()
+		{
+		}
+	}
+
+	private sealed class _003CDoShowHint_003Ed__21 : IEnumerator<object>, IEnumerator, IDisposable
+	{
+		private int _003C_003E1__state;
+
+		private object _003C_003E2__current;
+
+		public UIHudRouletteGrenadeController _003C_003E4__this;
+
+		public Vector3 targetPos;
+
+		private Transform _003CcontentTr_003E5__2;
+
+		object IEnumerator<object>.Current => null;
+
+		object IEnumerator.Current => null;
+
+		public _003CDoShowHint_003Ed__21(int _003C_003E1__state)
+		{
+		}
+
+		void IDisposable.Dispose()
+		{
+		}
+
+		private bool MoveNext()
+		{
+			return false;
+		}
+
+		bool IEnumerator.MoveNext()
+		{
+			//ILSpy generated this explicit interface implementation from .override directive in MoveNext
+			return this.MoveNext();
+		}
+
+		void IEnumerator.Reset()
+		{
+		}
+	}
+
+	private static float MaxMoveDis;
+
+	private static float CancelRadius;
+
+	private static float CancelRadiusSquare;
+
+	private UIHudRouletteGrenadeView m_View;
+
+	private List<UIHudGrenadeItem> m_SingleItemList;
+
+	private List<UIHudGrenadeItem> m_DoubleItemList;
+
+	protected int m_CustomGrenadeSlot;
+
+	private List<UIHudGrenadeItem> m_CurrentItemList;
+
+	private UIHudGrenadeItem m_SelectItem;
+
+	private int m_SelectIndex;
+
+	private float m_FixedRatio;
+
+	public static ResourceID GetResourceID()
+	{
+		return default(ResourceID);
+	}
+
+	protected override void OnUIInit()
+	{
+	}
+
+	protected override void OnUIOpen()
+	{
+	}
+
+	protected override void OnUIClose()
+	{
+	}
+
+	protected override void OnUIDestroy()
+	{
+	}
+
+	private void OnRefreshCSShop()
+	{
+	}
+
+	private void SwapSlotItems(object[] param)
+	{
+	}
+
+	private void OnItemAccountChanged(uint itemID)
+	{
+	}
+
+	public void SetViewData(Vector3 curDirection, bool isShow, bool globalStop)
+	{
+	}
+
+	private void SetSelectItem(UIHudGrenadeItem item)
+	{
+	}
+
+	private IEnumerator DoShowHint(Vector3 targetPos)
+	{
+		return null;
+	}
+
+	protected override void SetControllerCursorEvent(Action OnShow, Action OnHideOrDestory)
+	{
+	}
+
+	private void StartInfinityIceWall(GEvent data)
+	{
+	}
+
+	private void ForceRefreshInfinityIcon()
+	{
+	}
+
+	private ResourceID GetOverrideIconByItemID(uint itemID)
+	{
+		return default(ResourceID);
+	}
+
+	public void _003C_003EiFixBaseProxy_OnUIInit()
+	{
+	}
+
+	public void _003C_003EiFixBaseProxy_OnUIOpen()
+	{
+	}
+
+	public void _003C_003EiFixBaseProxy_OnUIClose()
+	{
+	}
+
+	public void _003C_003EiFixBaseProxy_OnUIDestroy()
+	{
+	}
+}

@@ -1,0 +1,91 @@
+namespace proto;
+
+public class EGroup
+{
+	public enum StatusChangeReason
+	{
+		StatusChangeReason_NONE,
+		StatusChangeReason_STARTMATCH,
+		StatusChangeReason_ENDMATCH,
+		StatusChangeReason_DROPMATCH,
+		StatusChangeReason_MATCHMAKINGTIMEOUT,
+		StatusChangeReason_JOINROOM,
+		StatusChangeReason_EMULATOR,
+		StatusChangeReason_UPDATEINGAMEITEMS,
+		StatusChangeReason_LEAVEROOM,
+		StatusChangeReason_ROOMMATCHMAKINGTIMEOUT,
+		StatusChangeReason_ROOMMATCHMAKINGFAILED,
+		StatusChangeReason_STARTSPECTATE,
+		StatusChangeReason_ENDSPECTATE
+	}
+
+	public enum ChangeMatchInfoEvent
+	{
+		ChangeMatchInfoEvent_NONE,
+		ChangeMatchInfoEvent_ENDMATCH,
+		ChangeMatchInfoEvent_CHOOSELOADOUTS,
+		ChangeMatchInfoEvent_CHOOSEPVEWEAPON,
+		ChangeMatchInfoEvent_CHOOSEEMOTE,
+		ChangeMatchInfoEvent_ANTIADDICTIONBAN,
+		ChangeMatchInfoEvent_CHOOSECLOTHES,
+		ChangeMatchInfoEvent_ACCOUNTHACKERTAG,
+		ChangeMatchInfoEvent_EQUIPSKILLS,
+		ChangeMatchInfoEvent_SELECTPET,
+		ChangeMatchInfoEvent_UPGRADEPET,
+		ChangeMatchInfoEvent_RENAMEPET,
+		ChangeMatchInfoEvent_SELECTPETSKIN,
+		ChangeMatchInfoEvent_SELECTPETSKILL,
+		ChangeMatchInfoEvent_SELECTPROFILE,
+		ChangeMatchInfoEvent_CHOOSESLOTS,
+		ChangeMatchInfoEvent_CHOOSESHOWS,
+		ChangeMatchInfoEvent_CHOOSEBANNER,
+		ChangeMatchInfoEvent_CHOOSEPIN,
+		ChangeMatchInfoEvent_CHOOSEHEADPIC,
+		ChangeMatchInfoEvent_CHOOSEGAMEBAGSHOW,
+		ChangeMatchInfoEvent_CHOOSERANDOMSLOTS,
+		ChangeMatchInfoEvent_UPGRADEPVETALENTS,
+		ChangeMatchInfoEvent_ROOMCARD,
+		ChangeMatchInfoEvent_CHOOSELEADERBOARDTITLE,
+		ChangeMatchInfoEvent_CHANGEEVOGUNSKINPROPERTY,
+		ChangeMatchInfoEvent_CHOOSETITLE,
+		ChangeMatchInfoEvent_WORKSHOPTOKEN,
+		ChangeMatchInfoEvent_CHANGECREDITSCORE,
+		ChangeMatchInfoEvent_INGAMEITEMCHANGE,
+		ChangeMatchInfoEvent_CHOOSECOLLECTIONACTIONS,
+		ChangeMatchInfoEvent_CHOOSEQUICKMSG,
+		ChangeMatchInfoEvent_CHOOSECOLLECTIONSKILLSKINS,
+		ChangeMatchInfoEvent_CHOOSELOADOUTV2,
+		ChangeMatchInfoEvent_UPDATEOCCUPATION,
+		ChangeMatchInfoEvent_CHOOSECOLLECTIONFINALSHOTS,
+		ChangeMatchInfoEvent_CHOOSEWEAPONSKINCUSTOMS,
+		ChangeMatchInfoEvent_SEVENTHBDISTRIBUTOR,
+		ChangeMatchInfoEvent_SEVENTHBDISCOUNTWEAPONID,
+		ChangeMatchInfoEvent_BOOYAHDAY24BDIMENSIONTITLE,
+		ChangeMatchInfoEvent_GLOOWORLD,
+		ChangeMatchInfoEvent_SUBMITMATCHSTATS,
+		ChangeMatchInfoEvent_WORKSHOPVIP,
+		ChangeMatchInfoEvent_CHOOSECOLLECTIONLOADINGCARD,
+		ChangeMatchInfoEvent_CHOOSECOLLECTIONSUPEREMOTE,
+		ChangeMatchInfoEvent_CHANGEAFKPUNISHENDTIME,
+		ChangeMatchInfoEvent_CHANGEHIPPOEQUIP,
+		ChangeMatchInfoEvent_PermanentWeaponSkins,
+		ChangeMatchInfoEvent_EIGHTHB,
+		ChangeMatchInfoEvent_CHANGEBADGE,
+		ChangeMatchInfoEvent_RANDOMSKINS,
+		ChangeMatchInfoEvent_SF50BCAREERINFO,
+		ChangeMatchInfoEvent_CHAMPIONSHIPINFO,
+		ChangeMatchInfoEvent_CHAMPIONSHIPMEMBERCHANGE,
+		ChangeMatchInfoEvent_FLAME25BLOADINGCARDINFO,
+		ChangeMatchInfoEvent_CHOOSECOLLECTIONFINISHMOVE,
+		ChangeMatchInfoEvent_UPDATECOLLECTIONCUSTOMS,
+		ChangeMatchInfoEvent_UPDATEPRESETS,
+		ChangeMatchInfoEvent_ACCOUNTEMULATORTAG
+	}
+
+	public enum InviteResponse
+	{
+		InviteResponse_None,
+		InviteResponse_Accept,
+		InviteResponse_Refuse
+	}
+}

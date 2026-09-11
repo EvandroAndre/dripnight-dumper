@@ -1,0 +1,7 @@
+namespace message;
+
+public enum MBOAAIHKCLJ : uint
+{
+	EWAITINGGAME_FLIGHTROAM_PLAYERCOUNT = 1u,
+	EWAITINGGAMEGRI_NB
+}

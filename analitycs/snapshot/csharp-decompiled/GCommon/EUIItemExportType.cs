@@ -1,0 +1,36 @@
+namespace GCommon;
+
+public enum EUIItemExportType
+{
+	GameObject,
+	Panel,
+	Widget,
+	Button,
+	Label,
+	InputField,
+	Sprite,
+	Texture,
+	Transform,
+	ParticleSystem,
+	ProgressBar,
+	TextList,
+	TweenPosition,
+	TweenAlpha,
+	TweenScale,
+	Grid,
+	PopupList,
+	ScrollView,
+	Slider,
+	Toggle,
+	WrapContent,
+	CustomType,
+	Animator,
+	EasyList,
+	UIToggleButton,
+	UIToggleButtonGroup,
+	TweenFill,
+	UICheckboxButton,
+	Animation,
+	UIEffectSprite,
+	Table
+}

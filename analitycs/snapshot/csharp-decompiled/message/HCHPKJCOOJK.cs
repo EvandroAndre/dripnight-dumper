@@ -1,0 +1,18 @@
+namespace message;
+
+public enum HCHPKJCOOJK : uint
+{
+	ERoomGameAchievementType_None,
+	ERoomGameAchievementType_FirstBlood,
+	ERoomGameAchievementType_SingleKill,
+	ERoomGameAchievementType_DoubleKill,
+	ERoomGameAchievementType_TripleKill,
+	ERoomGameAchievementType_QuadroKill,
+	ERoomGameAchievementType_PentaKill,
+	ERoomGameAchievementType_Unstoppable,
+	ERoomGameAchievementType_KingOfKiller_Team,
+	ERoomGameAchievementType_KingSlayer,
+	ERoomGameAchievementType_TeamAce,
+	ERoomGameAchievementType_KingOfKiller_Player_Add,
+	ERoomGameAchievementType_KingOfKiller_Player_Refresh
+}

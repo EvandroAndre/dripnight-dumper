@@ -1,0 +1,8 @@
+namespace message;
+
+public enum MOACFPBAKGM : uint
+{
+	EPRI_BT_FISHINGPOOL_ADV,
+	EPRI_BT_FISHINGPOOL_USEDOUT,
+	EPRI_BT_FISHINGPOOL_NB
+}

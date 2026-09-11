@@ -1,0 +1,35 @@
+namespace COW;
+
+public enum NotifyIDType
+{
+	GroupInvite = 1,
+	GroupJoin = 2,
+	FriendRequese = 3,
+	FriendRecommed = 4,
+	TeamReservation = 5,
+	RoomInvite = 6,
+	ClanWarInvite = 7,
+	CupInvite = 8,
+	JoinTeamReq = 9,
+	TeammateRecommend = 10,
+	TeamReservationJoin = 11,
+	TeamReservationJoinAccept = 12,
+	VeteranFriendOnline = 13,
+	BRSpecialMissionNotify = 14,
+	CSSpecialMissionNotify = 15,
+	GuildJoinRequest = 16,
+	GuildInvite = 17,
+	ConfidantOnline = 18,
+	GuildRecommend = 19,
+	InviteToSocialArea = 22,
+	InviteToTrainingArea = 23,
+	TeamUpRecommend = 20,
+	TeamUpRecommendInvite = 21,
+	NewFriendInvite = 24,
+	TeamUpFriendIntimacy = 25,
+	RoomJoin = 26,
+	GetGift = 27,
+	TournamentInvite = 28,
+	TournamentCheckIn = 29,
+	UGCHalfwayInvite = 30
+}

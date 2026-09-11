@@ -1,0 +1,23 @@
+using System.Collections.Generic;
+using GCommon;
+
+namespace message;
+
+public class DNKKMPBKKDD : UDPClientMessageBase
+{
+	public List<MBEHBBAPBDN> IJEEEBKJLGD;
+
+	public List<IDGDENFPMLD> CLPMMKJCMBF;
+
+	public override void Serialize(FastBinaryWriter CDKHIDGNFDE)
+	{
+	}
+
+	public override void UnSerialize(FastBinaryReader HICKLIEHMND)
+	{
+	}
+
+	public override void Recycle()
+	{
+	}
+}

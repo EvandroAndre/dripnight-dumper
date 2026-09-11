@@ -1,0 +1,146 @@
+using UnityEngine;
+
+namespace COW.GamePlay;
+
+internal class GLLLEDKLLDA
+{
+	public enum IHINCLBOJEC
+	{
+		None,
+		UseEquipmentMaxDurability,
+		IsTrainingHitInfoTarget
+	}
+
+	public int FOMIHMJCEHC;
+
+	public LLEDPGIGCMO DNFNNJMHNEK;
+
+	public string PKIAKKNCFAG;
+
+	public bool CGAHEFNNLNL;
+
+	public BHGGAEEHJCO NIMANCBDPFK;
+
+	public FDAEPHMIEPC FDAEPHMIEPC;
+
+	public int EJJFPFENMBP;
+
+	public Vector3 EPCMOGEBEKM;
+
+	public Vector3 ILJBHKIFOEP;
+
+	public Vector3 DGFLGBEOGPG;
+
+	public short LNOIFBAFGOK;
+
+	public bool HKJJLFNGMKO;
+
+	public int LNMHCENKABA;
+
+	public LazyDictionary<short, LAGLGLHKHJJ> GBOLEJPOAEP;
+
+	public static BCJEIGOGICO NBGJOOGAEAK;
+
+	public static float JBJDLGPLAPB(LLEDPGIGCMO KHLIJODOLOF, int HPPACPHIPCP, float LHNHJFGLDOE = 0f)
+	{
+		return 0f;
+	}
+
+	public static float MFGDBAEOMHE(Player FNOOENEHBJP, int HPPACPHIPCP)
+	{
+		return 0f;
+	}
+
+	public static bool GOKKEAIABMB(GLLLEDKLLDA PMMCGNJHOOA)
+	{
+		return false;
+	}
+
+	public static int IOHEFKPFCML(float PMNNBDDKCCE, GLLLEDKLLDA PMMCGNJHOOA, Player FNOOENEHBJP, Player MPNDGFIBADH, int HPPACPHIPCP, LOAEBBHPMEK AOJANNHGCEA, FDAEPHMIEPC KEDHIAANLGO, out CECJMLEEPLG OENGJNNOMHJ, out bool BCLOFGBLDLA, out int KKLDOJNGMFD, out bool LFNAJCODNPB, float LHNHJFGLDOE = 0f, IHINCLBOJEC PIDINBNGILH = IHINCLBOJEC.None)
+	{
+		OENGJNNOMHJ = default(CECJMLEEPLG);
+		BCLOFGBLDLA = default(bool);
+		KKLDOJNGMFD = default(int);
+		LFNAJCODNPB = default(bool);
+		return 0;
+	}
+
+	public static bool PLPACHPNFBK(Player PGEGMKJKOKI, int HPPACPHIPCP)
+	{
+		return false;
+	}
+
+	public static int IOHEFKPFCML(int PMNNBDDKCCE, LLEDPGIGCMO CCFHNBDPCOE, NetworkAIPawn MPNDGFIBADH, int HPPACPHIPCP, FDAEPHMIEPC KEDHIAANLGO, Player FNOOENEHBJP, LOAEBBHPMEK AOJANNHGCEA, out CECJMLEEPLG OENGJNNOMHJ)
+	{
+		OENGJNNOMHJ = default(CECJMLEEPLG);
+		return 0;
+	}
+
+	public static float OFKCCJIDAGD(LLEDPGIGCMO KHLIJODOLOF, int HPPACPHIPCP, float GOMNGFFGLKD, float LHNHJFGLDOE = 0f)
+	{
+		return 0f;
+	}
+
+	public static CECJMLEEPLG LIKKLDPBDGJ(GLLLEDKLLDA PMMCGNJHOOA)
+	{
+		return CECJMLEEPLG.None;
+	}
+
+	public static short KFEOBAJJFEF(short GPFPIAMCEMI, short PIDINBNGILH)
+	{
+		return 0;
+	}
+
+	public static bool CCAIEDHAMOL(short GPFPIAMCEMI, short PIDINBNGILH)
+	{
+		return false;
+	}
+
+	public static short FOKPBJBDCOK(short GPFPIAMCEMI, short PIDINBNGILH)
+	{
+		return 0;
+	}
+
+	public static BOBNJPOLFKF AEPPEFMABFD(KOBBCCENPBG LMFHNNEALPF)
+	{
+		return BOBNJPOLFKF.None;
+	}
+
+	public static int LEFKMLFNPIE(float PMNNBDDKCCE, LLEDPGIGCMO NKBJKJIBJKB, GLLLEDKLLDA PMMCGNJHOOA, Player FNOOENEHBJP, AttackableEntity CJOKKFOFHPO, int HPPACPHIPCP, LOAEBBHPMEK AOJANNHGCEA, FDAEPHMIEPC KEDHIAANLGO, float LHNHJFGLDOE = 0f, IHINCLBOJEC PIDINBNGILH = IHINCLBOJEC.None)
+	{
+		return 0;
+	}
+
+	private static GPKIJNDCLPD AMLCCGLPKKK(Player MPNDGFIBADH, LLEDPGIGCMO NKBJKJIBJKB)
+	{
+		return null;
+	}
+
+	private static bool OOEPLBKPFJP(GPKIJNDCLPD COAPCDBALCD, LLEDPGIGCMO NKBJKJIBJKB)
+	{
+		return false;
+	}
+
+	private static float MPOGLLCJOFP(GPKIJNDCLPD COAPCDBALCD, Player MPNDGFIBADH)
+	{
+		return 0f;
+	}
+
+	private static bool KDLOHBHMPMN(int PFDCJPHHDEN)
+	{
+		return false;
+	}
+
+	private static void CNOJKOBHMPN(EECMIDPHCKN NADOGLBIKEF, GLLLEDKLLDA PMMCGNJHOOA, GPKIJNDCLPD OMHIJEKNFGF, int KDGGJEGIOFC, IHINCLBOJEC PIDINBNGILH)
+	{
+	}
+
+	public static void IEKHGDPADPI(GLLLEDKLLDA PMMCGNJHOOA)
+	{
+	}
+
+	public static int CKNBNCGONLJ(float CGGPBJKCDEG, int FCAOOKIBKJK, int ANFDGFNPEIJ, float EAAACNKEFCF, float HDNGLBICEOF, uint LIKPJDHGPFG)
+	{
+		return 0;
+	}
+}

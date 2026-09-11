@@ -1,0 +1,15 @@
+namespace message;
+
+public enum AOALIEGNNGC : uint
+{
+	EObserverRewardFailReason_None,
+	EObserverRewardFailReason_InvalidMatch,
+	EObserverRewardFailReason_InvalidStatsType,
+	EObserverRewardFailReason_InvalidRegion,
+	EObserverRewardFailReason_InvalidConfig,
+	EObserverRewardFailReason_MatchEnd,
+	EObserverRewardFailReason_IsNotFriend,
+	EObserverRewardFailReason_RewardDailyLimitReached,
+	EObserverRewardFailReason_RewardPlayerLimitReached,
+	EObserverRewardFailReason_RecvLimitReached
+}

@@ -1,0 +1,14 @@
+using GCommon;
+
+namespace COW;
+
+public class CSShopSkinnedItemData
+{
+	public uint Filter;
+
+	public string CategoryIcon;
+
+	public string CategoryKey;
+
+	public ResourceID Additional;
+}

@@ -1,0 +1,34 @@
+namespace message;
+
+public enum DILGOEIGAMC : uint
+{
+	EDropInventoryReason_ByUser,
+	EDropInventoryReason_BagIsFull,
+	EDropInventoryReason_Broken,
+	EDropInventoryReason_PlayerDead,
+	EDropInventoryReason_BySystem,
+	EDropInventoryReason_InGameShopCost,
+	EDropInventoryReason_InGameLuckyDrawBox,
+	EDropInventoryReason_BuySelfReviveUseCoin,
+	EDropInventoryReason_RefreshAvatarAttribute,
+	EDropInventoryReason_RadarOpt,
+	EDropInventoryReason_ByUGCApi,
+	EDropInventoryReason_InGameAirDropShopCost,
+	EDropInventoryReason_TransferToTeammate,
+	EDropInventoryReason_TransactionWithdrawal,
+	EDropInventoryReason_TechDevice,
+	EDropInventoryReason_BuildSafeZoneController,
+	EDropInventoryReason_BuildMapScanMachine,
+	EDropInventoryReason_BuildSensorBeacon,
+	EDropInventoryReason_BuildHypercrate,
+	EDropInventoryReason_BuildMushroomGenerator,
+	EDropInventoryReason_BuildKingSword,
+	EDropInventoryReason_AcceptBountyPost,
+	EDropInventoryReason_DropRedundancyAttachment,
+	EDropInventoryReason_UnlockLoadoutSupportSlotCost,
+	EDropInventoryReason_ReinforceAnvilCost,
+	EDropInventoryReason_ReinfroceAnvilRemoveOldAttachment,
+	EDropInventoryReason_TreasuryUpgrade,
+	EDropInventoryReason_ActionWishPool,
+	EDropInventoryReason_RevivePointBuffShop
+}

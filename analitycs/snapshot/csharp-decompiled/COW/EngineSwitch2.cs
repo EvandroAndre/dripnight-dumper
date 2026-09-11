@@ -1,0 +1,38 @@
+namespace COW;
+
+public enum EngineSwitch2
+{
+	Unknown = 0,
+	EnablePersistReadObjectSkipAvaCheck = 1,
+	EnableParticleSyncFixAndroid = 2,
+	TryFixOnRenderSurfaceDestroyed = 4,
+	EnablePersistReadObjectAvaCheckByType = 8,
+	CloseGlobalGameMgrCache = 16,
+	EnableLockForSceneList = 32,
+	EnableLightSettingFix = 64,
+	EnableDeleteShaderInShaderErrors = 128,
+	EnableWebRequestFix = 256,
+	SkipBakedLight = 512,
+	EnableTrimSystemFonts = 1024,
+	EnableLogSampleInDev = 2048,
+	DisableErrorLog = 4096,
+	EnableEnsureShaderLabShaderExist = 8192,
+	EnableAnimatorUpdateAsync = 16384,
+	EnableSkinMeshRenderSkip = 32768,
+	QuitFast = 65536,
+	LogQuitTime = 131072,
+	EnableOptPreloadTable = 262144,
+	Enable2018PostEffect = 524288,
+	FixTexFormatCrash = 1048576,
+	EnableGetGPUTime = 2097152,
+	EnableReplaceGGP = 4194304,
+	EnableSyncInUpdateTime = 8388608,
+	Enable2018ABstreamed = 16777216,
+	EnableFixGeneralConnection = 33554432,
+	TryFixTraverseDepthFirst = 67108864,
+	EnableVSyncFix = 134217728,
+	EnableForceSafeForMonoBehaviour = 268435456,
+	EnableAnim16bitClone = 536870912,
+	EnableKTX2 = 1073741824,
+	TryFixShaderCrash = int.MinValue
+}

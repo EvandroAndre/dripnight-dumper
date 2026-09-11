@@ -1,0 +1,37 @@
+namespace message;
+
+public enum JLGHEEOJFOP : uint
+{
+	None,
+	ModelModify,
+	PropertyUp,
+	AnnouncementAdd,
+	HitEffectAdd,
+	FiringEffectAdd,
+	KillEffectAdd,
+	SkillObtain,
+	EmoteObtain,
+	GunTraceAdd,
+	MeleeFiringEffectAdd,
+	EffectTriggerAnim,
+	MeleeModelModify,
+	LastKillAnim,
+	FireSound,
+	ReloadAnim,
+	CustomProperty,
+	CustomSkill,
+	Rename,
+	KillCount,
+	ShowInLobby,
+	NewMaterial,
+	ChangeAppearance,
+	FinishMove,
+	ChangeWeaponSound,
+	ReloadWeaponSound,
+	ChangeWeaponAnim,
+	KillUIFX,
+	BackEffect,
+	GrenadeGunEffect,
+	MultiAppearance,
+	SightReskin
+}

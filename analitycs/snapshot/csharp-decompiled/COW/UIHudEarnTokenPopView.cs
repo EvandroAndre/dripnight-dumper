@@ -1,0 +1,19 @@
+using GCommon;
+using UnityEngine;
+
+namespace COW;
+
+public class UIHudEarnTokenPopView : UIBaseView
+{
+	public UILabel TokenNum;
+
+	public Animation EarnTokenAnimation;
+
+	protected override void OnInit(Transform holder)
+	{
+	}
+
+	public void _003C_003EiFixBaseProxy_OnInit(Transform P0)
+	{
+	}
+}

@@ -1,0 +1,17 @@
+namespace message;
+
+public enum PLMAEGOLKLA : uint
+{
+	EOverWriteConfigType_WeaponTable,
+	EOverWriteConfigType_GameModeSetting,
+	EOverWriteConfigType_AvatarSkill,
+	EOverWriteConfigType_WeaponSkinProperty,
+	EOverWriteConfigType_WeaponSkinPropertySwitch,
+	EOverWriteConfigType_ActiveSkill,
+	EOverWriteConfigType_BuffData,
+	EOverWriteConfigType_BuffBehaviorData,
+	EOverWriteConfigType_BuffECAData,
+	EOverWriteConfigType_FPPWeaponTable,
+	EOverWriteConfigType_FPPCollectWeapon,
+	EOverWriteConfigType_SecondWeaponTable
+}

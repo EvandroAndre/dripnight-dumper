@@ -1,0 +1,15 @@
+namespace message;
+
+public enum KPNEPPBBPPB : uint
+{
+	EScheduledReviveErrorCode_OK,
+	EScheduledReviveErrorCode_GameModeDisabled,
+	EScheduledReviveErrorCode_ReviveFuncForceClosed,
+	EScheduledReviveErrorCode_RequestPlayerNotFound,
+	EScheduledReviveErrorCode_RequestTeamNotFound,
+	EScheduledReviveErrorCode_RequestTargetsAllFailed,
+	EScheduledReviveErrorCode_PocketRevivePoint_NotFound,
+	EScheduledReviveErrorCode_PocketRevivePoint_InteractionNotAllowed,
+	EScheduledReviveErrorCode_PocketRevivePoint_ExceedMaxTargets,
+	EScheduledReviveErrorCode_PocketRevivePoint_PositionInvalid
+}

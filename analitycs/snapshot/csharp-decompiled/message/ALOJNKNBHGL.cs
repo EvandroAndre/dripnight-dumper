@@ -1,0 +1,8 @@
+namespace message;
+
+public enum ALOJNKNBHGL : uint
+{
+	EWEAPONBOX_STATE_NORMAL,
+	EWEAPONBOX_STATE_OPEN,
+	EWEAPONBOX_STATE_PICKEDUP
+}

@@ -1,0 +1,19 @@
+using GCommon;
+using UnityEngine;
+
+namespace COW;
+
+public class UIHudNameRedEnvelopeOwnerView : UIBaseView
+{
+	public UILabel OwnerName;
+
+	public UISprite bg;
+
+	protected override void OnInit(Transform holder)
+	{
+	}
+
+	public void _003C_003EiFixBaseProxy_OnInit(Transform P0)
+	{
+	}
+}

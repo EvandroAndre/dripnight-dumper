@@ -1,0 +1,15 @@
+namespace COW.GamePlay;
+
+public enum FCPLBIOLDOF
+{
+	NONE = 0,
+	HIT_ENEMY = 1,
+	BEHIT = 2,
+	CAMP_FIRE = 3,
+	KNOCK_DOWN = 4,
+	KNOCK_DOWN_TIP = 5,
+	FOOTSTEP_NEAR = 6,
+	USE_FIRSTAIDKIT = 7,
+	BEING_RESCURED = 12,
+	BEING_REAPER = 13
+}

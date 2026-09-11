@@ -1,0 +1,13 @@
+namespace message;
+
+public enum BMGMPINNBDL : uint
+{
+	EGeneralPlaceLevelObjectErrorCode_OK,
+	EGeneralPlaceLevelObjectErrorCode_PlayerNotFound,
+	EGeneralPlaceLevelObjectErrorCode_PlayerActionNotAllowed,
+	EGeneralPlaceLevelObjectErrorCode_InventoryNotFound,
+	EGeneralPlaceLevelObjectErrorCode_InventoryMismatched,
+	EGeneralPlaceLevelObjectErrorCode_OverlapPhysicsNotFound,
+	EGeneralPlaceLevelObjectErrorCode_Overlapped,
+	EGeneralPlaceLevelObjectErrorCode_SpawnFailure
+}

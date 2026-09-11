@@ -1,0 +1,6 @@
+namespace COW;
+
+public interface IUIHippoCrisisDragResponseController
+{
+	HippoCrisisDragOperationResult HippoCrisisDragResponseCB(HippoCrisisDragSourceInfo hippoCrisisDragSourceInfo, EDragReleaseResponseAreaType areaType);
+}

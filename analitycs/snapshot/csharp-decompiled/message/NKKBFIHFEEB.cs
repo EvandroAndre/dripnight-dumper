@@ -1,0 +1,14 @@
+namespace message;
+
+public enum NKKBFIHFEEB : uint
+{
+	ETechBuildConstructionObjectType_Invalid,
+	ETechBuildConstructionObjectType_TechBuildPoint,
+	ETechBuildConstructionObjectType_SafeZoneController,
+	ETechBuildConstructionObjectType_MapScanMachine,
+	ETechBuildConstructionObjectType_SensorBeacon,
+	ETechBuildConstructionObjectType_Hypercrate,
+	ETechBuildConstructionObjectType_MushroomGenerator,
+	ETechBuildConstructionObjectType_KingSword,
+	ETechBuildConstructionObjectType_SentryTurret
+}

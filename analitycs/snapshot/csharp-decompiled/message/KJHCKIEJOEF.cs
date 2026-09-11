@@ -1,0 +1,28 @@
+namespace message;
+
+public class KJHCKIEJOEF
+{
+	public DLCCEMCEMJL ECAKLJEMFAI;
+
+	public KCEOCGOLEAD JPKBNFJOIDE;
+
+	public KCEOCGOLEAD EIAGBFMOGAE;
+
+	public LGDCLLICIIC LFCNHAJBHEE;
+
+	public bool AJHNAAHPFOO;
+
+	public bool DKILCMDMAOM;
+
+	public string CBLHOCEAPKD;
+
+	public string OCGGAHANAIK;
+
+	public bool FEBAFGFCHMI;
+
+	public KCEOCGOLEAD LEGLEFICFDP;
+
+	public KCEOCGOLEAD IFEMIOECNLN;
+
+	public KCEOCGOLEAD PELBOAMPIFG;
+}

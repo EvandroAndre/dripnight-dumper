@@ -1,0 +1,8 @@
+namespace message;
+
+public enum AMFGECKOCAL : uint
+{
+	EPRI_PHYXSHIELD_HP = 1u,
+	EPRI_PHYXSHIELD_COLLIDER,
+	EPRI_PHYXSHIELD_NB
+}

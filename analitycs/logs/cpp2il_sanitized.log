@@ -1,0 +1,43 @@
+===Cpp2IL by Samboy063===
+A Tool to Reverse Unity's "il2cpp" Build Process.
+Version 2022.1.0+5fb20304df698ffd3d0e664b2a698cd911dc9d57
+
+[38;2;173;216;230m[Info] [Program] [0m[38;2;173;216;230mRunning on Unix
+[0m[38;2;173;216;230m[Info] [Plugins] [0m[38;2;173;216;230mLoading plugins from /workspaces/dripnight-dumper/Plugins...
+[0m[38;2;173;216;230m[Info] [Plugins] [0m[38;2;173;216;230mUsing Plugin: Cpp2IL Built-In
+[0m[38;2;255;255;0m[Warn] [Program] [0m[38;2;255;255;0mUsing force options, I sure hope you know what you're doing!
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230mInitializing Metadata...
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230m	Using actual IL2CPP Metadata version 31.1
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230mInitialized Metadata in 1826ms
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230mUsing binary type ELF (from LibCpp2IL)
+[0m[38;2;139;0;0m[Fail] [Library] [0m[38;2;139;0;0m	Caught OverflowException processing symbols! Attempting to continue without symbol information (no exports, for example)...
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230mSearching Binary for Required Data...
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230mGot Binary codereg: 0xAB41858, metareg: 0xAD10B38 in 272ms.
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230mInitializing Binary...
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230m[DRIP-SANITIZE] generic tables original = 87844
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230m[DRIP-SANITIZE] generic tables valid    = 66125
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230m[DRIP-SANITIZE] generic tables skipped  = 21719
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230m[DRIP-SANITIZE] max sane adjustorThunk = 15001
+[0m[38;2;139;0;0m[Fail] [Program] [0m[38;2;139;0;0m
+
+Cpp2IL.Core.Exceptions.LibCpp2ILInitializationException: Fatal Exception initializing LibCpp2IL!
+ ---> System.IndexOutOfRangeException: Index was outside the bounds of the array.
+   at LibCpp2IL.Metadata.Il2CppMetadata.GetMethodDefinitionFromIndex(Il2CppVariableWidthIndex`1 index) in /workspaces/dripnight-dumper/tools/cpp2il-src/LibCpp2IL/Metadata/Il2CppMetadata.cs:line 876
+   at LibCpp2IL.BinaryStructures.Il2CppMethodSpec.get_MethodDefinition() in /workspaces/dripnight-dumper/tools/cpp2il-src/LibCpp2IL/BinaryStructures/Il2CppMethodSpec.cs:line 15
+   at LibCpp2IL.Cpp2IlMethodRef.get_BaseMethod() in /workspaces/dripnight-dumper/tools/cpp2il-src/LibCpp2IL/Cpp2IlMethodRef.cs:line 12
+   at LibCpp2IL.Il2CppBinary.GetGenericMethodFromIndex(Il2CppMetadata metadata, Int32 genericMethodIndex, Int32 genericMethodPointerIndex, UInt64 adjustorThunkPtr) in /workspaces/dripnight-dumper/tools/cpp2il-src/LibCpp2IL/Il2CppBinary.cs:line 400
+   at LibCpp2IL.Il2CppBinary.Init(UInt64 pCodeRegistration, UInt64 pMetadataRegistration, Il2CppMetadata metadata) in /workspaces/dripnight-dumper/tools/cpp2il-src/LibCpp2IL/Il2CppBinary.cs:line 365
+   at LibCpp2IL.Il2CppBinary.Init(LibCpp2IlContext context) in /workspaces/dripnight-dumper/tools/cpp2il-src/LibCpp2IL/Il2CppBinary.cs:line 95
+   at LibCpp2IL.LibCpp2IlBinaryRegistry.CreateAndInit(Byte[] buffer, LibCpp2IlContext context) in /workspaces/dripnight-dumper/tools/cpp2il-src/LibCpp2IL/LibCpp2IlBinaryRegistry.cs:line 66
+   at LibCpp2IL.LibCpp2IlContextBuilder.LoadBinary(Byte[] binaryBytes) in /workspaces/dripnight-dumper/tools/cpp2il-src/LibCpp2IL/LibCpp2IlContextBuilder.cs:line 73
+   at LibCpp2IL.LibCpp2IlContextBuilder.Build(Byte[] binaryBytes, Byte[] metadataBytes, UnityVersion unityVersion) in /workspaces/dripnight-dumper/tools/cpp2il-src/LibCpp2IL/LibCpp2IlContextBuilder.cs:line 129
+   at LibCpp2IL.LibCpp2IlContextBuilder.BuildFromFiles(String pePath, String metadataPath, UnityVersion unityVersion) in /workspaces/dripnight-dumper/tools/cpp2il-src/LibCpp2IL/LibCpp2IlContextBuilder.cs:line 137
+   at LibCpp2IL.LibCpp2IlMain.LoadFromFileAsContext(String pePath, String metadataPath, UnityVersion unityVersion) in /workspaces/dripnight-dumper/tools/cpp2il-src/LibCpp2IL/LibCpp2IlMain.cs:line 41
+   at Cpp2IL.Core.Cpp2IlApi.InitializeLibCpp2Il(String assemblyPath, String metadataPath, UnityVersion unityVersion, Boolean allowUserToInputAddresses) in /workspaces/dripnight-dumper/tools/cpp2il-src/Cpp2IL.Core/Cpp2IlApi.cs:line 89
+   --- End of inner exception stack trace ---
+   at Cpp2IL.Core.Cpp2IlApi.InitializeLibCpp2Il(String assemblyPath, String metadataPath, UnityVersion unityVersion, Boolean allowUserToInputAddresses) in /workspaces/dripnight-dumper/tools/cpp2il-src/Cpp2IL.Core/Cpp2IlApi.cs:line 95
+   at Cpp2IL.Program.MainWithArgs(Cpp2IlRuntimeArgs runtimeArgs) in /workspaces/dripnight-dumper/tools/cpp2il-src/Cpp2IL/Program.cs:line 683
+   at Cpp2IL.Program.Main(String[] args) in /workspaces/dripnight-dumper/tools/cpp2il-src/Cpp2IL/Program.cs:line 615
+
+Waiting for you to press enter - feel free to copy the error...
+[0m

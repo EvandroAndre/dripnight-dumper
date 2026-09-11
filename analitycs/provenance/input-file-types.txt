@@ -1,0 +1,2 @@
+input/libil2cpp.so: ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, BuildID[sha1]=3f0442e40046ae3648ae2e3d82cc907dfd743792, stripped
+input/libunity.so:  ELF 64-bit LSB shared object, ARM aarch64, version 1 (SYSV), dynamically linked, BuildID[xxHash]=4a7c95992921cd88, stripped

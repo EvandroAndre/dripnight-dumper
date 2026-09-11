@@ -1,0 +1,11 @@
+namespace message;
+
+public enum IIBJENHFKHL : uint
+{
+	EClientSwitchPhysXStateResultCode_Approved,
+	EClientSwitchPhysXStateResultCode_InvalidTransition,
+	EClientSwitchPhysXStateResultCode_NotOnBoard,
+	EClientSwitchPhysXStateResultCode_CannotJumpYet,
+	EClientSwitchPhysXStateResultCode_FollowModeDenied,
+	EClientSwitchPhysXStateResultCode_StateConflict
+}

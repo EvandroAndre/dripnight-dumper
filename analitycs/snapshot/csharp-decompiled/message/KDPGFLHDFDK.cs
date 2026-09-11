@@ -1,0 +1,32 @@
+namespace message;
+
+public enum KDPGFLHDFDK : uint
+{
+	UGCMsgNotifyType_Unknown,
+	UGCMsgNotifyType_PlayEffect,
+	UGCMsgNotifyType_PlaySound,
+	UGCMsgNotifyType_ShowTips,
+	UGCMsgNotifyType_Morph,
+	UGCMsgNotifyType_Emote,
+	UGCMsgNotifyType_PauseAnimtion,
+	UGCMsgNotifyType_PlayAnimationController,
+	UGCMsgNotifyType_SetAnimationClipSpeed,
+	UGCMsgNotifyType_SetAnimationStateLoop,
+	UGCMsgNotifyType_SetAnimationClipLoop,
+	UGCMsgNotifyType_FirstSyncEnd,
+	UGCMsgNotifyType_StartMatchMaking,
+	UGCMsgNotifyType_OnPlayerStartMatchMaking,
+	UGCMsgNotifyType_DispatchClientEvent,
+	UGCMsgNotifyType_NotifyStartPlot,
+	UGCMsgNotifyType_SetAnimationBodyPartWeight,
+	UGCMsgNotifyType_StopAnimationState,
+	UGCMsgNotifyType_CameraTransition,
+	UGCMsgNotifyType_GroupMatchmakingMapCode,
+	UGCMsgNotifyType_GroupMatchmakingProgress,
+	UGCMsgNotifyType_GroupMatchmakingTimeout,
+	UGCMsgNotifyType_GroupMatchmakingStart,
+	UGCMsgNotifyType_GroupMatchmakingCancelResDownload,
+	UGCMsgNotifyType_GroupMatchmakingResReady,
+	UGCMsgNotifyType_GroupMatchmakingCancel,
+	UGCMsgNotifyType_GroupMatchmakingExceedMaxPlayer
+}

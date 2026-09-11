@@ -1,0 +1,8 @@
+namespace FFVoice;
+
+public enum FFVoiceAIAgentResultType
+{
+	AIAGENT_RESULT_TYPE_UNKNOWN,
+	AIAGENT_RESULT_TYPE_ASR,
+	AIAGENT_RESULT_TYPE_LLM
+}

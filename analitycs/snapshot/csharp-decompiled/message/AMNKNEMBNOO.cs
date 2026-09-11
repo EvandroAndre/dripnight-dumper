@@ -1,0 +1,7 @@
+namespace message;
+
+public enum AMNKNEMBNOO : uint
+{
+	EPRI_TIMING_CATAPULT_USEFUL_TIMES,
+	EPRI_TIMING_CATAPULT_NB
+}

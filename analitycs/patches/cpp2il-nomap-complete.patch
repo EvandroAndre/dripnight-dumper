@@ -1,0 +1,88 @@
+diff --git a/Cpp2IL.Core/OutputFormats/AsmResolverDllOutputFormat.cs b/Cpp2IL.Core/OutputFormats/AsmResolverDllOutputFormat.cs
+index 26ad284..24e2352 100644
+--- a/Cpp2IL.Core/OutputFormats/AsmResolverDllOutputFormat.cs
++++ b/Cpp2IL.Core/OutputFormats/AsmResolverDllOutputFormat.cs
+@@ -290,13 +290,17 @@ public abstract class AsmResolverDllOutputFormat : Cpp2IlOutputFormat
+ 
+         if (!il2CppDefinition.ClassSizeIsDefault)
+         {
+-            if (il2CppDefinition.Size > 1 << 30)
+-                throw new Exception($"Got invalid size for type {il2CppDefinition}: {il2CppDefinition.RawSizes}");
+-
+-            if (il2CppDefinition.Size != -1)
++            if (il2CppDefinition.Size < -1 || il2CppDefinition.Size > 1 << 30)
++            {
++                // DRIP metadata-only recovery:
++                // Ignore corrupted class-size data but preserve any valid packing information.
++                classSize = 0;
++            }
++            else if (il2CppDefinition.Size != -1)
+                 classSize = (uint)il2CppDefinition.Size;
+             else
+-                classSize = 0; //Not sure what this value actually implies but it seems to work
++                classSize = 0; //Unknown/default size
++
+         }
+ 
+         if (packingSize != 0 || classSize != 0)
+diff --git a/LibCpp2IL/Il2CppBinary.cs b/LibCpp2IL/Il2CppBinary.cs
+index 80110ba..cb1dece 100644
+--- a/LibCpp2IL/Il2CppBinary.cs
++++ b/LibCpp2IL/Il2CppBinary.cs
+@@ -304,7 +304,8 @@ public abstract class Il2CppBinary(Stream input) : ClassReadingBinaryReader(inpu
+             InBinaryMetadataSize += GetNumBytesReadSinceLastCallAndClear();
+         }
+ 
+-        if (_genericMethodPointers.Length > 0)
++        if (_genericMethodPointers.Length > 0 &&
++            !(_context?.Settings.DisableMethodPointerMapping ?? false))
+         {
+             LibLogger.Verbose("\tReading generic methods...");
+             start = DateTime.Now;
+@@ -336,7 +337,10 @@ public abstract class Il2CppBinary(Stream input) : ClassReadingBinaryReader(inpu
+         }
+         else
+         {
+-            LibLogger.WarnNewline("\tNo generic method pointer data found, skipping generic mapping.");
++            if (_context?.Settings.DisableMethodPointerMapping ?? false)
++                LibLogger.InfoNewline("\t[DRIP-NOMAP] Generic native pointer mapping disabled.");
++            else
++                LibLogger.WarnNewline("\tNo generic method pointer data found, skipping generic mapping.");
+         }
+ 
+         _hasFinishedInitialRead = true;
+@@ -417,7 +421,8 @@ public abstract class Il2CppBinary(Stream input) : ClassReadingBinaryReader(inpu
+     public Il2CppType GetType(Il2CppVariableWidthIndex<Il2CppType> index) => _types[index.Value];
+     public ulong GetRawMetadataUsage(uint index) => _metadataUsages[index];
+     public ulong[] GetCodegenModuleMethodPointers(int codegenModuleIndex) => _codeGenModuleMethodPointers[codegenModuleIndex];
+-    public Il2CppCodeGenModule? GetCodegenModuleByName(string name) => _codeGenModulesByName[name];
++    public Il2CppCodeGenModule? GetCodegenModuleByName(string name) =>
++        _codeGenModulesByName.TryGetValue(name, out var module) ? module : null;
+     public int GetCodegenModuleIndex(Il2CppCodeGenModule module) => Array.IndexOf(_codeGenModules, module);
+     public int GetCodegenModuleIndexByName(string name) => GetCodegenModuleByName(name) is { } module ? GetCodegenModuleIndex(module) : -1;
+     public Il2CppTokenRangePair[] GetRgctxRangePairsForModule(Il2CppCodeGenModule module) => _codegenModuleRgctxRanges[GetCodegenModuleIndex(module)];
+@@ -479,6 +484,11 @@ public abstract class Il2CppBinary(Stream input) : ClassReadingBinaryReader(inpu
+ 
+     public ulong GetMethodPointer(int methodIndex, Il2CppVariableWidthIndex<Il2CppMethodDefinition> methodDefinitionIndex, int imageIndex, uint methodToken)
+     {
++        // DRIP metadata-only recovery:
++        // Native method pointers are intentionally unavailable/untrusted.
++        if (_context?.Settings.DisableMethodPointerMapping ?? false)
++            return 0;
++
+         if (MetadataVersion >= 24.2f)
+         {
+             if (_genericMethodDictionary.TryGetValue(methodDefinitionIndex, out var methodPointer))
+diff --git a/LibCpp2IL/LibCpp2IlContextBuilder.cs b/LibCpp2IL/LibCpp2IlContextBuilder.cs
+index 9c23116..d497891 100644
+--- a/LibCpp2IL/LibCpp2IlContextBuilder.cs
++++ b/LibCpp2IL/LibCpp2IlContextBuilder.cs
+@@ -13,7 +13,7 @@ public sealed class LibCpp2IlContextBuilder
+         new LibCpp2IlMain.LibCpp2IlSettings // Snapshot settings at creation time.
+         {
+             AllowManualMetadataAndCodeRegInput = LibCpp2IlMain.Settings.AllowManualMetadataAndCodeRegInput,
+-            DisableMethodPointerMapping = LibCpp2IlMain.Settings.DisableMethodPointerMapping,
++            DisableMethodPointerMapping = true, // DRIP: metadata-only recovery mode
+             DisableGlobalResolving = LibCpp2IlMain.Settings.DisableGlobalResolving,
+             MetadataFixupFunc = LibCpp2IlMain.Settings.MetadataFixupFunc
+         });

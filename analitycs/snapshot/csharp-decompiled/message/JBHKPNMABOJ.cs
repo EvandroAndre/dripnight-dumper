@@ -1,0 +1,13 @@
+namespace message;
+
+public enum JBHKPNMABOJ : uint
+{
+	ENaru2NBGPNotificationType_None,
+	ENaru2NBGPNotificationType_BloodMoonPhaseStart,
+	ENaru2NBGPNotificationType_BloodMoonFirstEntered,
+	ENaru2NBGPNotificationType_BloodMoonRemoved,
+	ENaru2NBGPNotificationType_BigItemsPhaseStart,
+	ENaru2NBGPNotificationType_BigItemsFirstAcquired,
+	ENaru2NBGPNotificationType_BigItemsPhaseAboutToEnd,
+	ENaru2NBGPNotificationType_BigItemsPhaseEnd
+}

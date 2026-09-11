@@ -1,0 +1,36 @@
+namespace COW;
+
+public enum EngineSwitch3
+{
+	Unknown = 0,
+	EnableShaderDebugCompileInfo = 1,
+	EnableShaderSimpileCompileInfo = 2,
+	DisablePreloadShaderByFBX = 4,
+	TryFixAnrUnitySendMessage = 8,
+	TryFixGetChunkParametersCrash = 0x10,
+	TryFixGetMeshBufferCrash = 0x20,
+	EnableAddUnityShader2018Keyword = 0x40,
+	FixParticleMemOptFor22 = 0x80,
+	ForceNonPooledFileCacherRead = 0x100,
+	UsingUMABoneWeights2 = 0x200,
+	OpenMetalLanguageVersionSelect = 0x400,
+	MemsetZeroWhenFileIOFailed = 0x800,
+	CheckCompressSkinMeshRender = 0x1000,
+	EnableGfxDevicePointerValidation = 0x2000,
+	SafeFreeFSBDataWhenIOFailed = 0x4000,
+	EnableForceBothCompress = 0x8000,
+	EnablePhysicsZeroProtect = 0x10000,
+	EnableDefaultExtraLayerToOne = 0x20000,
+	FixRenderTextureCrashIn2018 = 0x40000,
+	EnableSetSourcePlayableScript = 0x80000,
+	EnableAnimatorBuildAssetOpt = 0x100000,
+	EnableMetalShaderAsyncCompile = 0x200000,
+	TryFixRenderFlareCrash = 0x400000,
+	EnableBlendShapeDataCompress = 0x800000,
+	EnableDrawCallAndParticleNumRecord = 0x1000000,
+	FixCullingTransformTPose = 0x2000000,
+	EnableAutoSaveSmapsWhenCrash = 0x4000000,
+	FixPhysicsExtraLayerWord0 = 0x8000000,
+	EnableFixRemmapIndexOutOfBounds = 0x10000000,
+	FixUGCAudioBug = 0x20000000
+}

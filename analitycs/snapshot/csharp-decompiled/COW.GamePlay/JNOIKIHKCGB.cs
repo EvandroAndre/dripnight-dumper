@@ -1,0 +1,47 @@
+using UnityEngine;
+using message;
+
+namespace COW.GamePlay;
+
+public class JNOIKIHKCGB
+{
+	private BHGGAEEHJCO KNGOAFLDNEJ;
+
+	private int MGDNKGIKBFN;
+
+	public bool EMKKNNOPAAG;
+
+	private EMEFBBBEPDG BBJFAGIODFG;
+
+	private uint EFGDHBFOEGM;
+
+	private uint DIFHCNIPBNJ;
+
+	public BHGGAEEHJCO FAMDJJMDPPK => default(BHGGAEEHJCO);
+
+	public int EBPGIBLHIOP => 0;
+
+	public JNOIKIHKCGB(BHGGAEEHJCO MELCKDBHDLI, int PIBGFBLEBPH)
+	{
+	}
+
+	public void LAJEELOALAA(Vector3 IGDHIDGLOKG, uint AOENABIMOCH, bool BKFBJPLADMP = true, bool LPBMBGBNFOL = true)
+	{
+	}
+
+	public void JOHPOACMIFC(EMEFBBBEPDG FEKAKKAKAHC, uint DIDNPODGGAA, uint GBGKIDEMLID, Vector3 IGDHIDGLOKG, bool BKFBJPLADMP = true, bool LPBMBGBNFOL = true)
+	{
+	}
+
+	public void OKIEMELGHJP(EMEFBBBEPDG FEKAKKAKAHC, uint DIDNPODGGAA, string LCGFPGOBNBC, uint GBGKIDEMLID, Vector3 ANBHOFKDHII, bool LPBMBGBNFOL = true)
+	{
+	}
+
+	private void JNFEMBDNBKB()
+	{
+	}
+
+	public void CECGIECHNAJ(BHGGAEEHJCO OBMFMAKFDDL, EMEFBBBEPDG FEKAKKAKAHC, uint DIDNPODGGAA, uint GBGKIDEMLID)
+	{
+	}
+}

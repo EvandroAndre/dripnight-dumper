@@ -1,0 +1,17 @@
+using GCommon;
+using message;
+
+namespace COW.GamePlay;
+
+public class PFINAIEDCEP : GEvent
+{
+	public BHGGAEEHJCO BNEAGPEAPMG;
+
+	public BOMHIFNLIGE PFKHPFECNFO;
+
+	public BOMHIFNLIGE JHKNJAAEDAA;
+
+	public void BLJEIAHKEPL(BHGGAEEHJCO OBMFMAKFDDL, BOMHIFNLIGE LALADOJHOBE, BOMHIFNLIGE GCJPAAPKMMA)
+	{
+	}
+}

@@ -1,0 +1,31 @@
+using System.Collections.Generic;
+using GCommon;
+
+namespace message;
+
+public class GKGCLAGODEO : UDPClientMessageBase
+{
+	public uint ACFBGLBIHIA;
+
+	public ushort FFJAFFJCHCD;
+
+	public string EFJCEKLKCLC;
+
+	public PMFGOGFPDHM MOEFFAIDCBP;
+
+	public BJIPILEFOGL LFCNHAJBHEE;
+
+	public List<byte> KGAIBJFMLOB;
+
+	public override void Serialize(FastBinaryWriter CDKHIDGNFDE)
+	{
+	}
+
+	public override void UnSerialize(FastBinaryReader HICKLIEHMND)
+	{
+	}
+
+	public override void Recycle()
+	{
+	}
+}

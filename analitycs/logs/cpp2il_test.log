@@ -1,0 +1,704 @@
+===Cpp2IL by Samboy063===
+A Tool to Reverse Unity's "il2cpp" Build Process.
+Version 2022.1.0-development.1736+5fb2030.5fb20304df698ffd3d0e664b2a698cd911dc9d57
+
+[38;2;173;216;230m[Info] [Program] [0m[38;2;173;216;230mRunning on Unix
+[0m[38;2;173;216;230m[Info] [Plugins] [0m[38;2;173;216;230mLoading plugins from /workspaces/dripnight-dumper/Plugins...
+[0m[38;2;128;128;128m[Verb] [Plugins] [0m[38;2;128;128;128mCollecting and instantiating plugins...
+[0m[38;2;128;128;128m[Verb] [Plugins] [0m[38;2;128;128;128m	Loading plugin Cpp2IL.Core.Cpp2IlCorePlugin from assembly: Cpp2IL.Core.dll
+[0m[38;2;128;128;128m[Verb] [Plugins] [0m[38;2;128;128;128mInvoking OnLoad on 1 plugins.
+[0m[38;2;128;128;128m[Verb] [Plugin: Cpp2IL Built-In] [0m[38;2;128;128;128mInitializing...
+[0m[38;2;128;128;128m[Verb] [Plugin: Cpp2IL Built-In] [0m[38;2;128;128;128m	Registering built-in instruction set handlers...
+[0m[38;2;128;128;128m[Verb] [Plugin: Cpp2IL Built-In] [0m[38;2;128;128;128m	Registering built-in binary parsers...
+[0m[38;2;128;128;128m[Verb] [Plugin: Cpp2IL Built-In] [0m[38;2;128;128;128m	Registering built-in output formats...
+[0m[38;2;128;128;128m[Verb] [Plugin: Cpp2IL Built-In] [0m[38;2;128;128;128m	Registering built-in processing layers
+[0m[38;2;128;128;128m[Verb] [Plugin: Cpp2IL Built-In] [0m[38;2;128;128;128mCore plugin loaded in 287752 ticks (28.7752ms)
+[0m[38;2;173;216;230m[Info] [Plugins] [0m[38;2;173;216;230mUsing Plugin: Cpp2IL Built-In
+[0m[38;2;128;128;128m[Verb] [Plugins] [0m[38;2;128;128;128mOnLoad complete
+[0m[38;2;255;255;0m[Warn] [Program] [0m[38;2;255;255;0mUsing force options, I sure hope you know what you're doing!
+[0m[38;2;128;128;128m[Verb] [Program] [0m[38;2;128;128;128mSelected output formats: [dummydll]
+[0m[38;2;128;128;128m[Verb] [Program] [0m[38;2;128;128;128mNo processing layers requested
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230mInitializing Metadata...
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	IL2CPP Metadata Declares its version as 31
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230m	Using actual IL2CPP Metadata version 31.1
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Metadata version is pre-v38, using fixed 32-bit widths for all variable width indices
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading image definitions...[0m[38;2;128;128;128mOK (1.6408 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading assembly definitions...[0m[38;2;128;128;128mOK (0.9485 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading type definitions...[0m[38;2;128;128;128m45407 OK (108.1163 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading interface offsets...[0m[38;2;128;128;128mOK (16.0044 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading vtable indices...[0m[38;2;128;128;128mOK (81.2575 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading method definitions...[0m[38;2;128;128;128mOK (515.9789 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading method parameter definitions...[0m[38;2;128;128;128mOK (92.1011 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading field definitions...[0m[38;2;128;128;128mOK (562.6785 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading default field values...[0m[38;2;128;128;128mOK (25.1873 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading default parameter values...[0m[38;2;128;128;128mOK (1.9242 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading property definitions...[0m[38;2;128;128;128mOK (139.9304 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading interface definitions...[0m[38;2;128;128;128mOK (3.6265 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading nested type definitions...[0m[38;2;128;128;128mOK (1.2301 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading event definitions...[0m[38;2;128;128;128mOK (0.7359 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading generic container definitions...[0m[38;2;128;128;128mOK (0.9312 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading generic parameter definitions...[0m[38;2;128;128;128mOK (1.5128 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading generic parameter constraint indices...[0m[38;2;128;128;128mOK (0.0317 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading referenced assemblies...[0m[38;2;128;128;128mOK (0.4188 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading string definitions...[0m[38;2;128;128;128mOK (5.0927 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading exported types...[0m[38;2;128;128;128mOK (0.409 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading field references...[0m[38;2;128;128;128mOK (0.4229 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading Attribute data...[0m[38;2;128;128;128mOK (8.2085 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Building Lookup Table for field defaults...[0m[38;2;128;128;128mOK (141.1715 ms)
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230mInitialized Metadata in 1729ms
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230mUsing binary type ELF (from LibCpp2IL)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading Elf File Ident...[0m[38;2;128;128;128mOK (1.5823 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Binary is 64-bit and little-endian.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading and validating full ELF header...[0m[38;2;128;128;128mOK (0.7892 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Elf File contains instructions of type ArmV8
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading ELF program header table...[0m[38;2;128;128;128mRead 14 OK (0.8839 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading ELF section header table and names...
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Name for section at 0x0 is 
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Name for section at 0x1887850 is .note.android.ident
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Name for section at 0xAE838B0 is .note.gnu.build-id
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Name for section at 0xB728470 is .dynsym
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Name for section at 0x100C8 is .gnu.version
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Name for section at 0x115EC is .gnu.version_r
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Name for section at 0x11650 is .gnu.hash
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Name for section at 0x1555C is .hash
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Name for section at 0x186B990 is .dynstr
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Name for section at 0x1A9F0 is .rela.dyn
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Name for section at 0x350 is .rela.plt
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Name for section at 0x1888B10 is .rodata
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Name for section at 0x20D14CC is .gcc_except_table
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Name for section at 0x22DFD30 is .eh_frame_hdr
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Name for section at 0x268D6F8 is .eh_frame
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Name for section at 0x34A9874 is .text
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Name for section at 0xAB36B60 is .plt
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Name for section at 0xAB39090 is .data.rel.ro
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Name for section at 0xAE83670 is .fini_array
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Name for section at 0xAE836B0 is .dynamic
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Name for section at 0xAE83918 is .got
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Name for section at 0xB01F228 is .got.plt
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Name for section at 0xB0204C8 is .data
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Name for section at 0xB722EF0 is .shstrtab
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Read 24 OK (4.0083 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	ELF global offset is 0x4000
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Finding Relocations...
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128mApplying 1062396 relocations
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128mApplying 306 relocations
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128mOK (788.968 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Processing Symbols...
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Found .dynsym at 0xB728470
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Found DT_SYMTAB at 0xB728470
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Found 2718 symbols in table at 0xB728470
+[0m[38;2;139;0;0m[Fail] [Library] [0m[38;2;139;0;0m	Caught OverflowException processing symbols! Attempting to continue without symbol information (no exports, for example)...
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Processing Initializers...[0m[38;2;128;128;128mGot 0 OK (0.5808 ms)
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230mSearching Binary for Required Data...
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Checking ELF Symbol Table for code and/or meta reg...[0m[38;2;128;128;128mDidn't find them, scanning binary...
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128mSearching for il2cpp structures in an ELF binary using non-arch-specific method...
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Looking for code reg (this might take a while)...
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			Looking for bytes: 6d 73 63 6f 72 6c 69 62 2e 64 6c 6c 00
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			Found 1 occurrences of mscorlib.dll: [18B9A55]
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			Looking for bytes: 55 9a 8b 01 00 00 00 00
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			Found 1 potential codegen modules for mscorlib: [AE68CB0]
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			Looking for bytes: b0 8c e6 0a 00 00 00 00
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			Found 1 address for potential codegen modules in potential codegen module lists: [B0DF8A0]
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			Looking for bytes: a0 f6 0d 0b 00 00 00 00
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			Looking for bytes: 98 f6 0d 0b 00 00 00 00
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			Looking for bytes: 90 f6 0d 0b 00 00 00 00
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			Looking for bytes: 88 f6 0d 0b 00 00 00 00
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			Looking for bytes: 80 f6 0d 0b 00 00 00 00
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			Looking for bytes: 78 f6 0d 0b 00 00 00 00
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			Looking for bytes: 70 f6 0d 0b 00 00 00 00
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			Looking for bytes: 68 f6 0d 0b 00 00 00 00
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			Found valid address for pCodegenModules after a backtrack of 71/74: AB418D8
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			Found 1 potential pCodegenModules addresses: [AB418D8]
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			pCodegenModules is the second-to-last field of the codereg struct. Therefore on this version and architecture, we need to subtract 128 bytes from its address to get pCodeReg
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			Only found one codegen module pointer, so assuming it's correct and returning pCodeReg = 0xAB41858
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Got code reg 0xAB41858
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Looking for meta reg (post-27)...
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			Looking for the number of type definitions, 0xB15F
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			Looking for bytes: 5f b1 00 00 00 00 00 00
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			Found 2 instances of the number of type definitions: [AD10B88, AD10B98]
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			Found 2 potential metadata registrations: [AD10B28, AD10B38]
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			Rejected Metadata registration at 0xAD10B28, because it has a count field 0x8B97F64 at offset 0 which is above sanity limit of 0xC0000. If metadata registration detection fails, may need to bump up the limit.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			Accepting metadata reg as VA 0xAD10B38
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Got meta reg 0xad10b38
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230mGot Binary codereg: 0xAB41858, metareg: 0xAD10B38 in 420ms.
+[0m[38;2;173;216;230m[Info] [Library] [0m[38;2;173;216;230mInitializing Binary...
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading generic instances...[0m[38;2;128;128;128mOK (13.135 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading generic method pointers...[0m[38;2;128;128;128mOK (0.5564 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading field offsets...[0m[38;2;128;128;128mOK (4.2331 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading types...[0m[38;2;128;128;128mOK (51.8685 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading type definition sizes...[0m[38;2;128;128;128mOK (0.3256 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading code gen modules...
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for Assembly-CSharp-firstpass.dll, contains 5154 method pointers starting at 0xB0EBB30
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 5154 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 29 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 278 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for Assembly-CSharp.dll, contains 275642 method pointers starting at 0xB0F5CB0
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 275642 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 498 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 2765 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for ECAPackage.dll, contains 290 method pointers starting at 0xB311B20
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 290 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 2 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 4 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for Firebase.Analytics.dll, contains 196 method pointers starting at 0xB312560
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 196 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for Firebase.App.dll, contains 785 method pointers starting at 0xB312B80
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 785 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 1 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 4 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for Firebase.Crashlytics.dll, contains 242 method pointers starting at 0xB314408
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 242 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 1 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 3 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for -=pqX61,!6?16=v
+96<75bb=,
+96<7561,1*;4=p61,!6?16=v=;,7*j~qX61,!6?16=v
+=+7-*;=+6,=*694bb6479<++=,p61,!6?16=v:2=;,qX61,!6?16=v
+=+7-*;=+bb=,-,>7-6<+**7*7?+pqX61,!6?16=v
+=+7-*;=+bb,9*,=*+1+,=6,969?=*7;391,15=*pqX61,!6?16=v95=:2=;,bb+=,= ,*9
+=6<=*9!=*p!+,=5v6,kjqX61,!6?16=v09<=*9*196,744=;,176bb<<9*196,p61,!6?16=v09<=*t61,!6?16=v
+=6<=*16?v9++!(=t!+,=5v,*16?qX61,!6?16=v09<=*9*196,744=;,176bb6,=*694*=9,=p61,!6?16=v09<=*9*196,744=;,176qX61,!6?16=v7/=.=4v49!=*77(bb=,-**=6,49!=*77(6,=*694pqX61,!6?16=v
+=6<=*16?v75596<->>=*bb61,->>=*pqX61,!6?16=v
+=6<=*16?v75596<->>=*bb941<9,=?916+, =;-,17649?+p61,!6?16=v
+=6<=*16?v75596<->>=* =;-,17649?+t61,!6?16=v
+=6<=*16?v75596<->>=* =;-,17649?+qX61,!6?16=v49!9:4=+v49!9:4=96<4=bb=,15=62=;,=<p61,!6?16=v49!9:4=+v49!9:4=96<4=~t!+,=5v7-:4=qX61,!6?16=v (=*15=6,94v
+=6<=*16?v;*1(,9:4=
+-6,15=
+=>4=;,176!+,=5=,,16?+bb;*1(,16?1*,!
+=>4=;,176!+,=56+,96;=pqX61,!6?16=v (=*15=6,94v
+=6<=*16?v*9(01;+7*59,,141,!bb+75(*=++=<7*59,9,1.== ,-*=7*59,p61,!6?16=v= ,-*=7*59,qX61,!6?16=vbb?=,;76,=6,747*62=;,=<p61,!6?16=v747*~qX61,!6?16=v:2=;,,9,=bb6,=*694=+,*7!p!+,=5v6,,*qX61,!6?16=v6(-,bb?=,57-+=;*744=4,962=;,=<p61,!6?16=v=;,7*j~qX61,!6?16=v6,=*694v6(-,6+9>=,141,!bb=,=!(,*16?65969?=<p!+,=5v!,=rt!+,=5v6,kjqX61,!6?16=v9*,1;4=!+,=5bb?=,(*7;=<-*9415-49,176-((7*,=<pqX61,!6?16=v9*,1;4=!+,=5bb7(!969?=<7:9,9p!+,=5v71<rt61,!6?16=v9*,1;4=!+,=57:+v9,1.=9*,1;4=9,9~qX61,!6?16=v9*,1;4=!+,=5w9167<-4=bb+=,(49!6/93=62=;,=<p61,!6?16=v9*,1;4=!+,=5w9167<-4=~t!+,=5v774=96qX61,!6?16=v9*,1;4=!+,=5w*1??=*7<-4=bb+=,16+1<=62=;,=<p61,!6?16=v9*,1;4=!+,=5w*1??=*7<-4=~t61,!6?16=v9*,1;4=!+,=5.=*49(;,176qX61,!6?16=v9*,1;4=!+,=5w-:51,,=*+7<-4=bb=,-:51,,=*!+,=562=;,=<p61,!6?16=v9*,1;4=!+,=5w-:51,,=*+7<-4=~t!+,=5v6,kjqX61,!6?16=v9*,1;4=!+,=5w7*;=.=*1>=,15=7<-4=bb?=,+(9;=62=;,=<p61,!6?16=v9*,1;4=!+,=5w7*;=.=*1>=,15=7<-4=~qX61,!6?16=v9*,1;4=!+,=5w
+7,9,176!(==<7<-4=bb?=, -4,1(41=*62=;,=<p61,!6?16=v9*,1;4=!+,=5w
+7,9,176!(==<7<-4=~qX61,!6?16=v9*,1;4=!+,=5w1?0,+7<-4=bb?=,*96?=62=;,=<p61,!6?16=v9*,1;4=!+,=5w1?0,+7<-4=~t61,!6?16=v9*,1;4=!+,=5w169 -*.=~qX61,!6?16=v9*,1;4=!+,=5
+=6<=*=*bb+=,=69:4=6+,96;16?p!+,=5v774=96qX61,!6?16=v
+1?1<:7<!bb?=,59 6?-49*=47;1,!pqX61,!6?16=v
+1?1<:7<!bb?=,.=47;1,!62=;,=<p61,!6?16=v=;,7*k~qX61,!6?16=v
+1?1<:7<!bb+=,(7+1,17662=;,=<p61,!6?16=v=;,7*k~qX61,!6?16=v7441<=*bb+=,59,=*194p61,!6?16=v0!+1;9,=*194qX61,!6?16=v9(+-4=7441<=*bb+=,0=1?0,p!+,=5v16?4=qX61,!6?16=v9(+-4=7441<=*bb94;-49,=*96+>7*562=;,=<p61,!6?16=v9,*1 l l~qX61,!6?16=v(*1,=9+3bb?=,+(*1,=7*,716,pqX9667,x59*+094x>1=4<x,= ,4=5=6,x7>x,!(=x= ,4=5=6,6>7bx
+=>=*=6;=x,!(=x>1=4<x59*+09416?x1+x67,x+-((7*,=<vX61,!6?16=v= ,=6=*9,7*bb7(-49,=6,=*69462=;,=<p!+,=5v,*16?t61,!6?16=v76,t61,!6?16=v747*~t!+,=5v6,kjt!+,=5v16?4=t!+,=5v16?4=t61,!6?16=v76,,!4=t!+,=5v774=96t!+,=5v774=96t!+,=5v6,kjt!+,=5v6,kjt!+,=5v6,kjt!+,=5v6,kjt!+,=5v774=96t61,!6?16=v= ,6;07*t!+,=5v16?4=t!+,=5v16?4=t!+,=5v16?4=t!+,=5v16?4=t!+,=5v774=96t!+,=5v774=96t!+,=5v6,kj~qX61,!6?16=v= ,=+0bb+=,941?65=6,p61,!6?16=v= ,41?65=6,qX61,!6?16=v7?9v9,1.=bb7<=7(!,!4=p!+,=5v6,,*t!+,=5v6,,*qX61,!6?16=v7?9v9,1.=bb7<=,!4==,16=1?0,p!+,=5v6,,*t!+,=5v16?4=qX9667,x59*+094x>1=4<x(*7(=*,1=+1+,x7>x,!(=x,!4=*7(=*,!95=744=;,176vX9667,x59*+094x>1=4<x+0==,x7>x,!(=x
+=+74.=76,= ,bx
+=>=*=6;=x,!(=x>1=4<x59*+09416?x1+x67,x+-((7*,=<vX61,!6?16=v96.9+
+=6<=*=*bb+=,(7(9,=*1947-6,p!+,=5v6,kjqX61,!6?16=v
+=;,*96+>7*5,141,!bb716,6
+=;,96?4=62=;,=<p61,!6?16=v=;,7*j~t61,!6?16=v
+=;,*96+>7*5t61,!6?16=v95=*9t61,!6?16=v=;,7*l~qX61,!6?16=v96.9+bb=,=>9-4,96.9+9,=*194pqX61,!6?16=v=,/7*316?v61,!=:
+=)-=+,bb
+=4=9+=pqX61,!6?16=v=,/7*316?v(479<96<4=*bb6,=*694=,76,=6,!(=p!+,=5v,*16?qX61,!6?16=v1<=7v1<=749!=*bb?=,;96=,15=(<9,=7<=pqX61,!6?16=v1<=7v1<=749!=*bb?=,1+*=(9*=<pqX61,!6?16=v1<=7v1<=749!=*bb?=,/91,7*1*+,*95=pqX61,!6?16=v1<=7v1<=749!=*bb9-+=pqX61,!6?16=v1<=7v1<=749!=*bb?=,;96,=(pqX61,!6?16=v1<=7v1<=749!=*bb?=,,15=
+=>=*=6;=pqX61,!6?16=v1<=7v1<=749!=*bb?=,>*95=7-6,pqX61,!6?16=v1<=7v1<=749!=*bb?=,9-<17*9;37-6,pqX!+,=5v76>1?-*9,176v<44X61,!6?16=v++=,-6<4=7<-4=v<44X7-:4=X++=5:4!95=X,,=5(,16?x,7x;944x9:+,*9;,x5=,07<x}+X*1,05=,1;x7(=*9,176x*=+-4,=<x16x96x7.=*>47/vXx16xXfqqX
+-6,15=*7(=*,!6>7X6x-6*=+74.=<x16<1*=;,x;944x4773-(x>914=<X?67*16?x+!5:74x>14=x<-=x,7xx51+59,;0vx14=x;76,916+x}+x:-,x= (=;,=<x}+vX!6;0*761"9,1767;3 ;=(,176X7;94=x}+Xj;((/1,;0X16<1;=+X96+1 kvlia`nX -61;7<=jh-,>oX=,9+07<=X0=x6-5:=*x7>x?=6=*1;x9*?-5=6,+x(*7.1<=<x<7=+6,x=)-94x,0=x9*1,!x7>x,0=x?=6=*1;x,!(=x<=>161,176vX!(=x5-+,x:=x9x,!(=x(*7.1<=<x:!x,0=x*-6,15=vX6+->>1;1=6,x5=57*!x>7*x:49;3x41+,RX:96<76=<x+,7((=<x59*316?x9>,=*x}-x1,=*9,176+RX9<x+,9;3x:9+=x16x*=?1+,=*5!,0*=9<X6+-((7*,=<x(9?=x+,9,=X0=x*=)-=+,=<x>-6;,176x/9+x67,x>7-6<X=(,=5:=*X=;X(=*9,176x67,x(=*51,,=<x76x96x7:2=;,x/1,07-,x96x9++7;19,=<x+,9,=vX}+x>914=<x,7x*=4=9+=x5-,= X~~X$X6-44(,*X7(=*9,7*ddeXbb7(=*9,7*xX=6-5X41:-6/16<bx594>7*5=<x.94= (*=++176x
+x-6/16<tx*=?x,77x:1?RX+(X kX aX jkX0:+09(=X495=161,X9667,x59*+094x>1=4<x=4=5=6,,!(=x7>x,!(=x**9!=,9<9,9bx
+=>=*=6;=x,!(=x>1=4<x59*+09416?x1+x67,x+-((7*,=<vX71;=161,X71;=27160966=4X71;=*=+-5=9;3?*7-6<-+1;X71;=+=,=9<+=,761,7*6X71;=+,7(*9:1;;,176X71;=31;3,0=**750966=4X9667,x59*+094x>1=4<x7-:4=9*95+x7>x,!(=x*=.1=/07/7-:4=6159,176.9,9*9*95+bx
+=>=*=6;=x,!(=x>1=4<x59*+09416?x1+x67,x+-((7*,=<vX=,77(16?X1*=:9+=((09*(09*=;,7*
+=57.=
+96?=X1*=:9+=((09*(09*=;,7*6<= >X1*=:9+=((09*(9*196,1+,<<
+96?=X1*=:9+=((09*(9*196,1+,
+=.=*+=iX1*=:9+=*9+04!,1;+09*( (7*,1 X1*=:9+=*9+04!,1;+09*(1*=:9+=*9+04!,1;+6,=*694+*9+04!,1;+744=;,17669:4=<X9667,x59*+094x>1=4<x5;, x7>x,!(=x
+=9<=*bx
+=>=*=6;=x,!(=x>1=4<x59*+09416?x1+x67,x+-((7*,=<vX9667,x59*+094x>1=4<x;-**=6,x7>x,!(=x+!6;
+=+-4,bx
+=>=*=6;=x,!(=x>1=4<x59*+09416?x1+x67,x+-((7*,=<vX61,!6?16=v6<*71<bb=4=,=47:94
+=>p!+,=5v6,,*qX61,!6?16=v6<*71<bb944!,==,07<6+9>=p!+,=5v6,,*t!+,=5v6,,*t61,!6?16=v2.94-=rqX61,!6?16=v6<*71<bb9447-:4==,07<6+9>=p!+,=5v6,,*t!+,=5v6,,*t61,!6?16=v2.94-=rqX61,!6?16=v6<*71<bb944,9,1;09*=,07<6+9>=p!+,=5v6,,*t!+,=5v6,,*t61,!6?16=v2.94-=rqX61,!6?16=v6<*71<bb=,,9,1;:2=;,1=4<p!+,=5v6,,*t!+,=5v6,,*qX61,!6?16=v6<*71<bb=,07*,**9!4=5=6,p!+,=5v6,,*t!+,=5v6,kjqX61,!6?16=v6159,176bb*7++9<=p!+,=5v,*16?t!+,=5v16?4=t61,!6?16=v49!7<=qX61,!6?16=v6159,176bb*7++9<=	-=-=<p!+,=5v,*16?t!+,=5v16?4=t61,!6?16=v	-=-=7<=t61,!6?16=v49!7<=qX61,!6?16=v6159,17641(bb?=,>*95=
+9,=pqX61,!6?16=v6159,17641(bb+=,47;947-6<+62=;,=<p61,!6?16=v7-6<+~qX61,!6?16=v6159,7*bb?=,9447/76+,96,41(95(416?(,151"9,176pqX61,!6?16=v6159,7*bb+=,9447/76+,96,41(95(416?(,151"9,176p!+,=5v774=96qX61,!6?16=v6159,7*bb=,9!=*=1?0,p!+,=5v6,kjt!+,=5v16?4=qX61,!6?16=v6159,7*bb=,6159,7*41(6>77-6,p!+,=5v6,kjt!+,=5v774=96qX61,!6?16=v6159,7*bb?=,4=>,==,7,,75=1?0,pqX61,!6?16=v.9,9*bb6,=*694=, 1+=6?,0p!+,=5v6,kjqX9667,x59*+094x>1=4<x57-*;=*96+>7*5x7>x,!(=x76+,*916,7-*;=bx
+=>=*=6;=x,!(=x>1=4<x59*+09416?x1+x67,x+-((7*,=<vX61,!6?16=v6159,176+v7+1,17676+,*916,bb?=,47;3=<pqX61,!6?16=v6159,176+v773,76+,*916,bb+=,47;3=<p!+,=5v774=96qX61,!6?16=v++=,-6<4=
+=)-=+,bb=,
+=+-4,pqX61,!6?16=v-<171+,=6=*bb+=,.74-5=p!+,=5v16?4=qX61,!6?16=v-<171+,=6=*bb+=,.=47;1,!(<9,=7<=p61,!6?16=v-<17=47;1,!(<9,=7<=qX61,!6?16=v-<177-*;=bb+=,:!(9++1+,=6=*>>=;,+p!+,=5v774=96qX61,!v7:+v7/=.=4v6+9>=v7:+,141,!bb?=,7:7*3=*9 15-57-6,pqX61,!v744=;,176+v7/=.=4v6+9>=v6+9>=,141,!bb*==p!+,=5v71<rt61,!v744=;,176+v447;9,7*qX61,!6?16=v((41;9,176bb?=,<9,99,0pqX61,!6?16=v95=*9bb+=,+31(6.73=6144
+=6<=*:2=;,p!+,=5v774=96qX61,!6?16=v95=*9bb?=,<=(,0= ,-*=7<=pqX61,!6?16=v95=*9bb?=,(1 =4=1?0,pqX61,!6?16=v95=*9bb?=,+=6+7*1"=62=;,=<p61,!6?16=v=;,7*j~qX61,!6?16=v
+=>4=;,176*7:=bb+=,,15=41;16?7<=p61,!6?16=v
+=6<=*16?v
+=>4=;,176*7:=15=41;16?7<=qX61,!6?16=v
+=>4=;,176*7:=bb?=,*=94,15== ,-*=pqX61,!6?16=v=:-?7?96<4=*bb6,=*6947?p61,!6?16=v7?!(=t61,!6?16=v7?(,176t!+,=5v,*16?t61,!6?16=v:2=;,qX61,!6?16=vbb=*,= kp!+,=5v16?4=t!+,=5v16?4=t!+,=5v16?4=qX61,!6?16=v*914
+=6<=*=*bb?=,?=6=*9,=1?0,16?9,9pqX61,!6?16=v*914
+=6<=*=*bb93==+0p61,!6?16=v=+0t61,!6?16=v95=*9t!+,=5v774=96qX61,!6?16=v16=
+=6<=*=*bb+=,+,9*,1<,0p!+,=5v16?4=qX61,!6?16=v16=
+=6<=*=*bb=,7+1,17662=;,=<p!+,=5v6,kjt61,!6?16=v=;,7*k~qX61,!6?16=v
+=6<=*=,,16?+bb+=,95:1=6,6,=6+1,!p!+,=5v16?4=qX61,!6?16=v
+=6<=*=,,16?+bb+=,>49*=9<=(==<p!+,=5v16?4=qX61,!6?16=v
+=6<=*=,,16?+bb?=,>7?747*62=;,=<p61,!6?16=v747*~qX61,!6?16=v09<=*bb?=,59 15-50-63+.=**1<=pqX61,!6?16=v09<=*bb=,9++7-6,6-:+09<=*p!+,=5v6,kjqX61,!6?16=v09<=*bb=,47:94479,**9!5(4p!+,=5v6,kjt!+,=5v16?4=t!+,=5v6,kjqX61,!6?16=v09<=*bb ,*9;,47:94479,**9!5(4p!+,=5v6,kjt!+,=5v16?4=qX61,!6?16=v09<=*bb ,*9;,47:949,*1 **9!5(4p!+,=5v6,kjt61,!6?16=v9,*1 l lqX61,!6?16=v09<=*bb=,47:949,*1 5(462=;,=<p!+,=5v6,kjt61,!6?16=v9,*1 l l~qX61,!6?16=v9,=*194bb=,.=**1<=9?p!+,=5v,*16?t!+,=5v,*16?qX61,!6?16=v9,=*194bb=,09<=*=!/7*<+pqX61,!6?16=v9,=*194bb=,= ,-*=5(4p!+,=5v6,kjt61,!6?16=v= ,-*=qX61,!6?16=v=6+49*=bb?=,;747*62=;,=<p61,!6?16=v747*~qX61,!6?16=v1?0,bb?=,+09<7/
+=+74-,176pqX61,!6?16=v1?0,bb?=,+09<7/9,*1 .=**1<=62=;,=<p61,!6?16=v9,*1 l l~qX61,!6?16=v3166=<=+0
+=6<=*=*bb?=,+3166=<7,176=;,7*+pqX61,!6?16=v=+0bb?=,16<= 7*59,pqX61,!6?16=v=+0bb=,=*,= ->>=*9*95+*75**9!p!+,=5v6,kjt61,!6?16=v
+=6<=*16?v=*,= ,,*1:-,==+;*1(,7*qX61,!6?16=v=+0bb=,6<1;=+5(4p!+,=5v6,kjt61,!6?16=v=+07(747?!t61,!6?16=v
+=6<=*16?v6<= 7*59,t!+,=5v**9!t!+,=5v6,kjt!+,=5v6,kjt!+,=5v774=96t!+,=5v6,kjqX61,!6?16=v=+0bb=,*196?4=+76447;5(4inp!+,=5v6,int!+,=5v6,kjt!+,=5v774=96qX61,!6?16=v=+0bb=,16<7+=+**9!p61,!6?16=v9,*1 l lt!+,=5v6,kjqX61,!6?16=v= ,-*=bb=,9,9=1?0,pqX61,!6?16=v= ,-*=bb=,9,1.== ,-*=,*pqX61,!6?16=v= ,-*=jbb=,1 =45(462=;,=<p!+,=5v6,kjt!+,=5v6,kjt!+,=5v6,kjt!+,=5v6,kjt61,!6?16=v747*~qX61,!6?16=v= ,-*=kbb?=,1+
+=9<9:4=pqX61,!6?16=v
+=6<=*= ,-*=bb=,747*7*59,p61,!6?16=v (=*15=6,94v
+=6<=*16?v*9(01;+7*59,qX61,!6?16=v
+=6<=*= ,-*=bb?=,:16<= ,-*=pqX61,!6?16=v
+=6<=*= ,-*=bb=,+7/=*>/7pqX61,!6?16=v
+=6<=*= ,-*=bb=,747*->>=*62=;,=<p61,!6?16=v
+=6<=*->>=*~qX61,!6?16=v49!=*766=;,1766,=*694bb*!=6<=++9?=p!+,=5v,*16?t!+,=5v!,=t!+,=5v6,kjqX61,!6?16=v+!6;(=*9,176bb6,=*694=+,*7!p!+,=5v6,,*qX61,!6?16=v95=:2=;,bb?=,,*96+>7*5pqX61,!6?16=v95=:2=;,bb=,;,1.=p!+,=5v774=96qX61,!6?16=v95=:2=;,bb?=,9;,1.=61=*9*;0!pqX61,!6?16=v15=bb?=,-6+;94=<=4,915=pqX61,!6?16=v7-;0;*==6=!:79*<bb+=,;09*9;,=*151,p!+,=5v6,kjqX61,!6?16=v
+=;,*96+>7*5bb?=,<*1.=6*7(=*,1=+pqX61,!6?16=v*96+>7*5bb+=,47;94;94=62=;,=<p61,!6?16=v=;,7*k~qX61,!6?16=v(*1,=bb6,=*694=,0!+1;+09(=716,7-6,p!+,=5v6,kjqX61,!6?16=v(*1,=bb=,0!+1;+09(=5(4p61,!6?16=v(*1,=t!+,=5v6,kjt!+,=5v744=;,176+v=6=*1;v1+,8id61,!6?16=v=;,7*jfqX61,!6?16=v*7>1416?v*7>14=*bb=,7,946-+=<
+=+=*.=<=57*!76?pqX61,!6?16=v;=6=969?=5=6,v;=6=969?=*bb6479<;=6=+!6;6,=*69462=;,=<p61,!6?16=v;=6=969?=5=6,v;=6=~t61,!6?16=v;=6=969?=5=6,v6479<;=6=(,176+qX61,!6?16=v49!9:4=+v49!9:4=*9(0bb=,
+=+74.=*62=;,=<p61,!6?16=v49!9:4=+v49!9:4=*9(0~qX61,!6?16=v49!9:4=+v49!9:4=*9(0bb766=;,6,=*69462=;,=<p61,!6?16=v49!9:4=+v49!9:4=*9(0~t61,!6?16=v49!9:4=+v49!9:4=96<4=~t!+,=5v6,kjt61,!6?16=v49!9:4=+v49!9:4=96<4=~t!+,=5v6,kjqX61,!6?16=v.=6,bb6,=*694=+,*7!p!+,=5v6,,*qX61,!6?16=v,141,!bb6,=*694=,76,*7462=;,=<p!+,=5v6,kjt61,!6?16=v7;-+!(=t61,!6?16=v
+=;,~qX61,!6?16=v+76,141,!bb7+766,=*694p!+,=5v:2=;,t!+,=5v774=96qX61,!6?16=v9*,1;4=!+,=5bb49!p!+,=5v774=96qX61,!6?16=v9*,1;4=!+,=5w9167<-4=bb?=,+,9*,=49!62=;,=<p61,!6?16=v9*,1;4=!+,=5w9167<-4=~t61,!6?16=v9*,1;4=!+,=5w169 -*.=~qX61,!6?16=v9*,1;4=!+,=5w9167<-4=bb?=,+,9*,
+7,9,176-4,1(41=*62=;,=<p61,!6?16=v9*,1;4=!+,=5w9167<-4=~qX61,!6?16=v9*,1;4=!+,=5w9167<-4=bb?=,59 9*,1;4=+62=;,=<p61,!6?16=v9*,1;4=!+,=5w9167<-4=~qX61,!6?16=v9*,1;4=!+,=5w09(=7<-4=bb?=,*9<1-+(==<-4,1(41=*62=;,=<p61,!6?16=v9*,1;4=!+,=5w09(=7<-4=~qX61,!6?16=v9*,1;4=!+,=5w09(=7<-4=bb+=,5=+0rp_delete_AndroidNotificationParamsInternal, contains 291 method pointers starting at 0xB314B98
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 291 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for Firebase.Platform.dll, contains 209 method pointers starting at 0xB3154B0
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 209 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 12 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 81 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for IFix.Core.dll, contains 210 method pointers starting at 0xB315B38
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 210 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 10 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 26 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for Mono.Security.dll, contains 510 method pointers starting at 0xB6A4358
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 510 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for Newtonsoft.Json.dll, contains 4181 method pointers starting at 0xB6C3528
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 4181 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 114 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 678 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for System.dll, contains 4952 method pointers starting at 0xB6ECBB0
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 4952 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 39 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 619 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXInjected(UnityEngine.ParticleSystem/ShapeModule&,UnityEngine.Mesh), contains 17 method pointers starting at 0xB6CF728
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 17 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for System.Core.dll, contains 3402 method pointers starting at 0xB6CF7B0
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 3402 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 255 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 1688 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for ?v*9(01;+7*59,qX61,!6?16=v
+=6<=*= ,-*=bb?=,:16<= ,-*=pqX61,!6?16=v
+=6<=*= ,-*=bb=,+7/=*>/7pqX61,!6?16=v
+=6<=*= ,-*=bb=,747*->>=*62=;,=<p61,!6?16=v
+=6<=*->>=*~qX61,!6?16=v49!=*766=;,1766,=*694bb*!=6<=++9?=p!+,=5v,*16?t!+,=5v!,=t!+,=5v6,kjqX61,!6?16=v+!6;(=*9,176bb6,=*694=+,*7!p!+,=5v6,,*qX61,!6?16=v95=:2=;,bb?=,,*96+>7*5pqX61,!6?16=v95=:2=;,bb=,;,1.=p!+,=5v774=96qX61,!6?16=v95=:2=;,bb?=,9;,1.=61=*9*;0!pqX61,!6?16=v15=bb?=,-6+;94=<=4,915=pqX61,!6?16=v7-;0;*==6=!:79*<bb+=,;09*9;,=*151,p!+,=5v6,kjqX61,!6?16=v
+=;,*96+>7*5bb?=,<*1.=6*7(=*,1=+pqX61,!6?16=v*96+>7*5bb+=,47;94;94=62=;,=<p61,!6?16=v=;,7*k~qX61,!6?16=v(*1,=bb6,=*694=,0!+1;+09(=716,7-6,p!+,=5v6,kjqX61,!6?16=v(*1,=bb=,0!+1;+09(=5(4p61,!6?16=v(*1,=t!+,=5v6,kjt!+,=5v744=;,176+v=6=*1;v1+,8id61,!6?16=v=;,7*jfqX61,!6?16=v*7>1416?v*7>14=*bb=,7,946-+=<
+=+=*.=<=57*!76?pqX61,!6?16=v;=6=969?=5=6,v;=6=969?=*bb6479<;=6=+!6;6,=*69462=;,=<p61,!6?16=v;=6=969?=5=6,v;=6=~t61,!6?16=v;=6=969?=5=6,v6479<;=6=(,176+qX61,!6?16=v49!9:4=+v49!9:4=*9(0bb=,
+=+74.=*62=;,=<p61,!6?16=v49!9:4=+v49!9:4=*9(0~qX61,!6?16=v49!9:4=+v49!9:4=*9(0bb766=;,6,=*69462=;,=<p61,!6?16=v49!9:4=+v49!9:4=*9(0~t61,!6?16=v49!9:4=+v49!9:4=96<4=~t!+,=5v6,kjt61,!6?16=v49!9:4=+v49!9:4=96<4=~t!+,=5v6,kjqX61,!6?16=v.=6,bb6,=*694=+,*7!p!+,=5v6,,*qX61,!6?16=v,141,!bb6,=*694=,76,*7462=;,=<p!+,=5v6,kjt61,!6?16=v7;-+!(=t61,!6?16=v
+=;,~qX61,!6?16=v+76,141,!bb7+766,=*694p!+,=5v:2=;,t!+,=5v774=96qX61,!6?16=v9*,1;4=!+,=5bb49!p!+,=5v774=96qX61,!6?16=v9*,1;4=!+,=5w9167<-4=bb?=,+,9*,=49!62=;,=<p61,!6?16=v9*,1;4=!+,=5w9167<-4=~t61,!6?16=v9*,1;4=!+,=5w169 -*.=~qX61,!6?16=v9*,1;4=!+,=5w9167<-4=bb?=,+,9*,
+7,9,176-4,1(41=*62=;,=<p61,!6?16=v9*,1;4=!+,=5w9167<-4=~qX61,!6?16=v9*,1;4=!+,=5w9167<-4=bb?=,59 9*,1;4=+62=;,=<p61,!6?16=v9*,1;4=!+,=5w9167<-4=~qX61,!6?16=v9*,1;4=!+,=5w09(=7<-4=bb?=,*9<1-+(==<-4,1(41=*62=;,=<p61,!6?16=v9*,1;4=!+,=5w09(=7<-4=~qX61,!6?16=v9*,1;4=!+,=5w09(=7<-4=bb+=,5=+0rp_delete_AndroidNotificationParamsInternal, contains 3327 method pointers starting at 0xB6D62F0
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 3327 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 18 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 144 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for System.Drawing.dll, contains 67 method pointers starting at 0xB6DDA08
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 67 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for qX61,!6?16=v
+=6<=*= ,-*=bb?=,:16<= ,-*=pqX61,!6?16=v
+=6<=*= ,-*=bb=,+7/=*>/7pqX61,!6?16=v
+=6<=*= ,-*=bb=,747*->>=*62=;,=<p61,!6?16=v
+=6<=*->>=*~qX61,!6?16=v49!=*766=;,1766,=*694bb*!=6<=++9?=p!+,=5v,*16?t!+,=5v!,=t!+,=5v6,kjqX61,!6?16=v+!6;(=*9,176bb6,=*694=+,*7!p!+,=5v6,,*qX61,!6?16=v95=:2=;,bb?=,,*96+>7*5pqX61,!6?16=v95=:2=;,bb=,;,1.=p!+,=5v774=96qX61,!6?16=v95=:2=;,bb?=,9;,1.=61=*9*;0!pqX61,!6?16=v15=bb?=,-6+;94=<=4,915=pqX61,!6?16=v7-;0;*==6=!:79*<bb+=,;09*9;,=*151,p!+,=5v6,kjqX61,!6?16=v
+=;,*96+>7*5bb?=,<*1.=6*7(=*,1=+pqX61,!6?16=v*96+>7*5bb+=,47;94;94=62=;,=<p61,!6?16=v=;,7*k~qX61,!6?16=v(*1,=bb6,=*694=,0!+1;+09(=716,7-6,p!+,=5v6,kjqX61,!6?16=v(*1,=bb=,0!+1;+09(=5(4p61,!6?16=v(*1,=t!+,=5v6,kjt!+,=5v744=;,176+v=6=*1;v1+,8id61,!6?16=v=;,7*jfqX61,!6?16=v*7>1416?v*7>14=*bb=,7,946-+=<
+=+=*.=<=57*!76?pqX61,!6?16=v;=6=969?=5=6,v;=6=969?=*bb6479<;=6=+!6;6,=*69462=;,=<p61,!6?16=v;=6=969?=5=6,v;=6=~t61,!6?16=v;=6=969?=5=6,v6479<;=6=(,176+qX61,!6?16=v49!9:4=+v49!9:4=*9(0bb=,
+=+74.=*62=;,=<p61,!6?16=v49!9:4=+v49!9:4=*9(0~qX61,!6?16=v49!9:4=+v49!9:4=*9(0bb766=;,6,=*69462=;,=<p61,!6?16=v49!9:4=+v49!9:4=*9(0~t61,!6?16=v49!9:4=+v49!9:4=96<4=~t!+,=5v6,kjt61,!6?16=v49!9:4=+v49!9:4=96<4=~t!+,=5v6,kjqX61,!6?16=v.=6,bb6,=*694=+,*7!p!+,=5v6,,*qX61,!6?16=v,141,!bb6,=*694=,76,*7462=;,=<p!+,=5v6,kjt61,!6?16=v7;-+!(=t61,!6?16=v
+=;,~qX61,!6?16=v+76,141,!bb7+766,=*694p!+,=5v:2=;,t!+,=5v774=96qX61,!6?16=v9*,1;4=!+,=5bb49!p!+,=5v774=96qX61,!6?16=v9*,1;4=!+,=5w9167<-4=bb?=,+,9*,=49!62=;,=<p61,!6?16=v9*,1;4=!+,=5w9167<-4=~t61,!6?16=v9*,1;4=!+,=5w169 -*.=~qX61,!6?16=v9*,1;4=!+,=5w9167<-4=bb?=,+,9*,
+7,9,176-4,1(41=*62=;,=<p61,!6?16=v9*,1;4=!+,=5w9167<-4=~qX61,!6?16=v9*,1;4=!+,=5w9167<-4=bb?=,59 9*,1;4=+62=;,=<p61,!6?16=v9*,1;4=!+,=5w9167<-4=~qX61,!6?16=v9*,1;4=!+,=5w09(=7<-4=bb?=,*9<1-+(==<-4,1(41=*62=;,=<p61,!6?16=v9*,1;4=!+,=5w09(=7<-4=~qX61,!6?16=v9*,1;4=!+,=5w09(=7<-4=bb+=,5=+0rp_delete_AndroidNotificationParamsInternal, contains 155 method pointers starting at 0xB6DDF50
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 155 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for !+,=5v
+-6,15=v=*1941"9,176v<44X61,!v=*.1;=+v7*=v=.1;=v<44X61,!v15=416=v<44X61,!6?16=v6<*71<7<-4=v<44X61,!6?16=v= ,7*=76,6?16=7<-4=v<44X!+,=5v=,X
+
+
+bx7-4<x67,x7(=6x}+X0*=9<Xbw-14<-,(-,
+1.=9+,;w=*+176w:*49,=+,w-61,!1:*9*!w+*;w5916w4j((-,(-,*72=;,wjw41:14j;((w1;944+w5+;7*41:w!+,=5v
+=>4=;,176w
+-6,15=++=5:4!v;((pjl`qxbx6+-((7*,=<x16,=*694x;944x>7*xjb++=5:4!bb6,=*69459?=
+-6,15==*+176xuxz01+x1;944x1+x67,x+-((7*,=<x:!x14j;((vzX:2=;,1+(7+=< ;=(,176X-+,75,,*1:-,=7*59, ;=(,176X47;393=6x5-+,x:=x>94+=X0*163x0*=9<x,9;3XkjX61,1941"=<x;49++x;7-6,bxX-;+jX41:14j;((xXjx<7=+x67,x+-((7*,x*=+-**=;,176x>7*x/=93x*=>=*=6;=+vx9++x,0=x,*9;3
+=+-**=;,176x/1,0x9x.94-=x7>x>94+=vX+,9*,X96,x+,9*,x-(bx67,x=67-?0x5=57*!RXx9*616?bx6= (=;,=<x9+!6;0*767-+xw(*7;w+=4>w59(+x?*7/,0xp,7x}4<x:!,=+qRX-659(?9(bx59<.1+=x>914=<x9,x}(xp4=6?,0x}4-qtx=**;7<=ex}<RX(,0*=9<3144x>914=<x9,x+-+(=6<X-6+(=;1>1=<x?=6=*1;;9,=?7*!x=**7*X>-,-*=X}X:9+1;17+,*=95Xx.749,14=X-*=x.1*,-94x>-6;,176x;944=<yX+,<bb:9<= ;=(,176X(1=;=x67,x15(4=5=6,=<X mX ihXXXXXX�gXX��XX��XX��XX��XX�gXIxzXOxzJ�XJB�XEbX]PSXO6XO{P[XTLXXXAXdXX�X�XXYgYXXXXXXXXXXXXXXXXXXXX�XXXXXX�gXX�gXXXXXXXX�gXX�gXX�gXX�XX�XXXXXXXX�gXX�gXX�g`XXX:X4.-JJJJJJJJJ*XJJXXXXXXXXXX,XPMxxigxXT@qgXG|zX�X^YXX�Y�Y�YXXfYXXnXX�X�X�XAYAhXX-X+X�XXXYYYXX�XUEtdX�<0$���XX[RMFz}pr;4"�����픉����XN��X\PT[@[XX^X^[sXH@XXXvXXMYX���XAxEX:?5+ %�X��������X}��pG�����s������������vil����obeND�AHK
+�, contains 6 method pointers starting at 0xB6DE5E8
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 6 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for System.Xml.dll, contains 6713 method pointers starting at 0xB6DEE58
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 6713 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 1 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 8 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for System.Xml.Linq.dll, contains 236 method pointers starting at 0xB6DE618
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 236 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 4 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 24 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.AIModule.dll, contains 8 method pointers starting at 0xB6FB2F0
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 8 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for 61,!6?16=v6<*71<7<-4=v<44X61,!6?16=v= ,7*=76,6?16=7<-4=v<44X!+,=5v=,X
+
+
+bx7-4<x67,x7(=6x}+X0*=9<Xbw-14<-,(-,
+1.=9+,;w=*+176w:*49,=+,w-61,!1:*9*!w+*;w5916w4j((-,(-,*72=;,wjw41:14j;((w1;944+w5+;7*41:w!+,=5v
+=>4=;,176w
+-6,15=++=5:4!v;((pjl`qxbx6+-((7*,=<x16,=*694x;944x>7*xjb++=5:4!bb6,=*69459?=
+-6,15==*+176xuxz01+x1;944x1+x67,x+-((7*,=<x:!x14j;((vzX:2=;,1+(7+=< ;=(,176X-+,75,,*1:-,=7*59, ;=(,176X47;393=6x5-+,x:=x>94+=X0*163x0*=9<x,9;3XkjX61,1941"=<x;49++x;7-6,bxX-;+jX41:14j;((xXjx<7=+x67,x+-((7*,x*=+-**=;,176x>7*x/=93x*=>=*=6;=+vx9++x,0=x,*9;3
+=+-**=;,176x/1,0x9x.94-=x7>x>94+=vX+,9*,X96,x+,9*,x-(bx67,x=67-?0x5=57*!RXx9*616?bx6= (=;,=<x9+!6;0*767-+xw(*7;w+=4>w59(+x?*7/,0xp,7x}4<x:!,=+qRX-659(?9(bx59<.1+=x>914=<x9,x}(xp4=6?,0x}4-qtx=**;7<=ex}<RX(,0*=9<3144x>914=<x9,x+-+(=6<X-6+(=;1>1=<x?=6=*1;;9,=?7*!x=**7*X>-,-*=X}X:9+1;17+,*=95Xx.749,14=X-*=x.1*,-94x>-6;,176x;944=<yX+,<bb:9<= ;=(,176X(1=;=x67,x15(4=5=6,=<X mX ihXXXXXX�gXX��XX��XX��XX��XX�gXIxzXOxzJ�XJB�XEbX]PSXO6XO{P[XTLXXXAXdXX�X�XXYgYXXXXXXXXXXXXXXXXXXXX�XXXXXX�gXX�gXXXXXXXX�gXX�gXX�gXX�XX�XXXXXXXX�gXX�gXX�g`XXX:X4.-JJJJJJJJJ*XJJXXXXXXXXXX,XPMxxigxXT@qgXG|zX�X^YXX�Y�Y�YXXfYXXnXX�X�X�XAYAhXX-X+X�XXXYYYXX�XUEtdX�<0$���XX[RMFz}pr;4"�����픉����XN��X\PT[@[XX^X^[sXH@XXXvXXMYX���XAxEX:?5+ %�X��������X}��pG�����s������������vil����obeND�AHK
+�, contains 522 method pointers starting at 0xB6FB330
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 522 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 43 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 93 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.AnimationModule.dll, contains 829 method pointers starting at 0xB6FC380
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 829 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 4 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 10 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXInjected(UnityEngine.ParticleSystem/ShapeModule&,UnityEngine.Mesh), contains 26 method pointers starting at 0xB6FE138
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 26 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 4 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 9 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.AudioModule.dll, contains 253 method pointers starting at 0xB6FE208
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 253 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for 61,!6?16=v<44X:2=;,x1+x67,x47;3=<vX6-44X!,=X=*>7*591,944:9;3XXjx<7=+x67,x+-((7*,x59*+09416?x?=6=*1;x<=4=?9,=+x/0=6x>-44x?=6=*1;x+09*16?x1+x=69:4=<vx0=x5=,07<x/=*=x9,,=5(,16?x,7x59*+094x1+bxX,X!+,=5v744=;,176+v=6=*1;v6-5=*9:4=8iv}+XX =;-,1766?16= ;=(,176Xbw-14<-,(-,
+1.=9+,;w=*+176w:*49,=+,w-61,!1:*9*!w+*;w5916w4j((-,(-,*72=;,wjw41:14j;((w1;944+w5+;7*41:w!+,=5v
+-6,15=v
+=57,16?v76,= ,+w76,= ,v;((pjjqxbx6+-((7*,=<x16,=*694x;944x>7*xjb76,= ,bb
+=?1+,=*76,= ,xuxz01+x1;944x1+x67,x+-((7*,=<x:!x14j;((vzX9667,x161,1941"=x9**9!x;76,91616?x*=>=*=6;=+X6-5x1< b}<x695=b}+x.94-=nlb}44 X6>49,=<x,!(=x;7-6,bxXbw-14<-,(-,
+1.=9+,;w=*+176w:*49,=+,w-61,!1:*9*!w+*;w5916w4j((-,(-,*72=;,wjw41:14j;((w1;944+w5+;7*41:w!+,=5w((75916v;((pjjjqxbx6+-((7*,=<x16,=*694x;944x>7*xjb((75916bb6,=*6947(75916
+=>xuxz01+x1;944x1+x764!x-+=<x16x,0=x!+,=5v
+-6,15=v
+=57,16?x695=+(9;=vzX9667,x<!6951;944!x;*=9,=x96x16+,96;=x7>x!+,=5v71<vX6+->>1;1=6,x5=57*!x>7*x944614+RXRuufx9*316?x>7*x;744=;,176x{}4-x9>,=*x}4-x9447;9,=<x:!,=+RX
+X77x596!x59*3x(*7;=<-*=+X744=;,16?x>*75x-6367/6x,0*=9<X-6X;76<1,176.9*19:4=bb,15=<x/91,bx5-,= x67,x47;3=<X,=*5169,16?x/1,0x}+x= ;=(,176x7>x,!(=x}+X;76+,;9+,XffX-6+1?6=<x16,ij`X7(=*9,7*x<=4=,=X7(=*9,7*feX-6/16<(09+=jX-6+-((7*,=<x9*5nlx*=?1+,=*X41:-6/16<bx594>7*5=<x<=>;>9x
+x-6/16<tx*=?x,77x:1?RX?=,ij`X?=,9.=<
+=?1+,=*X<iiX<jmX>>5.+=,=:-?X71;=+=,;5944:9;369:4=X71;=(49!9;3?*7-6<-+1;X71;=1+(=93=*
+=;7*<16?X71;=*=+-5=1;!6;X67=,
+=(7*,9,9lX9667,x59*+094x>1=4<x9+,*1,=15=,;x7>x,!(=x7;9414=,95(vX9667,x59*+094x>1=4<xx7>x,!(=xvX9667,x59*+094x>1=4<xx7>x,!(=xbx
+=>=*=6;=x,!(=x>1=4<x59*+09416?x1+x67,x+-((7*,=<vX1*=:9+=694!,1;+09*( (7*,1 X1*=:9+=694!,1;+09*(=,+=*<X1*=:9+=694!,1;+09*(=,=++176<X1*=:9+=((09*(<=4=,=-,-*=9+=X1*=:9+=((09*(6=/,*16?,*16?9(iX1*=:9+=((09*(9*196,1+,;9(9;1,!X1*=:9+=((09*(9*196,5(,!9(X1*=:9+=((09*(9*196,*756,nlX9667,x59*+094x>1=4<x;94=6<9*x7>x,!(=x9,=15=
+=+-4,bx
+=>=*=6;=x,!(=x>1=4<x59*+09416?x1+x67,x+-((7*,=<vX+6(*16,>X9667,x59*+094x>1=4<x47;3x7>x,!(=x7;374<=*bx
+=>=*=6;=x,!(=x>1=4<x59*+09416?x1+x67,x+-((7*,=<vX9667,x59*+094x>1=4<x94-=x7>x,!(=x749,14=:2=;,vX9667,x59*+094x>1=4<x,01+x7>x,!(=x=)-=6;=76+,*-;,7+76,= ,bx
+=>=*=6;=x,!(=x>1=4<x59*+09416?x1+x67,x+-((7*,ed., contains 1 method pointers starting at 0xB729920
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 1 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.CoreModule.dll, contains 4714 method pointers starting at 0xB6FEB00
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 4714 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 221 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 740 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.DirectorModule.dll, contains 61 method pointers starting at 0xB70A418
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 61 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.GridModule.dll, contains 0 method pointers starting at 0x0
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.IMGUIModule.dll, contains 499 method pointers starting at 0xB70A630
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 499 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.ImageConversionModule.dll, contains 6 method pointers starting at 0xB70A600
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 6 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.InputLegacyModule.dll, contains 120 method pointers starting at 0xB70B658
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 120 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.JSONSerializeModule.dll, contains 6 method pointers starting at 0xB70BB78
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 6 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 1 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 2 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.ParticleSystemModule.dll, contains 1018 method pointers starting at 0xB70BBA8
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 1018 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.Physics2DModule.dll, contains 77 method pointers starting at 0xB70F578
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 77 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.PhysicsModule.dll, contains 502 method pointers starting at 0xB70F8F0
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 502 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.PropertiesModule.dll, contains 267 method pointers starting at 0xB710B30
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 267 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 49 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 273 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.ScreenCaptureModule.dll, contains 2 method pointers starting at 0xB711428
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 2 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.SharedInternalsModule.dll, contains 67 method pointers starting at 0xB711438
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 67 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for 61,!6?16=v(*1,=9+37<-4=v<44X61,!6?16=v61,!694!,1;+755767<-4=v<44XwXX5*7-(XvXtx-:41;=!73=6eX(-:41;3=!,73=6X9667,x;944x6<6.73=pqx*=(=9,=<4!x7*x;76;-**=6,4!x76x,0=x+95=x+!6;
+=+-4,yXbw-14<-,(-,
+1.=9+,;w=*+176w:*49,=+,w-61,!1:*9*!w+*;w5916w4j((-,(-,*72=;,wjw41:14j;((w1;944+w5+;7*41:w!+,=5w
+-6,15=1=4<96<4=v;((pjhqxbx6+-((7*,=<x16,=*694x;944x>7*xjb
+-6,15=1=4<96<4=bb=,94-=1*=;,xuxz01+x1;944x1+x67,x+-((7*,=<x:!x14j;((vzX
+-6,15=!(=X((75916X=!94-=91*8jX
+
+
+X*7;=++ 1,X>14=bww}+X=6u-+Xx76x,!(=xX69:4=x,7x7(=6x(*7?*95x096<4=x:=;9-+=x7>xX69:4=x,7x>16<x96x=6,*!x(716,x695=<xX14j;((v-+!5X41:X=,07<;;=++ ;=(,176Xjx=6;7-6,=*=<x9x5969?=<x,!(=x/01;0x1,x;9667,x;76.=*,x90=9<u7>u,15=vx0=x,!(=x-+=+x?=6=*1;x7*x9**9!x,!(=+x/01;0x9*=x6=+,=<x:=!76<x,0=x59 15-5x<=(,0x/01;0x;96x:=x;76.=*,=<vxxx76+1<=*x16;*=9+16?x,0=xuu59 15-5u*=;-*+1.=u?=6=*1;u<=(,0e}<x9*?-5=6,Xw(*7;w+=4>w= =X*=Xbw-14<-,(-,
+1.=9+,;w=*+176w:*49,=+,w-61,!1:*9*!w+*;w5916w4j((-,(-,*72=;,wjw41:14j;((w1;944+w5+;7*41:w!+,=5w((75916v;((piaoqxbx6+-((7*,=<x16,=*694x;944x>7*xjb((75916bb6,=*694=,76,= ,xuxz01+x1;944x1+x764!x-+=<x16x,0=x!+,=5v
+-6,15=v
+=57,16?x695=+(9;=vzX-61;7<=ii-,>`X<=+,X0=x,x(9*95=,=*x1+x9x?=6=*1;x,!(=vX161,?;259447;bx:9<x16<= X
+
+Xx9*616?bx(,0*=9<?=,9,,*6(x7*x(,0*=9<9,,*?=,+,9;3x>914=<x>7*x5916x,0*=9<RX(,0*=9<+1?59+3x>914=<X=6=*94xx=**7*X;7449,=:!695=d;09*fbb;7449,=:!695=x>914=<x,7x;76+,*-;,x>7*xX0-X(*X7.XX,0*=9<bb<=,9;0x>914=<X0=x+,9,=x7>x,0=x(*751+=x09+x94*=9<!x:==6x+=,vX,0*7/X/;09*,X7(=*9,7*&X7(=*9,7*zzxX+,<bb:9+1;+,*16?X<=;4,!(=p9-,7qX=4=,=<x.1*,-94x>-6;,176x;944=<yX+,<bb= ;=(,176X>>5.+=,+=*6>7X>>5.1+1(X71;=*=)-=+,
+=+,(1X71;=-(479<7?X>>-,14659(X>>-,14659(0=;3X1*=:9+=694!,1;+09*(6,6,9(=5(,!X1*=:9+=694!,1;+09*(<=4=,=6,6,9(X1*=:9+=((09*(,*16?,*16?9(?=,1,=5X1*=:9+=((09*(,*16?1+,
+=57.=,X1*=:9+=((09*((((,176+6,=*694(1=!+=,X1*=:9+=((09*(<=4=,=(((,176+6,=*694X1*=:9+=((09*(744944:9;3+X1*=:9+=((09*(=,7?-6;,176X1*=:9+=*9+04!,1;+09*(1*=:9+=*9+04!,1;+*95=+!5:74+=,X1*=:9+=*9+04!,1;+09*(1*=:9+=*9+04!,1;+*95=>14=95=+=,X1*=:9+=*9+04!,1;+09*(1*=:9+=*9+04!,1;+6,=*694=,*9+04!,1;+744=;,17669:4=<X1*=:9+==++9?16?09*(1*=:9+==++9?=6,=*694;7449(+=3=!?=,X9667,x59*+094x>1=4<x9,=15=x7>x,!(=x1+;*15169,=<6176ij`:2=;,vX9667,x59*+094x>1=4<x;74-56+x7>x,!(=x9,9=!bx
+=>=*=6;=x,!(=x>1=4<x59*+09416?x1+x67,x+-((7*,=<vX61,!6?16=vv9.=+0?=6,bb+=,+(==<p!+,=5v16?4=qX61,!6?16=v6<*71<bb=,76?1=4<p!+,=5v6,,*t!+,=5v6,,*qX61,!6?16=v6<*71<bb=,6,**9!4=5=6,p!+,=5v6,,*t!+,=5v6,kjqX61,!6?16=v6159,176bb49!=>9-4,6159,176p61,!6?16=v49!7<=qX61,!6?16=v6159,17641(bb+=,4=?9;!p!+,=5v774=96qX61,!6?16=v6159,17641(bb?=,47;947-6<+62=;,=<p61,!6?16=v7-6<+~qX61,!6?16=v6159,7*bb?=,09+
+77,7,176pqX61,!6?16=v6159,7*bb*7++9<=61 =<15=p!+,=5v6,kjt!+,=5v16?4=t!+,=5v6,kjt!+,=5v16?4=t!+,=5v16?4=qX61,!6?16=v6159,7*bb?=,9.9,9*
+77,pqX61,!6?16=v6159,7*bb+=,*-6,15=6159,7*76,*744=*p61,!6?16=v
+-6,15=6159,7*76,*744=*qX61,!6?16=v6159,7*bb=,479,p!+,=5v6,kjqX61,!6?16=v6159,7*bb=,774p!+,=5v6,kjqX61,!6?16=v6159,7*bb=,6,=?=*,*16?p!+,=5v,*16?t!+,=5v6,kjqX61,!6?16=v6159,7*bb+=,>1*=.=6,+p!+,=5v774=96qX61,!6?16=v.9,9*bb6,=*694=,7+,
+7,9,17662=;,=<p!+,=5v6,kjt61,!6?16=v	-9,=*6176~qX61,!6?16=v6159,176+v7+1,17676+,*916,bb+=,,*96+49,176 1+p61,!6?16=v6159,176+v 1+qX61,!6?16=v6159,176+v7+1,17676+,*916,bb=,7-*;=+6,=*694p61,!6?16=v6159,176+v7+1,17676+,*916,t!+,=5v744=;,176+v=6=*1;v1+,8id61,!6?16=v6159,176+v76+,*916,7-*;=fqX61,!6?16=v6159,176+v;94=76+,*916,bb?=,47;3=<pqX61,!6?16=v6159,176+v9*=6,76+,*916,bb?=,,*96+49,176,
+=+,62=;,=<p61,!6?16=v=;,7*k~qX61,!6?16=v-<177-*;=bb+=,(49!6/93=p!+,=5v774=96qX61,!6?16=v=:95= ,-*=bb?=,.1<=7
+7,9,1766?4=pqX61,!6?16=v-<17v-<1741(49!9:4=bb=,,=*=7966,=*694p61,!6?16=v49!9:4=+v49!9:4=96<4=~t!+,=5v16?4=qX61,!v744=;,176+v7/=.=4v6+9>=v6+9>=,141,!bb=5(!,*1<=p!+,=5v71<rt!+,=5v6,kjt!+,=5v71<rt!+,=5v6,kjt!+,=5v6,kjt!+,=5v6,kjqX61,!v-*+,v7/=.=4v-*+,75(14=*=*.1;=bb=,**=9,=09*=<=57*!p61,!6?16=v9+0ij`~t!+,=5v6,kjt!+,=5v6,kjqX61,!6?16=v6159,176-*.=bb.94-9,=p!+,=5v16?4=qX61,!6?16=v6159,176-*.=bb=,9+07<=pqX61,!6?16=v((41;9,176bb	-1,p!+,=5v6,kjqX61,!6?16=v95=*9bb?=,;4=9*49?+pqX61,!6?16=v95=*9bb
+=+=,*72=;,1769,*1 pqX61,!6?16=v
+=>4=;,176*7:=bb?=,;-4416?9+3pqX61,!6?16=v*9(01;+bb =;-,=75596<->>=*p61,!6?16=v
+=6<=*16?v75596<->>=*qX61,!6?16=vbb79<1 =49,*1 pqX61,!6?16=v1?0,*7:=+bb94;-49,=6,=*(749,=<1?0,6<;;4-+176*7:=+6,=*694p61,!6?16=v=;,7*kt!+,=5v6,kjt61,!6?16=v
+=6<=*16?v(0=*1;949*5761;+jt61,!6?16=v=;,7*lqX61,!6?16=v*914
+=6<=*=*bb+=,9-,7<=+,*-;,p!+,=5v774=96qX61,!6?16=v*914
+=6<=*=*bb<<7+1,176+1,09,1.=76,916=*p!+,=5v6,,*t!+,=5v6,kjqX61,!6?16=v16=
+=6<=*=*bb+=,(7+1,1767-6,p!+,=5v6,kjqX61,!6?16=v16=
+=6<=*=*bb93==+0p61,!6?16=v=+0t61,!6?16=v95=*9t!+,=5v774=96qX61,!6?16=v
+=6<=*=*bb?=,+09<7/9+,16?7<=pqX61,!6?16=v
+=6<=*=*bb=,09*=<9,=*194**9!pqX61,!6?16=v
+=6<=*=*bb?=,47;947-6<+62=;,=<p61,!6?16=v7-6<+~qX61,!6?16=v09<=*bb?=,+-:+09<=*7-6,pqX61,!6?16=v09<=*bb=,47:94= ,-*=5(4p!+,=5v6,kjqX61,!6?16=v09<=*bb=,*7(=*,!7-6,pqX61,!6?16=v9,=*194bb9+*7(=*,!p!+,=5v6,kjqX61,!6?16=v1?0,bb?=,+(7,6?4=pqX61,!6?16=v3166=<=+0
+=6<=*=*bb?=,-(<9,=0=6>>+;*==6pqX61,!6?16=v3166=<=+0
+=6<=*=*bb+=,-(<9,=0=6>>+;*==6p!+,=5v774=96qX61,!6?16=v=+0bb=,4=6<09(=6<= p!+,=5v,*16?qX61,!6?16=v=+0bb=,4=6<09(=*95==1?0,p!+,=5v6,kjt!+,=5v6,kjqX61,!6?16=v=+0bb=,44-:=+0=+,6;=*759,1.=**9!p!+,=5v6,,*t!+,=5v6,kjt!+,=5v6,kjt61,!6?16=v
+=6<=*16?v=+0(<9,=49?+qX61,!6?16=v=+0bb
+=;94;-49,=7-6<+5(4p61,!6?16=v
+=6<=*16?v=+0(<9,=49?+qX61,!6?16=v=+0w=+09,9**9!bb;)-1*=
+=9<64!=+09,9+p61,!6?16=v=+0t!+,=5v6,,*rt!+,=5v6,kjqX61,!6?16=v= ,-*=jbb?=,/01,== ,-*=pqX61,!6?16=v= ,-*=jbb?=,:49;3= ,-*=pqX61,!6?16=v= ,-*=jbb=,1 =4+kjp!+,=5v6,kjqX61,!6?16=v-:=59(bb+=,*=)-=+,=<1(59(=.=4p!+,=5v6,kjqX61,!6?16=v-:=59(bb+
+=)-=+,=<1(59(=.=479<=<pqX61,!6?16=v
+=6<=*= ,-*=bb?=,-+=!6951;;94=pqX61,!6?16=v49!=*766=;,1766,=*694bb+766=;,=<pqX61,!6?16=v49!=**=>+bb9.=pqX61,!6?16=v=09.17-*bb?=,=69:4=<pqX61,!6?16=v95=:2=;,bb?=,9;,1.==4>pqX61,!6?16=v9!=*9+3bb9!=*795=p!+,=5v6,kjqX61,!6?16=v767=09.17-*bb,7(7*7-,16=p!+,=5v,*16?qX61,!6?16=v:2=;,bb=,95=p61,!6?16=v:2=;,qX61,!6?16=v09<=*9*196,744=;,176bb
+=57.=9*196,p61,!6?16=v09<=*t61,!6?16=v
+=6<=*16?v9++!(=t!+,=5v,*16?qX61,!6?16=v
+=;,*96+>7*5bb+=,+1"==4,962=;,=<p61,!6?16=v=;,7*j~qX61,!6?16=v(*1,=bb=,9;316?7<=pqX61,!6?16=v(*1,=bb.=**1<=0!+1;+09(=p61,!6?16=v(*1,=t61,!6?16=v=;,7*jt!+,=5v6,kjqX61,!6?16=v(*1,=bb=,9<<16?62=;,=<p61,!6?16=v=;,7*l~qX61,!6?16=v49!9:4=+v49!9:4=*9(0bb=,49!9:4=7-6,62=;,=<p61,!6?16=v49!9:4=+v49!9:4=*9(0~qX61,!6?16=v.=6,bb7(.=6,p61,!6?16=v.=6,qX61,!6?16=vbb+=,;096?=<p!+,=5v774=96qX61,!6?16=v,141,!bb?=,,= ,1=4<6(-,pqX61,!6?16=v,141,!bb=?1676,916=*p61,!6?16=v:2=;,,9,=qX61,!6?16=v,141,!bb+=,;75(7+1,176-*+7*7+62=;,=<p61,!6?16=v=;,7*j~qX61,!6?16=v9*,1;4=!+,=5bb51,4<6,=*694p61,!6?16=v9*,1;4=!+,=5w9*,1;4=~qX61,!6?16=v9*,1;4=!+,=5w9167<-4=bb?=,+,9*,1>=,15=-4,1(41=*62=;,=<p61,!6?16=v9*,1;4=!+,=5w9167<-4=~qX61,!6?16=v9*,1;4=!+,=5w9167<-4=bb?=,+,9*,1"=k62=;,=<p61,!6?16=v9*,1;4=!+,=5w9167<-4=~qX61,!6?16=v9*,1;4=!+,=5w9167<-4=bb+=,+,9*,747*62=;,=<p61,!6?16=v9*,1;4=!+,=5w9167<-4=~t61,!6?16=v9*,1;4=!+,=5w169 *9<1=6,~qX61,!6?16=v9*,1;4=!+,=5w51++1767<-4=bb+=,=69:4=<62=;,=<p61,!6?16=v9*,1;4=!+,=5w51++1767<-4=~t!+,=5v774=96qX61,!6?16=v9*,1;4=!+,=5w09(=7<-4=bb?=,9*;62=;,=<p61,!6?16=v9*,1;4=!+,=5w09(=7<-4=~qX61,!6?16=v9*,1;4=!+,=5w7441+1767<-4=bb?=,41>=,15=7++-4,1(41=*62=;,=<p61,!6?16=v9*,1;4=!+,=5w7441+1767<-4=~qX61,!6?16=v9*,1;4=!+,=5w=47;1,!.=*1>=,15=7<-4=bb?=,7*:1,94>>+=,, contains 19 method pointers starting at 0xB711650
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 19 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.SpriteShapeModule.dll, contains 0 method pointers starting at 0x0
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.TerrainModule.dll, contains 39 method pointers starting at 0xB7116E8
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 39 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for 61,!6?16=v= ,7*=76,6?16=7<-4=v<44X!+,=5v=,X
+
+
+bx7-4<x67,x7(=6x}+X0*=9<Xbw-14<-,(-,
+1.=9+,;w=*+176w:*49,=+,w-61,!1:*9*!w+*;w5916w4j((-,(-,*72=;,wjw41:14j;((w1;944+w5+;7*41:w!+,=5v
+=>4=;,176w
+-6,15=++=5:4!v;((pjl`qxbx6+-((7*,=<x16,=*694x;944x>7*xjb++=5:4!bb6,=*69459?=
+-6,15==*+176xuxz01+x1;944x1+x67,x+-((7*,=<x:!x14j;((vzX:2=;,1+(7+=< ;=(,176X-+,75,,*1:-,=7*59, ;=(,176X47;393=6x5-+,x:=x>94+=X0*163x0*=9<x,9;3XkjX61,1941"=<x;49++x;7-6,bxX-;+jX41:14j;((xXjx<7=+x67,x+-((7*,x*=+-**=;,176x>7*x/=93x*=>=*=6;=+vx9++x,0=x,*9;3
+=+-**=;,176x/1,0x9x.94-=x7>x>94+=vX+,9*,X96,x+,9*,x-(bx67,x=67-?0x5=57*!RXx9*616?bx6= (=;,=<x9+!6;0*767-+xw(*7;w+=4>w59(+x?*7/,0xp,7x}4<x:!,=+qRX-659(?9(bx59<.1+=x>914=<x9,x}(xp4=6?,0x}4-qtx=**;7<=ex}<RX(,0*=9<3144x>914=<x9,x+-+(=6<X-6+(=;1>1=<x?=6=*1;;9,=?7*!x=**7*X>-,-*=X}X:9+1;17+,*=95Xx.749,14=X-*=x.1*,-94x>-6;,176x;944=<yX+,<bb:9<= ;=(,176X(1=;=x67,x15(4=5=6,=<X mX ihXXXXXX�gXX��XX��XX��XX��XX�gXIxzXOxzJ�XJB�XEbX]PSXO6XO{P[XTLXXXAXdXX�X�XXYgYXXXXXXXXXXXXXXXXXXXX�XXXXXX�gXX�gXXXXXXXX�gXX�gXX�gXX�XX�XXXXXXXX�gXX�gXX�g`XXX:X4.-JJJJJJJJJ*XJJXXXXXXXXXX,XPMxxigxXT@qgXG|zX�X^YXX�Y�Y�YXXfYXXnXX�X�X�XAYAhXX-X+X�XXXYYYXX�XUEtdX�<0$���XX[RMFz}pr;4"�����픉����XN��X\PT[@[XX^X^[sXH@XXXvXXMYX���XAxEX:?5+ %�X��������X}��pG�����s������������vil����obeND�AHK
+�, contains 115 method pointers starting at 0xB711830
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 115 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 2 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 11 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.TextCoreTextEngineModule.dll, contains 472 method pointers starting at 0xB712068
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 472 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 6 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 24 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.TextRenderingModule.dll, contains 114 method pointers starting at 0xB713168
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 114 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for 61,!6?16=v14=59(7<-4=v<44X61,!6?16=v<44X:2=;,x1+x67,x47;3=<vX6-44X!,=X=*>7*591,944:9;3XXjx<7=+x67,x+-((7*,x59*+09416?x?=6=*1;x<=4=?9,=+x/0=6x>-44x?=6=*1;x+09*16?x1+x=69:4=<vx0=x5=,07<x/=*=x9,,=5(,16?x,7x59*+094x1+bxX,X!+,=5v744=;,176+v=6=*1;v6-5=*9:4=8iv}+XX =;-,1766?16= ;=(,176Xbw-14<-,(-,
+1.=9+,;w=*+176w:*49,=+,w-61,!1:*9*!w+*;w5916w4j((-,(-,*72=;,wjw41:14j;((w1;944+w5+;7*41:w!+,=5v
+-6,15=v
+=57,16?v76,= ,+w76,= ,v;((pjjqxbx6+-((7*,=<x16,=*694x;944x>7*xjb76,= ,bb
+=?1+,=*76,= ,xuxz01+x1;944x1+x67,x+-((7*,=<x:!x14j;((vzX9667,x161,1941"=x9**9!x;76,91616?x*=>=*=6;=+X6-5x1< b}<x695=b}+x.94-=nlb}44 X6>49,=<x,!(=x;7-6,bxXbw-14<-,(-,
+1.=9+,;w=*+176w:*49,=+,w-61,!1:*9*!w+*;w5916w4j((-,(-,*72=;,wjw41:14j;((w1;944+w5+;7*41:w!+,=5w((75916v;((pjjjqxbx6+-((7*,=<x16,=*694x;944x>7*xjb((75916bb6,=*6947(75916
+=>xuxz01+x1;944x1+x764!x-+=<x16x,0=x!+,=5v
+-6,15=v
+=57,16?x695=+(9;=vzX9667,x<!6951;944!x;*=9,=x96x16+,96;=x7>x!+,=5v71<vX6+->>1;1=6,x5=57*!x>7*x944614+RXRuufx9*316?x>7*x;744=;,176x{}4-x9>,=*x}4-x9447;9,=<x:!,=+RX
+X77x596!x59*3x(*7;=<-*=+X744=;,16?x>*75x-6367/6x,0*=9<X-6X;76<1,176.9*19:4=bb,15=<x/91,bx5-,= x67,x47;3=<X,=*5169,16?x/1,0x}+x= ;=(,176x7>x,!(=x}+X;76+,;9+,XffX-6+1?6=<x16,ij`X7(=*9,7*x<=4=,=X7(=*9,7*feX-6/16<(09+=jX-6+-((7*,=<x9*5nlx*=?1+,=*X41:-6/16<bx594>7*5=<x<=>;>9x
+x-6/16<tx*=?x,77x:1?RX?=,ij`X?=,9.=<
+=?1+,=*X<iiX<jmX>>5.+=,=:-?X71;=+=,;5944:9;369:4=X71;=(49!9;3?*7-6<-+1;X71;=1+(=93=*
+=;7*<16?X71;=*=+-5=1;!6;X67=,
+=(7*,9,9lX9667,x59*+094x>1=4<x9+,*1,=15=,;x7>x,!(=x7;9414=,95(vX9667,x59*+094x>1=4<xx7>x,!(=xvX9667,x59*+094x>1=4<xx7>x,!(=xbx
+=>=*=6;=x,!(=x>1=4<x59*+09416?x1+x67,x+-((7*,=<vX1*=:9+=694!,1;+09*( (7*,1 X1*=:9+=694!,1;+09*(=,+=*<X1*=:9+=694!,1;+09*(=,=++176<X1*=:9+=((09*(<=4=,=-,-*=9+=X1*=:9+=((09*(6=/,*16?,*16?9(iX1*=:9+=((09*(9*196,1+,;9(9;1,!X1*=:9+=((09*(9*196,5(,!9(X1*=:9+=((09*(9*196,*756,nlX9667,x59*+094x>1=4<x;94=6<9*x7>x,!(=x9,=15=
+=+-4,bx
+=>=*=6;=x,!(=x>1=4<x59*+09416?x1+x67,x+-((7*,=<vX+6(*16,>X9667,x59*+094x>1=4<x47;3x7>x,!(=x7;374<=*bx
+=>=*=6;=x,!(=x>1=4<x59*+09416?x1+x67,x+-((7*,=<vX9667,x59*+094x>1=4<x94-=x7>x,!(=x749,14=:2=;,vX9667,x59*+094x>1=4<x,01+x7>x,!(=x=)-=6;=76+,*-;,7+76,= ,bx
+=>=*=6;=x,!(=x>1=4<x59*+09416?x1+x67,x+-((7*,ed., contains 0 method pointers starting at 0x0
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.UIElementsModule.dll, contains 7477 method pointers starting at 0xB7135F8
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 7477 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 148 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 1619 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.UIModule.dll, contains 121 method pointers starting at 0xB724A00
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 121 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.UI.dll, contains 1900 method pointers starting at 0xB724DC8
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 1900 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 14 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 74 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for 61,!6?16=v61,!694!,1;+755767<-4=v<44XwXX5*7-(XvXtx-:41;=!73=6eX(-:41;3=!,73=6X9667,x;944x6<6.73=pqx*=(=9,=<4!x7*x;76;-**=6,4!x76x,0=x+95=x+!6;
+=+-4,yXbw-14<-,(-,
+1.=9+,;w=*+176w:*49,=+,w-61,!1:*9*!w+*;w5916w4j((-,(-,*72=;,wjw41:14j;((w1;944+w5+;7*41:w!+,=5w
+-6,15=1=4<96<4=v;((pjhqxbx6+-((7*,=<x16,=*694x;944x>7*xjb
+-6,15=1=4<96<4=bb=,94-=1*=;,xuxz01+x1;944x1+x67,x+-((7*,=<x:!x14j;((vzX
+-6,15=!(=X((75916X=!94-=91*8jX
+
+
+X*7;=++ 1,X>14=bww}+X=6u-+Xx76x,!(=xX69:4=x,7x7(=6x(*7?*95x096<4=x:=;9-+=x7>xX69:4=x,7x>16<x96x=6,*!x(716,x695=<xX14j;((v-+!5X41:X=,07<;;=++ ;=(,176Xjx=6;7-6,=*=<x9x5969?=<x,!(=x/01;0x1,x;9667,x;76.=*,x90=9<u7>u,15=vx0=x,!(=x-+=+x?=6=*1;x7*x9**9!x,!(=+x/01;0x9*=x6=+,=<x:=!76<x,0=x59 15-5x<=(,0x/01;0x;96x:=x;76.=*,=<vxxx76+1<=*x16;*=9+16?x,0=xuu59 15-5u*=;-*+1.=u?=6=*1;u<=(,0e}<x9*?-5=6,Xw(*7;w+=4>w= =X*=Xbw-14<-,(-,
+1.=9+,;w=*+176w:*49,=+,w-61,!1:*9*!w+*;w5916w4j((-,(-,*72=;,wjw41:14j;((w1;944+w5+;7*41:w!+,=5w((75916v;((piaoqxbx6+-((7*,=<x16,=*694x;944x>7*xjb((75916bb6,=*694=,76,= ,xuxz01+x1;944x1+x764!x-+=<x16x,0=x!+,=5v
+-6,15=v
+=57,16?x695=+(9;=vzX-61;7<=ii-,>`X<=+,X0=x,x(9*95=,=*x1+x9x?=6=*1;x,!(=vX161,?;259447;bx:9<x16<= X
+
+Xx9*616?bx(,0*=9<?=,9,,*6(x7*x(,0*=9<9,,*?=,+,9;3x>914=<x>7*x5916x,0*=9<RX(,0*=9<+1?59+3x>914=<X=6=*94xx=**7*X;7449,=:!695=d;09*fbb;7449,=:!695=x>914=<x,7x;76+,*-;,x>7*xX0-X(*X7.XX,0*=9<bb<=,9;0x>914=<X0=x+,9,=x7>x,0=x(*751+=x09+x94*=9<!x:==6x+=,vX,0*7/X/;09*,X7(=*9,7*&X7(=*9,7*zzxX+,<bb:9+1;+,*16?X<=;4,!(=p9-,7qX=4=,=<x.1*,-94x>-6;,176x;944=<yX+,<bb= ;=(,176X>>5.+=,+=*6>7X>>5.1+1(X71;=*=)-=+,
+=+,(1X71;=-(479<7?X>>-,14659(X>>-,14659(0=;3X1*=:9+=694!,1;+09*(6,6,9(=5(,!X1*=:9+=694!,1;+09*(<=4=,=6,6,9(X1*=:9+=((09*(,*16?,*16?9(?=,1,=5X1*=:9+=((09*(,*16?1+,
+=57.=,X1*=:9+=((09*((((,176+6,=*694(1=!+=,X1*=:9+=((09*(<=4=,=(((,176+6,=*694X1*=:9+=((09*(744944:9;3+X1*=:9+=((09*(=,7?-6;,176X1*=:9+=*9+04!,1;+09*(1*=:9+=*9+04!,1;+*95=+!5:74+=,X1*=:9+=*9+04!,1;+09*(1*=:9+=*9+04!,1;+*95=>14=95=+=,X1*=:9+=*9+04!,1;+09*(1*=:9+=*9+04!,1;+6,=*694=,*9+04!,1;+744=;,17669:4=<X1*=:9+==++9?16?09*(1*=:9+==++9?=6,=*694;7449(+=3=!?=,X9667,x59*+094x>1=4<x9,=15=x7>x,!(=x1+;*15169,=<6176ij`:2=;,vX9667,x59*+094x>1=4<x;74-56+x7>x,!(=x9,9=!bx
+=>=*=6;=x,!(=x>1=4<x59*+09416?x1+x67,x+-((7*,=<vX61,!6?16=vv9.=+0?=6,bb+=,+(==<p!+,=5v16?4=qX61,!6?16=v6<*71<bb=,76?1=4<p!+,=5v6,,*t!+,=5v6,,*qX61,!6?16=v6<*71<bb=,6,**9!4=5=6,p!+,=5v6,,*t!+,=5v6,kjqX61,!6?16=v6159,176bb49!=>9-4,6159,176p61,!6?16=v49!7<=qX61,!6?16=v6159,17641(bb+=,4=?9;!p!+,=5v774=96qX61,!6?16=v6159,17641(bb?=,47;947-6<+62=;,=<p61,!6?16=v7-6<+~qX61,!6?16=v6159,7*bb?=,09+
+77,7,176pqX61,!6?16=v6159,7*bb*7++9<=61 =<15=p!+,=5v6,kjt!+,=5v16?4=t!+,=5v6,kjt!+,=5v16?4=t!+,=5v16?4=qX61,!6?16=v6159,7*bb?=,9.9,9*
+77,pqX61,!6?16=v6159,7*bb+=,*-6,15=6159,7*76,*744=*p61,!6?16=v
+-6,15=6159,7*76,*744=*qX61,!6?16=v6159,7*bb=,479,p!+,=5v6,kjqX61,!6?16=v6159,7*bb=,774p!+,=5v6,kjqX61,!6?16=v6159,7*bb=,6,=?=*,*16?p!+,=5v,*16?t!+,=5v6,kjqX61,!6?16=v6159,7*bb+=,>1*=.=6,+p!+,=5v774=96qX61,!6?16=v.9,9*bb6,=*694=,7+,
+7,9,17662=;,=<p!+,=5v6,kjt61,!6?16=v	-9,=*6176~qX61,!6?16=v6159,176+v7+1,17676+,*916,bb+=,,*96+49,176 1+p61,!6?16=v6159,176+v 1+qX61,!6?16=v6159,176+v7+1,17676+,*916,bb=,7-*;=+6,=*694p61,!6?16=v6159,176+v7+1,17676+,*916,t!+,=5v744=;,176+v=6=*1;v1+,8id61,!6?16=v6159,176+v76+,*916,7-*;=fqX61,!6?16=v6159,176+v;94=76+,*916,bb?=,47;3=<pqX61,!6?16=v6159,176+v9*=6,76+,*916,bb?=,,*96+49,176,
+=+,62=;,=<p61,!6?16=v=;,7*k~qX61,!6?16=v-<177-*;=bb+=,(49!6/93=p!+,=5v774=96qX61,!6?16=v=:95= ,-*=bb?=,.1<=7
+7,9,1766?4=pqX61,!6?16=v-<17v-<1741(49!9:4=bb=,,=*=7966,=*694p61,!6?16=v49!9:4=+v49!9:4=96<4=~t!+,=5v16?4=qX61,!v744=;,176+v7/=.=4v6+9>=v6+9>=,141,!bb=5(!,*1<=p!+,=5v71<rt!+,=5v6,kjt!+,=5v71<rt!+,=5v6,kjt!+,=5v6,kjt!+,=5v6,kjqX61,!v-*+,v7/=.=4v-*+,75(14=*=*.1;=bb=,**=9,=09*=<=57*!p61,!6?16=v9+0ij`~t!+,=5v6,kjt!+,=5v6,kjqX61,!6?16=v6159,176-*.=bb.94-9,=p!+,=5v16?4=qX61,!6?16=v6159,176-*.=bb=,9+07<=pqX61,!6?16=v((41;9,176bb	-1,p!+,=5v6,kjqX61,!6?16=v95=*9bb?=,;4=9*49?+pqX61,!6?16=v95=*9bb
+=+=,*72=;,1769,*1 pqX61,!6?16=v
+=>4=;,176*7:=bb?=,;-4416?9+3pqX61,!6?16=v*9(01;+bb =;-,=75596<->>=*p61,!6?16=v
+=6<=*16?v75596<->>=*qX61,!6?16=vbb79<1 =49,*1 pqX61,!6?16=v1?0,*7:=+bb94;-49,=6,=*(749,=<1?0,6<;;4-+176*7:=+6,=*694p61,!6?16=v=;,7*kt!+,=5v6,kjt61,!6?16=v
+=6<=*16?v(0=*1;949*5761;+jt61,!6?16=v=;,7*lqX61,!6?16=v*914
+=6<=*=*bb+=,9-,7<=+,*-;,p!+,=5v774=96qX61,!6?16=v*914
+=6<=*=*bb<<7+1,176+1,09,1.=76,916=*p!+,=5v6,,*t!+,=5v6,kjqX61,!6?16=v16=
+=6<=*=*bb+=,(7+1,1767-6,p!+,=5v6,kjqX61,!6?16=v16=
+=6<=*=*bb93==+0p61,!6?16=v=+0t61,!6?16=v95=*9t!+,=5v774=96qX61,!6?16=v
+=6<=*=*bb?=,+09<7/9+,16?7<=pqX61,!6?16=v
+=6<=*=*bb=,09*=<9,=*194**9!pqX61,!6?16=v
+=6<=*=*bb?=,47;947-6<+62=;,=<p61,!6?16=v7-6<+~qX61,!6?16=v09<=*bb?=,+-:+09<=*7-6,pqX61,!6?16=v09<=*bb=,47:94= ,-*=5(4p!+,=5v6,kjqX61,!6?16=v09<=*bb=,*7(=*,!7-6,pqX61,!6?16=v9,=*194bb9+*7(=*,!p!+,=5v6,kjqX61,!6?16=v1?0,bb?=,+(7,6?4=pqX61,!6?16=v3166=<=+0
+=6<=*=*bb?=,-(<9,=0=6>>+;*==6pqX61,!6?16=v3166=<=+0
+=6<=*=*bb+=,-(<9,=0=6>>+;*==6p!+,=5v774=96qX61,!6?16=v=+0bb=,4=6<09(=6<= p!+,=5v,*16?qX61,!6?16=v=+0bb=,4=6<09(=*95==1?0,p!+,=5v6,kjt!+,=5v6,kjqX61,!6?16=v=+0bb=,44-:=+0=+,6;=*759,1.=**9!p!+,=5v6,,*t!+,=5v6,kjt!+,=5v6,kjt61,!6?16=v
+=6<=*16?v=+0(<9,=49?+qX61,!6?16=v=+0bb
+=;94;-49,=7-6<+5(4p61,!6?16=v
+=6<=*16?v=+0(<9,=49?+qX61,!6?16=v=+0w=+09,9**9!bb;)-1*=
+=9<64!=+09,9+p61,!6?16=v=+0t!+,=5v6,,*rt!+,=5v6,kjqX61,!6?16=v= ,-*=jbb?=,/01,== ,-*=pqX61,!6?16=v= ,-*=jbb?=,:49;3= ,-*=pqX61,!6?16=v= ,-*=jbb=,1 =4+kjp!+,=5v6,kjqX61,!6?16=v-:=59(bb+=,*=)-=+,=<1(59(=.=4p!+,=5v6,kjqX61,!6?16=v-:=59(bb+
+=)-=+,=<1(59(=.=479<=<pqX61,!6?16=v
+=6<=*= ,-*=bb?=,-+=!6951;;94=pqX61,!6?16=v49!=*766=;,1766,=*694bb+766=;,=<pqX61,!6?16=v49!=**=>+bb9.=pqX61,!6?16=v=09.17-*bb?=,=69:4=<pqX61,!6?16=v95=:2=;,bb?=,9;,1.==4>pqX61,!6?16=v9!=*9+3bb9!=*795=p!+,=5v6,kjqX61,!6?16=v767=09.17-*bb,7(7*7-,16=p!+,=5v,*16?qX61,!6?16=v:2=;,bb=,95=p61,!6?16=v:2=;,qX61,!6?16=v09<=*9*196,744=;,176bb
+=57.=9*196,p61,!6?16=v09<=*t61,!6?16=v
+=6<=*16?v9++!(=t!+,=5v,*16?qX61,!6?16=v
+=;,*96+>7*5bb+=,+1"==4,962=;,=<p61,!6?16=v=;,7*j~qX61,!6?16=v(*1,=bb=,9;316?7<=pqX61,!6?16=v(*1,=bb.=**1<=0!+1;+09(=p61,!6?16=v(*1,=t61,!6?16=v=;,7*jt!+,=5v6,kjqX61,!6?16=v(*1,=bb=,9<<16?62=;,=<p61,!6?16=v=;,7*l~qX61,!6?16=v49!9:4=+v49!9:4=*9(0bb=,49!9:4=7-6,62=;,=<p61,!6?16=v49!9:4=+v49!9:4=*9(0~qX61,!6?16=v.=6,bb7(.=6,p61,!6?16=v.=6,qX61,!6?16=vbb+=,;096?=<p!+,=5v774=96qX61,!6?16=v,141,!bb?=,,= ,1=4<6(-,pqX61,!6?16=v,141,!bb=?1676,916=*p61,!6?16=v:2=;,,9,=qX61,!6?16=v,141,!bb+=,;75(7+1,176-*+7*7+62=;,=<p61,!6?16=v=;,7*j~qX61,!6?16=v9*,1;4=!+,=5bb51,4<6,=*694p61,!6?16=v9*,1;4=!+,=5w9*,1;4=~qX61,!6?16=v9*,1;4=!+,=5w9167<-4=bb?=,+,9*,1>=,15=-4,1(41=*62=;,=<p61,!6?16=v9*,1;4=!+,=5w9167<-4=~qX61,!6?16=v9*,1;4=!+,=5w9167<-4=bb?=,+,9*,1"=k62=;,=<p61,!6?16=v9*,1;4=!+,=5w9167<-4=~qX61,!6?16=v9*,1;4=!+,=5w9167<-4=bb+=,+,9*,747*62=;,=<p61,!6?16=v9*,1;4=!+,=5w9167<-4=~t61,!6?16=v9*,1;4=!+,=5w169 *9<1=6,~qX61,!6?16=v9*,1;4=!+,=5w51++1767<-4=bb+=,=69:4=<62=;,=<p61,!6?16=v9*,1;4=!+,=5w51++1767<-4=~t!+,=5v774=96qX61,!6?16=v9*,1;4=!+,=5w09(=7<-4=bb?=,9*;62=;,=<p61,!6?16=v9*,1;4=!+,=5w09(=7<-4=~qX61,!6?16=v9*,1;4=!+,=5w7441+1767<-4=bb?=,41>=,15=7++-4,1(41=*62=;,=<p61,!6?16=v9*,1;4=!+,=5w7441+1767<-4=~qX61,!6?16=v9*,1;4=!+,=5w=47;1,!.=*1>=,15=7<-4=bb?=,7*:1,94>>+=,, contains 3 method pointers starting at 0xB728DA8
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 3 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.UnityAnalyticsModule.dll, contains 12 method pointers starting at 0xB728DC0
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 12 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.UnityWebRequestAssetBundleModule.dll, contains 9 method pointers starting at 0xB728E20
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 9 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for bb=,
+96<7561,1*;4=p61,!6?16=v=;,7*j~qX61,!6?16=v
+=+7-*;=+6,=*694bb6479<++=,p61,!6?16=v:2=;,qX61,!6?16=v
+=+7-*;=+bb=,-,>7-6<+**7*7?+pqX61,!6?16=v
+=+7-*;=+bb,9*,=*+1+,=6,969?=*7;391,15=*pqX61,!6?16=v95=:2=;,bb+=,= ,*9
+=6<=*9!=*p!+,=5v6,kjqX61,!6?16=v09<=*9*196,744=;,176bb<<9*196,p61,!6?16=v09<=*t61,!6?16=v
+=6<=*16?v9++!(=t!+,=5v,*16?qX61,!6?16=v09<=*9*196,744=;,176bb6,=*694*=9,=p61,!6?16=v09<=*9*196,744=;,176qX61,!6?16=v7/=.=4v49!=*77(bb=,-**=6,49!=*77(6,=*694pqX61,!6?16=v
+=6<=*16?v75596<->>=*bb61,->>=*pqX61,!6?16=v
+=6<=*16?v75596<->>=*bb941<9,=?916+, =;-,17649?+p61,!6?16=v
+=6<=*16?v75596<->>=* =;-,17649?+t61,!6?16=v
+=6<=*16?v75596<->>=* =;-,17649?+qX61,!6?16=v49!9:4=+v49!9:4=96<4=bb=,15=62=;,=<p61,!6?16=v49!9:4=+v49!9:4=96<4=~t!+,=5v7-:4=qX61,!6?16=v (=*15=6,94v
+=6<=*16?v;*1(,9:4=
+-6,15=
+=>4=;,176!+,=5=,,16?+bb;*1(,16?1*,!
+=>4=;,176!+,=56+,96;=pqX61,!6?16=v (=*15=6,94v
+=6<=*16?v*9(01;+7*59,,141,!bb+75(*=++=<7*59,9,1.== ,-*=7*59,p61,!6?16=v= ,-*=7*59,qX61,!6?16=vbb?=,;76,=6,747*62=;,=<p61,!6?16=v747*~qX61,!6?16=v:2=;,,9,=bb6,=*694=+,*7!p!+,=5v6,,*qX61,!6?16=v6(-,bb?=,57-+=;*744=4,962=;,=<p61,!6?16=v=;,7*j~qX61,!6?16=v6,=*694v6(-,6+9>=,141,!bb=,=!(,*16?65969?=<p!+,=5v!,=rt!+,=5v6,kjqX61,!6?16=v9*,1;4=!+,=5bb?=,(*7;=<-*9415-49,176-((7*,=<pqX61,!6?16=v9*,1;4=!+,=5bb7(!969?=<7:9,9p!+,=5v71<rt61,!6?16=v9*,1;4=!+,=57:+v9,1.=9*,1;4=9,9~qX61,!6?16=v9*,1;4=!+,=5w9167<-4=bb+=,(49!6/93=62=;,=<p61,!6?16=v9*,1;4=!+,=5w9167<-4=~t!+,=5v774=96qX61,!6?16=v9*,1;4=!+,=5w*1??=*7<-4=bb+=,16+1<=62=;,=<p61,!6?16=v9*,1;4=!+,=5w*1??=*7<-4=~t61,!6?16=v9*,1;4=!+,=5.=*49(;,176qX61,!6?16=v9*,1;4=!+,=5w-:51,,=*+7<-4=bb=,-:51,,=*!+,=562=;,=<p61,!6?16=v9*,1;4=!+,=5w-:51,,=*+7<-4=~t!+,=5v6,kjqX61,!6?16=v9*,1;4=!+,=5w7*;=.=*1>=,15=7<-4=bb?=,+(9;=62=;,=<p61,!6?16=v9*,1;4=!+,=5w7*;=.=*1>=,15=7<-4=~qX61,!6?16=v9*,1;4=!+,=5w
+7,9,176!(==<7<-4=bb?=, -4,1(41=*62=;,=<p61,!6?16=v9*,1;4=!+,=5w
+7,9,176!(==<7<-4=~qX61,!6?16=v9*,1;4=!+,=5w1?0,+7<-4=bb?=,*96?=62=;,=<p61,!6?16=v9*,1;4=!+,=5w1?0,+7<-4=~t61,!6?16=v9*,1;4=!+,=5w169 -*.=~qX61,!6?16=v9*,1;4=!+,=5
+=6<=*=*bb+=,=69:4=6+,96;16?p!+,=5v774=96qX61,!6?16=v
+1?1<:7<!bb?=,59 6?-49*=47;1,!pqX61,!6?16=v
+1?1<:7<!bb?=,.=47;1,!62=;,=<p61,!6?16=v=;,7*k~qX61,!6?16=v
+1?1<:7<!bb+=,(7+1,17662=;,=<p61,!6?16=v=;,7*k~qX61,!6?16=v7441<=*bb+=,59,=*194p61,!6?16=v0!+1;9,=*194qX61,!6?16=v9(+-4=7441<=*bb+=,0=1?0,p!+,=5v16?4=qX61,!6?16=v9(+-4=7441<=*bb94;-49,=*96+>7*562=;,=<p61,!6?16=v9,*1 l l~qX61,!6?16=v(*1,=9+3bb?=,+(*1,=7*,716,pqX9667,x59*+094x>1=4<x,= ,4=5=6,x7>x,!(=x= ,4=5=6,6>7bx
+=>=*=6;=x,!(=x>1=4<x59*+09416?x1+x67,x+-((7*,=<vX61,!6?16=v= ,=6=*9,7*bb7(-49,=6,=*69462=;,=<p!+,=5v,*16?t61,!6?16=v76,t61,!6?16=v747*~t!+,=5v6,kjt!+,=5v16?4=t!+,=5v16?4=t61,!6?16=v76,,!4=t!+,=5v774=96t!+,=5v774=96t!+,=5v6,kjt!+,=5v6,kjt!+,=5v6,kjt!+,=5v6,kjt!+,=5v774=96t61,!6?16=v= ,6;07*t!+,=5v16?4=t!+,=5v16?4=t!+,=5v16?4=t!+,=5v16?4=t!+,=5v774=96t!+,=5v774=96t!+,=5v6,kj~qX61,!6?16=v= ,=+0bb+=,941?65=6,p61,!6?16=v= ,41?65=6,qX61,!6?16=v7?9v9,1.=bb7<=7(!,!4=p!+,=5v6,,*t!+,=5v6,,*qX61,!6?16=v7?9v9,1.=bb7<=,!4==,16=1?0,p!+,=5v6,,*t!+,=5v16?4=qX9667,x59*+094x>1=4<x(*7(=*,1=+1+,x7>x,!(=x,!4=*7(=*,!95=744=;,176vX9667,x59*+094x>1=4<x+0==,x7>x,!(=x
+=+74.=76,= ,bx
+=>=*=6;=x,!(=x>1=4<x59*+09416?x1+x67,x+-((7*,=<vX61,!6?16=v96.9+
+=6<=*=*bb+=,(7(9,=*1947-6,p!+,=5v6,kjqX61,!6?16=v
+=;,*96+>7*5,141,!bb716,6
+=;,96?4=62=;,=<p61,!6?16=v=;,7*j~t61,!6?16=v
+=;,*96+>7*5t61,!6?16=v95=*9t61,!6?16=v=;,7*l~qX61,!6?16=v96.9+bb=,=>9-4,96.9+9,=*194pqX61,!6?16=v=,/7*316?v61,!=:
+=)-=+,bb
+=4=9+=pqX61,!6?16=v=,/7*316?v(479<96<4=*bb6,=*694=,76,=6,!(=p!+,=5v,*16?qX61,!6?16=v1<=7v1<=749!=*bb?=,;96=,15=(<9,=7<=pqX61,!6?16=v1<=7v1<=749!=*bb?=,1+*=(9*=<pqX61,!6?16=v1<=7v1<=749!=*bb?=,/91,7*1*+,*95=pqX61,!6?16=v1<=7v1<=749!=*bb9-+=pqX61,!6?16=v1<=7v1<=749!=*bb?=,;96,=(pqX61,!6?16=v1<=7v1<=749!=*bb?=,,15=
+=>=*=6;=pqX61,!6?16=v1<=7v1<=749!=*bb?=,>*95=7-6,pqX61,!6?16=v1<=7v1<=749!=*bb?=,9-<17*9;37-6,pqX!+,=5v76>1?-*9,176v<44X61,!6?16=v++=,-6<4=7<-4=v<44X7-:4=X++=5:4!95=X,,=5(,16?x,7x;944x9:+,*9;,x5=,07<x}+X*1,05=,1;x7(=*9,176x*=+-4,=<x16x96x7.=*>47/vXx16xXfqqX
+-6,15=*7(=*,!6>7X6x-6*=+74.=<x16<1*=;,x;944x4773-(x>914=<X?67*16?x+!5:74x>14=x<-=x,7xx51+59,;0vx14=x;76,916+x}+x:-,x= (=;,=<x}+vX!6;0*761"9,1767;3 ;=(,176X7;94=x}+Xj;((/1,;0X16<1;=+X96+1 kvlia`nX -61;7<=jh-,>oX=,9+07<=X0=x6-5:=*x7>x?=6=*1;x9*?-5=6,+x(*7.1<=<x<7=+6,x=)-94x,0=x9*1,!x7>x,0=x?=6=*1;x,!(=x<=>161,176vX!(=x5-+,x:=x9x,!(=x(*7.1<=<x:!x,0=x*-6,15=vX6+->>1;1=6,x5=57*!x>7*x:49;3x41+,RX:96<76=<x+,7((=<x59*316?x9>,=*x}-x1,=*9,176+RX9<x+,9;3x:9+=x16x*=?1+,=*5!,0*=9<X6+-((7*,=<x(9?=x+,9,=X0=x*=)-=+,=<x>-6;,176x/9+x67,x>7-6<X=(,=5:=*X=;X(=*9,176x67,x(=*51,,=<x76x96x7:2=;,x/1,07-,x96x9++7;19,=<x+,9,=vX}+x>914=<x,7x*=4=9+=x5-,= X~~X$X6-44(,*X7(=*9,7*ddeXbb7(=*9,7*xX=6-5X41:-6/16<bx594>7*5=<x.94= (*=++176x
+x-6/16<tx*=?x,77x:1?RX+(X kX aX jkX0:+09(=X495=161,X9667,x59*+094x>1=4<x=4=5=6,,!(=x7>x,!(=x**9!=,9<9,9bx
+=>=*=6;=x,!(=x>1=4<x59*+09416?x1+x67,x+-((7*,=<vX71;=161,X71;=27160966=4X71;=*=+-5=9;3?*7-6<-+1;X71;=+=,=9<+=,761,7*6X71;=+,7(*9:1;;,176X71;=31;3,0=**750966=4X9667,x59*+094x>1=4<x7-:4=9*95+x7>x,!(=x*=.1=/07/7-:4=6159,176.9,9*9*95+bx
+=>=*=6;=x,!(=x>1=4<x59*+09416?x1+x67,x+-((7*,=<vX=,77(16?X1*=:9+=((09*(09*=;,7*
+=57.=
+96?=X1*=:9+=((09*(09*=;,7*6<= >X1*=:9+=((09*(9*196,1+,<<
+96?=X1*=:9+=((09*(9*196,1+,
+=.=*+=iX1*=:9+=*9+04!,1;+09*( (7*,1 X1*=:9+=*9+04!,1;+09*(1*=:9+=*9+04!,1;+6,=*694+*9+04!,1;+744=;,17669:4=<X9667,x59*+094x>1=4<x5;, x7>x,!(=x
+=9<=*bx
+=>=*=6;=x,!(=x>1=4<x59*+09416?x1+x67,x+-((7*,=<vX9667,x59*+094x>1=4<x;-**=6,x7>x,!(=x+!6;
+=+-4,bx
+=>=*=6;=x,!(=x>1=4<x59*+09416?x1+x67,x+-((7*,=<vX61,!6?16=v6<*71<bb=4=,=47:94
+=>p!+,=5v6,,*qX61,!6?16=v6<*71<bb944!,==,07<6+9>=p!+,=5v6,,*t!+,=5v6,,*t61,!6?16=v2.94-=rqX61,!6?16=v6<*71<bb9447-:4==,07<6+9>=p!+,=5v6,,*t!+,=5v6,,*t61,!6?16=v2.94-=rqX61,!6?16=v6<*71<bb944,9,1;09*=,07<6+9>=p!+,=5v6,,*t!+,=5v6,,*t61,!6?16=v2.94-=rqX61,!6?16=v6<*71<bb=,,9,1;:2=;,1=4<p!+,=5v6,,*t!+,=5v6,,*qX61,!6?16=v6<*71<bb=,07*,**9!4=5=6,p!+,=5v6,,*t!+,=5v6,kjqX61,!6?16=v6159,176bb*7++9<=p!+,=5v,*16?t!+,=5v16?4=t61,!6?16=v49!7<=qX61,!6?16=v6159,176bb*7++9<=	-=-=<p!+,=5v,*16?t!+,=5v16?4=t61,!6?16=v	-=-=7<=t61,!6?16=v49!7<=qX61,!6?16=v6159,17641(bb?=,>*95=
+9,=pqX61,!6?16=v6159,17641(bb+=,47;947-6<+62=;,=<p61,!6?16=v7-6<+~qX61,!6?16=v6159,7*bb?=,9447/76+,96,41(95(416?(,151"9,176pqX61,!6?16=v6159,7*bb+=,9447/76+,96,41(95(416?(,151"9,176p!+,=5v774=96qX61,!6?16=v6159,7*bb=,9!=*=1?0,p!+,=5v6,kjt!+,=5v16?4=qX61,!6?16=v6159,7*bb=,6159,7*41(6>77-6,p!+,=5v6,kjt!+,=5v774=96qX61,!6?16=v6159,7*bb?=,4=>,==,7,,75=1?0,pqX61,!6?16=v.9,9*bb6,=*694=, 1+=6?,0p!+,=5v6,kjqX9667,x59*+094x>1=4<x57-*;=*96+>7*5x7>x,!(=x76+,*916,7-*;=bx
+=>=*=6;=x,!(=x>1=4<x59*+09416?x1+x67,x+-((7*,=<vX61,!6?16=v6159,176+v7+1,17676+,*916,bb?=,47;3=<pqX61,!6?16=v6159,176+v773,76+,*916,bb+=,47;3=<p!+,=5v774=96qX61,!6?16=v++=,-6<4=
+=)-=+,bb=,
+=+-4,pqX61,!6?16=v-<171+,=6=*bb+=,.74-5=p!+,=5v16?4=qX61,!6?16=v-<171+,=6=*bb+=,.=47;1,!(<9,=7<=p61,!6?16=v-<17=47;1,!(<9,=7<=qX61,!6?16=v-<177-*;=bb+=,:!(9++1+,=6=*>>=;,+p!+,=5v774=96qX61,!v7:+v7/=.=4v6+9>=v7:+,141,!bb?=,7:7*3=*9 15-57-6,pqX61,!v744=;,176+v7/=.=4v6+9>=v6+9>=,141,!bb*==p!+,=5v71<rt61,!v744=;,176+v447;9,7*qX61,!6?16=v((41;9,176bb?=,<9,99,0pqX61,!6?16=v95=*9bb+=,+31(6.73=6144
+=6<=*:2=;,p!+,=5v774=96qX61,!6?16=v95=*9bb?=,<=(,0= ,-*=7<=pqX61,!6?16=v95=*9bb?=,(1 =4=1?0,pqX61,!6?16=v95=*9bb?=,+=6+7*1"=62=;,=<p61,!6?16=v=;,7*j~qX61,!6?16=v
+=>4=;,176*7:=bb+=,,15=41;16?7<=p61,!6?16=v
+=6<=*16?v
+=>4=;,176*7:=15=41;16?7<=qX61,!6?16=v
+=>4=;,176*7:=bb?=,*=94,15== ,-*=pqX61,!6?16=v=:-?7?96<4=*bb6,=*6947?p61,!6?16=v7?!(=t61,!6?16=v7?(,176t!+,=5v,*16?t61,!6?16=v:2=;,qX61,!6?16=vbb=*,= kp!+,=5v16?4=t!+,=5v16?4=t!+,=5v16?4=qX61,!6?16=v*914
+=6<=*=*bb?=,?=6=*9,=1?0,16?9,9pqX61,!6?16=v*914
+=6<=*=*bb93==+0p61,!6?16=v=+0t61,!6?16=v95=*9t!+,=5v774=96qX61,!6?16=v16=
+=6<=*=*bb+=,+,9*,1<,0p!+,=5v16?4=qX61,!6?16=v16=
+=6<=*=*bb=,7+1,17662=;,=<p!+,=5v6,kjt61,!6?16=v=;,7*k~qX61,!6?16=v
+=6<=*=,,16?+bb+=,95:1=6,6,=6+1,!p!+,=5v16?4=qX61,!6?16=v
+=6<=*=,,16?+bb+=,>49*=9<=(==<p!+,=5v16?4=qX61,!6?16=v
+=6<=*=,,16?+bb?=,>7?747*62=;,=<p61,!6?16=v747*~qX61,!6?16=v09<=*bb?=,59 15-50-63+.=**1<=pqX61,!6?16=v09<=*bb=,9++7-6,6-:+09<=*p!+,=5v6,kjqX61,!6?16=v09<=*bb=,47:94479,**9!5(4p!+,=5v6,kjt!+,=5v16?4=t!+,=5v6,kjqX61,!6?16=v09<=*bb ,*9;,47:94479,**9!5(4p!+,=5v6,kjt!+,=5v16?4=qX61,!6?16=v09<=*bb ,*9;,47:949,*1 **9!5(4p!+,=5v6,kjt61,!6?16=v9,*1 l lqX61,!6?16=v09<=*bb=,47:949,*1 5(462=;,=<p!+,=5v6,kjt61,!6?16=v9,*1 l l~qX61,!6?16=v9,=*194bb=,.=**1<=9?p!+,=5v,*16?t!+,=5v,*16?qX61,!6?16=v9,=*194bb=,09<=*=!/7*<+pqX61,!6?16=v9,=*194bb=,= ,-*=5(4p!+,=5v6,kjt61,!6?16=v= ,-*=qX61,!6?16=v=6+49*=bb?=,;747*62=;,=<p61,!6?16=v747*~qX61,!6?16=v1?0,bb?=,+09<7/
+=+74-,176pqX61,!6?16=v1?0,bb?=,+09<7/9,*1 .=**1<=62=;,=<p61,!6?16=v9,*1 l l~qX61,!6?16=v3166=<=+0
+=6<=*=*bb?=,+3166=<7,176=;,7*+pqX61,!6?16=v=+0bb?=,16<= 7*59,pqX61,!6?16=v=+0bb=,=*,= ->>=*9*95+*75**9!p!+,=5v6,kjt61,!6?16=v
+=6<=*16?v=*,= ,,*1:-,==+;*1(,7*qX61,!6?16=v=+0bb=,6<1;=+5(4p!+,=5v6,kjt61,!6?16=v=+07(747?!t61,!6?16=v
+=6<=*16?v6<= 7*59,t!+,=5v**9!t!+,=5v6,kjt!+,=5v6,kjt!+,=5v774=96t!+,=5v6,kjqX61,!6?16=v=+0bb=,*196?4=+76447;5(4inp!+,=5v6,int!+,=5v6,kjt!+,=5v774=96qX61,!6?16=v=+0bb=,16<7+=+**9!p61,!6?16=v9,*1 l lt!+,=5v6,kjqX61,!6?16=v= ,-*=bb=,9,9=1?0,pqX61,!6?16=v= ,-*=bb=,9,1.== ,-*=,*pqX61,!6?16=v= ,-*=jbb=,1 =45(462=;,=<p!+,=5v6,kjt!+,=5v6,kjt!+,=5v6,kjt!+,=5v6,kjt61,!6?16=v747*~qX61,!6?16=v= ,-*=kbb?=,1+
+=9<9:4=pqX61,!6?16=v
+=6<=*= ,-*=bb=,747*7*59,p61,!6?16=v (=*15=6,94v
+=6<=*16?v*9(01;+7*59,qX61,!6?16=v
+=6<=*= ,-*=bb?=,:16<= ,-*=pqX61,!6?16=v
+=6<=*= ,-*=bb=,+7/=*>/7pqX61,!6?16=v
+=6<=*= ,-*=bb=,747*->>=*62=;,=<p61,!6?16=v
+=6<=*->>=*~qX61,!6?16=v49!=*766=;,1766,=*694bb*!=6<=++9?=p!+,=5v,*16?t!+,=5v!,=t!+,=5v6,kjqX61,!6?16=v+!6;(=*9,176bb6,=*694=+,*7!p!+,=5v6,,*qX61,!6?16=v95=:2=;,bb?=,,*96+>7*5pqX61,!6?16=v95=:2=;,bb=,;,1.=p!+,=5v774=96qX61,!6?16=v95=:2=;,bb?=,9;,1.=61=*9*;0!pqX61,!6?16=v15=bb?=,-6+;94=<=4,915=pqX61,!6?16=v7-;0;*==6=!:79*<bb+=,;09*9;,=*151,p!+,=5v6,kjqX61,!6?16=v
+=;,*96+>7*5bb?=,<*1.=6*7(=*,1=+pqX61,!6?16=v*96+>7*5bb+=,47;94;94=62=;,=<p61,!6?16=v=;,7*k~qX61,!6?16=v(*1,=bb6,=*694=,0!+1;+09(=716,7-6,p!+,=5v6,kjqX61,!6?16=v(*1,=bb=,0!+1;+09(=5(4p61,!6?16=v(*1,=t!+,=5v6,kjt!+,=5v744=;,176+v=6=*1;v1+,8id61,!6?16=v=;,7*jfqX61,!6?16=v*7>1416?v*7>14=*bb=,7,946-+=<
+=+=*.=<=57*!76?pqX61,!6?16=v;=6=969?=5=6,v;=6=969?=*bb6479<;=6=+!6;6,=*69462=;,=<p61,!6?16=v;=6=969?=5=6,v;=6=~t61,!6?16=v;=6=969?=5=6,v6479<;=6=(,176+qX61,!6?16=v49!9:4=+v49!9:4=*9(0bb=,
+=+74.=*62=;,=<p61,!6?16=v49!9:4=+v49!9:4=*9(0~qX61,!6?16=v49!9:4=+v49!9:4=*9(0bb766=;,6,=*69462=;,=<p61,!6?16=v49!9:4=+v49!9:4=*9(0~t61,!6?16=v49!9:4=+v49!9:4=96<4=~t!+,=5v6,kjt61,!6?16=v49!9:4=+v49!9:4=96<4=~t!+,=5v6,kjqX61,!6?16=v.=6,bb6,=*694=+,*7!p!+,=5v6,,*qX61,!6?16=v,141,!bb6,=*694=,76,*7462=;,=<p!+,=5v6,kjt61,!6?16=v7;-+!(=t61,!6?16=v
+=;,~qX61,!6?16=v+76,141,!bb7+766,=*694p!+,=5v:2=;,t!+,=5v774=96qX61,!6?16=v9*,1;4=!+,=5bb49!p!+,=5v774=96qX61,!6?16=v9*,1;4=!+,=5w9167<-4=bb?=,+,9*,=49!62=;,=<p61,!6?16=v9*,1;4=!+,=5w9167<-4=~t61,!6?16=v9*,1;4=!+,=5w169 -*.=~qX61,!6?16=v9*,1;4=!+,=5w9167<-4=bb?=,+,9*,
+7,9,176-4,1(41=*62=;,=<p61,!6?16=v9*,1;4=!+,=5w9167<-4=~qX61,!6?16=v9*,1;4=!+,=5w9167<-4=bb?=,59 9*,1;4=+62=;,=<p61,!6?16=v9*,1;4=!+,=5w9167<-4=~qX61,!6?16=v9*,1;4=!+,=5w09(=7<-4=bb?=,*9<1-+(==<-4,1(41=*62=;,=<p61,!6?16=v9*,1;4=!+,=5w09(=7<-4=~qX61,!6?16=v9*,1;4=!+,=5w09(=7<-4=bb+=,5=+0rp_delete_AndroidNotificationParamsInternal, contains 9 method pointers starting at 0xB728E68
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 9 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.UnityWebRequestModule.dll, contains 132 method pointers starting at 0xB728EB0
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 132 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 1 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 1 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.UnityWebRequestTextureModule.dll, contains 9 method pointers starting at 0xB7292D0
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 9 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.UnityWebRequestWWWModule.dll, contains 12 method pointers starting at 0xB729318
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 12 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for XHXXXXXXXXXXXXXXXHXXXHXXX@XXXxXXXpXXXHXXX@XXXHXXXXXXXXXXXXXXXXXXXHXXX@XXXxXXXpXXXhXXXHXXX@XXXxXXXHXXX@XXXxXXXXXXXPXXXHXXX@XXXxXXX|XXXpXXXhXXXdXXXXXX8XXX0XXX(XXX XXX�XXX�XXXxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXX@XXXxXXX|XXXpXXXhXXX`XXXXXXXXXXXX@XXXxXXXpXXXhXXX`XXXXXXXXXHXXX@XXXxXXXyXXXpXXXhXXX`XXXXXXXXXXXX, contains 29 method pointers starting at 0xB729378
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 29 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityEngine.VideoModule.dll, contains 138 method pointers starting at 0xB7294B0
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 138 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for UnityWebSocket.Runtime.dll, contains 2 method pointers starting at 0xB729928
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 2 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for Unity.Services.Analytics.dll, contains 378 method pointers starting at 0xB6F6EE0
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 378 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for Unity.Services.Core.dll, contains 53 method pointers starting at 0xB6F9330
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 53 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 1 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 2 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for Unity.Services.Core.Configuration.dll, contains 36 method pointers starting at 0xB6F7B90
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 36 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for 61,!v=*.1;=+v7*=v=.1;=v<44X61,!v15=416=v<44X61,!6?16=v6<*71<7<-4=v<44X61,!6?16=v= ,7*=76,6?16=7<-4=v<44X!+,=5v=,X
+
+
+bx7-4<x67,x7(=6x}+X0*=9<Xbw-14<-,(-,
+1.=9+,;w=*+176w:*49,=+,w-61,!1:*9*!w+*;w5916w4j((-,(-,*72=;,wjw41:14j;((w1;944+w5+;7*41:w!+,=5v
+=>4=;,176w
+-6,15=++=5:4!v;((pjl`qxbx6+-((7*,=<x16,=*694x;944x>7*xjb++=5:4!bb6,=*69459?=
+-6,15==*+176xuxz01+x1;944x1+x67,x+-((7*,=<x:!x14j;((vzX:2=;,1+(7+=< ;=(,176X-+,75,,*1:-,=7*59, ;=(,176X47;393=6x5-+,x:=x>94+=X0*163x0*=9<x,9;3XkjX61,1941"=<x;49++x;7-6,bxX-;+jX41:14j;((xXjx<7=+x67,x+-((7*,x*=+-**=;,176x>7*x/=93x*=>=*=6;=+vx9++x,0=x,*9;3
+=+-**=;,176x/1,0x9x.94-=x7>x>94+=vX+,9*,X96,x+,9*,x-(bx67,x=67-?0x5=57*!RXx9*616?bx6= (=;,=<x9+!6;0*767-+xw(*7;w+=4>w59(+x?*7/,0xp,7x}4<x:!,=+qRX-659(?9(bx59<.1+=x>914=<x9,x}(xp4=6?,0x}4-qtx=**;7<=ex}<RX(,0*=9<3144x>914=<x9,x+-+(=6<X-6+(=;1>1=<x?=6=*1;;9,=?7*!x=**7*X>-,-*=X}X:9+1;17+,*=95Xx.749,14=X-*=x.1*,-94x>-6;,176x;944=<yX+,<bb:9<= ;=(,176X(1=;=x67,x15(4=5=6,=<X mX ihXXXXXX�gXX��XX��XX��XX��XX�gXIxzXOxzJ�XJB�XEbX]PSXO6XO{P[XTLXXXAXdXX�X�XXYgYXXXXXXXXXXXXXXXXXXXX�XXXXXX�gXX�gXXXXXXXX�gXX�gXX�gXX�XX�XXXXXXXX�gXX�gXX�g`XXX:X4.-JJJJJJJJJ*XJJXXXXXXXXXX,XPMxxigxXT@qgXG|zX�X^YXX�Y�Y�YXXfYXXnXX�X�X�XAYAhXX-X+X�XXXYYYXX�XUEtdX�<0$���XX[RMFz}pr;4"�����픉����XN��X\PT[@[XX^X^[sXH@XXXvXXMYX���XAxEX:?5+ %�X��������X}��pG�����s������������vil����obeND�AHK
+�, contains 23 method pointers starting at 0xB6F7CD0
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 23 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for Unity.Services.Core.Environments.Internal.dll, contains 3 method pointers starting at 0xB6F7D88
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 3 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for Unity.Services.Core.Internal.dll, contains 453 method pointers starting at 0xB6F7DA0
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 453 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 40 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 188 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for HXXXLXXX@XXX|XXXlXXXXXXXXXXXX, contains 53 method pointers starting at 0xB6F8ED8
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 53 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for XXX@XXXHXXX@XXXHXXX@XXXHXXX@XXXxXXXHXXXXXXXXXXXXXXXHXXXHXXX@XXXxXXXpXXXHXXX@XXXHXXXXXXXXXXXXXXXXXXXHXXX@XXXxXXXpXXXhXXXHXXX@XXXxXXXHXXX@XXXxXXXXXXXPXXXHXXX@XXXxXXX|XXXpXXXhXXXdXXXXXX8XXX0XXX(XXX XXX�XXX�XXXxXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXXXXXXXXXXXXXXHXXX@XXXxXXX|XXXpXXXhXXX`XXXXXXXXXXXX@XXXxXXXpXXXhXXX`XXXXXXXXXHXXX@XXXxXXXyXXXpXXXhXXX`XXXXXXXXXXXX, contains 32 method pointers starting at 0xB6F9140
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 32 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 1 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 32 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for Unity.Services.Core.Telemetry.dll, contains 12 method pointers starting at 0xB6F9240
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 12 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for Unity.Services.Core.Threading.dll, contains 18 method pointers starting at 0xB6F92A0
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 18 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 8 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 36 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for 61,!v15=416=v<44X61,!6?16=v6<*71<7<-4=v<44X61,!6?16=v= ,7*=76,6?16=7<-4=v<44X!+,=5v=,X
+
+
+bx7-4<x67,x7(=6x}+X0*=9<Xbw-14<-,(-,
+1.=9+,;w=*+176w:*49,=+,w-61,!1:*9*!w+*;w5916w4j((-,(-,*72=;,wjw41:14j;((w1;944+w5+;7*41:w!+,=5v
+=>4=;,176w
+-6,15=++=5:4!v;((pjl`qxbx6+-((7*,=<x16,=*694x;944x>7*xjb++=5:4!bb6,=*69459?=
+-6,15==*+176xuxz01+x1;944x1+x67,x+-((7*,=<x:!x14j;((vzX:2=;,1+(7+=< ;=(,176X-+,75,,*1:-,=7*59, ;=(,176X47;393=6x5-+,x:=x>94+=X0*163x0*=9<x,9;3XkjX61,1941"=<x;49++x;7-6,bxX-;+jX41:14j;((xXjx<7=+x67,x+-((7*,x*=+-**=;,176x>7*x/=93x*=>=*=6;=+vx9++x,0=x,*9;3
+=+-**=;,176x/1,0x9x.94-=x7>x>94+=vX+,9*,X96,x+,9*,x-(bx67,x=67-?0x5=57*!RXx9*616?bx6= (=;,=<x9+!6;0*767-+xw(*7;w+=4>w59(+x?*7/,0xp,7x}4<x:!,=+qRX-659(?9(bx59<.1+=x>914=<x9,x}(xp4=6?,0x}4-qtx=**;7<=ex}<RX(,0*=9<3144x>914=<x9,x+-+(=6<X-6+(=;1>1=<x?=6=*1;;9,=?7*!x=**7*X>-,-*=X}X:9+1;17+,*=95Xx.749,14=X-*=x.1*,-94x>-6;,176x;944=<yX+,<bb:9<= ;=(,176X(1=;=x67,x15(4=5=6,=<X mX ihXXXXXX�gXX��XX��XX��XX��XX�gXIxzXOxzJ�XJB�XEbX]PSXO6XO{P[XTLXXXAXdXX�X�XXYgYXXXXXXXXXXXXXXXXXXXX�XXXXXX�gXX�gXXXXXXXX�gXX�gXX�gXX�XX�XXXXXXXX�gXX�gXX�g`XXX:X4.-JJJJJJJJJ*XJJXXXXXXXXXX,XPMxxigxXT@qgXG|zX�X^YXX�Y�Y�YXXfYXXnXX�X�X�XAYAhXX-X+X�XXXYYYXX�XUEtdX�<0$���XX[RMFz}pr;4"�����픉����XN��X\PT[@[XX^X^[sXH@XXXvXXMYX���XAxEX:?5+ %�X��������X}��pG�����s������������vil����obeND�AHK
+�, contains 891 method pointers starting at 0xB6F94F8
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 891 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 7 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 35 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for __Generated, contains 3 method pointers starting at 0xB72E9C0
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 3 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for mscorlib.dll, contains 13572 method pointers starting at 0xB6A5348
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 13572 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 292 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 2312 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for protobuf-net.dll, contains 1467 method pointers starting at 0xB6CC4A0
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 1467 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 38 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 108 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m		-Read module data for zxing.unity.dll, contains 2577 method pointers starting at 0xB729938
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 2577 method pointers.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 11 RGCTX ranges.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m			-Read 66 RGCTXs.
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	OK (20.7632 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading generic method tables...[0m[38;2;128;128;128mOK (8.0571 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading method specifications...[0m[38;2;128;128;128mOK (24.8924 ms)
+[0m[38;2;128;128;128m[Verb] [Library] [0m[38;2;128;128;128m	Reading generic methods...[0m[38;2;139;0;0m
+
+Cpp2IL.Core.Exceptions.LibCpp2ILInitializationException: Fatal Exception initializing LibCpp2IL!
+ ---> System.OutOfMemoryException: Exception of type 'System.OutOfMemoryException' was thrown.
+   at LibCpp2IL.ClassReadingBinaryReader.ReadNUintArrayAtRawAddress(Int64 offset, Int32 count) in /_/LibCpp2IL/ClassReadingBinaryReader.cs:line 390
+   at LibCpp2IL.Il2CppBinary.ReadNUintArrayAtVirtualAddress(UInt64 addr, Int64 count) in /_/LibCpp2IL/Il2CppBinary.cs:line 404
+   at LibCpp2IL.Il2CppBinary.Init(UInt64 pCodeRegistration, UInt64 pMetadataRegistration, Il2CppMetadata metadata) in /_/LibCpp2IL/Il2CppBinary.cs:line 314
+   at LibCpp2IL.Il2CppBinary.Init(LibCpp2IlContext context) in /_/LibCpp2IL/Il2CppBinary.cs:line 95
+   at LibCpp2IL.LibCpp2IlBinaryRegistry.CreateAndInit(Byte[] buffer, LibCpp2IlContext context) in /_/LibCpp2IL/LibCpp2IlBinaryRegistry.cs:line 66
+   at LibCpp2IL.LibCpp2IlContextBuilder.LoadBinary(Byte[] binaryBytes) in /_/LibCpp2IL/LibCpp2IlContextBuilder.cs:line 73
+   at LibCpp2IL.LibCpp2IlContextBuilder.Build(Byte[] binaryBytes, Byte[] metadataBytes, UnityVersion unityVersion) in /_/LibCpp2IL/LibCpp2IlContextBuilder.cs:line 129
+   at LibCpp2IL.LibCpp2IlContextBuilder.BuildFromFiles(String pePath, String metadataPath, UnityVersion unityVersion) in /_/LibCpp2IL/LibCpp2IlContextBuilder.cs:line 137
+   at LibCpp2IL.LibCpp2IlMain.LoadFromFileAsContext(String pePath, String metadataPath, UnityVersion unityVersion) in /_/LibCpp2IL/LibCpp2IlMain.cs:line 41
+   at Cpp2IL.Core.Cpp2IlApi.InitializeLibCpp2Il(String assemblyPath, String metadataPath, UnityVersion unityVersion, Boolean allowUserToInputAddresses) in /_/Cpp2IL.Core/Cpp2IlApi.cs:line 89
+   --- End of inner exception stack trace ---
+   at Cpp2IL.Core.Cpp2IlApi.InitializeLibCpp2Il(String assemblyPath, String metadataPath, UnityVersion unityVersion, Boolean allowUserToInputAddresses) in /_/Cpp2IL.Core/Cpp2IlApi.cs:line 95
+   at Cpp2IL.Program.MainWithArgs(Cpp2IlRuntimeArgs runtimeArgs) in /home/runner/work/Cpp2IL/Cpp2IL/Cpp2IL/Program.cs:line 683
+   at Cpp2IL.Program.Main(String[] args) in /home/runner/work/Cpp2IL/Cpp2IL/Cpp2IL/Program.cs:line 615
+
+Waiting for you to press enter - feel free to copy the error...
+[0m

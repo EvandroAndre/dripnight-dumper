@@ -1,0 +1,8 @@
+namespace message;
+
+public enum EMLGIBLNJGN : uint
+{
+	EICEWALL_NORMAL,
+	EICEWALL_CRACK,
+	EICEWALL_EXTRAHP_NORMAL
+}

@@ -1,0 +1,52 @@
+using System.Collections.Generic;
+using GCommon;
+using message;
+
+namespace COW.GamePlay;
+
+internal interface JLOFMCKFFHB
+{
+	uint OJJODPHMHAM();
+
+	void BEIBIPNHNJG(uint MCDOPEMIHGP);
+
+	PFNNIPJHHOD LDIKOKHINMD();
+
+	FDAEPHMIEPC EMPCKKEJKJP();
+
+	LMLKDECCMFM[] CFDCFJMDFPJ(FEGPBNJHOLO EJEMALEIFCE);
+
+	void EHABFCFANOA(ref ICollection<ResourceID> CFJCHCNHHLA);
+
+	bool EPOOGNBJFOP();
+
+	bool ENGAAJBKJHK();
+
+	void JJJGLJHDLJH();
+
+	void KEDLLFIIIBI();
+
+	void PDDIGIJNFOC();
+
+	void ODFLMFCNKLF(HOKIGPKKDJO KAEPDGADBPN);
+
+	void MIOJGEKIEFL();
+
+	void OPIADJJMJLB();
+
+	void NMMHPNHJDLK();
+
+	void PJENCKDNDIE();
+
+	void NNJHABNOLIA(int GPFPIAMCEMI);
+
+	void HCHGFAPHHAG();
+
+	void OMHFKOFCHCJ();
+
+	bool AENHEHJEDLB();
+
+	void LILEEJOFLPJ();
+
+	BEGDCOFACLE IPECJDKEPLC();
+}

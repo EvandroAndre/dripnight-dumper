@@ -1,0 +1,13 @@
+namespace COW.GamePlay;
+
+public enum EJMCDCLJNJI
+{
+	ADD,
+	DEL,
+	UPDATE,
+	ADD_CONTAINER,
+	DEL_CONTAINER,
+	NOTIFY_PlayerPickContainer,
+	UPDADTE_LASER,
+	UPDATE_PICKUP_COUNT
+}

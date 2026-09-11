@@ -1,0 +1,11 @@
+namespace proto;
+
+public enum NetworkMetricEvent
+{
+	NetworkMetricEvent_NONE,
+	NetworkMetricEvent_LOGIN_GS_NETWORK_TIMEOUT,
+	NetworkMetricEvent_LOGIN_GS_LOADING_TIMEOUT,
+	NetworkMetricEvent_GS_DISCONNECT,
+	NetworkMetricEvent_CDN_DOWNLOAD_FAILED,
+	NetworkMetricEvent_GCS_UPLOAD_FAILED
+}

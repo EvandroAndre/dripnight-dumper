@@ -1,0 +1,11 @@
+namespace message;
+
+public enum DMBLHAPEMPA : uint
+{
+	EPlayerTeamGatherPointState_None,
+	EPlayerTeamGatherPointState_Requester,
+	EPlayerTeamGatherPointState_Teammate_Waiting,
+	EPlayerTeamGatherPointState_Teammate_Accepted,
+	EPlayerTeamGatherPointState_Teammate_Rejected,
+	EPlayerTeamGatherPointState_Teammate_Interrupted
+}

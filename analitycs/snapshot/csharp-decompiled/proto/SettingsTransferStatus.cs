@@ -1,0 +1,10 @@
+namespace proto;
+
+public enum SettingsTransferStatus
+{
+	NONE,
+	NOTFOUNDBYACCOUNT,
+	NOTEXISTSAMEVERSION,
+	FOUNDSAMEVERSION,
+	UPLOADVERSIONERR
+}

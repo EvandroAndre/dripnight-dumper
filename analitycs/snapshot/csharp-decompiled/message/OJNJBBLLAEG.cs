@@ -1,0 +1,22 @@
+using GCommon;
+
+namespace message;
+
+public class OJNJBBLLAEG : UDPClientMessageBase
+{
+	public ushort FAAMLGOPLAC;
+
+	public bool CJFHGJHBCAL;
+
+	public override void Serialize(FastBinaryWriter CDKHIDGNFDE)
+	{
+	}
+
+	public override void UnSerialize(FastBinaryReader HICKLIEHMND)
+	{
+	}
+
+	public override void Recycle()
+	{
+	}
+}

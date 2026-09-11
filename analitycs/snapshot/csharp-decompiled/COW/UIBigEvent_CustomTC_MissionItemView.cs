@@ -1,0 +1,39 @@
+using GCommon;
+using UnityEngine;
+
+namespace COW;
+
+public class UIBigEvent_CustomTC_MissionItemView : UIBaseView
+{
+	public UILabel LabelDescription;
+
+	public GameObject LabelReceived;
+
+	public UIButton BtnReceive;
+
+	public GameObject GoAwarded;
+
+	public UINetworkTexture TextureBg;
+
+	public UILabel LabelProcess;
+
+	public UIGrid GridAwards;
+
+	public UINetworkTexture SpriteReceivedBg;
+
+	public UINetworkTexture SpriteReceiveBg;
+
+	public GameObject GotoBtnGo;
+
+	public UIButton GotoBtn;
+
+	public UINetworkTexture SpriteGotoBg;
+
+	protected override void OnInit(Transform holder)
+	{
+	}
+
+	public void _003C_003EiFixBaseProxy_OnInit(Transform P0)
+	{
+	}
+}

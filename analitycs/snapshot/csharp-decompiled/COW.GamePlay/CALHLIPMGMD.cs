@@ -1,0 +1,12 @@
+using UnityEngine;
+
+namespace COW.GamePlay;
+
+internal interface CALHLIPMGMD<T>
+{
+	void RefreshState(T PIHEOEJAPPO);
+
+	void InitManually(KMBEHIGOKNF LAIDKEINKFG, float FFADCBDFANJ, float HMCHAKDHAKE, float GOKHJBJHCLK, float CGGPBJKCDEG, Vector3 DFNHOKCIIJK, NHMBEJGPEMP CJPNFPLEDPA, CIDCDEOCLBA OAGMEDEPKML, FDACAOPGNJK FPJMDJMMDBL);
+
+	void UninitManually();
+}

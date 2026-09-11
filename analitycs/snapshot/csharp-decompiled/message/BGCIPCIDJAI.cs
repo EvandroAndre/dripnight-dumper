@@ -1,0 +1,15 @@
+namespace message;
+
+public enum BGCIPCIDJAI : uint
+{
+	EPlayerSkillSourceType_Unknown,
+	EPlayerSkillSourceType_BornWith,
+	EPlayerSkillSourceType_DebugAdd,
+	EPlayerSkillSourceType_SkillCard,
+	EPlayerSkillSourceType_TechDevice,
+	EPlayerSkillSourceType_PassiveSkillCard,
+	EPlayerSkillSourceType_ZombiePlusModeChoose,
+	EPlayerSkillSourceType_DualActiveSkillModeChoose,
+	EPlayerSkillSourceType_SkillCopySkill,
+	EPlayerSkillSourceType_PresetPick
+}

@@ -1,0 +1,14 @@
+namespace message;
+
+public enum CPIHKPFJFCO : uint
+{
+	EFinancialTransactionWithdrawRet_OK,
+	EFinancialTransactionWithdrawRet_TrackerNotAvailable,
+	EFinancialTransactionWithdrawRet_NotFound,
+	EFinancialTransactionWithdrawRet_InvalidRound,
+	EFinancialTransactionWithdrawRet_InvalidState,
+	EFinancialTransactionWithdrawRet_InvalidFlags,
+	EFinancialTransactionWithdrawRet_InvalidFilter,
+	EFinancialTransactionWithdrawRet_InsufficientMerchandise,
+	EFinancialTransactionWithdrawRet_ProcessFailed
+}

@@ -1,0 +1,24 @@
+namespace message;
+
+public enum ADBKGFHAAKA : uint
+{
+	EPRI_AI_CUR_HP,
+	EPRI_AI_MAX_HP,
+	EPRI_AI_TRANSFORMLEVEL,
+	EPRI_AI_SHIELD_STATUS,
+	EPRI_AI_SHIELD_CUR_HP,
+	EPRI_AI_STATE_INDEX,
+	EPRI_AI_INJURE_SCALE,
+	EPRI_AI_QUEST_OWNER_ID,
+	EPRI_AI_INVINCIBLE_SPAWN,
+	EPRI_AI_DragonLeftHead_HP,
+	EPRI_AI_DragonRightHead_HP,
+	EPRI_AI_DragonCombineHead_HP,
+	EPRI_AI_DragonWeakness_HP,
+	EPRI_AI_DragonSingleHeadMax_HP,
+	EPRI_AI_DragonCombineHeadMax_HP,
+	EPRI_AI_DragonWeaknessMax_HP,
+	EPRI_AI_WeaponOnHand,
+	EPRI_AI_DISMEMBER_PART,
+	EPRI_AI_NB
+}

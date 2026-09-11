@@ -1,0 +1,39 @@
+using System.Collections.Generic;
+using UnityEngine;
+using message;
+
+namespace COW.GamePlay;
+
+public class FNJJOALKJOC
+{
+	public float CGHNAKCHBCA;
+
+	public Dictionary<BHGGAEEHJCO, JNOIKIHKCGB> MDALGAMPEAJ;
+
+	public JNOIKIHKCGB BCEKDOOOMFI(BHGGAEEHJCO MELCKDBHDLI)
+	{
+		return null;
+	}
+
+	public bool GOADDKPEKEP(out float HKJKEJONGMC)
+	{
+		HKJKEJONGMC = default(float);
+		return false;
+	}
+
+	public void EMKKNNOPAAG(BHGGAEEHJCO MELCKDBHDLI, int PIBGFBLEBPH, bool GPFPIAMCEMI)
+	{
+	}
+
+	public void LAJEELOALAA(BHGGAEEHJCO MELCKDBHDLI, int PIBGFBLEBPH, Vector3 IGDHIDGLOKG, uint AOENABIMOCH, bool BKFBJPLADMP = true, bool LPBMBGBNFOL = true)
+	{
+	}
+
+	public void OKIEMELGHJP(BHGGAEEHJCO MELCKDBHDLI, int PIBGFBLEBPH, EMEFBBBEPDG FEKAKKAKAHC, uint DIDNPODGGAA, string LCGFPGOBNBC, uint GBGKIDEMLID, Vector3 ANBHOFKDHII, bool LPBMBGBNFOL = true)
+	{
+	}
+
+	public void CECGIECHNAJ(BHGGAEEHJCO MELCKDBHDLI, EMEFBBBEPDG FEKAKKAKAHC, uint DIDNPODGGAA, uint GBGKIDEMLID)
+	{
+	}
+}
