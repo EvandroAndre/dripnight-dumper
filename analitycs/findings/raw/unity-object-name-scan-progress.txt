@@ -1,0 +1,10 @@
+[progress] 250/2658 parsed=250 failed=0 hits=4251
+[progress] 500/2658 parsed=500 failed=0 hits=4385
+[progress] 750/2658 parsed=750 failed=0 hits=5169
+[progress] 1000/2658 parsed=1000 failed=0 hits=5894
+[progress] 1250/2658 parsed=1250 failed=0 hits=6564
+[progress] 1500/2658 parsed=1500 failed=0 hits=7093
+[progress] 1750/2658 parsed=1750 failed=0 hits=7144
+[progress] 2000/2658 parsed=2000 failed=0 hits=7212
+[progress] 2250/2658 parsed=2250 failed=0 hits=7509
+[progress] 2500/2658 parsed=2500 failed=0 hits=7617

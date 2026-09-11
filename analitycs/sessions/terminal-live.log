@@ -4276,4 +4276,129 @@ output/csharp-decompiled/COW.GamePlay/LevelObjectSpawnedAttackable.cs:79:	public
 [7mgit push origin main[27m[A[A[A[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ git add -f analitycs output/semantic-aliases.json
 git commit -m "Finalize metadata headshot architecture analysis"
 git push origin main
-[?2004l
+[?2004l[main 19bbfa05] Finalize metadata headshot architecture analysis
+ 9 files changed, 3542 insertions(+), 2 deletions(-)
+ create mode 100644 analitycs/findings/raw/bighead-capsule-relation-map.txt
+ create mode 100644 analitycs/findings/raw/bighead-component-internals.txt
+ create mode 100644 analitycs/findings/raw/final-headshot-metadata-relations.txt
+ create mode 100644 analitycs/findings/raw/head-bone-transform-search.txt
+ create mode 100644 analitycs/findings/raw/raycast-to-head-region-map.txt
+ create mode 100644 output/semantic-aliases.json
+Enumerating objects: 23, done.
+Counting objects:   4% (1/23)Counting objects:   8% (2/23)Counting objects:  13% (3/23)Counting objects:  17% (4/23)Counting objects:  21% (5/23)Counting objects:  26% (6/23)Counting objects:  30% (7/23)Counting objects:  34% (8/23)Counting objects:  39% (9/23)Counting objects:  43% (10/23)Counting objects:  47% (11/23)Counting objects:  52% (12/23)Counting objects:  56% (13/23)Counting objects:  60% (14/23)Counting objects:  65% (15/23)Counting objects:  69% (16/23)Counting objects:  73% (17/23)Counting objects:  78% (18/23)Counting objects:  82% (19/23)Counting objects:  86% (20/23)Counting objects:  91% (21/23)Counting objects:  95% (22/23)Counting objects: 100% (23/23)Counting objects: 100% (23/23), done.
+Delta compression using up to 2 threads
+Compressing objects:   7% (1/14)Compressing objects:  14% (2/14)Compressing objects:  21% (3/14)Compressing objects:  28% (4/14)Compressing objects:  35% (5/14)Compressing objects:  42% (6/14)Compressing objects:  50% (7/14)Compressing objects:  57% (8/14)Compressing objects:  64% (9/14)Compressing objects:  71% (10/14)Compressing objects:  78% (11/14)Compressing objects:  85% (12/14)Compressing objects:  92% (13/14)Compressing objects: 100% (14/14)Compressing objects: 100% (14/14), done.
+Writing objects:   6% (1/15)Writing objects:  13% (2/15)Writing objects:  20% (3/15)Writing objects:  26% (4/15)Writing objects:  33% (5/15)Writing objects:  40% (6/15)Writing objects:  46% (7/15)Writing objects:  53% (8/15)Writing objects:  60% (9/15)Writing objects:  66% (10/15)Writing objects:  73% (11/15)Writing objects:  80% (12/15)Writing objects:  86% (13/15)Writing objects:  93% (14/15)Writing objects: 100% (15/15)Writing objects: 100% (15/15), 30.58 KiB | 3.06 MiB/s, done.
+Total 15 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+[Kremote: Resolving deltas:   0% (0/4)[Kremote: Resolving deltas:  25% (1/4)[Kremote: Resolving deltas:  50% (2/4)[Kremote: Resolving deltas:  75% (3/4)[Kremote: Resolving deltas: 100% (4/4)[Kremote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To https://github.com/EvandroAndre/dripnight-dumper
+   142aafc5..19bbfa05  main -> main
+[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ clear
+[?2004l[H[2J[3J[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ [7mcd /workspaces/dripnight-dumper[27m 
+
+[7mfind . -type f \( \[27m
+[7m  -iname '*.assets' -o \[27m
+[7m  -iname '*.bundle' -o \[27m
+[7m  -iname '*.unity3d' -o \[27m
+[7m  -iname 'globalgamemanagers' -o \[27m
+[7m  -iname 'resources.assets' -o \[27m
+[7m  -iname 'sharedassets*' -o \[27m
+[7m  -iname '*.apk' \[27m
+[7m\) -printf '%p\t%k KB\n' | head -300[27m[A[A[A[A[A[A[A[A[A[A[A[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ cd /workspaces/dripnight-dumper 
+
+find . -type f \( \
+  -iname '*.assets' -o \
+  -iname '*.bundle' -o \
+  -iname '*.unity3d' -o \
+  -iname 'globalgamemanagers' -o \
+  -iname 'resources.assets' -o \
+  -iname 'sharedassets*' -o \
+  -iname '*.apk' \
+\) -printf '%p\t%k KB\n' | head -300
+[?2004l./tools/cpp2il-src/TestFiles/Simple_2022_3_35/Simple_2022_3_35_Data/globalgamemanagers	64 KB
+./tools/cpp2il-src/TestFiles/Simple_2022_3_35/Simple_2022_3_35_Data/globalgamemanagers.assets	152 KB
+./tools/cpp2il-src/TestFiles/Simple_2022_3_35/Simple_2022_3_35_Data/sharedassets0.assets	60 KB
+./tools/cpp2il-src/TestFiles/Simple_2019_4_34/Simple_2019_4_34_Data/globalgamemanagers	44 KB
+./tools/cpp2il-src/TestFiles/Simple_2019_4_34/Simple_2019_4_34_Data/globalgamemanagers.assets	44 KB
+./tools/cpp2il-src/TestFiles/Simple_2019_4_34/Simple_2019_4_34_Data/sharedassets0.assets	88 KB
+[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ clear
+[?2004l[H[2J[3J[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ cd /workspaces/dripnight-dumper 
+
+ls -lh input/FF_assets.apk
+file input/FF_assets.apk
+
+mkdir -p input/freefire-assets
+
+unzip -q input/FF_assets.apk -d input/freefire-assets
+
+[7m{[27m
+[7mecho "============================================================"[27m
+[7mecho "FREE FIRE UNITY ASSET INVENTORY"[27m
+[7mecho "============================================================"[27m
+
+[7mfind input/freefire-assets -type f \( \[27m
+[7m  -iname '*.assets' -o \[27m
+[7m  -iname '*.bundle' -o \[27m[7m  -iname '*.unity3d' -o \[27m[7m  -iname 'globalgamemanagers' -o \[27m[7m  -iname 'globalgamemanagers.assets' -o \[27m[7m  -iname 'resources.assets' -o \[27m[7m  -iname 'sharedassets*' -o \[27m[7m  -iname '*.resS' \[27m[7m\) -printf '%p\t%k KB\n' | sort[27m[7m} | tee analitycs/findings/raw/freefire-unity-assets-inventory.txt[27m[A[A[A[A[A[A[A{
+echo "============================================================"
+echo "FREE FIRE UNITY ASSET INVENTORY"
+echo "============================================================"
+
+find input/freefire-assets -type f \( \
+  -iname '*.assets' -o \
+  -iname '*.bundle' -o \  -iname '*.unity3d' -o \  -iname 'globalgamemanagers' -o \  -iname 'globalgamemanagers.assets' -o \  -iname 'resources.assets' -o \  -iname 'sharedassets*' -o \  -iname '*.resS' \\) -printf '%p\t%k KB\n' | sort} | tee analitycs/findings/raw/freefire-unity-assets-inventory.txt
+[?2004lls: cannot access 'input/FF_assets.apk': No such file or directory
+input/FF_assets.apk: cannot open `input/FF_assets.apk' (No such file or directory)
+unzip:  cannot find or open input/FF_assets.apk, input/FF_assets.apk.zip or input/FF_assets.apk.ZIP.
+============================================================
+FREE FIRE UNITY ASSET INVENTORY
+============================================================
+[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ [7mfind input/freefire-assets/asse[27m[7mt[27m[7ms/bin/Data \ [27m
+[7m  -maxdepth 3 \[27m
+[7m  -type f \[27m
+[7m  -printf '%p\t%k KB\n' \[27m
+[7m  | sort \[27m
+[7m  | head -500 \[27m
+[7m  | tee analitycs/findings/raw/freefire-data-directory.txt[27m[A[A[A[A[A[A[Afind input/freefire-assets/assets/bin/Data \
+  -maxdepth 3 \
+  -type f \
+  -printf '%p\t%k KB\n' \
+  | sort \
+  | head -500 \
+  | tee analitycs/findings/raw/freefire-data-directory.txt
+[?2004lfind: ‘input/freefire-assets/assets/bin/Data’: No such file or directory
+[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ [7mfind input/freefire-assets -typ[27m[7me[27m[7m f -size +1M \ [27m
+[7m  -printf '%s\t%p\n' \[27m
+[7m  | sort -nr \[27m
+[7m  | head -300 \[27m
+[7m  | tee analitycs/findings/raw/freefire-largest-assets.txt[27m[A[A[A[A[Afind input/freefire-assets -type f -size +1M \
+  -printf '%s\t%p\n' \
+  | sort -nr \
+  | head -300 \
+  | tee analitycs/findings/raw/freefire-largest-assets.txt
+[?2004l[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ clear
+[?2004l[H[2J[3J[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ [7mcd /workspaces/dripnight-dumper[27m 
+
+[7mecho "========== INPUT =========="[27m
+[7mls -lah input[27m
+
+[7mecho[27m
+[7mecho "========== APKs NO CODESPACE =========="[27m
+[7mfind /workspaces/dripnight-dumper -type f -iname '*.apk' -printf '%p\t%k KB\n'[27m[A[A[A[A[A[A[A[Acd /workspaces/dripnight-dumper 
+
+echo "========== INPUT =========="
+ls -lah input
+
+echo
+echo "========== APKs NO CODESPACE =========="
+find /workspaces/dripnight-dumper -type f -iname '*.apk' -printf '%p\t%k KB\n'
+[?2004l========== INPUT ==========
+total 257M
+drwxrwxrwx+ 3 codespace codespace 4.0K Sep 11 01:44 [0m[34;42m.[0m
+drwxrwxrwx+ 7 codespace root      4.0K Sep 11 01:31 [34;42m..[0m
+drwxrwxrwx+ 2 codespace codespace 4.0K Sep 11 01:44 [34;42mfreefire-assets[0m
+-rw-rw-rw-  1 codespace codespace  54M Sep 10 23:32 global-metadata.dat
+-rw-rw-rw-  1 codespace codespace 184M Sep 10 23:34 libil2cpp.so
+-rw-rw-rw-  1 codespace codespace  21M Sep 10 23:41 libunity.so
+
+========== APKs NO CODESPACE ==========
+[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ 

@@ -617,3 +617,127 @@ Não foi possível reconstruir por esta fonte:
 - bone/path exato da cabeça
 - fórmulas originais de dano
 - ordem exata de branches internos
+
+## Asset investigation - FireCollider
+
+Asset:
+360276293c2d7454ebc613b499b62d22
+
+Hierarchy:
+
+CyberMushroom_Coin
+└── Cyber_mushroom
+    └── FireCollider
+
+Conclusion:
+
+The object named FireCollider in this asset is associated with the
+Cyber Mushroom object hierarchy and is not evidence of a Player
+head/body collider.
+
+The FireCollider GameObject has three unresolved component references:
+
+- path_id 19
+- path_id 54
+- path_id 35
+
+No MonoScript objects are stored directly in this SerializedFile.
+
+This candidate is therefore removed from the Player collider investigation.
+
+## Asset investigation - VFX Head/Neck candidate
+
+Asset:
+17006988cb02da341a83c6329c59e6dc
+
+Root:
+FF_VFX_Ingame_Male_Cos_Jumpsuit2022_Lobby
+
+Relevant hierarchy:
+
+FF_VFX_Ingame_Male_Cos_Jumpsuit2022_Lobby
+├── VFX_bone_Neck
+│   ├── gantan01
+│   ├── gantan01 (1)
+│   ├── Particle System
+│   └── Particle System (1)
+├── VFX_bone_Head
+│   └── box001
+├── VFX_bone_LeftLeg
+├── VFX_bone_RightLeg
+└── VFX_Bip01
+
+The SerializedFile contains:
+
+- 14 GameObjects
+- 14 Transforms
+- 8 ParticleSystems
+- 8 ParticleSystemRenderers
+- 5 MonoBehaviours
+
+Conclusion:
+
+VFX_bone_Head and VFX_bone_Neck are attachment points belonging to a
+lobby/cosmetic VFX hierarchy.
+
+They are useful evidence that the game uses Head/Neck attachment nodes,
+but this asset is not evidence of the main Player physical collider or
+canonical Player skeleton.
+
+This candidate is removed from the physical Player collider investigation.
+
+## Asset investigation - Bip01 Head/Neck candidate
+
+Asset:
+d1e2028b9b7ed5b46b7a0c807ae306d6
+
+Root:
+Preview_Vehicle_Horse_Magical
+
+Relevant skeleton:
+
+Bone_Root
+└── Bip01
+    └── Bip01 Pelvis
+        └── Bip01 Spine
+            ├── Bip01 Tail...
+            └── Bip01 Spine1
+                └── Bip01 Spine2
+                    └── Bip01 Neck
+                        └── Bip01 Neck1
+                            └── Bip01 Head
+
+Conclusion:
+
+This asset contains a complete Bip01-style skeleton, but its root is
+Preview_Vehicle_Horse_Magical and the hierarchy includes horse-specific
+bones such as Tail and HorseLink.
+
+Therefore this is a vehicle/horse preview skeleton and not the physical
+Player skeleton.
+
+Removed from Player collider investigation.
+
+## Final serialized physics scan
+
+A final ancestry-aware scan inspected Unity physical components associated
+with Player/Head/Neck/Character naming.
+
+Candidate files: 207
+
+Files containing physical components in the prior scan: 131
+
+High-confidence result:
+
+Strong matches: 0
+
+All highest-ranked matches were UI/HUD/profile/avatar-menu BoxColliders.
+
+No CharacterController, CapsuleCollider, or SphereCollider was found with
+a clean Player/Head/Neck ancestry.
+
+Combined with Player.InitCollider(), Player.CreateCapsuleHuman(),
+Player.ResizeCapsuleCollider(), and CapsuleHuman.ResizeCapsuleCollider(),
+the strongest supported interpretation is that the principal Player
+collision structure is initialized/configured dynamically at runtime
+rather than stored as a simple serialized Player prefab collider.

@@ -1,0 +1,803 @@
+==============================================================================
+PLAYER / HEAD / COLLIDER RANKED ASSET CANDIDATES
+==============================================================================
+
+#1 SCORE=43
+FILE: input/freefire-assets/assets/bin/Data/98981e8def17f514daf7c8bfae596533
+  PLAYER:
+   - PlayerID
+   - PlayerHeadshot
+   - PlayerNickname
+  HEAD:
+   - HeadshotRemote
+   - HeadshotLocal
+   - PlayerHeadshot
+   - HeadshotDefault
+   - BannedPersonheadbg
+   - BannedPersonHeadSprite
+   - Personhead
+  PHYSICS:
+   - RightCollider
+   - LeftCollider
+
+#2 SCORE=40
+FILE: input/freefire-assets/assets/bin/Data/7eceb614c5d7f1e4f80df2dc3c0129b1
+  PLAYER:
+   - UIUGCAvatarEditor
+   - GotoAvatarProfileBtn
+   - AvatarNode
+   - SecondTabsAvatar
+   - TemplateAvatarItem
+  HEAD:
+   - HeadPreviewNode
+   - HeadPicNode
+  PHYSICS:
+   - BoxCollider
+   - BoxCollider
+  NOISE:
+   - UIUGCAvatarEditor
+   - HeadPicNode
+
+#3 SCORE=39
+FILE: input/freefire-assets/assets/bin/Data/f1c7db8c8c22b3c40973a9572898e971
+  PLAYER:
+   - PlayerSex
+   - AvatarFramePos
+  HEAD:
+   - Personheadbtn
+   - Personheadbg
+   - PersonHeadSprite
+   - HeadpicGuideWidget
+  PHYSICS:
+   - RightCollider
+  NOISE:
+   - HeadpicGuideWidget
+
+#4 SCORE=38
+FILE: input/freefire-assets/assets/bin/Data/level43
+  PLAYER:
+   - PlayerSpawnRegion
+   - male_lobby_cos_no1_head_001
+   - male_cos_no1_head_001
+   - male_cos_no1_head_001
+   - male_lobby_cos_no1_head_001
+   - male_lobby_cos_no1_head_001
+   - male_cos_no1_head_001
+   - male_lobby_cos_no1_head_001
+   - male_cos_no1_head_001
+   - male_cos_no1_head_001
+   - male_lobby_cos_no1_head_001
+   - male_cos_no1_head_001
+  HEAD:
+   - male_lobby_cos_no1_head_001
+   - male_cos_no1_head_001
+   - bone_Neck
+   - bone_Head
+   - bone_Head
+   - bone_Neck
+   - male_cos_no1_head_001
+   - male_lobby_cos_no1_head_001
+   - bone_Head
+   - bone_Neck
+   - male_lobby_cos_no1_head_001
+   - male_cos_no1_head_001
+  PHYSICS:
+   - LevelDynamicCollider1002
+   - LevelDynamicCollider1001
+   - Ninth_GP_SocialLobby_Table001_Collider004
+   - Ninth_GP_SocialLobby_Table001_Collider004
+   - Ninth_GP_SocialLobby_Table001_Collider004
+   - Ninth_GP_SocialLobby_Table001_Collider004
+   - Ninth_GP_SocialLobby_Table001_Collider004
+   - Ninth_GP_SocialLobby_Table001_Collider004
+   - Ninth_GP_SocialLobby_Table001_Collider004
+   - Ninth_GP_SocialLobby_Chair001_Collider001
+   - Ninth_GP_SocialLobby_Chair001_Collider001
+   - Ninth_GP_SocialLobby_Chair001_Collider001
+  NOISE:
+   - male_lobby_cos_no1_head_001
+   - male_lobby_cos_no1_head_001
+   - male_lobby_cos_no1_head_001
+   - Ninth_GP_SocialLobby_Table001_Collider004
+   - Ninth_GP_SocialLobby_Table001_Collider004
+   - Ninth_GP_SocialLobby_Table001_Collider004
+
+#5 SCORE=19
+FILE: input/freefire-assets/assets/bin/Data/level6
+  PLAYER:
+   - PlayerSpawnPoint_Group2
+   - PlayerSpawnPoint
+  HEAD:
+  PHYSICS:
+   - SAPCollider
+   - LevelDynamicCollider1001
+   - LevelDynamicCollider1002
+   - IIV_GP_StoneLamp001_Collider025
+   - IIV_GP_Foundation001_Collider121
+   - IIV_GP_WoodLamp001_Collider035
+   - IIV_GP_WoodLamp001_Collider035
+   - IIV_GP_WoodLamp001_Collider035
+   - IIV_GP_StoneLamp001_Collider019
+   - IIV_GP_WoodLamp001_Collider047
+   - IIV_GP_StoneLamp001_Collider004
+   - IIV_GP_Roundpool001_Collider004
+
+#6 SCORE=19
+FILE: input/freefire-assets/assets/bin/Data/855dd071f9e6c724090c36d57f796e5b
+  PLAYER:
+   - Male_Head_Sc_CityHeroBoy
+   - Male_Head_Sc_CityHeroBoy
+   - Male_Head_Sc_CityHeroBoy
+  HEAD:
+   - Head_CityHeroBoy_Sc_R_Bone002
+   - bone_Head
+   - Head_CityHeroBoy_Sc_R_Bone003
+   - Head_CityHeroBoy_Sc_L_Bone002
+   - Head_CityHeroBoy_Sc_R_Bone002
+   - bone_Neck
+   - Head_CityHeroBoy_Sc_R_Bone001
+   - bone_Neck
+   - Head_CityHeroBoy_Sc_L_Bone001
+   - bone_Neck
+   - bone_Head
+   - Head_CityHeroBoy_Sc_Dummy001
+  PHYSICS:
+
+#7 SCORE=19
+FILE: input/freefire-assets/assets/bin/Data/7e204f9bfe35d7548b1e6dc4c2bf9863
+  PLAYER:
+   - Male_Head_Sc_CityHeroBoy
+   - Male_Head_Sc_CityHeroBoy
+   - Male_Head_Sc_CityHeroBoy
+  HEAD:
+   - Head_CityHeroBoy_Sc_L_Bone002
+   - Head_CityHeroBoy_Sc_Dummy001
+   - Head_CityHeroBoy_Sc_L_Bone001
+   - Head_CityHeroBoy_Sc_R_Bone003
+   - Head_CityHeroBoy_Sc_L_Bone001
+   - bone_Head
+   - Head_CityHeroBoy_Sc_L_Bone003
+   - Male_Head_Sc_CityHeroBoy
+   - Male_Head_Sc_CityHeroBoy
+   - Head_CityHeroBoy_Sc_M_Bone001
+   - Head_CityHeroBoy_Sc_Dummy001
+   - Head_CityHeroBoy_Sc_L_Bone001
+  PHYSICS:
+
+#8 SCORE=18
+FILE: input/freefire-assets/assets/bin/Data/613335139d6b5984399c258264b6149f
+  PLAYER:
+   - PlayerNameRight
+   - PlayerCheckBtn
+   - PlayerInfo
+   - PlayerNameLeft
+  HEAD:
+   - HeadIconLeft
+   - HeadSpriteLeft
+   - HeadSpriteRight
+   - headbtnLeft
+   - headbtnRight
+   - HeadIconRight
+  PHYSICS:
+  NOISE:
+   - HeadIconLeft
+   - HeadIconRight
+
+#9 SCORE=18
+FILE: input/freefire-assets/assets/bin/Data/bdb3e0ce6e842f2469d1109ed5d2705f
+  PLAYER:
+   - BtnGotoAvatarProfile
+   - LoadingPlayerInfo
+  HEAD:
+   - SpriteColorPanelComponentHeadAdditive
+   - SpriteColorPanelComponentBgHeadAdditive
+   - BtnColorPanelComponentHeadAdditive
+   - SpriteColorPanelCurrentColorHeadAdditive
+   - GoColorPanelUnPickingHeadAdditive
+   - GoSlotHeadAdditive
+   - GoColorPanelPickingHeadAdditive
+  PHYSICS:
+
+#10 SCORE=18
+FILE: input/freefire-assets/assets/bin/Data/6041e8c6b48836e4ca97f5f571a87ffa
+  PLAYER:
+   - Male_Head_Sc_CityHeroBoy
+   - Male_Head_Sc_CityHeroBoy
+  HEAD:
+   - Head_CityHeroBoy_Sc_M_Bone001
+   - Head_CityHeroBoy_Sc_L_Bone003
+   - bone_Neck
+   - Head_CityHeroBoy_Sc_R_Bone001
+   - Head_CityHeroBoy_Sc_Dummy001
+   - Head_CityHeroBoy_Sc_R_Bone003
+   - Head_CityHeroBoy_Sc_R_Bone002
+   - bone_Head
+   - Head_CityHeroBoy_Sc_R_Bone001
+   - Head_CityHeroBoy_Sc_M_Bone001
+   - Head_CityHeroBoy_Sc_L_Bone001
+   - Head_CityHeroBoy_Sc_R_Bone002
+  PHYSICS:
+
+#11 SCORE=18
+FILE: input/freefire-assets/assets/bin/Data/f49e81b442cd69d48bf79a0500ff9beb
+  PLAYER:
+   - Male_Head_Sc_CityHeroBoy
+   - Male_Head_Sc_CityHeroBoy
+  HEAD:
+   - bone_Head
+   - Head_CityHeroBoy_Sc_L_Bone002
+   - Head_CityHeroBoy_Sc_R_Bone003
+   - bone_Neck
+   - Male_Head_Sc_CityHeroBoy
+   - Head_CityHeroBoy_Sc_R_Bone001
+   - Head_CityHeroBoy_Sc_L_Bone002
+   - Head_CityHeroBoy_Sc_R_Bone002
+   - Head_CityHeroBoy_Sc_M_Bone001
+   - Head_CityHeroBoy_Sc_R_Bone003
+   - bone_Neck
+   - Head_CityHeroBoy_Sc_R_Bone001
+  PHYSICS:
+
+#12 SCORE=17
+FILE: input/freefire-assets/assets/bin/Data/b12601f50af264e4c821a9024e35efd6
+  PLAYER:
+   - UIHudPlayerRemainingInfo
+   - HudPlayerStats
+   - SinglePlayerMark
+   - HudPlayerFollowEmote
+   - HudPlayerArmorStats
+   - HudPlayerSkillBuff
+  HEAD:
+  PHYSICS:
+   - BGCollider
+  NOISE:
+   - UIHudPlayerRemainingInfo
+
+#13 SCORE=17
+FILE: input/freefire-assets/assets/bin/Data/d1e2028b9b7ed5b46b7a0c807ae306d6
+  PLAYER:
+   - Bip01 Neck
+   - Bip01 Neck1
+   - Bip01 Head
+  HEAD:
+   - Bip01 Neck
+   - Bip01 Neck1
+   - Bip01 Head
+  PHYSICS:
+
+#14 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/9ca587f10a284664899b64f7f1b0096c
+  PLAYER:
+   - LeftTitlePlayerTxt
+   - RightTitlePlayerTxt
+   - DataPlayerList
+   - DataPlayerItemInfo4
+   - DataPlayerItemInfo2
+   - AvatarPageBtn
+   - AvatarPageBG
+   - DataPlayerInfoTitle
+   - DataPlayerInfoTitleRoot
+   - DataPlayerItemInfo3
+   - AvatarPageIcon
+   - DataPlayerItemInfo1
+  HEAD:
+   - TeamHeadIcon_L
+   - TeamHeadIcon_R
+  PHYSICS:
+  NOISE:
+   - TeamHeadIcon_L
+   - TeamHeadIcon_R
+
+#15 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/018b63ea6f1c611429f43f08a0551795
+  PLAYER:
+   - PlayerListGrid
+   - PlayerListScrollView
+   - PlayerNum
+  HEAD:
+  PHYSICS:
+   - RoomSettingDragCollider
+   - DragCollider
+  NOISE:
+   - PlayerListScrollView
+
+#16 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/43d7c0928cda26243bcdaab25a614ceb
+  PLAYER:
+   - PlayerInfo
+   - PlayerKDA
+   - AvatarFramePos
+   - PlayerKDATable
+   - PlayerIndexBG
+   - PlayerIndexCon
+   - PlayerIndex
+  HEAD:
+   - HeadPicIcon
+   - HeadPic
+  PHYSICS:
+  NOISE:
+   - HeadPicIcon
+   - HeadPic
+
+#17 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/89ce64495f772664ea3916c47d4606cf
+  PLAYER:
+  HEAD:
+   - HeadShotOnlyGo
+  PHYSICS:
+   - GameSettingDragCollider
+   - RoomSettingPanelDragCollider
+
+#18 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/191bf992a18fcf047925c903f620813f
+  PLAYER:
+   - SlelctPlayerBtn
+   - NoPlayerInfoLabel
+   - NoPlayerContainer
+   - NoPlayerInfoBg
+  HEAD:
+   - previewHeadAdditive
+   - Headbg
+  PHYSICS:
+  NOISE:
+   - NoPlayerInfoLabel
+
+#19 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/4185d0ea516a8db4b9157fed72f8dff8
+  PLAYER:
+   - AvatarRotateTouchArea
+   - AvatarProfileContainer
+   - AvatarTransformLevel
+  HEAD:
+  PHYSICS:
+   - FakeColliderPanel
+
+#20 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/f79b5f50c3af7874b9937b028c2c88e5
+  PLAYER:
+   - UIBuildChooseAvatarSkillSide
+   - AvatarPanelContent
+   - AvatarIcon
+   - AvatarContent
+  HEAD:
+  PHYSICS:
+   - DragCollider
+  NOISE:
+   - UIBuildChooseAvatarSkillSide
+
+#21 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/e50d4ef450c561c47b6866c109600935
+  PLAYER:
+   - PlayerSex
+   - AvatarFramePos
+  HEAD:
+   - headbtn
+   - HeadIcon
+   - HeadSprite
+   - AnonymousHead
+  PHYSICS:
+  NOISE:
+   - HeadIcon
+
+#22 SCORE=15
+FILE: input/freefire-assets/assets/bin/Data/4e54ae037f0a20b49974d81e7c3e8a25
+  PLAYER:
+   - UIHudPlayerMarkIconPos
+   - UIHudPlayerMarkIconPos
+   - UIHudPlayerMarkIconPos
+   - UIHudPlayerMarkIconPos
+  HEAD:
+   - HeadBGSprite
+   - HeadBGSprite
+   - HeadBGSprite
+   - HeadBGSprite
+  PHYSICS:
+  NOISE:
+   - UIHudPlayerMarkIconPos
+   - UIHudPlayerMarkIconPos
+   - UIHudPlayerMarkIconPos
+   - UIHudPlayerMarkIconPos
+
+#23 SCORE=15
+FILE: input/freefire-assets/assets/bin/Data/5a4eea0ced6fb714aa8978fafc526558
+  PLAYER:
+   - UIHudPlayerMarkIconPos
+   - UIHudPlayerMarkIconPos
+   - UIHudPlayerMarkIconPos
+   - UIHudPlayerMarkIconPos
+  HEAD:
+   - HeadBGSprite
+   - HeadBGSprite
+   - HeadBGSprite
+   - HeadBGSprite
+  PHYSICS:
+  NOISE:
+   - UIHudPlayerMarkIconPos
+   - UIHudPlayerMarkIconPos
+   - UIHudPlayerMarkIconPos
+   - UIHudPlayerMarkIconPos
+
+#24 SCORE=15
+FILE: input/freefire-assets/assets/bin/Data/c451598d6b2ec2c4ab1a94f1db98ce85
+  PLAYER:
+   - HudPlayerStats
+   - UIHudPlayerRemainingInfo
+   - HudPlayerArmorStats
+  HEAD:
+  PHYSICS:
+   - BGCollider
+  NOISE:
+   - UIHudPlayerRemainingInfo
+
+#25 SCORE=15
+FILE: input/freefire-assets/assets/bin/Data/905924919545a3648871ab547837242f
+  PLAYER:
+   - AvatarProficiencyBtn
+   - DetailAvatarStrategyBtn2
+   - OriAvatarSwitchBtn
+   - AwakenAvatarSwitchBtn
+   - UIAvatarInfoRight
+   - FreeAvatarContainer
+   - FreeAvatarPurchaseBtn
+   - DetailAvatarStrategyBtn
+   - AvatarUGCTutorial
+   - AvatarName
+   - ActivityAvatarContainer
+   - AvatarSkillSlot
+  HEAD:
+   - OriHeadIcon
+   - AwakenHeadIcon
+   - HeadIcons
+  PHYSICS:
+  NOISE:
+   - OriHeadIcon
+   - UIAvatarInfoRight
+   - AwakenHeadIcon
+   - HeadIcons
+
+#26 SCORE=15
+FILE: input/freefire-assets/assets/bin/Data/3fa9a8f027694084fa7c9c5895291ae8
+  PLAYER:
+   - cAavatarName
+   - InAvatarProfile
+   - cAvatarHeadSp
+   - AvatarListScrollView
+  HEAD:
+   - cAvatarHeadSp
+  PHYSICS:
+  NOISE:
+   - AvatarListScrollView
+
+#27 SCORE=15
+FILE: input/freefire-assets/assets/bin/Data/5092532ab6e46424aa22b2c96384904a
+  PLAYER:
+   - AvatarSelectWndPos
+  HEAD:
+  PHYSICS:
+   - ExpandCollider
+   - ShrinkCollider
+
+#28 SCORE=14
+FILE: input/freefire-assets/assets/bin/Data/15c3b5e9b87416849b70f377c3c5fab0
+  PLAYER:
+  HEAD:
+   - ItemHeadPicIcon
+  PHYSICS:
+   - BoxCollider
+  NOISE:
+   - ItemHeadPicIcon
+
+#29 SCORE=14
+FILE: input/freefire-assets/assets/bin/Data/e514234058d689e40ac7bb4b8be38776
+  PLAYER:
+   - PlayerHeadPicSelect
+   - PlayerHeadPic
+   - MyPlayerInfo
+  HEAD:
+   - PlayerHeadPicSelect
+   - PlayerHeadPic
+   - myHeadPic
+  PHYSICS:
+  NOISE:
+   - PlayerHeadPicSelect
+   - PlayerHeadPic
+   - myHeadPic
+
+#30 SCORE=14
+FILE: input/freefire-assets/assets/bin/Data/e1c636ce9ad9a694185949a7b4a80291
+  PLAYER:
+   - AvatarPosFrame
+  HEAD:
+   - HeadIcon
+   - HeadLocalIcon
+   - Head
+  PHYSICS:
+  NOISE:
+   - HeadIcon
+
+#31 SCORE=14
+FILE: input/freefire-assets/assets/bin/Data/3a5d996d20b172f4a945b4b7d0ca7e51
+  PLAYER:
+   - AvatarFramePos
+  HEAD:
+   - head
+   - HeadSprite
+   - HeadIcon
+  PHYSICS:
+  NOISE:
+   - HeadIcon
+
+#32 SCORE=14
+FILE: input/freefire-assets/assets/bin/Data/b527d6b2e4e804d41bb216fccbffb665
+  PLAYER:
+   - AvatarFramePos
+   - ReportedPlayer
+   - UnreportPlayer
+  HEAD:
+   - HeadIcon
+  PHYSICS:
+  NOISE:
+   - HeadIcon
+
+#33 SCORE=13
+FILE: input/freefire-assets/assets/bin/Data/b4b7372f75cdf284aae23218caec0956
+  PLAYER:
+   - PlayerInfo
+  HEAD:
+   - HeadSprite
+  PHYSICS:
+
+#34 SCORE=13
+FILE: input/freefire-assets/assets/bin/Data/a207bf20d80f363498b68cfd8c6725a1
+  PLAYER:
+   - AvatarRotateTouchAreaItemRotateTouchArea
+  HEAD:
+   - Head
+  PHYSICS:
+
+#35 SCORE=13
+FILE: input/freefire-assets/assets/bin/Data/08d7a777c296cb541ad7c873d5d4dca5
+  PLAYER:
+   - AvatarFramePos
+   - AvatarAttributesEntryBtn
+  HEAD:
+   - HeadIcon
+  PHYSICS:
+  NOISE:
+   - HeadIcon
+
+#36 SCORE=13
+FILE: input/freefire-assets/assets/bin/Data/5cd81595923bbb249affe9f972524c44
+  PLAYER:
+   - GotoAvatarProfileBtn
+  HEAD:
+   - HeadPreviewNode
+   - HeadPicNode
+  PHYSICS:
+  NOISE:
+   - HeadPicNode
+
+#37 SCORE=13
+FILE: input/freefire-assets/assets/bin/Data/ff443814be41b2442b0ac91dbb0188ff
+  PLAYER:
+   - FF_VFX_Ingame_Male_Cos_HeadHunters_Up
+  HEAD:
+   - FF_VFX_Ingame_Male_Cos_HeadHunters_Up
+   - CutScene_headhunters_Animation_up01_ani (1)
+  PHYSICS:
+  NOISE:
+   - FF_VFX_Ingame_Male_Cos_HeadHunters_Up
+
+#38 SCORE=13
+FILE: input/freefire-assets/assets/bin/Data/54ec652aa07c3c1498855b5f3be1e1e2
+  PLAYER:
+   - PlayerImg
+  HEAD:
+   - HeadIcon
+   - HeadSprite
+  PHYSICS:
+  NOISE:
+   - HeadIcon
+
+#39 SCORE=13
+FILE: input/freefire-assets/assets/bin/Data/85531beb18e0a6349b165ea07efe251b
+  PLAYER:
+   - PlayerImg
+  HEAD:
+   - HeadIcon
+   - HeadSprite
+  PHYSICS:
+  NOISE:
+   - HeadIcon
+
+#40 SCORE=12
+FILE: input/freefire-assets/assets/bin/Data/afa22b8caaea6734c8d1c8df4f074474
+  PLAYER:
+   - PlayerBG
+  HEAD:
+   - HeadPortrait 
+   - HeadIcon
+  PHYSICS:
+  NOISE:
+   - HeadPortrait 
+   - HeadIcon
+
+#41 SCORE=12
+FILE: input/freefire-assets/assets/bin/Data/4caf6b6db9ae5324981e76849b8e2baa
+  PLAYER:
+   - AvatarFramePos
+  HEAD:
+   - HeadIcon
+  PHYSICS:
+  NOISE:
+   - HeadIcon
+
+#42 SCORE=12
+FILE: input/freefire-assets/assets/bin/Data/4dd09d63fe2dbaa4c9c8f5a38fce4052
+  PLAYER:
+   - AvatarFramePos
+  HEAD:
+   - HeadIcon
+  PHYSICS:
+  NOISE:
+   - HeadIcon
+
+#43 SCORE=9
+FILE: input/freefire-assets/assets/bin/Data/level46
+  PLAYER:
+   - PlayerSpawnPoint_Group2
+   - PlayerSpawnPoint
+  HEAD:
+  PHYSICS:
+   - LevelDynamicCollider1021 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1025 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1003 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1039 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1007 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1005 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1023 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1014 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1006 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1011 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1026 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1037 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+  NOISE:
+   - LevelDynamicCollider1021 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1025 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1003 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1039 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1007 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1005 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+
+#44 SCORE=9
+FILE: input/freefire-assets/assets/bin/Data/level31
+  PLAYER:
+   - PlayerSpawnPoint_Group2
+   - PlayerSpawnPoint
+  HEAD:
+  PHYSICS:
+   - LevelDynamicCollider1024 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1018 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1021 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1019 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1009 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1010 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1012 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1025 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1007 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1020 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1003 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1015 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+  NOISE:
+   - LevelDynamicCollider1024 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1018 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1021 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1019 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1009 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1010 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+
+#45 SCORE=9
+FILE: input/freefire-assets/assets/bin/Data/level34
+  PLAYER:
+   - PlayerSpawnPoint
+   - PlayerSpawnPoint_Group2
+  HEAD:
+  PHYSICS:
+   - LevelDynamicCollider1009 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1022 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1016 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1017 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1007 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1010 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - SAPCollider
+   - LevelDynamicCollider1026 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1006 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1004 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1012 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1018 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+  NOISE:
+   - LevelDynamicCollider1009 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1022 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1016 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1017 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1007 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1010 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+
+#46 SCORE=9
+FILE: input/freefire-assets/assets/bin/Data/level61
+  PLAYER:
+   - PlayerSpawnPoint_Group2
+   - PlayerSpawnPoint
+  HEAD:
+  PHYSICS:
+   - LevelDynamicCollider1021 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1011 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1012 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1017 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1004 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1025 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1022 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1026 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1016 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1008 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1009 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1024 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+  NOISE:
+   - LevelDynamicCollider1021 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1011 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1012 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1017 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1004 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1025 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+
+#47 SCORE=9
+FILE: input/freefire-assets/assets/bin/Data/level63
+  PLAYER:
+   - PlayerSpawnPoint
+   - PlayerSpawnPoint_Group2
+  HEAD:
+  PHYSICS:
+   - LevelDynamicCollider1015 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1026 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1005 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1013 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1020 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1019 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1025 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1021 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1010 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1018 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1016 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1008 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+  NOISE:
+   - LevelDynamicCollider1015 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1026 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1005 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1013 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1020 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+   - LevelDynamicCollider1019 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+
+==============================================================================
+STRICT CANDIDATES: PLAYER + HEAD + PHYSICS
+==============================================================================
+Count: 4
+
+43 input/freefire-assets/assets/bin/Data/98981e8def17f514daf7c8bfae596533
+ P: PlayerID | PlayerHeadshot | PlayerNickname
+ H: HeadshotRemote | HeadshotLocal | PlayerHeadshot | HeadshotDefault | BannedPersonheadbg | BannedPersonHeadSprite | Personhead
+ C: RightCollider | LeftCollider
+
+40 input/freefire-assets/assets/bin/Data/7eceb614c5d7f1e4f80df2dc3c0129b1
+ P: UIUGCAvatarEditor | GotoAvatarProfileBtn | AvatarNode | SecondTabsAvatar | TemplateAvatarItem
+ H: HeadPreviewNode | HeadPicNode
+ C: BoxCollider | BoxCollider
+
+39 input/freefire-assets/assets/bin/Data/f1c7db8c8c22b3c40973a9572898e971
+ P: PlayerSex | AvatarFramePos
+ H: Personheadbtn | Personheadbg | PersonHeadSprite | HeadpicGuideWidget
+ C: RightCollider
+
+38 input/freefire-assets/assets/bin/Data/level43
+ P: PlayerSpawnRegion | male_lobby_cos_no1_head_001 | male_cos_no1_head_001 | male_cos_no1_head_001 | male_lobby_cos_no1_head_001 | male_lobby_cos_no1_head_001 | male_cos_no1_head_001 | male_lobby_cos_no1_head_001
+ H: male_lobby_cos_no1_head_001 | male_cos_no1_head_001 | bone_Neck | bone_Head | bone_Head | bone_Neck | male_cos_no1_head_001 | male_lobby_cos_no1_head_001
+ C: LevelDynamicCollider1002 | LevelDynamicCollider1001 | Ninth_GP_SocialLobby_Table001_Collider004 | Ninth_GP_SocialLobby_Table001_Collider004 | Ninth_GP_SocialLobby_Table001_Collider004 | Ninth_GP_SocialLobby_Table001_Collider004 | Ninth_GP_SocialLobby_Table001_Collider004 | Ninth_GP_SocialLobby_Table001_Collider004

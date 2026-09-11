@@ -1,0 +1,602 @@
+============================================================================
+BIP01 HEAD / NECK STRUCTURAL MAP
+============================================================================
+FILE: input/freefire-assets/assets/bin/Data/d1e2028b9b7ed5b46b7a0c807ae306d6
+Objects: 207
+GameObjects: 79
+
+========== OBJECT TYPE COUNTS ==========
+GameObject                     79
+Transform                      79
+ParticleSystem                 18
+ParticleSystemRenderer         18
+MeshRenderer                   5
+MeshFilter                     5
+Animator                       1
+SkinnedMeshRenderer            1
+MonoBehaviour                  1
+
+========== HEAD / NECK / BIP MATCHES ==========
+
+GameObject 10: Bip01 Spine2
+  Parent: 17 Bip01 Spine1
+  Components:
+    90: <unresolved>
+  Children:
+    9: VFX_wing
+    20: Bip01 Neck
+    75: VFX_qiantui
+  Ancestry:
+    10: Bip01 Spine2
+      17: Bip01 Spine1
+        16: Bip01 Spine
+          14: Bip01 Pelvis
+            22: Bip01
+              40: Bone_Root
+                39: Preview_Vehicle_Horse_Magical
+
+GameObject 11: Bip01 Tail
+  Parent: 16 Bip01 Spine
+  Components:
+    91: <unresolved>
+  Children:
+    12: Bip01 Tail1
+    77: VFX_weiba
+  Ancestry:
+    11: Bip01 Tail
+      16: Bip01 Spine
+        14: Bip01 Pelvis
+          22: Bip01
+            40: Bone_Root
+              39: Preview_Vehicle_Horse_Magical
+
+GameObject 12: Bip01 Tail1
+  Parent: 11 Bip01 Tail
+  Components:
+    92: <unresolved>
+  Children:
+    13: Bip01 Tail2
+  Ancestry:
+    12: Bip01 Tail1
+      11: Bip01 Tail
+        16: Bip01 Spine
+          14: Bip01 Pelvis
+            22: Bip01
+              40: Bone_Root
+                39: Preview_Vehicle_Horse_Magical
+
+GameObject 13: Bip01 Tail2
+  Parent: 12 Bip01 Tail1
+  Components:
+    93: <unresolved>
+  Children:
+    35: Bip01 Tail3
+  Ancestry:
+    13: Bip01 Tail2
+      12: Bip01 Tail1
+        11: Bip01 Tail
+          16: Bip01 Spine
+            14: Bip01 Pelvis
+              22: Bip01
+                40: Bone_Root
+                  39: Preview_Vehicle_Horse_Magical
+
+GameObject 14: Bip01 Pelvis
+  Parent: 22 Bip01
+  Components:
+    94: <unresolved>
+  Children:
+    16: Bip01 Spine
+  Ancestry:
+    14: Bip01 Pelvis
+      22: Bip01
+        40: Bone_Root
+          39: Preview_Vehicle_Horse_Magical
+
+GameObject 15: Bip01 R Clavicle
+  Parent: 20 Bip01 Neck
+  Components:
+    95: <unresolved>
+  Children:
+    26: Bip02 R UpperArm
+  Ancestry:
+    15: Bip01 R Clavicle
+      20: Bip01 Neck
+        10: Bip01 Spine2
+          17: Bip01 Spine1
+            16: Bip01 Spine
+              14: Bip01 Pelvis
+                22: Bip01
+                  40: Bone_Root
+                    39: Preview_Vehicle_Horse_Magical
+
+GameObject 16: Bip01 Spine
+  Parent: 14 Bip01 Pelvis
+  Components:
+    96: <unresolved>
+  Children:
+    11: Bip01 Tail
+    17: Bip01 Spine1
+    30: Bip02 R Thigh
+    32: Bip02 L Thigh
+  Ancestry:
+    16: Bip01 Spine
+      14: Bip01 Pelvis
+        22: Bip01
+          40: Bone_Root
+            39: Preview_Vehicle_Horse_Magical
+
+GameObject 17: Bip01 Spine1
+  Parent: 16 Bip01 Spine
+  Components:
+    97: <unresolved>
+  Children:
+    10: Bip01 Spine2
+    41: bone_Spine_Character
+  Ancestry:
+    17: Bip01 Spine1
+      16: Bip01 Spine
+        14: Bip01 Pelvis
+          22: Bip01
+            40: Bone_Root
+              39: Preview_Vehicle_Horse_Magical
+
+GameObject 18: Bip01 L Hand
+  Parent: 25 Bip01 L Forearm
+  Components:
+    98: <unresolved>
+  Children:
+    73: Bip02 L Finger0
+  Ancestry:
+    18: Bip01 L Hand
+      25: Bip01 L Forearm
+        19: Bip01 L UpperArm
+          24: Bip01 L Clavicle
+            20: Bip01 Neck
+              10: Bip01 Spine2
+                17: Bip01 Spine1
+                  16: Bip01 Spine
+                    14: Bip01 Pelvis
+                      22: Bip01
+                        40: Bone_Root
+                          39: Preview_Vehicle_Horse_Magical
+
+GameObject 19: Bip01 L UpperArm
+  Parent: 24 Bip01 L Clavicle
+  Components:
+    99: <unresolved>
+  Children:
+    25: Bip01 L Forearm
+  Ancestry:
+    19: Bip01 L UpperArm
+      24: Bip01 L Clavicle
+        20: Bip01 Neck
+          10: Bip01 Spine2
+            17: Bip01 Spine1
+              16: Bip01 Spine
+                14: Bip01 Pelvis
+                  22: Bip01
+                    40: Bone_Root
+                      39: Preview_Vehicle_Horse_Magical
+
+GameObject 20: Bip01 Neck
+  Parent: 10 Bip01 Spine2
+  Components:
+    100: <unresolved>
+  Children:
+    15: Bip01 R Clavicle
+    21: Bip01 Neck1
+    24: Bip01 L Clavicle
+    61: bone_14
+    64: bone_07
+    67: bone_12
+    68: bone_11
+    70: bone_08
+  Ancestry:
+    20: Bip01 Neck
+      10: Bip01 Spine2
+        17: Bip01 Spine1
+          16: Bip01 Spine
+            14: Bip01 Pelvis
+              22: Bip01
+                40: Bone_Root
+                  39: Preview_Vehicle_Horse_Magical
+
+GameObject 21: Bip01 Neck1
+  Parent: 20 Bip01 Neck
+  Components:
+    101: <unresolved>
+  Children:
+    23: Bip01 Head
+    65: bone_03
+    66: bone_01
+    76: VFX_tou
+  Ancestry:
+    21: Bip01 Neck1
+      20: Bip01 Neck
+        10: Bip01 Spine2
+          17: Bip01 Spine1
+            16: Bip01 Spine
+              14: Bip01 Pelvis
+                22: Bip01
+                  40: Bone_Root
+                    39: Preview_Vehicle_Horse_Magical
+
+GameObject 22: Bip01
+  Parent: 40 Bone_Root
+  Components:
+    102: <unresolved>
+  Children:
+    14: Bip01 Pelvis
+    51: VFX_pigu
+  Ancestry:
+    22: Bip01
+      40: Bone_Root
+        39: Preview_Vehicle_Horse_Magical
+
+GameObject 23: Bip01 Head
+  Parent: 21 Bip01 Neck1
+  Components:
+    103: <unresolved>
+  Children:
+    45: VFX_jiao
+    59: bone_19
+    60: bone_18
+    62: bone_13
+    63: bone_20
+    69: bone_09
+  Ancestry:
+    23: Bip01 Head
+      21: Bip01 Neck1
+        20: Bip01 Neck
+          10: Bip01 Spine2
+            17: Bip01 Spine1
+              16: Bip01 Spine
+                14: Bip01 Pelvis
+                  22: Bip01
+                    40: Bone_Root
+                      39: Preview_Vehicle_Horse_Magical
+
+GameObject 24: Bip01 L Clavicle
+  Parent: 20 Bip01 Neck
+  Components:
+    104: <unresolved>
+  Children:
+    19: Bip01 L UpperArm
+  Ancestry:
+    24: Bip01 L Clavicle
+      20: Bip01 Neck
+        10: Bip01 Spine2
+          17: Bip01 Spine1
+            16: Bip01 Spine
+              14: Bip01 Pelvis
+                22: Bip01
+                  40: Bone_Root
+                    39: Preview_Vehicle_Horse_Magical
+
+GameObject 25: Bip01 L Forearm
+  Parent: 19 Bip01 L UpperArm
+  Components:
+    105: <unresolved>
+  Children:
+    18: Bip01 L Hand
+  Ancestry:
+    25: Bip01 L Forearm
+      19: Bip01 L UpperArm
+        24: Bip01 L Clavicle
+          20: Bip01 Neck
+            10: Bip01 Spine2
+              17: Bip01 Spine1
+                16: Bip01 Spine
+                  14: Bip01 Pelvis
+                    22: Bip01
+                      40: Bone_Root
+                        39: Preview_Vehicle_Horse_Magical
+
+GameObject 26: Bip02 R UpperArm
+  Parent: 15 Bip01 R Clavicle
+  Components:
+    106: <unresolved>
+  Children:
+    27: Bip02 R Forearm
+  Ancestry:
+    26: Bip02 R UpperArm
+      15: Bip01 R Clavicle
+        20: Bip01 Neck
+          10: Bip01 Spine2
+            17: Bip01 Spine1
+              16: Bip01 Spine
+                14: Bip01 Pelvis
+                  22: Bip01
+                    40: Bone_Root
+                      39: Preview_Vehicle_Horse_Magical
+
+GameObject 27: Bip02 R Forearm
+  Parent: 26 Bip02 R UpperArm
+  Components:
+    107: <unresolved>
+  Children:
+    28: Bip02 R Hand
+  Ancestry:
+    27: Bip02 R Forearm
+      26: Bip02 R UpperArm
+        15: Bip01 R Clavicle
+          20: Bip01 Neck
+            10: Bip01 Spine2
+              17: Bip01 Spine1
+                16: Bip01 Spine
+                  14: Bip01 Pelvis
+                    22: Bip01
+                      40: Bone_Root
+                        39: Preview_Vehicle_Horse_Magical
+
+GameObject 28: Bip02 R Hand
+  Parent: 27 Bip02 R Forearm
+  Components:
+    108: <unresolved>
+  Children:
+    71: Bip02 R Finger0
+  Ancestry:
+    28: Bip02 R Hand
+      27: Bip02 R Forearm
+        26: Bip02 R UpperArm
+          15: Bip01 R Clavicle
+            20: Bip01 Neck
+              10: Bip01 Spine2
+                17: Bip01 Spine1
+                  16: Bip01 Spine
+                    14: Bip01 Pelvis
+                      22: Bip01
+                        40: Bone_Root
+                          39: Preview_Vehicle_Horse_Magical
+
+GameObject 29: Bip02 R HorseLink
+  Parent: 33 Bip02 R Calf
+  Components:
+    109: <unresolved>
+  Children:
+    34: Bip02 R Foot
+  Ancestry:
+    29: Bip02 R HorseLink
+      33: Bip02 R Calf
+        30: Bip02 R Thigh
+          16: Bip01 Spine
+            14: Bip01 Pelvis
+              22: Bip01
+                40: Bone_Root
+                  39: Preview_Vehicle_Horse_Magical
+
+GameObject 30: Bip02 R Thigh
+  Parent: 16 Bip01 Spine
+  Components:
+    110: <unresolved>
+  Children:
+    33: Bip02 R Calf
+  Ancestry:
+    30: Bip02 R Thigh
+      16: Bip01 Spine
+        14: Bip01 Pelvis
+          22: Bip01
+            40: Bone_Root
+              39: Preview_Vehicle_Horse_Magical
+
+GameObject 31: Bip02 L HorseLink
+  Parent: 37 Bip02 L Calf
+  Components:
+    111: <unresolved>
+  Children:
+    38: Bip02 L Foot
+  Ancestry:
+    31: Bip02 L HorseLink
+      37: Bip02 L Calf
+        32: Bip02 L Thigh
+          16: Bip01 Spine
+            14: Bip01 Pelvis
+              22: Bip01
+                40: Bone_Root
+                  39: Preview_Vehicle_Horse_Magical
+
+GameObject 32: Bip02 L Thigh
+  Parent: 16 Bip01 Spine
+  Components:
+    112: <unresolved>
+  Children:
+    37: Bip02 L Calf
+  Ancestry:
+    32: Bip02 L Thigh
+      16: Bip01 Spine
+        14: Bip01 Pelvis
+          22: Bip01
+            40: Bone_Root
+              39: Preview_Vehicle_Horse_Magical
+
+GameObject 33: Bip02 R Calf
+  Parent: 30 Bip02 R Thigh
+  Components:
+    113: <unresolved>
+  Children:
+    29: Bip02 R HorseLink
+  Ancestry:
+    33: Bip02 R Calf
+      30: Bip02 R Thigh
+        16: Bip01 Spine
+          14: Bip01 Pelvis
+            22: Bip01
+              40: Bone_Root
+                39: Preview_Vehicle_Horse_Magical
+
+GameObject 34: Bip02 R Foot
+  Parent: 29 Bip02 R HorseLink
+  Components:
+    114: <unresolved>
+  Children:
+    72: Bip02 R Toe0
+  Ancestry:
+    34: Bip02 R Foot
+      29: Bip02 R HorseLink
+        33: Bip02 R Calf
+          30: Bip02 R Thigh
+            16: Bip01 Spine
+              14: Bip01 Pelvis
+                22: Bip01
+                  40: Bone_Root
+                    39: Preview_Vehicle_Horse_Magical
+
+GameObject 35: Bip01 Tail3
+  Parent: 13 Bip01 Tail2
+  Components:
+    115: <unresolved>
+  Children:
+    36: Bip01 Tail4
+  Ancestry:
+    35: Bip01 Tail3
+      13: Bip01 Tail2
+        12: Bip01 Tail1
+          11: Bip01 Tail
+            16: Bip01 Spine
+              14: Bip01 Pelvis
+                22: Bip01
+                  40: Bone_Root
+                    39: Preview_Vehicle_Horse_Magical
+
+GameObject 36: Bip01 Tail4
+  Parent: 35 Bip01 Tail3
+  Components:
+    116: <unresolved>
+  Children:
+  Ancestry:
+    36: Bip01 Tail4
+      35: Bip01 Tail3
+        13: Bip01 Tail2
+          12: Bip01 Tail1
+            11: Bip01 Tail
+              16: Bip01 Spine
+                14: Bip01 Pelvis
+                  22: Bip01
+                    40: Bone_Root
+                      39: Preview_Vehicle_Horse_Magical
+
+GameObject 37: Bip02 L Calf
+  Parent: 32 Bip02 L Thigh
+  Components:
+    117: <unresolved>
+  Children:
+    31: Bip02 L HorseLink
+  Ancestry:
+    37: Bip02 L Calf
+      32: Bip02 L Thigh
+        16: Bip01 Spine
+          14: Bip01 Pelvis
+            22: Bip01
+              40: Bone_Root
+                39: Preview_Vehicle_Horse_Magical
+
+GameObject 38: Bip02 L Foot
+  Parent: 31 Bip02 L HorseLink
+  Components:
+    118: <unresolved>
+  Children:
+    74: Bip02 L Toe0
+  Ancestry:
+    38: Bip02 L Foot
+      31: Bip02 L HorseLink
+        37: Bip02 L Calf
+          32: Bip02 L Thigh
+            16: Bip01 Spine
+              14: Bip01 Pelvis
+                22: Bip01
+                  40: Bone_Root
+                    39: Preview_Vehicle_Horse_Magical
+
+GameObject 41: bone_Spine_Character
+  Parent: 17 Bip01 Spine1
+  Components:
+    121: <unresolved>
+  Children:
+  Ancestry:
+    41: bone_Spine_Character
+      17: Bip01 Spine1
+        16: Bip01 Spine
+          14: Bip01 Pelvis
+            22: Bip01
+              40: Bone_Root
+                39: Preview_Vehicle_Horse_Magical
+
+GameObject 71: Bip02 R Finger0
+  Parent: 28 Bip02 R Hand
+  Components:
+    139: <unresolved>
+  Children:
+  Ancestry:
+    71: Bip02 R Finger0
+      28: Bip02 R Hand
+        27: Bip02 R Forearm
+          26: Bip02 R UpperArm
+            15: Bip01 R Clavicle
+              20: Bip01 Neck
+                10: Bip01 Spine2
+                  17: Bip01 Spine1
+                    16: Bip01 Spine
+                      14: Bip01 Pelvis
+                        22: Bip01
+                          40: Bone_Root
+                            39: Preview_Vehicle_Horse_Magical
+
+GameObject 72: Bip02 R Toe0
+  Parent: 34 Bip02 R Foot
+  Components:
+    140: <unresolved>
+  Children:
+  Ancestry:
+    72: Bip02 R Toe0
+      34: Bip02 R Foot
+        29: Bip02 R HorseLink
+          33: Bip02 R Calf
+            30: Bip02 R Thigh
+              16: Bip01 Spine
+                14: Bip01 Pelvis
+                  22: Bip01
+                    40: Bone_Root
+                      39: Preview_Vehicle_Horse_Magical
+
+GameObject 73: Bip02 L Finger0
+  Parent: 18 Bip01 L Hand
+  Components:
+    141: <unresolved>
+  Children:
+  Ancestry:
+    73: Bip02 L Finger0
+      18: Bip01 L Hand
+        25: Bip01 L Forearm
+          19: Bip01 L UpperArm
+            24: Bip01 L Clavicle
+              20: Bip01 Neck
+                10: Bip01 Spine2
+                  17: Bip01 Spine1
+                    16: Bip01 Spine
+                      14: Bip01 Pelvis
+                        22: Bip01
+                          40: Bone_Root
+                            39: Preview_Vehicle_Horse_Magical
+
+GameObject 74: Bip02 L Toe0
+  Parent: 38 Bip02 L Foot
+  Components:
+    142: <unresolved>
+  Children:
+  Ancestry:
+    74: Bip02 L Toe0
+      38: Bip02 L Foot
+        31: Bip02 L HorseLink
+          37: Bip02 L Calf
+            32: Bip02 L Thigh
+              16: Bip01 Spine
+                14: Bip01 Pelvis
+                  22: Bip01
+                    40: Bone_Root
+                      39: Preview_Vehicle_Horse_Magical
+
+========== ROOT OBJECTS ==========
+39 Preview_Vehicle_Horse_Magical
+
+========== MONOSCRIPTS ==========

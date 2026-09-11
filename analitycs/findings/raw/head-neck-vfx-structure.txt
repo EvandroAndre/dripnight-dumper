@@ -1,0 +1,84 @@
+========================================================================
+HEAD / NECK VFX STRUCTURE
+========================================================================
+File: input/freefire-assets/assets/bin/Data/17006988cb02da341a83c6329c59e6dc
+Objects: 49
+GameObjects: 14
+
+========================================================================
+ALL GAMEOBJECTS
+========================================================================
+1	gantan01	parent=4:VFX_bone_Neck
+2	box001	parent=14:VFX_bone_Head
+3	gantan01 (1)	parent=4:VFX_bone_Neck
+4	VFX_bone_Neck	parent=9:FF_VFX_Ingame_Male_Cos_Jumpsuit2022_Lobby
+5	VFX_bone_LeftLeg	parent=9:FF_VFX_Ingame_Male_Cos_Jumpsuit2022_Lobby
+6	Particle System (1)	parent=4:VFX_bone_Neck
+7	VFX_Bip01	parent=9:FF_VFX_Ingame_Male_Cos_Jumpsuit2022_Lobby
+8	VFX_bone_RightLeg	parent=9:FF_VFX_Ingame_Male_Cos_Jumpsuit2022_Lobby
+9	FF_VFX_Ingame_Male_Cos_Jumpsuit2022_Lobby	parent=0:<root>
+10	box001	parent=8:VFX_bone_RightLeg
+11	box001	parent=5:VFX_bone_LeftLeg
+12	Particle System	parent=4:VFX_bone_Neck
+13	box001	parent=7:VFX_Bip01
+14	VFX_bone_Head	parent=9:FF_VFX_Ingame_Male_Cos_Jumpsuit2022_Lobby
+
+========================================================================
+HEAD / NECK MATCHES
+========================================================================
+
+GameObject 4: VFX_bone_Neck
+  Parent: 9 FF_VFX_Ingame_Male_Cos_Jumpsuit2022_Lobby
+  Components:
+    25: <unresolved>
+    47: <unresolved>
+  Children:
+    1: gantan01
+    3: gantan01 (1)
+    6: Particle System (1)
+    12: Particle System
+  Ancestry:
+    4: VFX_bone_Neck
+      9: FF_VFX_Ingame_Male_Cos_Jumpsuit2022_Lobby
+
+GameObject 5: VFX_bone_LeftLeg
+  Parent: 9 FF_VFX_Ingame_Male_Cos_Jumpsuit2022_Lobby
+  Components:
+    19: <unresolved>
+    49: <unresolved>
+  Children:
+    11: box001
+  Ancestry:
+    5: VFX_bone_LeftLeg
+      9: FF_VFX_Ingame_Male_Cos_Jumpsuit2022_Lobby
+
+GameObject 8: VFX_bone_RightLeg
+  Parent: 9 FF_VFX_Ingame_Male_Cos_Jumpsuit2022_Lobby
+  Components:
+    20: <unresolved>
+    46: <unresolved>
+  Children:
+    10: box001
+  Ancestry:
+    8: VFX_bone_RightLeg
+      9: FF_VFX_Ingame_Male_Cos_Jumpsuit2022_Lobby
+
+GameObject 14: VFX_bone_Head
+  Parent: 9 FF_VFX_Ingame_Male_Cos_Jumpsuit2022_Lobby
+  Components:
+    22: <unresolved>
+    45: <unresolved>
+  Children:
+    2: box001
+  Ancestry:
+    14: VFX_bone_Head
+      9: FF_VFX_Ingame_Male_Cos_Jumpsuit2022_Lobby
+
+========================================================================
+OBJECT TYPE COUNTS
+========================================================================
+GameObject                     14
+Transform                      14
+ParticleSystem                 8
+ParticleSystemRenderer         8
+MonoBehaviour                  5

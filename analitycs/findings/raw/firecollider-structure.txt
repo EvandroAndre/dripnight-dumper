@@ -1,0 +1,29 @@
+========================================================================
+FIRECOLLIDER STRUCTURAL INSPECTION
+========================================================================
+File: input/freefire-assets/assets/bin/Data/360276293c2d7454ebc613b499b62d22
+Objects: 58
+GameObjects: 16
+
+========================================================================
+MATCHING GAMEOBJECTS
+========================================================================
+
+GameObject path_id=4 name='FireCollider'
+  Parent: 2 Cyber_mushroom
+  Components:
+    - <unresolved> path_id=19
+    - <unresolved> path_id=54
+    - <unresolved> path_id=35
+  Direct children: 0
+
+========================================================================
+FIRECOLLIDER ANCESTRY
+========================================================================
+4: FireCollider
+  2: Cyber_mushroom
+    3: CyberMushroom_Coin
+
+========================================================================
+MONOSCRIPTS IN FILE
+========================================================================

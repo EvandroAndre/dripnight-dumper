@@ -1,0 +1,2194 @@
+
+========================================================================================
+FILE: 855dd071f9e6c724090c36d57f796e5b
+========================================================================================
+Objects: 456
+
+INTERESTING OBJECT TYPES:
+  Animator                  4
+  MeshFilter                3
+  MeshRenderer              3
+  SkinnedMeshRenderer       15
+
+ROOT OBJECTS:
+  176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+HEAD / NECK / CHARACTER MATCHES:
+
+  1: Head_CityHeroBoy_Sc_R_Bone002
+    Parent: 79 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      1: Head_CityHeroBoy_Sc_R_Bone002
+        79: Head_CityHeroBoy_Sc_Dummy001
+          61: bone_Head
+            37: bone_Neck
+              169: bone_Spine1
+                118: bone_Spine
+                  5: bone_Hips
+                    84: Bip01
+                      13: bone_Root
+                        185: Male_Sc_CityHeroBoy3
+                          89: scale
+                            176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  7: bone_Head
+    Parent: 32 bone_Neck
+    Children:
+      186: Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      7: bone_Head
+        32: bone_Neck
+          121: bone_Spine1
+            178: bone_Spine
+              145: bone_Hips
+                40: Bip01
+                  187: bone_Root
+                    2: Male_Sc_CityHeroBoy1
+                      89: scale
+                        176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  9: bone_Right_Spine_Weapon
+    Parent: 121 bone_Spine1
+
+  20: Head_CityHeroBoy_Sc_R_Bone003
+    Parent: 79 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      20: Head_CityHeroBoy_Sc_R_Bone003
+        79: Head_CityHeroBoy_Sc_Dummy001
+          61: bone_Head
+            37: bone_Neck
+              169: bone_Spine1
+                118: bone_Spine
+                  5: bone_Hips
+                    84: Bip01
+                      13: bone_Root
+                        185: Male_Sc_CityHeroBoy3
+                          89: scale
+                            176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  22: Head_CityHeroBoy_Sc_L_Bone002
+    Parent: 174 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      22: Head_CityHeroBoy_Sc_L_Bone002
+        174: Head_CityHeroBoy_Sc_Dummy001
+          98: bone_Head
+            47: bone_Neck
+              66: bone_Spine1
+                45: bone_Spine
+                  88: bone_Hips
+                    48: Bip01
+                      151: bone_Root
+                        155: Male_Sc_CityHeroBoy2
+                          89: scale
+                            176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  23: Head_CityHeroBoy_Sc_R_Bone002
+    Parent: 174 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      23: Head_CityHeroBoy_Sc_R_Bone002
+        174: Head_CityHeroBoy_Sc_Dummy001
+          98: bone_Head
+            47: bone_Neck
+              66: bone_Spine1
+                45: bone_Spine
+                  88: bone_Hips
+                    48: Bip01
+                      151: bone_Root
+                        155: Male_Sc_CityHeroBoy2
+                          89: scale
+                            176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  32: bone_Neck
+    Parent: 121 bone_Spine1
+    Children:
+      7: bone_Head
+    Ancestry:
+      32: bone_Neck
+        121: bone_Spine1
+          178: bone_Spine
+            145: bone_Hips
+              40: Bip01
+                187: bone_Root
+                  2: Male_Sc_CityHeroBoy1
+                    89: scale
+                      176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  33: Head_CityHeroBoy_Sc_R_Bone001
+    Parent: 174 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      33: Head_CityHeroBoy_Sc_R_Bone001
+        174: Head_CityHeroBoy_Sc_Dummy001
+          98: bone_Head
+            47: bone_Neck
+              66: bone_Spine1
+                45: bone_Spine
+                  88: bone_Hips
+                    48: Bip01
+                      151: bone_Root
+                        155: Male_Sc_CityHeroBoy2
+                          89: scale
+                            176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  37: bone_Neck
+    Parent: 169 bone_Spine1
+    Children:
+      61: bone_Head
+    Ancestry:
+      37: bone_Neck
+        169: bone_Spine1
+          118: bone_Spine
+            5: bone_Hips
+              84: Bip01
+                13: bone_Root
+                  185: Male_Sc_CityHeroBoy3
+                    89: scale
+                      176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  40: Bip01
+    Parent: 187 bone_Root
+    Children:
+      145: bone_Hips
+
+  43: Head_CityHeroBoy_Sc_L_Bone001
+    Parent: 79 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      43: Head_CityHeroBoy_Sc_L_Bone001
+        79: Head_CityHeroBoy_Sc_Dummy001
+          61: bone_Head
+            37: bone_Neck
+              169: bone_Spine1
+                118: bone_Spine
+                  5: bone_Hips
+                    84: Bip01
+                      13: bone_Root
+                        185: Male_Sc_CityHeroBoy3
+                          89: scale
+                            176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  45: bone_Spine
+    Parent: 88 bone_Hips
+    Children:
+      66: bone_Spine1
+
+  47: bone_Neck
+    Parent: 66 bone_Spine1
+    Children:
+      98: bone_Head
+    Ancestry:
+      47: bone_Neck
+        66: bone_Spine1
+          45: bone_Spine
+            88: bone_Hips
+              48: Bip01
+                151: bone_Root
+                  155: Male_Sc_CityHeroBoy2
+                    89: scale
+                      176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  48: Bip01
+    Parent: 151 bone_Root
+    Children:
+      88: bone_Hips
+
+  54: bone_Left_Spine_Weapon
+    Parent: 121 bone_Spine1
+
+  61: bone_Head
+    Parent: 37 bone_Neck
+    Children:
+      79: Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      61: bone_Head
+        37: bone_Neck
+          169: bone_Spine1
+            118: bone_Spine
+              5: bone_Hips
+                84: Bip01
+                  13: bone_Root
+                    185: Male_Sc_CityHeroBoy3
+                      89: scale
+                        176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  64: bone_Left_Spine_Backpack
+    Parent: 169 bone_Spine1
+
+  66: bone_Spine1
+    Parent: 45 bone_Spine
+    Children:
+      47: bone_Neck
+      63: bone_RightClav
+      70: bone_LeftClav
+      110: bone_Left_Spine_Backpack
+      150: bone_Left_Spine_Weapon
+      181: bone_Right_Spine_Weapon
+
+  79: Head_CityHeroBoy_Sc_Dummy001
+    Parent: 61 bone_Head
+    Children:
+      1: Head_CityHeroBoy_Sc_R_Bone002
+      20: Head_CityHeroBoy_Sc_R_Bone003
+      43: Head_CityHeroBoy_Sc_L_Bone001
+      96: Head_CityHeroBoy_Sc_M_Bone001
+      125: Head_CityHeroBoy_Sc_R_Bone001
+      166: Head_CityHeroBoy_Sc_L_Bone002
+      200: Head_CityHeroBoy_Sc_L_Bone003
+    Ancestry:
+      79: Head_CityHeroBoy_Sc_Dummy001
+        61: bone_Head
+          37: bone_Neck
+            169: bone_Spine1
+              118: bone_Spine
+                5: bone_Hips
+                  84: Bip01
+                    13: bone_Root
+                      185: Male_Sc_CityHeroBoy3
+                        89: scale
+                          176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  83: Head_CityHeroBoy_Sc_L_Bone003
+    Parent: 186 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      83: Head_CityHeroBoy_Sc_L_Bone003
+        186: Head_CityHeroBoy_Sc_Dummy001
+          7: bone_Head
+            32: bone_Neck
+              121: bone_Spine1
+                178: bone_Spine
+                  145: bone_Hips
+                    40: Bip01
+                      187: bone_Root
+                        2: Male_Sc_CityHeroBoy1
+                          89: scale
+                            176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  84: Bip01
+    Parent: 13 bone_Root
+    Children:
+      5: bone_Hips
+
+  87: Male_Head_Sc_CityHeroBoy
+    Parent: 155 Male_Sc_CityHeroBoy2
+    Ancestry:
+      87: Male_Head_Sc_CityHeroBoy
+        155: Male_Sc_CityHeroBoy2
+          89: scale
+            176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  93: Male_Head_Sc_CityHeroBoy
+    Parent: 2 Male_Sc_CityHeroBoy1
+    Ancestry:
+      93: Male_Head_Sc_CityHeroBoy
+        2: Male_Sc_CityHeroBoy1
+          89: scale
+            176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  96: Head_CityHeroBoy_Sc_M_Bone001
+    Parent: 79 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      96: Head_CityHeroBoy_Sc_M_Bone001
+        79: Head_CityHeroBoy_Sc_Dummy001
+          61: bone_Head
+            37: bone_Neck
+              169: bone_Spine1
+                118: bone_Spine
+                  5: bone_Hips
+                    84: Bip01
+                      13: bone_Root
+                        185: Male_Sc_CityHeroBoy3
+                          89: scale
+                            176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  98: bone_Head
+    Parent: 47 bone_Neck
+    Children:
+      174: Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      98: bone_Head
+        47: bone_Neck
+          66: bone_Spine1
+            45: bone_Spine
+              88: bone_Hips
+                48: Bip01
+                  151: bone_Root
+                    155: Male_Sc_CityHeroBoy2
+                      89: scale
+                        176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  107: bone_Left_Spine_Backpack
+    Parent: 121 bone_Spine1
+
+  110: bone_Left_Spine_Backpack
+    Parent: 66 bone_Spine1
+
+  115: Head_CityHeroBoy_Sc_M_Bone001
+    Parent: 186 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      115: Head_CityHeroBoy_Sc_M_Bone001
+        186: Head_CityHeroBoy_Sc_Dummy001
+          7: bone_Head
+            32: bone_Neck
+              121: bone_Spine1
+                178: bone_Spine
+                  145: bone_Hips
+                    40: Bip01
+                      187: bone_Root
+                        2: Male_Sc_CityHeroBoy1
+                          89: scale
+                            176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  118: bone_Spine
+    Parent: 5 bone_Hips
+    Children:
+      169: bone_Spine1
+
+  119: Head_CityHeroBoy_Sc_L_Bone001
+    Parent: 174 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      119: Head_CityHeroBoy_Sc_L_Bone001
+        174: Head_CityHeroBoy_Sc_Dummy001
+          98: bone_Head
+            47: bone_Neck
+              66: bone_Spine1
+                45: bone_Spine
+                  88: bone_Hips
+                    48: Bip01
+                      151: bone_Root
+                        155: Male_Sc_CityHeroBoy2
+                          89: scale
+                            176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  121: bone_Spine1
+    Parent: 178 bone_Spine
+    Children:
+      9: bone_Right_Spine_Weapon
+      32: bone_Neck
+      54: bone_Left_Spine_Weapon
+      107: bone_Left_Spine_Backpack
+      162: bone_RightClav
+      183: bone_LeftClav
+
+  125: Head_CityHeroBoy_Sc_R_Bone001
+    Parent: 79 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      125: Head_CityHeroBoy_Sc_R_Bone001
+        79: Head_CityHeroBoy_Sc_Dummy001
+          61: bone_Head
+            37: bone_Neck
+              169: bone_Spine1
+                118: bone_Spine
+                  5: bone_Hips
+                    84: Bip01
+                      13: bone_Root
+                        185: Male_Sc_CityHeroBoy3
+                          89: scale
+                            176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  131: Head_CityHeroBoy_Sc_L_Bone002
+    Parent: 186 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      131: Head_CityHeroBoy_Sc_L_Bone002
+        186: Head_CityHeroBoy_Sc_Dummy001
+          7: bone_Head
+            32: bone_Neck
+              121: bone_Spine1
+                178: bone_Spine
+                  145: bone_Hips
+                    40: Bip01
+                      187: bone_Root
+                        2: Male_Sc_CityHeroBoy1
+                          89: scale
+                            176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  133: Head_CityHeroBoy_Sc_M_Bone001
+    Parent: 174 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      133: Head_CityHeroBoy_Sc_M_Bone001
+        174: Head_CityHeroBoy_Sc_Dummy001
+          98: bone_Head
+            47: bone_Neck
+              66: bone_Spine1
+                45: bone_Spine
+                  88: bone_Hips
+                    48: Bip01
+                      151: bone_Root
+                        155: Male_Sc_CityHeroBoy2
+                          89: scale
+                            176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  134: Head_CityHeroBoy_Sc_R_Bone001
+    Parent: 186 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      134: Head_CityHeroBoy_Sc_R_Bone001
+        186: Head_CityHeroBoy_Sc_Dummy001
+          7: bone_Head
+            32: bone_Neck
+              121: bone_Spine1
+                178: bone_Spine
+                  145: bone_Hips
+                    40: Bip01
+                      187: bone_Root
+                        2: Male_Sc_CityHeroBoy1
+                          89: scale
+                            176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  144: bone_Left_Spine_Weapon
+    Parent: 169 bone_Spine1
+
+  146: bone_Right_Spine_Weapon
+    Parent: 169 bone_Spine1
+
+  150: bone_Left_Spine_Weapon
+    Parent: 66 bone_Spine1
+
+  152: Head_CityHeroBoy_Sc_L_Bone001
+    Parent: 186 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      152: Head_CityHeroBoy_Sc_L_Bone001
+        186: Head_CityHeroBoy_Sc_Dummy001
+          7: bone_Head
+            32: bone_Neck
+              121: bone_Spine1
+                178: bone_Spine
+                  145: bone_Hips
+                    40: Bip01
+                      187: bone_Root
+                        2: Male_Sc_CityHeroBoy1
+                          89: scale
+                            176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  156: Head_CityHeroBoy_Sc_L_Bone003
+    Parent: 174 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      156: Head_CityHeroBoy_Sc_L_Bone003
+        174: Head_CityHeroBoy_Sc_Dummy001
+          98: bone_Head
+            47: bone_Neck
+              66: bone_Spine1
+                45: bone_Spine
+                  88: bone_Hips
+                    48: Bip01
+                      151: bone_Root
+                        155: Male_Sc_CityHeroBoy2
+                          89: scale
+                            176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  166: Head_CityHeroBoy_Sc_L_Bone002
+    Parent: 79 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      166: Head_CityHeroBoy_Sc_L_Bone002
+        79: Head_CityHeroBoy_Sc_Dummy001
+          61: bone_Head
+            37: bone_Neck
+              169: bone_Spine1
+                118: bone_Spine
+                  5: bone_Hips
+                    84: Bip01
+                      13: bone_Root
+                        185: Male_Sc_CityHeroBoy3
+                          89: scale
+                            176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  169: bone_Spine1
+    Parent: 118 bone_Spine
+    Children:
+      37: bone_Neck
+      64: bone_Left_Spine_Backpack
+      103: bone_LeftClav
+      144: bone_Left_Spine_Weapon
+      146: bone_Right_Spine_Weapon
+      195: bone_RightClav
+
+  174: Head_CityHeroBoy_Sc_Dummy001
+    Parent: 98 bone_Head
+    Children:
+      22: Head_CityHeroBoy_Sc_L_Bone002
+      23: Head_CityHeroBoy_Sc_R_Bone002
+      33: Head_CityHeroBoy_Sc_R_Bone001
+      119: Head_CityHeroBoy_Sc_L_Bone001
+      133: Head_CityHeroBoy_Sc_M_Bone001
+      156: Head_CityHeroBoy_Sc_L_Bone003
+      202: Head_CityHeroBoy_Sc_R_Bone003
+    Ancestry:
+      174: Head_CityHeroBoy_Sc_Dummy001
+        98: bone_Head
+          47: bone_Neck
+            66: bone_Spine1
+              45: bone_Spine
+                88: bone_Hips
+                  48: Bip01
+                    151: bone_Root
+                      155: Male_Sc_CityHeroBoy2
+                        89: scale
+                          176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  178: bone_Spine
+    Parent: 145 bone_Hips
+    Children:
+      121: bone_Spine1
+
+  181: bone_Right_Spine_Weapon
+    Parent: 66 bone_Spine1
+
+  186: Head_CityHeroBoy_Sc_Dummy001
+    Parent: 7 bone_Head
+    Children:
+      83: Head_CityHeroBoy_Sc_L_Bone003
+      115: Head_CityHeroBoy_Sc_M_Bone001
+      131: Head_CityHeroBoy_Sc_L_Bone002
+      134: Head_CityHeroBoy_Sc_R_Bone001
+      152: Head_CityHeroBoy_Sc_L_Bone001
+      192: Head_CityHeroBoy_Sc_R_Bone002
+      203: Head_CityHeroBoy_Sc_R_Bone003
+    Ancestry:
+      186: Head_CityHeroBoy_Sc_Dummy001
+        7: bone_Head
+          32: bone_Neck
+            121: bone_Spine1
+              178: bone_Spine
+                145: bone_Hips
+                  40: Bip01
+                    187: bone_Root
+                      2: Male_Sc_CityHeroBoy1
+                        89: scale
+                          176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  190: Male_Head_Sc_CityHeroBoy
+    Parent: 185 Male_Sc_CityHeroBoy3
+    Ancestry:
+      190: Male_Head_Sc_CityHeroBoy
+        185: Male_Sc_CityHeroBoy3
+          89: scale
+            176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  192: Head_CityHeroBoy_Sc_R_Bone002
+    Parent: 186 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      192: Head_CityHeroBoy_Sc_R_Bone002
+        186: Head_CityHeroBoy_Sc_Dummy001
+          7: bone_Head
+            32: bone_Neck
+              121: bone_Spine1
+                178: bone_Spine
+                  145: bone_Hips
+                    40: Bip01
+                      187: bone_Root
+                        2: Male_Sc_CityHeroBoy1
+                          89: scale
+                            176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  200: Head_CityHeroBoy_Sc_L_Bone003
+    Parent: 79 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      200: Head_CityHeroBoy_Sc_L_Bone003
+        79: Head_CityHeroBoy_Sc_Dummy001
+          61: bone_Head
+            37: bone_Neck
+              169: bone_Spine1
+                118: bone_Spine
+                  5: bone_Hips
+                    84: Bip01
+                      13: bone_Root
+                        185: Male_Sc_CityHeroBoy3
+                          89: scale
+                            176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  202: Head_CityHeroBoy_Sc_R_Bone003
+    Parent: 174 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      202: Head_CityHeroBoy_Sc_R_Bone003
+        174: Head_CityHeroBoy_Sc_Dummy001
+          98: bone_Head
+            47: bone_Neck
+              66: bone_Spine1
+                45: bone_Spine
+                  88: bone_Hips
+                    48: Bip01
+                      151: bone_Root
+                        155: Male_Sc_CityHeroBoy2
+                          89: scale
+                            176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+  203: Head_CityHeroBoy_Sc_R_Bone003
+    Parent: 186 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      203: Head_CityHeroBoy_Sc_R_Bone003
+        186: Head_CityHeroBoy_Sc_Dummy001
+          7: bone_Head
+            32: bone_Neck
+              121: bone_Spine1
+                178: bone_Spine
+                  145: bone_Hips
+                    40: Bip01
+                      187: bone_Root
+                        2: Male_Sc_CityHeroBoy1
+                          89: scale
+                            176: VFX_CITYHEROBOY_PERK_1_GHOST_03_High
+
+PHYSICS COMPONENT GAMEOBJECTS:
+  <none>
+
+========================================================================================
+FILE: 7e204f9bfe35d7548b1e6dc4c2bf9863
+========================================================================================
+Objects: 452
+
+INTERESTING OBJECT TYPES:
+  Animator                  4
+  MeshFilter                2
+  MeshRenderer              2
+  SkinnedMeshRenderer       15
+
+ROOT OBJECTS:
+  162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+HEAD / NECK / CHARACTER MATCHES:
+
+  1: Head_CityHeroBoy_Sc_L_Bone002
+    Parent: 91 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      1: Head_CityHeroBoy_Sc_L_Bone002
+        91: Head_CityHeroBoy_Sc_Dummy001
+          99: bone_Head
+            193: bone_Neck
+              122: bone_Spine1
+                109: bone_Spine
+                  152: bone_Hips
+                    34: Bip01
+                      22: bone_Root
+                        191: Male_Sc_CityHeroBoy2
+                          32: scale
+                            162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  3: bone_Right_Spine_Weapon
+    Parent: 182 bone_Spine1
+
+  11: Head_CityHeroBoy_Sc_Dummy001
+    Parent: 46 bone_Head
+    Children:
+      44: Head_CityHeroBoy_Sc_L_Bone001
+      68: Head_CityHeroBoy_Sc_R_Bone003
+      110: Head_CityHeroBoy_Sc_L_Bone003
+      176: Head_CityHeroBoy_Sc_L_Bone002
+      178: Head_CityHeroBoy_Sc_R_Bone002
+      201: Head_CityHeroBoy_Sc_R_Bone001
+      202: Head_CityHeroBoy_Sc_M_Bone001
+    Ancestry:
+      11: Head_CityHeroBoy_Sc_Dummy001
+        46: bone_Head
+          115: bone_Neck
+            42: bone_Spine1
+              161: bone_Spine
+                36: bone_Hips
+                  59: Bip01
+                    174: bone_Root
+                      184: Male_Sc_CityHeroBoy1
+                        32: scale
+                          162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  21: Head_CityHeroBoy_Sc_L_Bone001
+    Parent: 91 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      21: Head_CityHeroBoy_Sc_L_Bone001
+        91: Head_CityHeroBoy_Sc_Dummy001
+          99: bone_Head
+            193: bone_Neck
+              122: bone_Spine1
+                109: bone_Spine
+                  152: bone_Hips
+                    34: Bip01
+                      22: bone_Root
+                        191: Male_Sc_CityHeroBoy2
+                          32: scale
+                            162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  25: Head_CityHeroBoy_Sc_R_Bone003
+    Parent: 91 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      25: Head_CityHeroBoy_Sc_R_Bone003
+        91: Head_CityHeroBoy_Sc_Dummy001
+          99: bone_Head
+            193: bone_Neck
+              122: bone_Spine1
+                109: bone_Spine
+                  152: bone_Hips
+                    34: Bip01
+                      22: bone_Root
+                        191: Male_Sc_CityHeroBoy2
+                          32: scale
+                            162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  30: bone_Spine
+    Parent: 145 bone_Hips
+    Children:
+      182: bone_Spine1
+
+  34: Bip01
+    Parent: 22 bone_Root
+    Children:
+      152: bone_Hips
+
+  42: bone_Spine1
+    Parent: 161 bone_Spine
+    Children:
+      78: bone_LeftClav
+      93: bone_Left_Spine_Weapon
+      95: bone_Right_Spine_Weapon
+      115: bone_Neck
+      137: bone_RightClav
+      158: bone_Left_Spine_Backpack
+
+  44: Head_CityHeroBoy_Sc_L_Bone001
+    Parent: 11 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      44: Head_CityHeroBoy_Sc_L_Bone001
+        11: Head_CityHeroBoy_Sc_Dummy001
+          46: bone_Head
+            115: bone_Neck
+              42: bone_Spine1
+                161: bone_Spine
+                  36: bone_Hips
+                    59: Bip01
+                      174: bone_Root
+                        184: Male_Sc_CityHeroBoy1
+                          32: scale
+                            162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  45: Bip01
+    Parent: 50 bone_Root
+    Children:
+      145: bone_Hips
+
+  46: bone_Head
+    Parent: 115 bone_Neck
+    Children:
+      11: Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      46: bone_Head
+        115: bone_Neck
+          42: bone_Spine1
+            161: bone_Spine
+              36: bone_Hips
+                59: Bip01
+                  174: bone_Root
+                    184: Male_Sc_CityHeroBoy1
+                      32: scale
+                        162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  47: Head_CityHeroBoy_Sc_L_Bone003
+    Parent: 91 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      47: Head_CityHeroBoy_Sc_L_Bone003
+        91: Head_CityHeroBoy_Sc_Dummy001
+          99: bone_Head
+            193: bone_Neck
+              122: bone_Spine1
+                109: bone_Spine
+                  152: bone_Hips
+                    34: Bip01
+                      22: bone_Root
+                        191: Male_Sc_CityHeroBoy2
+                          32: scale
+                            162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  49: Male_Head_Sc_CityHeroBoy
+    Parent: 191 Male_Sc_CityHeroBoy2
+    Ancestry:
+      49: Male_Head_Sc_CityHeroBoy
+        191: Male_Sc_CityHeroBoy2
+          32: scale
+            162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  55: Male_Head_Sc_CityHeroBoy
+    Parent: 184 Male_Sc_CityHeroBoy1
+    Ancestry:
+      55: Male_Head_Sc_CityHeroBoy
+        184: Male_Sc_CityHeroBoy1
+          32: scale
+            162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  59: Bip01
+    Parent: 174 bone_Root
+    Children:
+      36: bone_Hips
+
+  60: Head_CityHeroBoy_Sc_M_Bone001
+    Parent: 91 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      60: Head_CityHeroBoy_Sc_M_Bone001
+        91: Head_CityHeroBoy_Sc_Dummy001
+          99: bone_Head
+            193: bone_Neck
+              122: bone_Spine1
+                109: bone_Spine
+                  152: bone_Hips
+                    34: Bip01
+                      22: bone_Root
+                        191: Male_Sc_CityHeroBoy2
+                          32: scale
+                            162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  61: Head_CityHeroBoy_Sc_Dummy001
+    Parent: 134 bone_Head
+    Children:
+      63: Head_CityHeroBoy_Sc_L_Bone001
+      80: Head_CityHeroBoy_Sc_L_Bone003
+      90: Head_CityHeroBoy_Sc_R_Bone003
+      136: Head_CityHeroBoy_Sc_R_Bone002
+      141: Head_CityHeroBoy_Sc_L_Bone002
+      157: Head_CityHeroBoy_Sc_R_Bone001
+      170: Head_CityHeroBoy_Sc_M_Bone001
+    Ancestry:
+      61: Head_CityHeroBoy_Sc_Dummy001
+        134: bone_Head
+          180: bone_Neck
+            182: bone_Spine1
+              30: bone_Spine
+                145: bone_Hips
+                  45: Bip01
+                    50: bone_Root
+                      89: Male_Sc_CityHeroBoy3
+                        32: scale
+                          162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  63: Head_CityHeroBoy_Sc_L_Bone001
+    Parent: 61 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      63: Head_CityHeroBoy_Sc_L_Bone001
+        61: Head_CityHeroBoy_Sc_Dummy001
+          134: bone_Head
+            180: bone_Neck
+              182: bone_Spine1
+                30: bone_Spine
+                  145: bone_Hips
+                    45: Bip01
+                      50: bone_Root
+                        89: Male_Sc_CityHeroBoy3
+                          32: scale
+                            162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  66: bone_Left_Spine_Weapon
+    Parent: 122 bone_Spine1
+
+  68: Head_CityHeroBoy_Sc_R_Bone003
+    Parent: 11 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      68: Head_CityHeroBoy_Sc_R_Bone003
+        11: Head_CityHeroBoy_Sc_Dummy001
+          46: bone_Head
+            115: bone_Neck
+              42: bone_Spine1
+                161: bone_Spine
+                  36: bone_Hips
+                    59: Bip01
+                      174: bone_Root
+                        184: Male_Sc_CityHeroBoy1
+                          32: scale
+                            162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  70: bone_Left_Spine_Backpack
+    Parent: 122 bone_Spine1
+
+  72: Head_CityHeroBoy_Sc_R_Bone001
+    Parent: 91 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      72: Head_CityHeroBoy_Sc_R_Bone001
+        91: Head_CityHeroBoy_Sc_Dummy001
+          99: bone_Head
+            193: bone_Neck
+              122: bone_Spine1
+                109: bone_Spine
+                  152: bone_Hips
+                    34: Bip01
+                      22: bone_Root
+                        191: Male_Sc_CityHeroBoy2
+                          32: scale
+                            162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  75: bone_Left_Spine_Backpack
+    Parent: 182 bone_Spine1
+
+  80: Head_CityHeroBoy_Sc_L_Bone003
+    Parent: 61 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      80: Head_CityHeroBoy_Sc_L_Bone003
+        61: Head_CityHeroBoy_Sc_Dummy001
+          134: bone_Head
+            180: bone_Neck
+              182: bone_Spine1
+                30: bone_Spine
+                  145: bone_Hips
+                    45: Bip01
+                      50: bone_Root
+                        89: Male_Sc_CityHeroBoy3
+                          32: scale
+                            162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  90: Head_CityHeroBoy_Sc_R_Bone003
+    Parent: 61 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      90: Head_CityHeroBoy_Sc_R_Bone003
+        61: Head_CityHeroBoy_Sc_Dummy001
+          134: bone_Head
+            180: bone_Neck
+              182: bone_Spine1
+                30: bone_Spine
+                  145: bone_Hips
+                    45: Bip01
+                      50: bone_Root
+                        89: Male_Sc_CityHeroBoy3
+                          32: scale
+                            162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  91: Head_CityHeroBoy_Sc_Dummy001
+    Parent: 99 bone_Head
+    Children:
+      1: Head_CityHeroBoy_Sc_L_Bone002
+      21: Head_CityHeroBoy_Sc_L_Bone001
+      25: Head_CityHeroBoy_Sc_R_Bone003
+      47: Head_CityHeroBoy_Sc_L_Bone003
+      60: Head_CityHeroBoy_Sc_M_Bone001
+      72: Head_CityHeroBoy_Sc_R_Bone001
+      148: Head_CityHeroBoy_Sc_R_Bone002
+    Ancestry:
+      91: Head_CityHeroBoy_Sc_Dummy001
+        99: bone_Head
+          193: bone_Neck
+            122: bone_Spine1
+              109: bone_Spine
+                152: bone_Hips
+                  34: Bip01
+                    22: bone_Root
+                      191: Male_Sc_CityHeroBoy2
+                        32: scale
+                          162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  93: bone_Left_Spine_Weapon
+    Parent: 42 bone_Spine1
+
+  95: bone_Right_Spine_Weapon
+    Parent: 42 bone_Spine1
+
+  99: bone_Head
+    Parent: 193 bone_Neck
+    Children:
+      91: Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      99: bone_Head
+        193: bone_Neck
+          122: bone_Spine1
+            109: bone_Spine
+              152: bone_Hips
+                34: Bip01
+                  22: bone_Root
+                    191: Male_Sc_CityHeroBoy2
+                      32: scale
+                        162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  100: bone_Left_Spine_Weapon
+    Parent: 182 bone_Spine1
+
+  109: bone_Spine
+    Parent: 152 bone_Hips
+    Children:
+      122: bone_Spine1
+
+  110: Head_CityHeroBoy_Sc_L_Bone003
+    Parent: 11 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      110: Head_CityHeroBoy_Sc_L_Bone003
+        11: Head_CityHeroBoy_Sc_Dummy001
+          46: bone_Head
+            115: bone_Neck
+              42: bone_Spine1
+                161: bone_Spine
+                  36: bone_Hips
+                    59: Bip01
+                      174: bone_Root
+                        184: Male_Sc_CityHeroBoy1
+                          32: scale
+                            162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  115: bone_Neck
+    Parent: 42 bone_Spine1
+    Children:
+      46: bone_Head
+    Ancestry:
+      115: bone_Neck
+        42: bone_Spine1
+          161: bone_Spine
+            36: bone_Hips
+              59: Bip01
+                174: bone_Root
+                  184: Male_Sc_CityHeroBoy1
+                    32: scale
+                      162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  122: bone_Spine1
+    Parent: 109 bone_Spine
+    Children:
+      35: bone_RightClav
+      66: bone_Left_Spine_Weapon
+      70: bone_Left_Spine_Backpack
+      92: bone_LeftClav
+      123: bone_Right_Spine_Weapon
+      193: bone_Neck
+
+  123: bone_Right_Spine_Weapon
+    Parent: 122 bone_Spine1
+
+  134: bone_Head
+    Parent: 180 bone_Neck
+    Children:
+      61: Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      134: bone_Head
+        180: bone_Neck
+          182: bone_Spine1
+            30: bone_Spine
+              145: bone_Hips
+                45: Bip01
+                  50: bone_Root
+                    89: Male_Sc_CityHeroBoy3
+                      32: scale
+                        162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  136: Head_CityHeroBoy_Sc_R_Bone002
+    Parent: 61 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      136: Head_CityHeroBoy_Sc_R_Bone002
+        61: Head_CityHeroBoy_Sc_Dummy001
+          134: bone_Head
+            180: bone_Neck
+              182: bone_Spine1
+                30: bone_Spine
+                  145: bone_Hips
+                    45: Bip01
+                      50: bone_Root
+                        89: Male_Sc_CityHeroBoy3
+                          32: scale
+                            162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  141: Head_CityHeroBoy_Sc_L_Bone002
+    Parent: 61 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      141: Head_CityHeroBoy_Sc_L_Bone002
+        61: Head_CityHeroBoy_Sc_Dummy001
+          134: bone_Head
+            180: bone_Neck
+              182: bone_Spine1
+                30: bone_Spine
+                  145: bone_Hips
+                    45: Bip01
+                      50: bone_Root
+                        89: Male_Sc_CityHeroBoy3
+                          32: scale
+                            162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  148: Head_CityHeroBoy_Sc_R_Bone002
+    Parent: 91 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      148: Head_CityHeroBoy_Sc_R_Bone002
+        91: Head_CityHeroBoy_Sc_Dummy001
+          99: bone_Head
+            193: bone_Neck
+              122: bone_Spine1
+                109: bone_Spine
+                  152: bone_Hips
+                    34: Bip01
+                      22: bone_Root
+                        191: Male_Sc_CityHeroBoy2
+                          32: scale
+                            162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  157: Head_CityHeroBoy_Sc_R_Bone001
+    Parent: 61 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      157: Head_CityHeroBoy_Sc_R_Bone001
+        61: Head_CityHeroBoy_Sc_Dummy001
+          134: bone_Head
+            180: bone_Neck
+              182: bone_Spine1
+                30: bone_Spine
+                  145: bone_Hips
+                    45: Bip01
+                      50: bone_Root
+                        89: Male_Sc_CityHeroBoy3
+                          32: scale
+                            162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  158: bone_Left_Spine_Backpack
+    Parent: 42 bone_Spine1
+
+  161: bone_Spine
+    Parent: 36 bone_Hips
+    Children:
+      42: bone_Spine1
+
+  170: Head_CityHeroBoy_Sc_M_Bone001
+    Parent: 61 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      170: Head_CityHeroBoy_Sc_M_Bone001
+        61: Head_CityHeroBoy_Sc_Dummy001
+          134: bone_Head
+            180: bone_Neck
+              182: bone_Spine1
+                30: bone_Spine
+                  145: bone_Hips
+                    45: Bip01
+                      50: bone_Root
+                        89: Male_Sc_CityHeroBoy3
+                          32: scale
+                            162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  176: Head_CityHeroBoy_Sc_L_Bone002
+    Parent: 11 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      176: Head_CityHeroBoy_Sc_L_Bone002
+        11: Head_CityHeroBoy_Sc_Dummy001
+          46: bone_Head
+            115: bone_Neck
+              42: bone_Spine1
+                161: bone_Spine
+                  36: bone_Hips
+                    59: Bip01
+                      174: bone_Root
+                        184: Male_Sc_CityHeroBoy1
+                          32: scale
+                            162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  177: Male_Head_Sc_CityHeroBoy
+    Parent: 89 Male_Sc_CityHeroBoy3
+    Ancestry:
+      177: Male_Head_Sc_CityHeroBoy
+        89: Male_Sc_CityHeroBoy3
+          32: scale
+            162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  178: Head_CityHeroBoy_Sc_R_Bone002
+    Parent: 11 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      178: Head_CityHeroBoy_Sc_R_Bone002
+        11: Head_CityHeroBoy_Sc_Dummy001
+          46: bone_Head
+            115: bone_Neck
+              42: bone_Spine1
+                161: bone_Spine
+                  36: bone_Hips
+                    59: Bip01
+                      174: bone_Root
+                        184: Male_Sc_CityHeroBoy1
+                          32: scale
+                            162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  180: bone_Neck
+    Parent: 182 bone_Spine1
+    Children:
+      134: bone_Head
+    Ancestry:
+      180: bone_Neck
+        182: bone_Spine1
+          30: bone_Spine
+            145: bone_Hips
+              45: Bip01
+                50: bone_Root
+                  89: Male_Sc_CityHeroBoy3
+                    32: scale
+                      162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  182: bone_Spine1
+    Parent: 30 bone_Spine
+    Children:
+      3: bone_Right_Spine_Weapon
+      37: bone_LeftClav
+      75: bone_Left_Spine_Backpack
+      100: bone_Left_Spine_Weapon
+      160: bone_RightClav
+      180: bone_Neck
+
+  193: bone_Neck
+    Parent: 122 bone_Spine1
+    Children:
+      99: bone_Head
+    Ancestry:
+      193: bone_Neck
+        122: bone_Spine1
+          109: bone_Spine
+            152: bone_Hips
+              34: Bip01
+                22: bone_Root
+                  191: Male_Sc_CityHeroBoy2
+                    32: scale
+                      162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  201: Head_CityHeroBoy_Sc_R_Bone001
+    Parent: 11 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      201: Head_CityHeroBoy_Sc_R_Bone001
+        11: Head_CityHeroBoy_Sc_Dummy001
+          46: bone_Head
+            115: bone_Neck
+              42: bone_Spine1
+                161: bone_Spine
+                  36: bone_Hips
+                    59: Bip01
+                      174: bone_Root
+                        184: Male_Sc_CityHeroBoy1
+                          32: scale
+                            162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+  202: Head_CityHeroBoy_Sc_M_Bone001
+    Parent: 11 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      202: Head_CityHeroBoy_Sc_M_Bone001
+        11: Head_CityHeroBoy_Sc_Dummy001
+          46: bone_Head
+            115: bone_Neck
+              42: bone_Spine1
+                161: bone_Spine
+                  36: bone_Hips
+                    59: Bip01
+                      174: bone_Root
+                        184: Male_Sc_CityHeroBoy1
+                          32: scale
+                            162: VFX_CITYHEROBOY_PERK_1_GHOST_03_ENEMY_High
+
+PHYSICS COMPONENT GAMEOBJECTS:
+  <none>
+
+========================================================================================
+FILE: 6041e8c6b48836e4ca97f5f571a87ffa
+========================================================================================
+Objects: 324
+
+INTERESTING OBJECT TYPES:
+  Animator                  3
+  MeshFilter                3
+  MeshRenderer              3
+  SkinnedMeshRenderer       10
+
+ROOT OBJECTS:
+  129: VFX_CITYHEROBOY_PERK_1_GHOST_High
+
+HEAD / NECK / CHARACTER MATCHES:
+
+  1: Head_CityHeroBoy_Sc_M_Bone001
+    Parent: 119 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      1: Head_CityHeroBoy_Sc_M_Bone001
+        119: Head_CityHeroBoy_Sc_Dummy001
+          35: bone_Head
+            23: bone_Neck
+              103: bone_Spine1
+                2: bone_Spine
+                  31: bone_Hips
+                    70: Bip01
+                      110: bone_Root
+                        76: Male_Sc_CityHeroBoy
+                          91: scale
+                            58: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              50: EFFECT
+                                129: VFX_CITYHEROBOY_PERK_1_GHOST_High
+
+  2: bone_Spine
+    Parent: 31 bone_Hips
+    Children:
+      103: bone_Spine1
+
+  7: bone_Left_Spine_Weapon
+    Parent: 142 bone_Spine1
+
+  17: Head_CityHeroBoy_Sc_L_Bone003
+    Parent: 119 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      17: Head_CityHeroBoy_Sc_L_Bone003
+        119: Head_CityHeroBoy_Sc_Dummy001
+          35: bone_Head
+            23: bone_Neck
+              103: bone_Spine1
+                2: bone_Spine
+                  31: bone_Hips
+                    70: Bip01
+                      110: bone_Root
+                        76: Male_Sc_CityHeroBoy
+                          91: scale
+                            58: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              50: EFFECT
+                                129: VFX_CITYHEROBOY_PERK_1_GHOST_High
+
+  23: bone_Neck
+    Parent: 103 bone_Spine1
+    Children:
+      35: bone_Head
+    Ancestry:
+      23: bone_Neck
+        103: bone_Spine1
+          2: bone_Spine
+            31: bone_Hips
+              70: Bip01
+                110: bone_Root
+                  76: Male_Sc_CityHeroBoy
+                    91: scale
+                      58: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                        50: EFFECT
+                          129: VFX_CITYHEROBOY_PERK_1_GHOST_High
+
+  24: bone_Spine
+    Parent: 25 bone_Hips
+    Children:
+      142: bone_Spine1
+
+  27: Head_CityHeroBoy_Sc_R_Bone001
+    Parent: 29 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      27: Head_CityHeroBoy_Sc_R_Bone001
+        29: Head_CityHeroBoy_Sc_Dummy001
+          118: bone_Head
+            141: bone_Neck
+              142: bone_Spine1
+                24: bone_Spine
+                  25: bone_Hips
+                    133: Bip01
+                      128: bone_Root
+                        120: Male_Sc_CityHeroBoy2
+                          91: scale
+                            58: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              50: EFFECT
+                                129: VFX_CITYHEROBOY_PERK_1_GHOST_High
+
+  29: Head_CityHeroBoy_Sc_Dummy001
+    Parent: 118 bone_Head
+    Children:
+      27: Head_CityHeroBoy_Sc_R_Bone001
+      33: Head_CityHeroBoy_Sc_R_Bone002
+      45: Head_CityHeroBoy_Sc_M_Bone001
+      51: Head_CityHeroBoy_Sc_L_Bone001
+      99: Head_CityHeroBoy_Sc_L_Bone003
+      121: Head_CityHeroBoy_Sc_R_Bone003
+      144: Head_CityHeroBoy_Sc_L_Bone002
+    Ancestry:
+      29: Head_CityHeroBoy_Sc_Dummy001
+        118: bone_Head
+          141: bone_Neck
+            142: bone_Spine1
+              24: bone_Spine
+                25: bone_Hips
+                  133: Bip01
+                    128: bone_Root
+                      120: Male_Sc_CityHeroBoy2
+                        91: scale
+                          58: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                            50: EFFECT
+                              129: VFX_CITYHEROBOY_PERK_1_GHOST_High
+
+  30: Head_CityHeroBoy_Sc_R_Bone003
+    Parent: 119 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      30: Head_CityHeroBoy_Sc_R_Bone003
+        119: Head_CityHeroBoy_Sc_Dummy001
+          35: bone_Head
+            23: bone_Neck
+              103: bone_Spine1
+                2: bone_Spine
+                  31: bone_Hips
+                    70: Bip01
+                      110: bone_Root
+                        76: Male_Sc_CityHeroBoy
+                          91: scale
+                            58: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              50: EFFECT
+                                129: VFX_CITYHEROBOY_PERK_1_GHOST_High
+
+  33: Head_CityHeroBoy_Sc_R_Bone002
+    Parent: 29 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      33: Head_CityHeroBoy_Sc_R_Bone002
+        29: Head_CityHeroBoy_Sc_Dummy001
+          118: bone_Head
+            141: bone_Neck
+              142: bone_Spine1
+                24: bone_Spine
+                  25: bone_Hips
+                    133: Bip01
+                      128: bone_Root
+                        120: Male_Sc_CityHeroBoy2
+                          91: scale
+                            58: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              50: EFFECT
+                                129: VFX_CITYHEROBOY_PERK_1_GHOST_High
+
+  35: bone_Head
+    Parent: 23 bone_Neck
+    Children:
+      119: Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      35: bone_Head
+        23: bone_Neck
+          103: bone_Spine1
+            2: bone_Spine
+              31: bone_Hips
+                70: Bip01
+                  110: bone_Root
+                    76: Male_Sc_CityHeroBoy
+                      91: scale
+                        58: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                          50: EFFECT
+                            129: VFX_CITYHEROBOY_PERK_1_GHOST_High
+
+  36: bone_Right_Spine_Weapon
+    Parent: 103 bone_Spine1
+
+  37: Head_CityHeroBoy_Sc_R_Bone001
+    Parent: 119 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      37: Head_CityHeroBoy_Sc_R_Bone001
+        119: Head_CityHeroBoy_Sc_Dummy001
+          35: bone_Head
+            23: bone_Neck
+              103: bone_Spine1
+                2: bone_Spine
+                  31: bone_Hips
+                    70: Bip01
+                      110: bone_Root
+                        76: Male_Sc_CityHeroBoy
+                          91: scale
+                            58: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              50: EFFECT
+                                129: VFX_CITYHEROBOY_PERK_1_GHOST_High
+
+  43: bone_Left_Spine_Backpack
+    Parent: 142 bone_Spine1
+
+  45: Head_CityHeroBoy_Sc_M_Bone001
+    Parent: 29 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      45: Head_CityHeroBoy_Sc_M_Bone001
+        29: Head_CityHeroBoy_Sc_Dummy001
+          118: bone_Head
+            141: bone_Neck
+              142: bone_Spine1
+                24: bone_Spine
+                  25: bone_Hips
+                    133: Bip01
+                      128: bone_Root
+                        120: Male_Sc_CityHeroBoy2
+                          91: scale
+                            58: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              50: EFFECT
+                                129: VFX_CITYHEROBOY_PERK_1_GHOST_High
+
+  51: Head_CityHeroBoy_Sc_L_Bone001
+    Parent: 29 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      51: Head_CityHeroBoy_Sc_L_Bone001
+        29: Head_CityHeroBoy_Sc_Dummy001
+          118: bone_Head
+            141: bone_Neck
+              142: bone_Spine1
+                24: bone_Spine
+                  25: bone_Hips
+                    133: Bip01
+                      128: bone_Root
+                        120: Male_Sc_CityHeroBoy2
+                          91: scale
+                            58: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              50: EFFECT
+                                129: VFX_CITYHEROBOY_PERK_1_GHOST_High
+
+  54: bone_Right_Spine_Weapon
+    Parent: 142 bone_Spine1
+
+  61: Head_CityHeroBoy_Sc_R_Bone002
+    Parent: 119 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      61: Head_CityHeroBoy_Sc_R_Bone002
+        119: Head_CityHeroBoy_Sc_Dummy001
+          35: bone_Head
+            23: bone_Neck
+              103: bone_Spine1
+                2: bone_Spine
+                  31: bone_Hips
+                    70: Bip01
+                      110: bone_Root
+                        76: Male_Sc_CityHeroBoy
+                          91: scale
+                            58: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              50: EFFECT
+                                129: VFX_CITYHEROBOY_PERK_1_GHOST_High
+
+  67: bone_Left_Spine_Weapon
+    Parent: 103 bone_Spine1
+
+  70: Bip01
+    Parent: 110 bone_Root
+    Children:
+      31: bone_Hips
+
+  73: Head_CityHeroBoy_Sc_L_Bone002
+    Parent: 119 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      73: Head_CityHeroBoy_Sc_L_Bone002
+        119: Head_CityHeroBoy_Sc_Dummy001
+          35: bone_Head
+            23: bone_Neck
+              103: bone_Spine1
+                2: bone_Spine
+                  31: bone_Hips
+                    70: Bip01
+                      110: bone_Root
+                        76: Male_Sc_CityHeroBoy
+                          91: scale
+                            58: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              50: EFFECT
+                                129: VFX_CITYHEROBOY_PERK_1_GHOST_High
+
+  93: Head_CityHeroBoy_Sc_L_Bone001
+    Parent: 119 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      93: Head_CityHeroBoy_Sc_L_Bone001
+        119: Head_CityHeroBoy_Sc_Dummy001
+          35: bone_Head
+            23: bone_Neck
+              103: bone_Spine1
+                2: bone_Spine
+                  31: bone_Hips
+                    70: Bip01
+                      110: bone_Root
+                        76: Male_Sc_CityHeroBoy
+                          91: scale
+                            58: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              50: EFFECT
+                                129: VFX_CITYHEROBOY_PERK_1_GHOST_High
+
+  99: Head_CityHeroBoy_Sc_L_Bone003
+    Parent: 29 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      99: Head_CityHeroBoy_Sc_L_Bone003
+        29: Head_CityHeroBoy_Sc_Dummy001
+          118: bone_Head
+            141: bone_Neck
+              142: bone_Spine1
+                24: bone_Spine
+                  25: bone_Hips
+                    133: Bip01
+                      128: bone_Root
+                        120: Male_Sc_CityHeroBoy2
+                          91: scale
+                            58: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              50: EFFECT
+                                129: VFX_CITYHEROBOY_PERK_1_GHOST_High
+
+  103: bone_Spine1
+    Parent: 2 bone_Spine
+    Children:
+      23: bone_Neck
+      36: bone_Right_Spine_Weapon
+      55: bone_RightClav
+      67: bone_Left_Spine_Weapon
+      116: bone_LeftClav
+      136: bone_Left_Spine_Backpack
+
+  105: Male_Head_Sc_CityHeroBoy
+    Parent: 120 Male_Sc_CityHeroBoy2
+    Ancestry:
+      105: Male_Head_Sc_CityHeroBoy
+        120: Male_Sc_CityHeroBoy2
+          91: scale
+            58: VFX_CITYHEROBOY_PERK_1_GHOST_02
+              50: EFFECT
+                129: VFX_CITYHEROBOY_PERK_1_GHOST_High
+
+  113: Male_Head_Sc_CityHeroBoy
+    Parent: 76 Male_Sc_CityHeroBoy
+    Ancestry:
+      113: Male_Head_Sc_CityHeroBoy
+        76: Male_Sc_CityHeroBoy
+          91: scale
+            58: VFX_CITYHEROBOY_PERK_1_GHOST_02
+              50: EFFECT
+                129: VFX_CITYHEROBOY_PERK_1_GHOST_High
+
+  118: bone_Head
+    Parent: 141 bone_Neck
+    Children:
+      29: Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      118: bone_Head
+        141: bone_Neck
+          142: bone_Spine1
+            24: bone_Spine
+              25: bone_Hips
+                133: Bip01
+                  128: bone_Root
+                    120: Male_Sc_CityHeroBoy2
+                      91: scale
+                        58: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                          50: EFFECT
+                            129: VFX_CITYHEROBOY_PERK_1_GHOST_High
+
+  119: Head_CityHeroBoy_Sc_Dummy001
+    Parent: 35 bone_Head
+    Children:
+      1: Head_CityHeroBoy_Sc_M_Bone001
+      17: Head_CityHeroBoy_Sc_L_Bone003
+      30: Head_CityHeroBoy_Sc_R_Bone003
+      37: Head_CityHeroBoy_Sc_R_Bone001
+      61: Head_CityHeroBoy_Sc_R_Bone002
+      73: Head_CityHeroBoy_Sc_L_Bone002
+      93: Head_CityHeroBoy_Sc_L_Bone001
+    Ancestry:
+      119: Head_CityHeroBoy_Sc_Dummy001
+        35: bone_Head
+          23: bone_Neck
+            103: bone_Spine1
+              2: bone_Spine
+                31: bone_Hips
+                  70: Bip01
+                    110: bone_Root
+                      76: Male_Sc_CityHeroBoy
+                        91: scale
+                          58: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                            50: EFFECT
+                              129: VFX_CITYHEROBOY_PERK_1_GHOST_High
+
+  121: Head_CityHeroBoy_Sc_R_Bone003
+    Parent: 29 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      121: Head_CityHeroBoy_Sc_R_Bone003
+        29: Head_CityHeroBoy_Sc_Dummy001
+          118: bone_Head
+            141: bone_Neck
+              142: bone_Spine1
+                24: bone_Spine
+                  25: bone_Hips
+                    133: Bip01
+                      128: bone_Root
+                        120: Male_Sc_CityHeroBoy2
+                          91: scale
+                            58: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              50: EFFECT
+                                129: VFX_CITYHEROBOY_PERK_1_GHOST_High
+
+  133: Bip01
+    Parent: 128 bone_Root
+    Children:
+      25: bone_Hips
+
+  136: bone_Left_Spine_Backpack
+    Parent: 103 bone_Spine1
+
+  141: bone_Neck
+    Parent: 142 bone_Spine1
+    Children:
+      118: bone_Head
+    Ancestry:
+      141: bone_Neck
+        142: bone_Spine1
+          24: bone_Spine
+            25: bone_Hips
+              133: Bip01
+                128: bone_Root
+                  120: Male_Sc_CityHeroBoy2
+                    91: scale
+                      58: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                        50: EFFECT
+                          129: VFX_CITYHEROBOY_PERK_1_GHOST_High
+
+  142: bone_Spine1
+    Parent: 24 bone_Spine
+    Children:
+      7: bone_Left_Spine_Weapon
+      43: bone_Left_Spine_Backpack
+      54: bone_Right_Spine_Weapon
+      85: bone_RightClav
+      111: bone_LeftClav
+      141: bone_Neck
+
+  144: Head_CityHeroBoy_Sc_L_Bone002
+    Parent: 29 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      144: Head_CityHeroBoy_Sc_L_Bone002
+        29: Head_CityHeroBoy_Sc_Dummy001
+          118: bone_Head
+            141: bone_Neck
+              142: bone_Spine1
+                24: bone_Spine
+                  25: bone_Hips
+                    133: Bip01
+                      128: bone_Root
+                        120: Male_Sc_CityHeroBoy2
+                          91: scale
+                            58: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              50: EFFECT
+                                129: VFX_CITYHEROBOY_PERK_1_GHOST_High
+
+PHYSICS COMPONENT GAMEOBJECTS:
+  <none>
+
+========================================================================================
+FILE: f49e81b442cd69d48bf79a0500ff9beb
+========================================================================================
+Objects: 320
+
+INTERESTING OBJECT TYPES:
+  Animator                  3
+  MeshFilter                2
+  MeshRenderer              2
+  SkinnedMeshRenderer       10
+
+ROOT OBJECTS:
+  10: VFX_CITYHEROBOY_PERK_1_GHOST_ENEMY_High
+
+HEAD / NECK / CHARACTER MATCHES:
+
+  14: bone_Head
+    Parent: 45 bone_Neck
+    Children:
+      88: Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      14: bone_Head
+        45: bone_Neck
+          46: bone_Spine1
+            51: bone_Spine
+              82: bone_Hips
+                96: Bip01
+                  27: bone_Root
+                    131: Male_Sc_CityHeroBoy
+                      126: scale
+                        59: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                          76: EFFECT
+                            10: VFX_CITYHEROBOY_PERK_1_GHOST_ENEMY_High
+
+  15: Head_CityHeroBoy_Sc_L_Bone002
+    Parent: 54 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      15: Head_CityHeroBoy_Sc_L_Bone002
+        54: Head_CityHeroBoy_Sc_Dummy001
+          61: bone_Head
+            28: bone_Neck
+              85: bone_Spine1
+                130: bone_Spine
+                  13: bone_Hips
+                    42: Bip01
+                      93: bone_Root
+                        109: Male_Sc_CityHeroBoy2
+                          126: scale
+                            59: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              76: EFFECT
+                                10: VFX_CITYHEROBOY_PERK_1_GHOST_ENEMY_High
+
+  17: bone_Right_Spine_Weapon
+    Parent: 46 bone_Spine1
+
+  19: Head_CityHeroBoy_Sc_R_Bone003
+    Parent: 88 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      19: Head_CityHeroBoy_Sc_R_Bone003
+        88: Head_CityHeroBoy_Sc_Dummy001
+          14: bone_Head
+            45: bone_Neck
+              46: bone_Spine1
+                51: bone_Spine
+                  82: bone_Hips
+                    96: Bip01
+                      27: bone_Root
+                        131: Male_Sc_CityHeroBoy
+                          126: scale
+                            59: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              76: EFFECT
+                                10: VFX_CITYHEROBOY_PERK_1_GHOST_ENEMY_High
+
+  28: bone_Neck
+    Parent: 85 bone_Spine1
+    Children:
+      61: bone_Head
+    Ancestry:
+      28: bone_Neck
+        85: bone_Spine1
+          130: bone_Spine
+            13: bone_Hips
+              42: Bip01
+                93: bone_Root
+                  109: Male_Sc_CityHeroBoy2
+                    126: scale
+                      59: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                        76: EFFECT
+                          10: VFX_CITYHEROBOY_PERK_1_GHOST_ENEMY_High
+
+  31: Male_Head_Sc_CityHeroBoy
+    Parent: 131 Male_Sc_CityHeroBoy
+    Ancestry:
+      31: Male_Head_Sc_CityHeroBoy
+        131: Male_Sc_CityHeroBoy
+          126: scale
+            59: VFX_CITYHEROBOY_PERK_1_GHOST_02
+              76: EFFECT
+                10: VFX_CITYHEROBOY_PERK_1_GHOST_ENEMY_High
+
+  33: Head_CityHeroBoy_Sc_R_Bone001
+    Parent: 54 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      33: Head_CityHeroBoy_Sc_R_Bone001
+        54: Head_CityHeroBoy_Sc_Dummy001
+          61: bone_Head
+            28: bone_Neck
+              85: bone_Spine1
+                130: bone_Spine
+                  13: bone_Hips
+                    42: Bip01
+                      93: bone_Root
+                        109: Male_Sc_CityHeroBoy2
+                          126: scale
+                            59: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              76: EFFECT
+                                10: VFX_CITYHEROBOY_PERK_1_GHOST_ENEMY_High
+
+  36: Head_CityHeroBoy_Sc_L_Bone002
+    Parent: 88 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      36: Head_CityHeroBoy_Sc_L_Bone002
+        88: Head_CityHeroBoy_Sc_Dummy001
+          14: bone_Head
+            45: bone_Neck
+              46: bone_Spine1
+                51: bone_Spine
+                  82: bone_Hips
+                    96: Bip01
+                      27: bone_Root
+                        131: Male_Sc_CityHeroBoy
+                          126: scale
+                            59: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              76: EFFECT
+                                10: VFX_CITYHEROBOY_PERK_1_GHOST_ENEMY_High
+
+  38: Head_CityHeroBoy_Sc_R_Bone002
+    Parent: 88 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      38: Head_CityHeroBoy_Sc_R_Bone002
+        88: Head_CityHeroBoy_Sc_Dummy001
+          14: bone_Head
+            45: bone_Neck
+              46: bone_Spine1
+                51: bone_Spine
+                  82: bone_Hips
+                    96: Bip01
+                      27: bone_Root
+                        131: Male_Sc_CityHeroBoy
+                          126: scale
+                            59: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              76: EFFECT
+                                10: VFX_CITYHEROBOY_PERK_1_GHOST_ENEMY_High
+
+  40: Head_CityHeroBoy_Sc_M_Bone001
+    Parent: 54 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      40: Head_CityHeroBoy_Sc_M_Bone001
+        54: Head_CityHeroBoy_Sc_Dummy001
+          61: bone_Head
+            28: bone_Neck
+              85: bone_Spine1
+                130: bone_Spine
+                  13: bone_Hips
+                    42: Bip01
+                      93: bone_Root
+                        109: Male_Sc_CityHeroBoy2
+                          126: scale
+                            59: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              76: EFFECT
+                                10: VFX_CITYHEROBOY_PERK_1_GHOST_ENEMY_High
+
+  41: Head_CityHeroBoy_Sc_R_Bone003
+    Parent: 54 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      41: Head_CityHeroBoy_Sc_R_Bone003
+        54: Head_CityHeroBoy_Sc_Dummy001
+          61: bone_Head
+            28: bone_Neck
+              85: bone_Spine1
+                130: bone_Spine
+                  13: bone_Hips
+                    42: Bip01
+                      93: bone_Root
+                        109: Male_Sc_CityHeroBoy2
+                          126: scale
+                            59: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              76: EFFECT
+                                10: VFX_CITYHEROBOY_PERK_1_GHOST_ENEMY_High
+
+  42: Bip01
+    Parent: 93 bone_Root
+    Children:
+      13: bone_Hips
+
+  45: bone_Neck
+    Parent: 46 bone_Spine1
+    Children:
+      14: bone_Head
+    Ancestry:
+      45: bone_Neck
+        46: bone_Spine1
+          51: bone_Spine
+            82: bone_Hips
+              96: Bip01
+                27: bone_Root
+                  131: Male_Sc_CityHeroBoy
+                    126: scale
+                      59: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                        76: EFFECT
+                          10: VFX_CITYHEROBOY_PERK_1_GHOST_ENEMY_High
+
+  46: bone_Spine1
+    Parent: 51 bone_Spine
+    Children:
+      3: bone_LeftClav
+      17: bone_Right_Spine_Weapon
+      24: bone_RightClav
+      45: bone_Neck
+      80: bone_Left_Spine_Backpack
+      107: bone_Left_Spine_Weapon
+
+  49: bone_Right_Spine_Weapon
+    Parent: 85 bone_Spine1
+
+  51: bone_Spine
+    Parent: 82 bone_Hips
+    Children:
+      46: bone_Spine1
+
+  52: Head_CityHeroBoy_Sc_R_Bone001
+    Parent: 88 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      52: Head_CityHeroBoy_Sc_R_Bone001
+        88: Head_CityHeroBoy_Sc_Dummy001
+          14: bone_Head
+            45: bone_Neck
+              46: bone_Spine1
+                51: bone_Spine
+                  82: bone_Hips
+                    96: Bip01
+                      27: bone_Root
+                        131: Male_Sc_CityHeroBoy
+                          126: scale
+                            59: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              76: EFFECT
+                                10: VFX_CITYHEROBOY_PERK_1_GHOST_ENEMY_High
+
+  54: Head_CityHeroBoy_Sc_Dummy001
+    Parent: 61 bone_Head
+    Children:
+      15: Head_CityHeroBoy_Sc_L_Bone002
+      33: Head_CityHeroBoy_Sc_R_Bone001
+      40: Head_CityHeroBoy_Sc_M_Bone001
+      41: Head_CityHeroBoy_Sc_R_Bone003
+      64: Head_CityHeroBoy_Sc_L_Bone003
+      103: Head_CityHeroBoy_Sc_R_Bone002
+      132: Head_CityHeroBoy_Sc_L_Bone001
+    Ancestry:
+      54: Head_CityHeroBoy_Sc_Dummy001
+        61: bone_Head
+          28: bone_Neck
+            85: bone_Spine1
+              130: bone_Spine
+                13: bone_Hips
+                  42: Bip01
+                    93: bone_Root
+                      109: Male_Sc_CityHeroBoy2
+                        126: scale
+                          59: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                            76: EFFECT
+                              10: VFX_CITYHEROBOY_PERK_1_GHOST_ENEMY_High
+
+  61: bone_Head
+    Parent: 28 bone_Neck
+    Children:
+      54: Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      61: bone_Head
+        28: bone_Neck
+          85: bone_Spine1
+            130: bone_Spine
+              13: bone_Hips
+                42: Bip01
+                  93: bone_Root
+                    109: Male_Sc_CityHeroBoy2
+                      126: scale
+                        59: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                          76: EFFECT
+                            10: VFX_CITYHEROBOY_PERK_1_GHOST_ENEMY_High
+
+  64: Head_CityHeroBoy_Sc_L_Bone003
+    Parent: 54 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      64: Head_CityHeroBoy_Sc_L_Bone003
+        54: Head_CityHeroBoy_Sc_Dummy001
+          61: bone_Head
+            28: bone_Neck
+              85: bone_Spine1
+                130: bone_Spine
+                  13: bone_Hips
+                    42: Bip01
+                      93: bone_Root
+                        109: Male_Sc_CityHeroBoy2
+                          126: scale
+                            59: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              76: EFFECT
+                                10: VFX_CITYHEROBOY_PERK_1_GHOST_ENEMY_High
+
+  72: Head_CityHeroBoy_Sc_M_Bone001
+    Parent: 88 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      72: Head_CityHeroBoy_Sc_M_Bone001
+        88: Head_CityHeroBoy_Sc_Dummy001
+          14: bone_Head
+            45: bone_Neck
+              46: bone_Spine1
+                51: bone_Spine
+                  82: bone_Hips
+                    96: Bip01
+                      27: bone_Root
+                        131: Male_Sc_CityHeroBoy
+                          126: scale
+                            59: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              76: EFFECT
+                                10: VFX_CITYHEROBOY_PERK_1_GHOST_ENEMY_High
+
+  80: bone_Left_Spine_Backpack
+    Parent: 46 bone_Spine1
+
+  81: bone_Left_Spine_Backpack
+    Parent: 85 bone_Spine1
+
+  85: bone_Spine1
+    Parent: 130 bone_Spine
+    Children:
+      7: bone_LeftClav
+      28: bone_Neck
+      49: bone_Right_Spine_Weapon
+      81: bone_Left_Spine_Backpack
+      99: bone_Left_Spine_Weapon
+      121: bone_RightClav
+
+  88: Head_CityHeroBoy_Sc_Dummy001
+    Parent: 14 bone_Head
+    Children:
+      19: Head_CityHeroBoy_Sc_R_Bone003
+      36: Head_CityHeroBoy_Sc_L_Bone002
+      38: Head_CityHeroBoy_Sc_R_Bone002
+      52: Head_CityHeroBoy_Sc_R_Bone001
+      72: Head_CityHeroBoy_Sc_M_Bone001
+      106: Head_CityHeroBoy_Sc_L_Bone003
+      118: Head_CityHeroBoy_Sc_L_Bone001
+    Ancestry:
+      88: Head_CityHeroBoy_Sc_Dummy001
+        14: bone_Head
+          45: bone_Neck
+            46: bone_Spine1
+              51: bone_Spine
+                82: bone_Hips
+                  96: Bip01
+                    27: bone_Root
+                      131: Male_Sc_CityHeroBoy
+                        126: scale
+                          59: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                            76: EFFECT
+                              10: VFX_CITYHEROBOY_PERK_1_GHOST_ENEMY_High
+
+  90: Male_Head_Sc_CityHeroBoy
+    Parent: 109 Male_Sc_CityHeroBoy2
+    Ancestry:
+      90: Male_Head_Sc_CityHeroBoy
+        109: Male_Sc_CityHeroBoy2
+          126: scale
+            59: VFX_CITYHEROBOY_PERK_1_GHOST_02
+              76: EFFECT
+                10: VFX_CITYHEROBOY_PERK_1_GHOST_ENEMY_High
+
+  96: Bip01
+    Parent: 27 bone_Root
+    Children:
+      82: bone_Hips
+
+  99: bone_Left_Spine_Weapon
+    Parent: 85 bone_Spine1
+
+  103: Head_CityHeroBoy_Sc_R_Bone002
+    Parent: 54 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      103: Head_CityHeroBoy_Sc_R_Bone002
+        54: Head_CityHeroBoy_Sc_Dummy001
+          61: bone_Head
+            28: bone_Neck
+              85: bone_Spine1
+                130: bone_Spine
+                  13: bone_Hips
+                    42: Bip01
+                      93: bone_Root
+                        109: Male_Sc_CityHeroBoy2
+                          126: scale
+                            59: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              76: EFFECT
+                                10: VFX_CITYHEROBOY_PERK_1_GHOST_ENEMY_High
+
+  106: Head_CityHeroBoy_Sc_L_Bone003
+    Parent: 88 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      106: Head_CityHeroBoy_Sc_L_Bone003
+        88: Head_CityHeroBoy_Sc_Dummy001
+          14: bone_Head
+            45: bone_Neck
+              46: bone_Spine1
+                51: bone_Spine
+                  82: bone_Hips
+                    96: Bip01
+                      27: bone_Root
+                        131: Male_Sc_CityHeroBoy
+                          126: scale
+                            59: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              76: EFFECT
+                                10: VFX_CITYHEROBOY_PERK_1_GHOST_ENEMY_High
+
+  107: bone_Left_Spine_Weapon
+    Parent: 46 bone_Spine1
+
+  118: Head_CityHeroBoy_Sc_L_Bone001
+    Parent: 88 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      118: Head_CityHeroBoy_Sc_L_Bone001
+        88: Head_CityHeroBoy_Sc_Dummy001
+          14: bone_Head
+            45: bone_Neck
+              46: bone_Spine1
+                51: bone_Spine
+                  82: bone_Hips
+                    96: Bip01
+                      27: bone_Root
+                        131: Male_Sc_CityHeroBoy
+                          126: scale
+                            59: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              76: EFFECT
+                                10: VFX_CITYHEROBOY_PERK_1_GHOST_ENEMY_High
+
+  130: bone_Spine
+    Parent: 13 bone_Hips
+    Children:
+      85: bone_Spine1
+
+  132: Head_CityHeroBoy_Sc_L_Bone001
+    Parent: 54 Head_CityHeroBoy_Sc_Dummy001
+    Ancestry:
+      132: Head_CityHeroBoy_Sc_L_Bone001
+        54: Head_CityHeroBoy_Sc_Dummy001
+          61: bone_Head
+            28: bone_Neck
+              85: bone_Spine1
+                130: bone_Spine
+                  13: bone_Hips
+                    42: Bip01
+                      93: bone_Root
+                        109: Male_Sc_CityHeroBoy2
+                          126: scale
+                            59: VFX_CITYHEROBOY_PERK_1_GHOST_02
+                              76: EFFECT
+                                10: VFX_CITYHEROBOY_PERK_1_GHOST_ENEMY_High
+
+PHYSICS COMPONENT GAMEOBJECTS:
+  <none>

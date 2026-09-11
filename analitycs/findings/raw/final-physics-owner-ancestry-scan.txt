@@ -1,0 +1,1194 @@
+==========================================================================================
+FINAL PHYSICS OWNER / ANCESTRY SCAN
+==========================================================================================
+Candidate files: 207
+
+Physical components inspected: 6761
+Target-related collider ancestries: 201
+
+==========================================================================================
+TOP STRUCTURAL MATCHES
+==========================================================================================
+
+#1 SCORE=41
+FILE: input/freefire-assets/assets/bin/Data/905924919545a3648871ab547837242f
+PHYSICS: BoxCollider object= 338
+ANCESTRY:
+63: FreeAvatarPurchaseBtn
+  48: FreeAvatarContainer
+    4: PurchaseBtnContainer
+      111: PermanentBtnGroup
+        80: BottomBtnGroup
+          139: Pos
+            46: UIAvatarInfoRight
+TARGET: avatar
+NOISE: ui
+
+#2 SCORE=39
+FILE: input/freefire-assets/assets/bin/Data/2587d2be4a73f8d4e8dedc552a1fd0ce
+PHYSICS: BoxCollider object= 216
+ANCESTRY:
+57: PlayerInfoBtn
+  47: PlayerInfo
+    4: UIRecPresetItem
+TARGET: player
+NOISE: ui
+
+#3 SCORE=39
+FILE: input/freefire-assets/assets/bin/Data/613335139d6b5984399c258264b6149f
+PHYSICS: BoxCollider object= 274
+ANCESTRY:
+126: headbtnRight
+  92: PlayerInfo
+    95: UIPeakWeekLeaderboardItem
+TARGET: head, player
+NOISE: ui
+
+#4 SCORE=39
+FILE: input/freefire-assets/assets/bin/Data/613335139d6b5984399c258264b6149f
+PHYSICS: BoxCollider object= 275
+ANCESTRY:
+106: headbtnLeft
+  92: PlayerInfo
+    95: UIPeakWeekLeaderboardItem
+TARGET: head, player
+NOISE: ui
+
+#5 SCORE=39
+FILE: input/freefire-assets/assets/bin/Data/905924919545a3648871ab547837242f
+PHYSICS: BoxCollider object= 326
+ANCESTRY:
+26: AwakenAvatarSwitchBtn
+  150: HeadIcons
+    126: AwakenInfolContainer
+      139: Pos
+        46: UIAvatarInfoRight
+TARGET: head, avatar
+NOISE: ui, headicon
+
+#6 SCORE=39
+FILE: input/freefire-assets/assets/bin/Data/905924919545a3648871ab547837242f
+PHYSICS: BoxCollider object= 328
+ANCESTRY:
+20: OriAvatarSwitchBtn
+  150: HeadIcons
+    126: AwakenInfolContainer
+      139: Pos
+        46: UIAvatarInfoRight
+TARGET: head, avatar
+NOISE: ui, headicon
+
+#7 SCORE=36
+FILE: input/freefire-assets/assets/bin/Data/905924919545a3648871ab547837242f
+PHYSICS: BoxCollider object= 333
+ANCESTRY:
+1: AvatarProficiencyBtn
+  139: Pos
+    46: UIAvatarInfoRight
+TARGET: avatar
+NOISE: ui
+
+#8 SCORE=36
+FILE: input/freefire-assets/assets/bin/Data/905924919545a3648871ab547837242f
+PHYSICS: BoxCollider object= 336
+ANCESTRY:
+77: AvatarUGCTutorial
+  139: Pos
+    46: UIAvatarInfoRight
+TARGET: avatar
+NOISE: ui
+
+#9 SCORE=31
+FILE: input/freefire-assets/assets/bin/Data/191bf992a18fcf047925c903f620813f
+PHYSICS: BoxCollider object= 443
+ANCESTRY:
+59: NoPlayerContainer
+  47: SlelctPlayerBtn
+    182: SendGiftContainer
+      4: BtnGroupContainer
+        36: ButtonViewContainer
+          6: Right _Ani_Container
+            164: Right
+              171: UI_Mall2_Out_Ani
+                154: main
+                  95: UIMallV2
+TARGET: player
+NOISE: ui, button
+
+#10 SCORE=28
+FILE: input/freefire-assets/assets/bin/Data/e514234058d689e40ac7bb4b8be38776
+PHYSICS: BoxCollider object= 298
+ANCESTRY:
+85: SelectFriendBtn
+  7: PlayerHeadPicSelect
+    73: Bottomright
+      36: CloseFriendStateNone
+        128: UICloseFriend
+TARGET: head, player
+NOISE: ui, headpic
+
+#11 SCORE=27
+FILE: input/freefire-assets/assets/bin/Data/7eceb614c5d7f1e4f80df2dc3c0129b1
+PHYSICS: BoxCollider object= 888
+ANCESTRY:
+62: GotoAvatarProfileBtn
+  366: TopRightBtns
+    415: TopRight
+      309: UI_NewVault_Out_Ani
+        369: main
+          19: UIUGCAvatarEditor
+TARGET: avatar
+NOISE: ui
+
+#12 SCORE=27
+FILE: input/freefire-assets/assets/bin/Data/905924919545a3648871ab547837242f
+PHYSICS: BoxCollider object= 335
+ANCESTRY:
+159: BriefAvatarStrategyBtn
+  55: BriefBtnWidget
+    147: BriefContainer
+      89: SkillContainer
+        139: Pos
+          46: UIAvatarInfoRight
+TARGET: avatar
+NOISE: ui
+
+#13 SCORE=27
+FILE: input/freefire-assets/assets/bin/Data/9ca587f10a284664899b64f7f1b0096c
+PHYSICS: BoxCollider object= 909
+ANCESTRY:
+257: DataRankRatingTip
+  404: DataTitleRankRatingTxt
+    290: DataPlayerInfoTitleRoot
+      239: DataPlayerInfoTitle
+        388: DetailDataInfoUI
+          111: HudTeamBattleAni
+            50: UIHudTeamBattleMatchResult
+TARGET: player
+NOISE: ui
+
+#14 SCORE=27
+FILE: input/freefire-assets/assets/bin/Data/9ca587f10a284664899b64f7f1b0096c
+PHYSICS: BoxCollider object= 924
+ANCESTRY:
+417: DataTitleInfo3Tip
+  280: DataTitleInfo3Txt
+    290: DataPlayerInfoTitleRoot
+      239: DataPlayerInfoTitle
+        388: DetailDataInfoUI
+          111: HudTeamBattleAni
+            50: UIHudTeamBattleMatchResult
+TARGET: player
+NOISE: ui
+
+#15 SCORE=24
+FILE: input/freefire-assets/assets/bin/Data/7eceb614c5d7f1e4f80df2dc3c0129b1
+PHYSICS: BoxCollider object= 900
+ANCESTRY:
+169: TemplateAvatarItem
+  170: CollectionContainerNode
+    11: CollectionContainer
+      102: Left_Ani_Container
+        24: LeftTabContainer
+          309: UI_NewVault_Out_Ani
+            369: main
+              19: UIUGCAvatarEditor
+TARGET: avatar
+NOISE: ui
+
+#16 SCORE=23
+FILE: input/freefire-assets/assets/bin/Data/e376ab7808034b146add761704ceabd1
+PHYSICS: BoxCollider object= 473
+ANCESTRY:
+32: SpHudCsPlayerInfoOff
+  139: SpHudCsPlayerInfoEnabled
+    39: Grid
+      178: CSRoot
+        100: Table
+          58: scrollview
+            37: container
+              182: UIOBSetting
+TARGET: player
+NOISE: ui, scroll, table
+
+#17 SCORE=23
+FILE: input/freefire-assets/assets/bin/Data/e376ab7808034b146add761704ceabd1
+PHYSICS: BoxCollider object= 482
+ANCESTRY:
+28: SpHudCsPlayerInfoOn
+  139: SpHudCsPlayerInfoEnabled
+    39: Grid
+      178: CSRoot
+        100: Table
+          58: scrollview
+            37: container
+              182: UIOBSetting
+TARGET: player
+NOISE: ui, scroll, table
+
+#18 SCORE=23
+FILE: input/freefire-assets/assets/bin/Data/e376ab7808034b146add761704ceabd1
+PHYSICS: BoxCollider object= 486
+ANCESTRY:
+159: PlayerSightOff
+  131: PlayerSightEnabled
+    55: Grid
+      164: CommonRoot
+        100: Table
+          58: scrollview
+            37: container
+              182: UIOBSetting
+TARGET: player
+NOISE: ui, scroll, table
+
+#19 SCORE=23
+FILE: input/freefire-assets/assets/bin/Data/e376ab7808034b146add761704ceabd1
+PHYSICS: BoxCollider object= 492
+ANCESTRY:
+77: PlayerSightOn
+  131: PlayerSightEnabled
+    55: Grid
+      164: CommonRoot
+        100: Table
+          58: scrollview
+            37: container
+              182: UIOBSetting
+TARGET: player
+NOISE: ui, scroll, table
+
+#20 SCORE=22
+FILE: input/freefire-assets/assets/bin/Data/08d7a777c296cb541ad7c873d5d4dca5
+PHYSICS: BoxCollider object= 308
+ANCESTRY:
+91: AvatarAttributesEntryBtn
+  6: BtnContainer
+    116: NormalRoot
+      15: UIHudNormalMatchResultItem
+TARGET: avatar
+NOISE: ui
+
+#21 SCORE=22
+FILE: input/freefire-assets/assets/bin/Data/2587d2be4a73f8d4e8dedc552a1fd0ce
+PHYSICS: BoxCollider object= 211
+ANCESTRY:
+98: PurchaseAvatarBtn0
+  27: MainSkillPos
+    92: SkillContainer
+      67: Main
+        4: UIRecPresetItem
+TARGET: avatar
+NOISE: ui
+
+#22 SCORE=22
+FILE: input/freefire-assets/assets/bin/Data/2587d2be4a73f8d4e8dedc552a1fd0ce
+PHYSICS: BoxCollider object= 212
+ANCESTRY:
+84: PurchaseAvatarBtn3
+  87: EquipSkillPos3
+    92: SkillContainer
+      67: Main
+        4: UIRecPresetItem
+TARGET: avatar
+NOISE: ui
+
+#23 SCORE=22
+FILE: input/freefire-assets/assets/bin/Data/2587d2be4a73f8d4e8dedc552a1fd0ce
+PHYSICS: BoxCollider object= 213
+ANCESTRY:
+99: PurchaseAvatarBtn2
+  89: EquipSkillPos2
+    92: SkillContainer
+      67: Main
+        4: UIRecPresetItem
+TARGET: avatar
+NOISE: ui
+
+#24 SCORE=22
+FILE: input/freefire-assets/assets/bin/Data/2587d2be4a73f8d4e8dedc552a1fd0ce
+PHYSICS: BoxCollider object= 214
+ANCESTRY:
+40: PurchaseAvatarBtn1
+  38: EquipSkillPos1
+    92: SkillContainer
+      67: Main
+        4: UIRecPresetItem
+TARGET: avatar
+NOISE: ui
+
+#25 SCORE=22
+FILE: input/freefire-assets/assets/bin/Data/582a6f610d3727c41b5e819d14587fa6
+PHYSICS: BoxCollider object= 216
+ANCESTRY:
+51: AvatarRotateTouchAreaItemRotateTouchArea
+  94: CenterContainer
+    22: UIIAPBundle
+TARGET: avatar
+NOISE: ui
+
+#26 SCORE=22
+FILE: input/freefire-assets/assets/bin/Data/5cd81595923bbb249affe9f972524c44
+PHYSICS: BoxCollider object= 421
+ANCESTRY:
+35: GotoAvatarProfileBtn
+  171: TopRightBtns
+    188: TopRight
+      140: UI_NewVault_Out_Ani
+        173: main
+          19: UINewVault
+TARGET: avatar
+NOISE: ui
+
+#27 SCORE=22
+FILE: input/freefire-assets/assets/bin/Data/613335139d6b5984399c258264b6149f
+PHYSICS: BoxCollider object= 273
+ANCESTRY:
+52: PlayerCheckBtn
+  37: InfoPos
+    95: UIPeakWeekLeaderboardItem
+TARGET: player
+NOISE: ui
+
+#28 SCORE=22
+FILE: input/freefire-assets/assets/bin/Data/95ee51c8fdca45e4eb45084afb494a5c
+PHYSICS: BoxCollider object= 333
+ANCESTRY:
+71: AvatarBtn
+  125: Middle
+    163: main
+      45: UIBuildNavigation
+TARGET: avatar
+NOISE: ui
+
+#29 SCORE=22
+FILE: input/freefire-assets/assets/bin/Data/a207bf20d80f363498b68cfd8c6725a1
+PHYSICS: BoxCollider object= 237
+ANCESTRY:
+35: AvatarRotateTouchAreaItemRotateTouchArea
+  17: UILuckyBuffBattle
+TARGET: avatar
+NOISE: ui
+
+#30 SCORE=22
+FILE: input/freefire-assets/assets/bin/Data/b12601f50af264e4c821a9024e35efd6
+PHYSICS: BoxCollider object= 2505
+ANCESTRY:
+385: HudPlayerStats
+  138: Bottom
+    524: UIHudCustom
+TARGET: player
+NOISE: ui
+
+#31 SCORE=22
+FILE: input/freefire-assets/assets/bin/Data/b12601f50af264e4c821a9024e35efd6
+PHYSICS: BoxCollider object= 2529
+ANCESTRY:
+341: UIHudPlayerRemainingInfo
+  216: TopRight
+    524: UIHudCustom
+TARGET: player
+NOISE: ui
+
+#32 SCORE=22
+FILE: input/freefire-assets/assets/bin/Data/b12601f50af264e4c821a9024e35efd6
+PHYSICS: BoxCollider object= 2530
+ANCESTRY:
+902: HudPlayerArmorStats
+  138: Bottom
+    524: UIHudCustom
+TARGET: player
+NOISE: ui
+
+#33 SCORE=22
+FILE: input/freefire-assets/assets/bin/Data/b12601f50af264e4c821a9024e35efd6
+PHYSICS: BoxCollider object= 2544
+ANCESTRY:
+1120: HudPlayerSkillBuff
+  138: Bottom
+    524: UIHudCustom
+TARGET: player
+NOISE: ui
+
+#34 SCORE=22
+FILE: input/freefire-assets/assets/bin/Data/b12601f50af264e4c821a9024e35efd6
+PHYSICS: BoxCollider object= 2548
+ANCESTRY:
+758: HudPlayerFollowEmote
+  462: TopLeft
+    524: UIHudCustom
+TARGET: player
+NOISE: ui
+
+#35 SCORE=22
+FILE: input/freefire-assets/assets/bin/Data/cf5bc788e447b604293302c0afd79a02
+PHYSICS: BoxCollider object= 461
+ANCESTRY:
+50: SlotHead
+  55: Slots
+    99: Center
+      70: UITailorMainPage
+TARGET: head
+NOISE: ui
+
+#36 SCORE=22
+FILE: input/freefire-assets/assets/bin/Data/cf5bc788e447b604293302c0afd79a02
+PHYSICS: BoxCollider object= 471
+ANCESTRY:
+69: SlotHeadAdditive
+  55: Slots
+    99: Center
+      70: UITailorMainPage
+TARGET: head
+NOISE: ui
+
+#37 SCORE=22
+FILE: input/freefire-assets/assets/bin/Data/d514d4b23d7b5324d9a23a0ddc40c910
+PHYSICS: BoxCollider object= 313
+ANCESTRY:
+57: AvatarIconBtn0
+  128: IconContainer
+    111: EquipSkillPos0
+      8: SkillContent
+        150: SkillContainer
+          10: window
+            17: Parent
+              13: Right
+                55: main
+                  11: UIPresetSide
+TARGET: avatar
+NOISE: ui
+
+#38 SCORE=22
+FILE: input/freefire-assets/assets/bin/Data/d514d4b23d7b5324d9a23a0ddc40c910
+PHYSICS: BoxCollider object= 316
+ANCESTRY:
+88: AvatarIconBtn2
+  48: IconContainer
+    6: EquipSkillPos2
+      8: SkillContent
+        150: SkillContainer
+          10: window
+            17: Parent
+              13: Right
+                55: main
+                  11: UIPresetSide
+TARGET: avatar
+NOISE: ui
+
+#39 SCORE=22
+FILE: input/freefire-assets/assets/bin/Data/d514d4b23d7b5324d9a23a0ddc40c910
+PHYSICS: BoxCollider object= 323
+ANCESTRY:
+138: AvatarIconBtn1
+  62: IconContainer
+    12: EquipSkillPos1
+      8: SkillContent
+        150: SkillContainer
+          10: window
+            17: Parent
+              13: Right
+                55: main
+                  11: UIPresetSide
+TARGET: avatar
+NOISE: ui
+
+#40 SCORE=22
+FILE: input/freefire-assets/assets/bin/Data/d514d4b23d7b5324d9a23a0ddc40c910
+PHYSICS: BoxCollider object= 325
+ANCESTRY:
+100: AvatarIconBtn3
+  122: IconContainer
+    16: EquipSkillPos3
+      8: SkillContent
+        150: SkillContainer
+          10: window
+            17: Parent
+              13: Right
+                55: main
+                  11: UIPresetSide
+TARGET: avatar
+NOISE: ui
+
+#41 SCORE=22
+FILE: input/freefire-assets/assets/bin/Data/d514d4b23d7b5324d9a23a0ddc40c910
+PHYSICS: BoxCollider object= 327
+ANCESTRY:
+144: PlanAvatarAppearanceGuideBtn
+  102: PlanContainer
+    10: window
+      17: Parent
+        13: Right
+          55: main
+            11: UIPresetSide
+TARGET: avatar
+NOISE: ui
+
+#42 SCORE=22
+FILE: input/freefire-assets/assets/bin/Data/e50d4ef450c561c47b6866c109600935
+PHYSICS: BoxCollider object= 165
+ANCESTRY:
+9: headbtn
+  82: main
+    20: UIBaseProfileInfo
+TARGET: head
+NOISE: ui
+
+#43 SCORE=22
+FILE: input/freefire-assets/assets/bin/Data/f1c7db8c8c22b3c40973a9572898e971
+PHYSICS: BoxCollider object= 448
+ANCESTRY:
+43: Personheadbtn
+  46: PersonalCard
+    173: main
+      94: PersonProfileInfo
+        147: PersonShowNodeRight
+          145: main
+            58: UIProfilePersonProfileInfo
+TARGET: head
+NOISE: ui
+
+#44 SCORE=21
+FILE: input/freefire-assets/assets/bin/Data/4dbe136f1a794a849a425f4ed371f334
+PHYSICS: BoxCollider object= 263
+ANCESTRY:
+44: LikeBtn
+  97: LikeBtnContainer
+    47: PlayerNameAndIcon
+      46: NameCon
+        89: NameAnchor
+          15: PlayerInfo
+            22: BottomRight
+              20: HudMVPShowAnim
+                12: UIHudMatchResultMVPShow
+TARGET: player
+NOISE: ui
+
+#45 SCORE=21
+FILE: input/freefire-assets/assets/bin/Data/905924919545a3648871ab547837242f
+PHYSICS: BoxCollider object= 331
+ANCESTRY:
+45: GoposBtn
+  104: ActivityAvatarContainer
+    4: PurchaseBtnContainer
+      111: PermanentBtnGroup
+        80: BottomBtnGroup
+          139: Pos
+            46: UIAvatarInfoRight
+TARGET: avatar
+NOISE: ui
+
+#46 SCORE=21
+FILE: input/freefire-assets/assets/bin/Data/905924919545a3648871ab547837242f
+PHYSICS: BoxCollider object= 334
+ANCESTRY:
+79: FreeBtn
+  48: FreeAvatarContainer
+    4: PurchaseBtnContainer
+      111: PermanentBtnGroup
+        80: BottomBtnGroup
+          139: Pos
+            46: UIAvatarInfoRight
+TARGET: avatar
+NOISE: ui
+
+#47 SCORE=21
+FILE: input/freefire-assets/assets/bin/Data/905924919545a3648871ab547837242f
+PHYSICS: BoxCollider object= 339
+ANCESTRY:
+81: PurchaseBtn
+  131: NormalAvatarContainer
+    4: PurchaseBtnContainer
+      111: PermanentBtnGroup
+        80: BottomBtnGroup
+          139: Pos
+            46: UIAvatarInfoRight
+TARGET: avatar
+NOISE: ui
+
+#48 SCORE=19
+FILE: input/freefire-assets/assets/bin/Data/26aefb658f0d2384f80d9058dc5d2ff4
+PHYSICS: BoxCollider object= 261
+ANCESTRY:
+57: ChangeSkillBtn
+  13: UICSBanPickPlayerItem
+TARGET: player
+NOISE: ui
+
+#49 SCORE=19
+FILE: input/freefire-assets/assets/bin/Data/26aefb658f0d2384f80d9058dc5d2ff4
+PHYSICS: BoxCollider object= 265
+ANCESTRY:
+104: WaitSkillBtn
+  13: UICSBanPickPlayerItem
+TARGET: player
+NOISE: ui
+
+#50 SCORE=19
+FILE: input/freefire-assets/assets/bin/Data/2b07f5046cc007e4bbad332ac1ce597b
+PHYSICS: BoxCollider object= 186
+ANCESTRY:
+15: BtnCSAbilityPoint
+  79: UIHudPlayerArmorStats_Low
+TARGET: player
+NOISE: ui
+
+#51 SCORE=19
+FILE: input/freefire-assets/assets/bin/Data/498ba62f896186948af1b855a6ba4b4f
+PHYSICS: BoxCollider object= 121
+ANCESTRY:
+46: ConfirmBtn
+  49: UIAvatarProfileLevelUp
+TARGET: avatar
+NOISE: ui
+
+#52 SCORE=19
+FILE: input/freefire-assets/assets/bin/Data/54ec652aa07c3c1498855b5f3be1e1e2
+PHYSICS: BoxCollider object= 106
+ANCESTRY:
+46: BtnOpenBriefBox
+  36: PlayerImg
+    44: ImageContainer
+      1: UIPaymentSquadTreasureTeammateItem
+TARGET: player
+NOISE: ui
+
+#53 SCORE=19
+FILE: input/freefire-assets/assets/bin/Data/7eceb614c5d7f1e4f80df2dc3c0129b1
+PHYSICS: BoxCollider object= 891
+ANCESTRY:
+271: BoxCollider
+  19: UIUGCAvatarEditor
+TARGET: avatar
+NOISE: ui
+
+#54 SCORE=19
+FILE: input/freefire-assets/assets/bin/Data/85531beb18e0a6349b165ea07efe251b
+PHYSICS: BoxCollider object= 106
+ANCESTRY:
+46: BtnOpenBriefBox
+  36: PlayerImg
+    44: ImageContainer
+      1: UIPaymentSquadTreasureTeammateItemSmall
+TARGET: player
+NOISE: ui
+
+#55 SCORE=19
+FILE: input/freefire-assets/assets/bin/Data/905924919545a3648871ab547837242f
+PHYSICS: BoxCollider object= 342
+ANCESTRY:
+70: DetailAvatarStrategyBtn
+  143: ScrollContainer
+    56: DetailContainer
+      89: SkillContainer
+        139: Pos
+          46: UIAvatarInfoRight
+TARGET: avatar
+NOISE: ui, scroll
+
+#56 SCORE=19
+FILE: input/freefire-assets/assets/bin/Data/990786fb8dbee2f4fb6c43709a53eb0f
+PHYSICS: BoxCollider object= 153
+ANCESTRY:
+45: Mask
+  15: UINewPlayerV3Sign
+TARGET: player
+NOISE: ui
+
+#57 SCORE=19
+FILE: input/freefire-assets/assets/bin/Data/b1ba9c8ef0d62bd47ad44f63903b82f1
+PHYSICS: BoxCollider object= 65
+ANCESTRY:
+9: GuideWidget
+  31: UIHudBattleStylePlayerStats
+TARGET: player
+NOISE: ui
+
+#58 SCORE=19
+FILE: input/freefire-assets/assets/bin/Data/b1ba9c8ef0d62bd47ad44f63903b82f1
+PHYSICS: BoxCollider object= 66
+ANCESTRY:
+16: PopoverPressBtn
+  31: UIHudBattleStylePlayerStats
+TARGET: player
+NOISE: ui
+
+#59 SCORE=19
+FILE: input/freefire-assets/assets/bin/Data/b4636e1dbacb2d743a85751422f22ec6
+PHYSICS: BoxCollider object= 187
+ANCESTRY:
+72: BtnCSAbilityPoint
+  17: UIHudPlayerArmorStats
+TARGET: player
+NOISE: ui
+
+#60 SCORE=19
+FILE: input/freefire-assets/assets/bin/Data/f6783a48b30358c4596d5a3833f86d3f
+PHYSICS: BoxCollider object= 240
+ANCESTRY:
+60: ChangeSkillBtn
+  10: UICSBanPickPlayerItemRightEnemy
+TARGET: player
+NOISE: ui
+
+#61 SCORE=19
+FILE: input/freefire-assets/assets/bin/Data/f6783a48b30358c4596d5a3833f86d3f
+PHYSICS: BoxCollider object= 244
+ANCESTRY:
+96: WaitSkillBtn
+  10: UICSBanPickPlayerItemRightEnemy
+TARGET: player
+NOISE: ui
+
+#62 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/20b1caecbbb628d408ef15aad56bfa93
+PHYSICS: BoxCollider object= 155
+ANCESTRY:
+54: BuffIcon
+  5: Container
+    18: UIHudBigHeadHypeProcessBar
+TARGET: head
+NOISE: ui
+
+#63 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/26aefb658f0d2384f80d9058dc5d2ff4
+PHYSICS: BoxCollider object= 260
+ANCESTRY:
+96: CanBan
+  71: HelpBan
+    13: UICSBanPickPlayerItem
+TARGET: player
+NOISE: ui
+
+#64 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/26aefb658f0d2384f80d9058dc5d2ff4
+PHYSICS: BoxCollider object= 262
+ANCESTRY:
+74: HelpPickRefuseBtn
+  82: HelpPickAnswer
+    13: UICSBanPickPlayerItem
+TARGET: player
+NOISE: ui
+
+#65 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/26aefb658f0d2384f80d9058dc5d2ff4
+PHYSICS: BoxCollider object= 263
+ANCESTRY:
+23: HelpPickAgreeBtn
+  82: HelpPickAnswer
+    13: UICSBanPickPlayerItem
+TARGET: player
+NOISE: ui
+
+#66 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/2b07f5046cc007e4bbad332ac1ce597b
+PHYSICS: BoxCollider object= 185
+ANCESTRY:
+59: BtnQuickUse
+  64: UseWidget
+    79: UIHudPlayerArmorStats_Low
+TARGET: player
+NOISE: ui
+
+#67 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/2b07f5046cc007e4bbad332ac1ce597b
+PHYSICS: BoxCollider object= 188
+ANCESTRY:
+25: UpgradeTipsBtn
+  54: SpriteUpgradeLine
+    79: UIHudPlayerArmorStats_Low
+TARGET: player
+NOISE: ui
+
+#68 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/498ba62f896186948af1b855a6ba4b4f
+PHYSICS: BoxCollider object= 120
+ANCESTRY:
+34: Glass
+  31: UIGlassBG
+    49: UIAvatarProfileLevelUp
+TARGET: avatar
+NOISE: ui
+
+#69 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/498ba62f896186948af1b855a6ba4b4f
+PHYSICS: BoxCollider object= 122
+ANCESTRY:
+55: Black
+  31: UIGlassBG
+    49: UIAvatarProfileLevelUp
+TARGET: avatar
+NOISE: ui
+
+#70 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/677c5423c98d25e45b17136b80380547
+PHYSICS: BoxCollider object= 504
+ANCESTRY:
+141: GainAvatarBtn
+  138: Btn
+    41: TaskLock
+      5: TaskShowPanel
+        140: AwakenTask
+          28: LeftAni
+            132: LeftContainer
+              91: UIAvatarAwaken
+TARGET: avatar
+NOISE: ui, panel
+
+#71 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/7eceb614c5d7f1e4f80df2dc3c0129b1
+PHYSICS: BoxCollider object= 912
+ANCESTRY:
+158: CloseBtn
+  120: TopRight
+    19: UIUGCAvatarEditor
+TARGET: avatar
+NOISE: ui
+
+#72 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/905924919545a3648871ab547837242f
+PHYSICS: BoxCollider object= 347
+ANCESTRY:
+5: DetailAvatarStrategyBtn2
+  7: DetailBtnWidget
+    132: NotScrollContainer
+      56: DetailContainer
+        89: SkillContainer
+          139: Pos
+            46: UIAvatarInfoRight
+TARGET: avatar
+NOISE: ui, scroll
+
+#73 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/990786fb8dbee2f4fb6c43709a53eb0f
+PHYSICS: BoxCollider object= 154
+ANCESTRY:
+74: CloseBtn
+  31: main
+    15: UINewPlayerV3Sign
+TARGET: player
+NOISE: ui
+
+#74 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/b12601f50af264e4c821a9024e35efd6
+PHYSICS: BoxCollider object= 2521
+ANCESTRY:
+957: FollowBtn
+  1001: Container
+    758: HudPlayerFollowEmote
+      462: TopLeft
+        524: UIHudCustom
+TARGET: player
+NOISE: ui
+
+#75 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/b12601f50af264e4c821a9024e35efd6
+PHYSICS: BoxCollider object= 2554
+ANCESTRY:
+1138: DriverBtn
+  1001: Container
+    758: HudPlayerFollowEmote
+      462: TopLeft
+        524: UIHudCustom
+TARGET: player
+NOISE: ui
+
+#76 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/b4636e1dbacb2d743a85751422f22ec6
+PHYSICS: BoxCollider object= 185
+ANCESTRY:
+9: BtnQuickUse
+  16: UseWidget
+    17: UIHudPlayerArmorStats
+TARGET: player
+NOISE: ui
+
+#77 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/b4636e1dbacb2d743a85751422f22ec6
+PHYSICS: BoxCollider object= 188
+ANCESTRY:
+50: UpgradeTipsBtn
+  82: SpriteUpgradeLine
+    17: UIHudPlayerArmorStats
+TARGET: player
+NOISE: ui
+
+#78 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/b4b7372f75cdf284aae23218caec0956
+PHYSICS: BoxCollider object= 502
+ANCESTRY:
+60: NickName
+  75: Table
+    31: PlayerInfo
+      188: TopContainer
+        23: SeasonRankContainer
+          50: LadderMatchSeasonChangePopup
+TARGET: player
+NOISE: table
+
+#79 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/f6783a48b30358c4596d5a3833f86d3f
+PHYSICS: BoxCollider object= 239
+ANCESTRY:
+80: CanBan
+  86: HelpBan
+    10: UICSBanPickPlayerItemRightEnemy
+TARGET: player
+NOISE: ui
+
+#80 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/f6783a48b30358c4596d5a3833f86d3f
+PHYSICS: BoxCollider object= 241
+ANCESTRY:
+69: HelpPickRefuseBtn
+  76: HelpPickAnswer
+    10: UICSBanPickPlayerItemRightEnemy
+TARGET: player
+NOISE: ui
+
+#81 SCORE=16
+FILE: input/freefire-assets/assets/bin/Data/f6783a48b30358c4596d5a3833f86d3f
+PHYSICS: BoxCollider object= 242
+ANCESTRY:
+22: HelpPickAgreeBtn
+  76: HelpPickAnswer
+    10: UICSBanPickPlayerItemRightEnemy
+TARGET: player
+NOISE: ui
+
+#82 SCORE=14
+FILE: input/freefire-assets/assets/bin/Data/3a5d996d20b172f4a945b4b7d0ca7e51
+PHYSICS: BoxCollider object= 190
+ANCESTRY:
+17: head
+  2: ContentPanel
+    1: UIFriendNearbySearchWindow
+TARGET: head
+NOISE: ui, panel
+
+#83 SCORE=14
+FILE: input/freefire-assets/assets/bin/Data/7678bb783b2c4c84e8ed278f9deec6fa
+PHYSICS: BoxCollider object= 605
+ANCESTRY:
+194: AvatarPageBtn
+  280: HQPageSwtichBtnGrid
+    227: BottomLeftTable
+      66: Bottom
+        133: HudTeamBattleAni
+          52: UIHudUGCTeamBattleMatchResult
+TARGET: avatar
+NOISE: ui, table
+
+#84 SCORE=14
+FILE: input/freefire-assets/assets/bin/Data/9ca587f10a284664899b64f7f1b0096c
+PHYSICS: BoxCollider object= 908
+ANCESTRY:
+220: AvatarPageBtn
+  421: HQPageSwtichBtnGrid
+    302: BottomLeftTable
+      62: Bottom
+        111: HudTeamBattleAni
+          50: UIHudTeamBattleMatchResult
+TARGET: avatar
+NOISE: ui, table
+
+#85 SCORE=14
+FILE: input/freefire-assets/assets/bin/Data/b75bebbc3ca9fee4881a7666b0445110
+PHYSICS: BoxCollider object= 534
+ANCESTRY:
+82: AvatarPageBtn
+  92: HQPageSwtichBtnGrid
+    214: BottomLeftTable
+      18: Bottom
+        33: HudNormalMatchResAni
+          37: UIHudNormalMatchResult
+TARGET: avatar
+NOISE: ui, table
+
+#86 SCORE=14
+FILE: input/freefire-assets/assets/bin/Data/bdb3e0ce6e842f2469d1109ed5d2705f
+PHYSICS: BoxCollider object= 382
+ANCESTRY:
+87: BtnColorPanelComponentHeadAdditive
+  114: BtnGrid
+    34: Components
+      14: ColorPanel
+        130: Right
+          68: UILegendClothVault
+TARGET: head
+NOISE: ui, panel
+
+#87 SCORE=14
+FILE: input/freefire-assets/assets/bin/Data/c451598d6b2ec2c4ab1a94f1db98ce85
+PHYSICS: BoxCollider object= 788
+ANCESTRY:
+24: HudPlayerStats
+  257: Bottom
+    229: UIHudVehicleCustom
+TARGET: player
+NOISE: ui, vehicle
+
+#88 SCORE=14
+FILE: input/freefire-assets/assets/bin/Data/c451598d6b2ec2c4ab1a94f1db98ce85
+PHYSICS: BoxCollider object= 793
+ANCESTRY:
+115: HudPlayerArmorStats
+  257: Bottom
+    229: UIHudVehicleCustom
+TARGET: player
+NOISE: ui, vehicle
+
+#89 SCORE=14
+FILE: input/freefire-assets/assets/bin/Data/c451598d6b2ec2c4ab1a94f1db98ce85
+PHYSICS: BoxCollider object= 796
+ANCESTRY:
+47: UIHudPlayerRemainingInfo
+  293: TopRight
+    229: UIHudVehicleCustom
+TARGET: player
+NOISE: ui, vehicle
+
+#90 SCORE=13
+FILE: input/freefire-assets/assets/bin/Data/26aefb658f0d2384f80d9058dc5d2ff4
+PHYSICS: BoxCollider object= 259
+ANCESTRY:
+19: N
+  74: HelpPickRefuseBtn
+    82: HelpPickAnswer
+      13: UICSBanPickPlayerItem
+TARGET: player
+NOISE: ui
+
+#91 SCORE=13
+FILE: input/freefire-assets/assets/bin/Data/905924919545a3648871ab547837242f
+PHYSICS: BoxCollider object= 327
+ANCESTRY:
+9: clickView
+  87: SkinColorContainer
+    139: Pos
+      46: UIAvatarInfoRight
+TARGET: avatar
+NOISE: ui
+
+#92 SCORE=13
+FILE: input/freefire-assets/assets/bin/Data/905924919545a3648871ab547837242f
+PHYSICS: BoxCollider object= 329
+ANCESTRY:
+12: colorSlider
+  87: SkinColorContainer
+    139: Pos
+      46: UIAvatarInfoRight
+TARGET: avatar
+NOISE: ui
+
+#93 SCORE=13
+FILE: input/freefire-assets/assets/bin/Data/905924919545a3648871ab547837242f
+PHYSICS: BoxCollider object= 340
+ANCESTRY:
+160: AwakenNavigationBtn
+  126: AwakenInfolContainer
+    139: Pos
+      46: UIAvatarInfoRight
+TARGET: avatar
+NOISE: ui
+
+#94 SCORE=13
+FILE: input/freefire-assets/assets/bin/Data/b4b7372f75cdf284aae23218caec0956
+PHYSICS: BoxCollider object= 499
+ANCESTRY:
+59: Icon
+  89: Sprite
+    75: Table
+      31: PlayerInfo
+        188: TopContainer
+          23: SeasonRankContainer
+            50: LadderMatchSeasonChangePopup
+TARGET: player
+NOISE: table
+
+#95 SCORE=13
+FILE: input/freefire-assets/assets/bin/Data/b75bebbc3ca9fee4881a7666b0445110
+PHYSICS: BoxCollider object= 530
+ANCESTRY:
+221: TitleInfo2Tip
+  10: TitleInfo2Txt
+    196: NormalTitleRoot
+      43: PlayerInfoTitle
+        62: DetailInfoUI
+          33: HudNormalMatchResAni
+            37: UIHudNormalMatchResult
+TARGET: player
+NOISE: ui
+
+#96 SCORE=13
+FILE: input/freefire-assets/assets/bin/Data/b75bebbc3ca9fee4881a7666b0445110
+PHYSICS: BoxCollider object= 531
+ANCESTRY:
+230: BRRankRatingTip
+  178: LeftTitleRankRatingTxt
+    196: NormalTitleRoot
+      43: PlayerInfoTitle
+        62: DetailInfoUI
+          33: HudNormalMatchResAni
+            37: UIHudNormalMatchResult
+TARGET: player
+NOISE: ui
+
+#97 SCORE=13
+FILE: input/freefire-assets/assets/bin/Data/f6783a48b30358c4596d5a3833f86d3f
+PHYSICS: BoxCollider object= 238
+ANCESTRY:
+17: N
+  69: HelpPickRefuseBtn
+    76: HelpPickAnswer
+      10: UICSBanPickPlayerItemRightEnemy
+TARGET: player
+NOISE: ui
+
+#98 SCORE=13
+FILE: input/freefire-assets/assets/bin/Data/f79b5f50c3af7874b9937b028c2c88e5
+PHYSICS: BoxCollider object= 312
+ANCESTRY:
+82: EquippedActiveSkillBtn
+  64: AvatarContent
+    39: Center
+      107: EquippedActiveSkill
+        67: ActiveSkillList
+          21: ActiveSkillScrollView
+            111: main
+              127: Left
+                20: LeftAnchor
+                  38: UIBuildChooseAvatarSkillSide
+TARGET: avatar
+NOISE: ui, scroll
+
+#99 SCORE=11
+FILE: input/freefire-assets/assets/bin/Data/191bf992a18fcf047925c903f620813f
+PHYSICS: BoxCollider object= 456
+ANCESTRY:
+123: UnDressBtn
+  8: previewHeadAdditive
+    125: ClothPreviewTab
+      6: Right _Ani_Container
+        164: Right
+          171: UI_Mall2_Out_Ani
+            154: main
+              95: UIMallV2
+TARGET: head
+NOISE: ui, preview
+
+#100 SCORE=11
+FILE: input/freefire-assets/assets/bin/Data/29a4a3928d906774b9513809e750f149
+PHYSICS: BoxCollider object= 198
+ANCESTRY:
+39: AcceptBtn
+  79: RequestPlayerInfo
+    33: leaderRequestPanel
+      67: MainAction
+        47: Root
+          19: UIHUDTeamParachuteAction
+TARGET: player
+NOISE: ui, panel
+
+==========================================================================================
+HIGH CONFIDENCE FILTER
+==========================================================================================
+Strong matches: 0

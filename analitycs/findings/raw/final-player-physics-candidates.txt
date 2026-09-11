@@ -1,0 +1,3052 @@
+==========================================================================================
+FINAL PLAYER / PHYSICS CANDIDATE RANKING
+==========================================================================================
+Files checked: 207
+Files with physical components: 131
+
+==========================================================================================
+#1 SCORE=105
+FILE: input/freefire-assets/assets/bin/Data/level43
+
+COMPONENT TYPES:
+  BoxCollider: 199
+  MeshCollider: 29
+  Animator: 20
+  SkinnedMeshRenderer: 104
+  MonoBehaviour: 120
+
+HEAD / NECK OBJECTS:
+  - male_lobby_cos_no1_head_001
+  - male_cos_no1_head_001
+  - bone_Neck
+  - bone_Head
+  - bone_Head
+  - bone_Neck
+  - male_cos_no1_head_001
+  - male_lobby_cos_no1_head_001
+  - bone_Head
+  - bone_Neck
+  - male_lobby_cos_no1_head_001
+  - male_cos_no1_head_001
+  - male_lobby_cos_no1_head_001
+  - male_cos_no1_head_001
+  - bone_Head
+  - bone_Neck
+  - male_cos_no1_head_001
+  - male_lobby_cos_no1_head_001
+  - bone_Head
+  - bone_Neck
+  - bone_Neck
+  - bone_Head
+  - male_cos_no1_head_001
+  - male_lobby_cos_no1_head_001
+  - Base_Lobby_Female_Head
+  - bone_Neck
+  - bone_Head
+  - Base_Female_Head
+  - bone_Head
+  - Base_Female_Head
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - PlayerSpawnRegion
+  - bone_Root
+  - bone_Spine1
+  - bone_Spine
+  - Bip01 Footsteps
+  - bone_Left_Spine_Backpack
+  - bone_Left_Spine_Weapon
+  - bone_Right_Spine_Weapon
+  - Bip01
+  - Bip01
+  - bone_Right_Spine_Weapon
+  - bone_Left_Spine_Weapon
+  - bone_Left_Spine_Backpack
+  - Bip01 Footsteps
+  - bone_Spine
+  - bone_Spine1
+  - bone_Root
+  - Bip01
+  - bone_Right_Spine_Weapon
+  - bone_Left_Spine_Backpack
+  - bone_Left_Spine_Weapon
+  - Bip01 Footsteps
+  - bone_Root
+  - bone_Spine1
+  - bone_Spine
+  - bone_Root
+  - Bip01 Footsteps
+  - bone_Root
+  - bone_Spine1
+  - bone_Spine
+
+PHYSICS COMPONENT OWNERS:
+  MeshCollider           object=3229 GameObject=831:Model
+  MeshCollider           object=3230 GameObject=830:Model
+  MeshCollider           object=3231 GameObject=997:Ninth_GP_SocialLobby_Table001 (2)
+  MeshCollider           object=3232 GameObject=996:Ninth_GP_SocialLobby_Table001 (4)
+  MeshCollider           object=3233 GameObject=995:Ninth_GP_SocialLobby_Table001 (1)
+  MeshCollider           object=3234 GameObject=994:Ninth_GP_SocialLobby_Table001 (3)
+  MeshCollider           object=3235 GameObject=993:Ninth_GP_SocialLobby_Table001 (6)
+  MeshCollider           object=3236 GameObject=992:Ninth_GP_SocialLobby_Table001
+  MeshCollider           object=3237 GameObject=991:Ninth_GP_SocialLobby_Table001 (5)
+  MeshCollider           object=3238 GameObject=1536:Ninth_GP_SocialLobby_Chair001
+  MeshCollider           object=3239 GameObject=1535:Ninth_GP_SocialLobby_Chair001
+  MeshCollider           object=3240 GameObject=1539:Ninth_GP_SocialLobby_Chair001
+  MeshCollider           object=3241 GameObject=1540:Ninth_GP_SocialLobby_Chair001
+  MeshCollider           object=3242 GameObject=1537:Ninth_GP_SocialLobby_Chair001
+  MeshCollider           object=3243 GameObject=1538:Ninth_GP_SocialLobby_Chair001
+  MeshCollider           object=3244 GameObject=1281:Ninth_GP_SocialLobby_Chair002_LOD0
+  MeshCollider           object=3245 GameObject=1282:Ninth_GP_SocialLobby_Chair002_LOD0
+  MeshCollider           object=3246 GameObject=1285:Ninth_GP_SocialLobby_Chair002_LOD0
+  MeshCollider           object=3247 GameObject=1286:Ninth_GP_SocialLobby_Chair002_LOD0
+  MeshCollider           object=3248 GameObject=1283:Ninth_GP_SocialLobby_Chair002_LOD0
+  MeshCollider           object=3249 GameObject=1284:Ninth_GP_SocialLobby_Chair002_LOD0
+  MeshCollider           object=3250 GameObject=1280:Ninth_GP_SocialLobby_Chair002_LOD0
+  MeshCollider           object=3251 GameObject=1287:Ninth_GP_SocialLobby_Chair002_LOD0
+  MeshCollider           object=3252 GameObject=1288:Ninth_GP_SocialLobby_Chair002_LOD0
+  MeshCollider           object=3253 GameObject=1289:Ninth_GP_SocialLobby_Chair002_LOD0
+  MeshCollider           object=3254 GameObject=1290:Ninth_GP_SocialLobby_Chair002_LOD0
+  MeshCollider           object=3255 GameObject=1291:Ninth_GP_SocialLobby_Chair002_LOD0
+  MeshCollider           object=3256 GameObject=1293:Ninth_GP_SocialLobby_Chair002_LOD0
+  MeshCollider           object=3257 GameObject=1292:Ninth_GP_SocialLobby_Chair002_LOD0
+  BoxCollider            object=3258 GameObject=4:Col1 (2)
+  BoxCollider            object=3259 GameObject=5:ObserveZoneTrigger (6)
+  BoxCollider            object=3260 GameObject=7:Col1 (1)
+  BoxCollider            object=3261 GameObject=8:QueueZoneTrigger (7)
+  BoxCollider            object=3262 GameObject=9:QueueZoneTrigger (1)
+  BoxCollider            object=3263 GameObject=829:L_InGame_Ninth_GP_TokenMachine_Max (1)
+  BoxCollider            object=3264 GameObject=13:QueueZoneTrigger
+  BoxCollider            object=3265 GameObject=14:trigger1 (3)
+  BoxCollider            object=3266 GameObject=15:trigger1 (1)
+  BoxCollider            object=3267 GameObject=16:trigger1 (8)
+  BoxCollider            object=3268 GameObject=17:trigger1 (7)
+  BoxCollider            object=3269 GameObject=19:Col1 (4)
+  BoxCollider            object=3270 GameObject=20:DancePoolTrigger
+  BoxCollider            object=3271 GameObject=21:Col3 (1)
+  BoxCollider            object=3272 GameObject=22:trigger1 (5)
+  BoxCollider            object=3273 GameObject=23:QueueZoneTrigger (8)
+  BoxCollider            object=3274 GameObject=24:ObserveZoneTrigger (1)
+  BoxCollider            object=3275 GameObject=27:trigger1 (4)
+  BoxCollider            object=3276 GameObject=28:QueueZoneTrigger (4)
+  BoxCollider            object=3277 GameObject=29:QueueZoneTrigger (6)
+  BoxCollider            object=3278 GameObject=30:CarringTrigger
+  BoxCollider            object=3279 GameObject=31:ObserveZoneTrigger (5)
+  BoxCollider            object=3280 GameObject=32:trigger1
+  BoxCollider            object=3281 GameObject=34:ObserveZoneTrigger (3)
+  BoxCollider            object=3282 GameObject=35:Col1 (3)
+  BoxCollider            object=3283 GameObject=40:Col (1)
+  BoxCollider            object=3284 GameObject=42:ObserveZoneTrigger (8)
+  BoxCollider            object=3285 GameObject=43:trigger1 (2)
+  BoxCollider            object=3286 GameObject=44:Col1 (5)
+  BoxCollider            object=3287 GameObject=45:ObserveZoneTrigger (4)
+  BoxCollider            object=3288 GameObject=47:Col
+  BoxCollider            object=3289 GameObject=50:ObserveZoneTrigger (7)
+  BoxCollider            object=3290 GameObject=52:QueueZoneTrigger (2)
+  BoxCollider            object=3291 GameObject=53:trigger1 (6)
+  BoxCollider            object=3292 GameObject=54:ObserveZoneTrigger
+  BoxCollider            object=3293 GameObject=56:BattleZoneTrigger
+  BoxCollider            object=3294 GameObject=57:QueueZoneTrigger (5)
+  BoxCollider            object=3295 GameObject=58:ObserveZoneTrigger (2)
+  BoxCollider            object=3296 GameObject=828:L_InGame_Ninth_GP_TokenMachine_Max
+  BoxCollider            object=3297 GameObject=59:QueueZoneTrigger (3)
+  BoxCollider            object=3298 GameObject=63:White_fence_long (1)
+  BoxCollider            object=3299 GameObject=62:White_fence_long (1)
+  BoxCollider            object=3300 GameObject=64:Catapult1001
+  BoxCollider            object=3301 GameObject=79:White_fence_long
+  BoxCollider            object=3302 GameObject=80:White_fence_long
+  BoxCollider            object=3303 GameObject=82:White_fence_long (2)
+  BoxCollider            object=3304 GameObject=81:White_fence_long (2)
+  BoxCollider            object=3305 GameObject=65:White_fence_long (3)
+  BoxCollider            object=3306 GameObject=66:White_fence_long (3)
+  BoxCollider            object=3307 GameObject=1219:Ninth_GP_SocialLobby_Table001_Collider002
+  BoxCollider            object=3308 GameObject=1216:Ninth_GP_SocialLobby_Table001_Collider002
+
+NOISE:
+  - VFX
+  - VFX
+  - VFX
+  - VFX
+  - L_VFX_Zcom_Noise002
+  - L_VFX_Zcom_Noise002
+  - L_ff_vfx_Zcom_Env_006
+  - L_ff_vfx_Zcom_Env_006
+  - L_VFX_Zcom_Noise001
+  - L_VFX_Zcom_Noise001
+  - male_lobby_cos_no1_hair_001
+  - male_lobby_shoes_001
+  - male_lobby_cos_no1_head_001
+  - male_lobby_undershirt_001
+  - male_lobby_short_001
+
+==========================================================================================
+#2 SCORE=85
+FILE: input/freefire-assets/assets/bin/Data/98981e8def17f514daf7c8bfae596533
+
+COMPONENT TYPES:
+  BoxCollider: 22
+  Animator: 1
+  MonoBehaviour: 230
+
+HEAD / NECK OBJECTS:
+  - HeadshotRemote
+  - HeadshotLocal
+  - PlayerHeadshot
+  - HeadshotDefault
+  - BannedPersonheadbg
+  - BannedPersonHeadSprite
+  - Personhead
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - PlayerID
+  - PlayerHeadshot
+  - PlayerNickname
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=395 GameObject=49:LeftCollider
+  BoxCollider            object=396 GameObject=21:RightCollider
+  BoxCollider            object=397 GameObject=13:PersonalShareBtn
+  BoxCollider            object=398 GameObject=14:PersonBtnCloseup
+  BoxCollider            object=399 GameObject=38:BtnProfileNodeALLShare
+  BoxCollider            object=400 GameObject=22:PersonBtnAddFriend
+  BoxCollider            object=401 GameObject=110:Vbadge
+  BoxCollider            object=402 GameObject=65:LimitedTimeRankIcon
+  BoxCollider            object=403 GameObject=197:PhotoWallBtn
+  BoxCollider            object=404 GameObject=101:PersonalQRCodeBtn
+  BoxCollider            object=405 GameObject=72:PersonBtnCustomProfileReturn
+  BoxCollider            object=406 GameObject=151:PersonSignatureReportBtn
+  BoxCollider            object=407 GameObject=145:PersonBtnSkinPreview
+  BoxCollider            object=408 GameObject=186:PersonBtnCustomProfilePreview
+  BoxCollider            object=409 GameObject=91:HistoryGotoBtn
+  BoxCollider            object=410 GameObject=59:CreditIcon
+  BoxCollider            object=411 GameObject=118:GameBufIcon
+  BoxCollider            object=412 GameObject=160:SkinPreviewWithdrawArrow
+  BoxCollider            object=413 GameObject=78:RecentVisitorBtn
+  BoxCollider            object=414 GameObject=176:PersonBtnCustomProfileEdit
+  BoxCollider            object=415 GameObject=77:SimulatorIcon
+  BoxCollider            object=416 GameObject=142:CreatorLvIcon
+
+NOISE:
+  - ProfileDeslabel1
+  - ScreenShotPreview
+  - UIProfile
+  - ProfilenoDEsHAREDeslabel
+  - PersonBtnCustomProfilePreviewContainer
+  - WeaponPowerGuideWidget
+  - PersonSkinPreviewIcon (2)
+  - UIFX_PhotoWallBtn_Xing
+  - UIFX_PhotoWallBtn_Suolian
+  - PreviewBorder
+  - UIFX_PhotoWallBtn_Loop
+  - EditGuideWidget
+  - ExtendGuideWidget
+  - Label
+  - PersonBtnSkinPreview
+
+==========================================================================================
+#3 SCORE=85
+FILE: input/freefire-assets/assets/bin/Data/9ca587f10a284664899b64f7f1b0096c
+
+COMPONENT TYPES:
+  BoxCollider: 41
+  Animator: 1
+  MonoBehaviour: 487
+
+HEAD / NECK OBJECTS:
+  - TeamHeadIcon_L
+  - TeamHeadIcon_R
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - LeftTitlePlayerTxt
+  - RightTitlePlayerTxt
+  - DataPlayerList
+  - DataPlayerItemInfo4
+  - DataPlayerItemInfo2
+  - AvatarPageBtn
+  - AvatarPageBG
+  - DataPlayerInfoTitle
+  - DataPlayerInfoTitleRoot
+  - DataPlayerItemInfo3
+  - AvatarPageIcon
+  - DataPlayerItemInfo1
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=897 GameObject=40:FastSendGiftBtn
+  BoxCollider            object=898 GameObject=47:ReportBtn
+  BoxCollider            object=899 GameObject=20:NextBtn
+  BoxCollider            object=900 GameObject=70:DragScroll (1)
+  BoxCollider            object=901 GameObject=30:AddFriendBtn
+  BoxCollider            object=902 GameObject=114:LikeBtn
+  BoxCollider            object=903 GameObject=69:VideoGiftBtn
+  BoxCollider            object=904 GameObject=86:ShareBtn
+  BoxCollider            object=905 GameObject=104:DragScroll
+  BoxCollider            object=906 GameObject=354:ReplayBtn
+  BoxCollider            object=907 GameObject=159:RefuseDuelWidget
+  BoxCollider            object=908 GameObject=220:AvatarPageBtn
+  BoxCollider            object=909 GameObject=257:DataRankRatingTip
+  BoxCollider            object=910 GameObject=251:Btn
+  BoxCollider            object=911 GameObject=141:MatchMaking
+  BoxCollider            object=912 GameObject=307:RightTeamRankBtn
+  BoxCollider            object=913 GameObject=410:WaitingDuelWidget
+  BoxCollider            object=914 GameObject=157:DataPageBtn
+  BoxCollider            object=915 GameObject=383:BlockBtn
+  BoxCollider            object=916 GameObject=235:PostMatchTeamUpBtn
+  BoxCollider            object=917 GameObject=176:DataBtn
+  BoxCollider            object=918 GameObject=298:DataRightTeamBtn
+  BoxCollider            object=919 GameObject=171:DataLeftTeamBtn
+  BoxCollider            object=920 GameObject=233:LeftTeamRankBtn
+  BoxCollider            object=921 GameObject=429:InviteBtn
+  BoxCollider            object=922 GameObject=222:PostMatchCancelBigBtn
+  BoxCollider            object=923 GameObject=260:CSRankRatingTipRight
+  BoxCollider            object=924 GameObject=417:DataTitleInfo3Tip
+  BoxCollider            object=925 GameObject=228:PostMatchQuickNextBigBtn
+  BoxCollider            object=926 GameObject=385:InviteDuelBtn
+  BoxCollider            object=927 GameObject=229:NormalPageBtn
+  BoxCollider            object=928 GameObject=173:PostMatchBtnSmallDrop
+  BoxCollider            object=929 GameObject=133:MatchFeedbackBtn
+  BoxCollider            object=930 GameObject=250:ReadyBtn
+  BoxCollider            object=931 GameObject=317:DisableBtn
+  BoxCollider            object=932 GameObject=409:AcceptDuelBtn
+  BoxCollider            object=933 GameObject=398:SoloQuickNextBtn
+  BoxCollider            object=934 GameObject=395:DetailBtn
+  BoxCollider            object=935 GameObject=407:BGInFrontEndScene
+  BoxCollider            object=936 GameObject=218:CSRankRatingTip
+  BoxCollider            object=937 GameObject=168:MultQuickNextBtn
+
+NOISE:
+  - UIFX_Report
+  - UI_Formation_2
+  - DetailInfoUI
+  - UI_Formation_3
+  - UIHudTeamBattleMatchResult
+  - UI_Formation_4
+  - DragScroll (1)
+  - TeamInfoScrollViewLeft
+  - TeamInfoScrollViewRight
+  - UI_Formation_1
+  - VFX_Boomright
+  - DragScroll
+  - VFX_Defeat
+  - VFX_Boom
+  - VFX_Boomleft
+
+==========================================================================================
+#4 SCORE=85
+FILE: input/freefire-assets/assets/bin/Data/b4b7372f75cdf284aae23218caec0956
+
+COMPONENT TYPES:
+  BoxCollider: 4
+  Animator: 1
+  MonoBehaviour: 209
+
+HEAD / NECK OBJECTS:
+  - HeadSprite
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - PlayerInfo
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=499 GameObject=59:Icon
+  BoxCollider            object=500 GameObject=47:Mask
+  BoxCollider            object=501 GameObject=73:ContinueBtn
+  BoxCollider            object=502 GameObject=60:NickName
+
+NOISE:
+  - VFX_Glow1_L
+  - VFX_Glow2_R
+  - VFX_Flag
+  - VFX_Line_L
+  - VFX_Baodian
+  - VFX_Glow2_L
+  - VFX_White
+  - VFX_Glow1_R
+  - VFX_Door
+  - VFX_Line_R
+  - RankLabel
+  - Label
+  - BtnLabel
+  - RankLabelAnim
+  - RankSeasonLabelAnim
+
+==========================================================================================
+#5 SCORE=85
+FILE: input/freefire-assets/assets/bin/Data/e514234058d689e40ac7bb4b8be38776
+
+COMPONENT TYPES:
+  BoxCollider: 18
+  Animator: 3
+  MonoBehaviour: 183
+
+HEAD / NECK OBJECTS:
+  - PlayerHeadPicSelect
+  - PlayerHeadPic
+  - myHeadPic
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - PlayerHeadPicSelect
+  - PlayerHeadPic
+  - MyPlayerInfo
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=297 GameObject=114:ClickMask
+  BoxCollider            object=298 GameObject=85:SelectFriendBtn
+  BoxCollider            object=299 GameObject=21:DescTipsBtn
+  BoxCollider            object=300 GameObject=120:CallBackBtn
+  BoxCollider            object=301 GameObject=25:AnniversaryBtn
+  BoxCollider            object=302 GameObject=83:BreakTipsShowBtn
+  BoxCollider            object=303 GameObject=5:InvitationListBtn
+  BoxCollider            object=304 GameObject=50:InviteBtn
+  BoxCollider            object=305 GameObject=102:SendGiftBtn
+  BoxCollider            object=306 GameObject=115:UnSelectInviteBtn
+  BoxCollider            object=307 GameObject=117:RequestChatBtn
+  BoxCollider            object=308 GameObject=71:BreakRequestBtn
+  BoxCollider            object=309 GameObject=30:dragPanel
+  BoxCollider            object=310 GameObject=100:CheckboxForNotify
+  BoxCollider            object=311 GameObject=116:RelationshipSettingBtn
+  BoxCollider            object=312 GameObject=54:RequestTeamBtn
+  BoxCollider            object=313 GameObject=60:ClickMask_2
+  BoxCollider            object=314 GameObject=136:SkillShareTipBtn
+
+NOISE:
+  - Label
+  - PlayerHeadPicSelect
+  - AnniversaryLabel
+  - Label
+  - LabelWaitForReply
+  - FF_VFX_UI_Line003
+  - VFX_Heart
+  - BreakTipsCountdownLabel
+  - Label
+  - VFX_Line
+  - PlayerHeadPic
+  - Scroll View
+  - BreakTipsLabel
+  - levellabel
+  - Label
+
+==========================================================================================
+#6 SCORE=59
+FILE: input/freefire-assets/assets/bin/Data/b527d6b2e4e804d41bb216fccbffb665
+
+COMPONENT TYPES:
+  BoxCollider: 15
+  MonoBehaviour: 121
+
+HEAD / NECK OBJECTS:
+  - HeadIcon
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - AvatarFramePos
+  - ReportedPlayer
+  - UnreportPlayer
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=253 GameObject=4:SkillBtn
+  BoxCollider            object=254 GameObject=20:AddFriendBtn
+  BoxCollider            object=255 GameObject=32:SkillBGNormal
+  BoxCollider            object=256 GameObject=67:SkillBGNormal
+  BoxCollider            object=257 GameObject=93:PassiveSkillBtn2
+  BoxCollider            object=258 GameObject=8:PetSkillBtn
+  BoxCollider            object=259 GameObject=12:SkillBGNormal
+  BoxCollider            object=260 GameObject=102:NormalBG
+  BoxCollider            object=261 GameObject=72:ExtraSkillBtn
+  BoxCollider            object=262 GameObject=83:PassiveSkillBtn1
+  BoxCollider            object=263 GameObject=112:SkillBGNormal
+  BoxCollider            object=264 GameObject=47:ReportBtn
+  BoxCollider            object=265 GameObject=85:SkillBGNormal
+  BoxCollider            object=266 GameObject=84:SkillBGNormal
+  BoxCollider            object=267 GameObject=46:PassiveSkillBtn3
+
+NOISE:
+  - IndexLabel
+  - HeadIcon
+
+==========================================================================================
+#7 SCORE=55
+FILE: input/freefire-assets/assets/bin/Data/level46
+
+COMPONENT TYPES:
+  CapsuleCollider: 16
+  SphereCollider: 3
+  BoxCollider: 1347
+  MeshCollider: 6
+  Animator: 3
+  MonoBehaviour: 570
+
+HEAD / NECK OBJECTS:
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - PlayerSpawnPoint_Group2
+  - PlayerSpawnPoint
+
+PHYSICS COMPONENT OWNERS:
+  MeshCollider           object=5158 GameObject=640:GameObject
+  MeshCollider           object=5159 GameObject=1213:GameObject
+  MeshCollider           object=5160 GameObject=1717:Tire_01
+  MeshCollider           object=5161 GameObject=1716:Tire_01
+  MeshCollider           object=5162 GameObject=1715:Tire_01
+  MeshCollider           object=5163 GameObject=2076:IIV_GP_Stone001_Cols
+  BoxCollider            object=5164 GameObject=1:SlideTrigger
+  BoxCollider            object=5165 GameObject=12:SlideTrigger
+  BoxCollider            object=5166 GameObject=13:TriggerMid (1)
+  BoxCollider            object=5167 GameObject=14:Slider
+  BoxCollider            object=5168 GameObject=15:SlideTrigger
+  BoxCollider            object=5169 GameObject=18:SlideTrigger
+  BoxCollider            object=5170 GameObject=20:SlideTrigger
+  BoxCollider            object=5171 GameObject=21:SlideTrigger
+  BoxCollider            object=5172 GameObject=23:TriggerMid (1)
+  BoxCollider            object=5173 GameObject=24:SlideTrigger
+  BoxCollider            object=5174 GameObject=28:Trigger
+  BoxCollider            object=5175 GameObject=29:SlideTrigger
+  BoxCollider            object=5176 GameObject=39:TriggerMid (1)
+  BoxCollider            object=5177 GameObject=41:Trigger
+  BoxCollider            object=5178 GameObject=45:SlideTrigger
+  BoxCollider            object=5179 GameObject=47:SlideTrigger
+  BoxCollider            object=5180 GameObject=49:TriggerMid
+  BoxCollider            object=5181 GameObject=52:SlideTrigger
+  BoxCollider            object=5182 GameObject=53:SlideTrigger
+  BoxCollider            object=5183 GameObject=55:SlideTrigger
+  BoxCollider            object=5184 GameObject=64:SlideTrigger
+  BoxCollider            object=5185 GameObject=67:TriggerMid
+  BoxCollider            object=5186 GameObject=68:SlideTrigger
+  BoxCollider            object=5187 GameObject=69:SlideTrigger
+  BoxCollider            object=5188 GameObject=71:SlideTrigger
+  BoxCollider            object=5189 GameObject=73:SlideTrigger
+  BoxCollider            object=5190 GameObject=75:DirectionalTrigger (10)
+  BoxCollider            object=5191 GameObject=77:SlideTrigger
+  BoxCollider            object=5192 GameObject=78:Trigger
+  BoxCollider            object=5193 GameObject=80:Trigger
+  BoxCollider            object=5194 GameObject=81:SlideTrigger
+  BoxCollider            object=5195 GameObject=82:SlideTrigger
+  BoxCollider            object=5196 GameObject=84:SlideTrigger
+  BoxCollider            object=5197 GameObject=85:SlideTrigger
+  BoxCollider            object=5198 GameObject=87:Trigger
+  BoxCollider            object=5199 GameObject=88:SlideTrigger
+  BoxCollider            object=5200 GameObject=90:SlideTrigger
+  BoxCollider            object=5201 GameObject=91:Trigger
+  BoxCollider            object=5202 GameObject=92:Trigger
+  BoxCollider            object=5203 GameObject=94:SlideTrigger
+  BoxCollider            object=5204 GameObject=96:SlideTrigger
+  BoxCollider            object=5205 GameObject=97:TriggerMid (1)
+  BoxCollider            object=5206 GameObject=101:SlideTrigger
+  BoxCollider            object=5207 GameObject=106:TriggerMid (1)
+  BoxCollider            object=5208 GameObject=111:SlideTrigger
+  BoxCollider            object=5209 GameObject=112:SlideTrigger
+  BoxCollider            object=5210 GameObject=113:SlideTrigger
+  BoxCollider            object=5211 GameObject=116:TriggerMid
+  BoxCollider            object=5212 GameObject=120:SlideTrigger
+  BoxCollider            object=5213 GameObject=121:SlideTrigger
+  BoxCollider            object=5214 GameObject=123:SlideTrigger
+  BoxCollider            object=5215 GameObject=126:Trigger
+  BoxCollider            object=5216 GameObject=132:SlideTrigger
+  BoxCollider            object=5217 GameObject=133:SlideTrigger
+  BoxCollider            object=5218 GameObject=134:SlideTrigger
+  BoxCollider            object=5219 GameObject=136:Trigger
+  BoxCollider            object=5220 GameObject=139:SlideTrigger
+  BoxCollider            object=5221 GameObject=145:SlideTrigger
+  BoxCollider            object=5222 GameObject=150:TriggerMid (1)
+  BoxCollider            object=5223 GameObject=151:TriggerMid (1)
+  BoxCollider            object=5224 GameObject=152:TriggerMid (1)
+  BoxCollider            object=5225 GameObject=155:Trigger
+  BoxCollider            object=5226 GameObject=156:SlideTrigger
+  BoxCollider            object=5227 GameObject=161:SlideTrigger
+  BoxCollider            object=5228 GameObject=162:SlideTrigger
+  BoxCollider            object=5229 GameObject=164:SlideTrigger
+  BoxCollider            object=5230 GameObject=165:SlideTrigger
+  BoxCollider            object=5231 GameObject=166:TriggerMid (1)
+  BoxCollider            object=5232 GameObject=177:Trigger
+  BoxCollider            object=5233 GameObject=179:SlideTrigger
+  BoxCollider            object=5234 GameObject=182:SlideTrigger
+  BoxCollider            object=5235 GameObject=185:SlideTrigger
+  BoxCollider            object=5236 GameObject=186:Trigger
+  BoxCollider            object=5237 GameObject=189:DirectionalTrigger (16)
+
+NOISE:
+  - LevelDynamicCollider1021 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+  - LevelDynamicCollider1025 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+  - LevelDynamicCollider1003 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+  - LevelDynamicCollider1039 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+  - LevelDynamicCollider1007 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+  - LevelDynamicCollider1005 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+  - LevelDynamicCollider1023 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+  - SeafoodGate1001 (Missing Prefab with guid: 6d9d2152ec2518144b4dc02578e955f4)
+  - LevelDynamicCollider1014 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+  - SeafoodGate1002 (Missing Prefab with guid: 6d9d2152ec2518144b4dc02578e955f4)
+  - LevelDynamicCollider1006 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+  - LevelDynamicCollider1011 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+  - LevelDynamicCollider1026 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+  - LevelDynamicCollider1037 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+  - LevelDynamicCollider1024 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+
+==========================================================================================
+#8 SCORE=52
+FILE: input/freefire-assets/assets/bin/Data/293f6fbc6d867ff47832fa0d3c40c95a
+
+COMPONENT TYPES:
+  BoxCollider: 2
+  Animator: 2
+  MonoBehaviour: 54
+
+HEAD / NECK OBJECTS:
+  - Sprite_HeadPic
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=149 GameObject=35:Mask
+  BoxCollider            object=150 GameObject=61:Mask_Front
+
+NOISE:
+  - ButtonsParent
+  - Sprite_HeadPic
+  - UIMatchAfterLotteryItem
+  - VFX_RollCard
+  - QuantityLabel
+  - ItemNameLabel
+
+==========================================================================================
+#9 SCORE=49
+FILE: input/freefire-assets/assets/bin/Data/bafed8b301999c645bb6c474de0f27d8
+
+COMPONENT TYPES:
+  BoxCollider: 1
+  Animator: 1
+  MonoBehaviour: 27
+
+HEAD / NECK OBJECTS:
+  - HiddenPageHeadBubble
+  - PageHeadBubbleBG
+  - PageHeadLable
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=77 GameObject=34:SelectBtn
+
+NOISE:
+  - PageIdxLabel
+  - vfx_stand
+  - UIFX
+  - VFX_BOOK_FFWS_HIDDENPAGE
+  - UIHyperBookContentPageItem
+  - HiddenPageVFXRoot
+  - IncreaseVFX
+
+==========================================================================================
+#10 SCORE=44
+FILE: input/freefire-assets/assets/bin/Data/621b7a90ef197834bbfea09dabf95212
+
+COMPONENT TYPES:
+  BoxCollider: 1
+  MonoBehaviour: 56
+
+HEAD / NECK OBJECTS:
+  - Head_orange
+  - Head_blue
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=103 GameObject=23:btnLeaderboard
+
+NOISE:
+  - UIHudBanknoteMatchTimeScore
+  - CaptureInfoLabel
+
+==========================================================================================
+#11 SCORE=43
+FILE: input/freefire-assets/assets/bin/Data/f093db80a4d7df14182077bd41f6660a
+
+COMPONENT TYPES:
+  BoxCollider: 1
+  Animator: 1
+  MonoBehaviour: 56
+
+HEAD / NECK OBJECTS:
+  - ItemHeadPicIcon
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=109 GameObject=19:UIGachaShowRewardItem
+
+NOISE:
+  - VFX_Award_GAI
+  - VoucherLabel
+  - UIGachaShowRewardItem
+  - SeniorVFX
+  - ItemSuitWeaponIcon
+  - DropUpLabel
+  - JuniorVFX
+  - ItemHeadPicIcon
+  - RedVFX
+
+==========================================================================================
+#12 SCORE=40
+FILE: input/freefire-assets/assets/bin/Data/15c3b5e9b87416849b70f377c3c5fab0
+
+COMPONENT TYPES:
+  BoxCollider: 5
+  Animator: 2
+  MonoBehaviour: 103
+
+HEAD / NECK OBJECTS:
+  - ItemHeadPicIcon
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=312 GameObject=71:ItemRotateTouchArea
+  BoxCollider            object=313 GameObject=11:OkBtn
+  BoxCollider            object=314 GameObject=61:BoxCollider
+  BoxCollider            object=315 GameObject=34:ShareBtn
+  BoxCollider            object=316 GameObject=47:InterfaceMask
+
+NOISE:
+  - UIFX
+  - UIFX
+  - UIFX
+  - UIContent
+  - UIGachaFeature_001
+  - VFX_Red
+  - Label
+  - UIWeaponSkinUpgraderFeature
+  - VFX_Once_Purple
+  - Got new Label
+  - Got new Label
+  - VFX_Loop_Red
+  - ItemNameRedLabel
+  - ItemNameVioLabel
+  - VFX_Loop_Purple
+
+==========================================================================================
+#13 SCORE=40
+FILE: input/freefire-assets/assets/bin/Data/2d0f3fb9bd4be6342bfaab08c599c5c5
+
+COMPONENT TYPES:
+  BoxCollider: 1
+  Animator: 2
+  MonoBehaviour: 53
+
+HEAD / NECK OBJECTS:
+  - ItemHeadPicIcon
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=237 GameObject=43:BtnTip
+
+NOISE:
+  - VFX_Glow007_A_001
+  - VFX_Shine032_A_001
+  - VFX_Square016_B_001
+  - ItemSuitWeaponIcon
+  - VFX
+  - ItemHeadPicIcon
+  - VoucherLabel
+  - FirstVFX
+  - DropUpLabel
+  - VFX_Award_GAI
+  - ThirdVFX
+  - UIGachaLimitChestItem
+  - SecondVFX
+  - LimitTimeLabel
+  - VFXback
+
+==========================================================================================
+#14 SCORE=40
+FILE: input/freefire-assets/assets/bin/Data/4350e03e99e94a24abfb3730ddbfc7e2
+
+COMPONENT TYPES:
+  BoxCollider: 5
+  Animator: 1
+  MonoBehaviour: 101
+
+HEAD / NECK OBJECTS:
+  - head
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=151 GameObject=69:GuideMaskBtn
+  BoxCollider            object=152 GameObject=42:BuyBtn
+  BoxCollider            object=153 GameObject=14:mallToggle
+  BoxCollider            object=154 GameObject=64:FreeAcessBtn
+  BoxCollider            object=155 GameObject=54:RuleButton
+
+NOISE:
+  - Label
+  - LabelLimitedCount
+  - PreviewContainer
+  - UIFX_TipsGo
+  - BuyBtnLabel
+  - FreeAcessLabel
+  - ExchangeMallScrollView
+  - DiamondStoreLabelDefaultSprite
+  - PeriodIllustrationLabel
+  - ItemListGuideWidget
+  - DiamondStoreLabelCDN
+  - UIFlashStoreNavigation
+  - RuleButton
+  - NormalMallTabScrollView
+  - Label
+
+==========================================================================================
+#15 SCORE=40
+FILE: input/freefire-assets/assets/bin/Data/a29834034ed42b74eb96b8f3f6c63cde
+
+COMPONENT TYPES:
+  BoxCollider: 1
+  Animator: 1
+  MonoBehaviour: 40
+
+HEAD / NECK OBJECTS:
+  - ItemHeadPicIcon
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=97 GameObject=15:BtnTip
+
+NOISE:
+  - VoucherLabel
+  - DropUpLabel
+  - VFX_Normal
+  - UIGachaTurntableItem
+  - ObtainedLabel
+  - VFX_Award
+  - VFX_Award_GAI
+  - VFX_TurntableItem
+  - ItemHeadPicIcon
+  - LimitTimeLabel
+  - VFX
+  - ItemSuitWeaponIcon
+
+==========================================================================================
+#16 SCORE=40
+FILE: input/freefire-assets/assets/bin/Data/cda6ca9c00fa1b0469a6fa8954d52628
+
+COMPONENT TYPES:
+  BoxCollider: 51
+  Rigidbody: 1
+  Animator: 1
+  MonoBehaviour: 421
+
+HEAD / NECK OBJECTS:
+  - HeadIcon_pic
+  - head
+  - HeadIconShadow_pic
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  Rigidbody              object=795 GameObject=323:UIPreviewItem
+  BoxCollider            object=796 GameObject=339:HairBtnLv2
+  BoxCollider            object=797 GameObject=275:BtnWeaponSkinUpgradeLevelRightLvMax
+  BoxCollider            object=798 GameObject=264:AlignmentIcon
+  BoxCollider            object=799 GameObject=212:weaponSkinUpgradeInfoIcon
+  BoxCollider            object=800 GameObject=190:HairBtnLv0
+  BoxCollider            object=801 GameObject=320:HairBtnLv2right
+  BoxCollider            object=802 GameObject=314:showIcon
+  BoxCollider            object=803 GameObject=340:HairBtnLv1
+  BoxCollider            object=804 GameObject=236:zoomBtn
+  BoxCollider            object=805 GameObject=312:HairBtnLv0right
+  BoxCollider            object=806 GameObject=150:tipsleft
+  BoxCollider            object=807 GameObject=305:WeaponSkinBtn
+  BoxCollider            object=808 GameObject=152:HairSpreadhlBtn
+  BoxCollider            object=809 GameObject=56:LevelUpBtn
+  BoxCollider            object=810 GameObject=288:BtnWeaponSkinUpgradeLevelRightLv1
+  BoxCollider            object=811 GameObject=94:HairSpreadhlRBtn
+  BoxCollider            object=812 GameObject=78:skillbtn
+  BoxCollider            object=813 GameObject=223:notificationBtn
+  BoxCollider            object=814 GameObject=266:BtnWeaponSkinUpgradeLv1
+  BoxCollider            object=815 GameObject=133:InstallmentInfoBtn
+  BoxCollider            object=816 GameObject=162:btnlv3right
+  BoxCollider            object=817 GameObject=168:HairBtnLv1right
+  BoxCollider            object=818 GameObject=228:pvpToggle
+  BoxCollider            object=819 GameObject=260:switchbtn
+  BoxCollider            object=820 GameObject=83:WeaponEventTrigger
+  BoxCollider            object=821 GameObject=101:btnlv2right
+  BoxCollider            object=822 GameObject=47:HairStylecontrlRbtn
+  BoxCollider            object=823 GameObject=255:BtnLv2
+  BoxCollider            object=824 GameObject=285:gachaswitchbtn
+  BoxCollider            object=825 GameObject=63:ForgeAwardBtn
+  BoxCollider            object=826 GameObject=218:BtnLv1
+  BoxCollider            object=827 GameObject=171:WeaponSkinTips
+  BoxCollider            object=828 GameObject=289:pveToggle
+  BoxCollider            object=829 GameObject=139:tipsright
+  BoxCollider            object=830 GameObject=115:DraMask
+  BoxCollider            object=831 GameObject=229:HairBtnLv3
+  BoxCollider            object=832 GameObject=182:HairBtnLv3right
+  BoxCollider            object=833 GameObject=281:BtnLv3
+  BoxCollider            object=834 GameObject=267:weaponskillbtn
+  BoxCollider            object=835 GameObject=207:BtnWeaponSkinUpgradeLvMax
+  BoxCollider            object=836 GameObject=95:btnlv1right
+  BoxCollider            object=837 GameObject=344:backpckSwitch
+  BoxCollider            object=838 GameObject=15:notificationIcon
+  BoxCollider            object=839 GameObject=331:HairStylecontrlbtn
+  BoxCollider            object=840 GameObject=208:MagnifierBtn
+  BoxCollider            object=841 GameObject=29:TreasureBoxProbability
+  BoxCollider            object=842 GameObject=116:HotFixDownloadBtn
+  BoxCollider            object=843 GameObject=365:NewBtnLv1
+  BoxCollider            object=844 GameObject=387:NewBtnLv2
+  BoxCollider            object=845 GameObject=395:NewBtnLv3
+  BoxCollider            object=846 GameObject=357:ZoomWithCameraBtn
+
+NOISE:
+  - Label
+  - skilltiplabelright
+  - Label
+  - LabelWeaponSkinUpgradeLvMaxUnChosenRight
+  - Label
+  - Label
+  - Label
+  - Label
+  - LabelLv1
+  - Label
+  - Label
+  - Label
+  - HairShowLabel
+  - Label
+  - itemDescLabel
+
+==========================================================================================
+#17 SCORE=40
+FILE: input/freefire-assets/assets/bin/Data/d233194e0da236a479ec0317e4bf6cb4
+
+COMPONENT TYPES:
+  BoxCollider: 5
+  Animator: 1
+  MonoBehaviour: 237
+
+HEAD / NECK OBJECTS:
+  - PeriodicHeadShotKillRate
+  - HeadshotkillRate
+  - PeriodicHeadShot
+  - HeadShotLabel
+  - bHeadShot
+  - bHeadShot
+  - CSHeadShot
+  - HeadShotLabel
+  - HeadShotRatioLabel
+  - CSHeadShotRatio
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=263 GameObject=76:UISeasonStatsDetailInfoItem
+  BoxCollider            object=264 GameObject=136:CSRankRatingTip
+  BoxCollider            object=265 GameObject=28:BRRankRatingTip
+  BoxCollider            object=266 GameObject=125:ShareBtn
+  BoxCollider            object=267 GameObject=93:MaskBg
+
+NOISE:
+  - CSMedalSilverLabel
+  - TotalKillLabel
+  - bMedalGoldLabel
+  - CSMedalGoldLabel
+  - MedalLabel
+  - HeadShotLabel
+  - AVGDamageLabel
+  - MedalLabel
+  - ThreekillLabel
+  - DoubleKillLabel
+  - UISeasonStatsDetailInfoItem
+  - MVPLabel
+  - AVGDamageLabel
+  - HeadShotLabel
+  - HeadShotRatioLabel
+
+==========================================================================================
+#18 SCORE=40
+FILE: input/freefire-assets/assets/bin/Data/e23990a793a09504693f32a2af98caae
+
+COMPONENT TYPES:
+  BoxCollider: 1
+  Animator: 1
+  MonoBehaviour: 56
+
+HEAD / NECK OBJECTS:
+  - HeadTexture
+  - HeadIcon
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=153 GameObject=29:BtnShare
+
+NOISE:
+  - VFX_light (3)
+  - VFX
+  - FF_FX_UIElitePass_06 (1)
+  - VFX_light (2)
+  - VFX_Zcom_Noise103
+  - VFX_light (4)
+  - UICupMatchAccomplished
+  - LabelSquadSolo
+  - LabelSquad
+  - VFX_Zcom_Noise103
+  - VFX_light
+  - LabelTier
+  - VFX_light (5)
+  - VFX_Zcom_Light011
+  - VFX_Mesh_UICupMatch004
+
+==========================================================================================
+#19 SCORE=40
+FILE: input/freefire-assets/assets/bin/Data/eae9c8a6e1b6c594d9c8d5d161b09371
+
+COMPONENT TYPES:
+  BoxCollider: 28
+  Animator: 1
+  MonoBehaviour: 327
+
+HEAD / NECK OBJECTS:
+  - ReplacementHeadPic
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=505 GameObject=8:BtnRevive
+  BoxCollider            object=506 GameObject=7:BtnDrop
+  BoxCollider            object=507 GameObject=158:DisableBtn
+  BoxCollider            object=508 GameObject=233:BtnBigAskRevive
+  BoxCollider            object=509 GameObject=245:SoloQuickNextBigBtn
+  BoxCollider            object=510 GameObject=210:BtnLikeList_01
+  BoxCollider            object=511 GameObject=201:PostMatchTeamUpBtn
+  BoxCollider            object=512 GameObject=159:PostMatchQuickNextBigBtn
+  BoxCollider            object=513 GameObject=96:MatchMaking
+  BoxCollider            object=514 GameObject=78:MultQuickNextBigBtn
+  BoxCollider            object=515 GameObject=184:MultQuickNextBtn
+  BoxCollider            object=516 GameObject=124:PostMatchCancelBigBtn
+  BoxCollider            object=517 GameObject=18:AskReviveDisableBtn
+  BoxCollider            object=518 GameObject=62:BigMatchMaking
+  BoxCollider            object=519 GameObject=120:DisableBigBtn
+  BoxCollider            object=520 GameObject=90:PostMatchCancelBigBtn
+  BoxCollider            object=521 GameObject=169:BtnBigRevive
+  BoxCollider            object=522 GameObject=57:AskReviveBigDisableBtn
+  BoxCollider            object=523 GameObject=206:PostMatchQuickNextBtn
+  BoxCollider            object=524 GameObject=128:PostMatchTeamUpBigBtn
+  BoxCollider            object=525 GameObject=162:SoloQuickNextBtn
+  BoxCollider            object=526 GameObject=154:PostMatchBigBtnSmallDrop
+  BoxCollider            object=527 GameObject=199:PostMatchBtnSmallDrop
+  BoxCollider            object=528 GameObject=83:BtnSmallDrop
+  BoxCollider            object=529 GameObject=239:ReadyBtn
+  BoxCollider            object=530 GameObject=229:TrainingGameAutoReviveBtn
+  BoxCollider            object=531 GameObject=238:BtnAskRevive
+  BoxCollider            object=532 GameObject=30:ReadyBigBtn
+
+NOISE:
+  - UIFX
+  - UIHudObserverProfile
+  - ReviveLabel
+  - label
+  - LabelKillNum
+  - NoticeBigVFX
+  - UIFX
+  - OldScoreLabel
+  - QuickMatchContainer
+  - CancelReadyLabel
+  - AskReviveLabel
+  - LabelKill
+  - QuickBtnClosePosition
+  - UIHudTimer_Ani
+  - AskReviveBigLabel
+
+==========================================================================================
+#20 SCORE=38
+FILE: input/freefire-assets/assets/bin/Data/54ec652aa07c3c1498855b5f3be1e1e2
+
+COMPONENT TYPES:
+  BoxCollider: 5
+  MonoBehaviour: 66
+
+HEAD / NECK OBJECTS:
+  - HeadIcon
+  - HeadSprite
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - PlayerImg
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=105 GameObject=47:BtnAddFriend
+  BoxCollider            object=106 GameObject=46:BtnOpenBriefBox
+  BoxCollider            object=107 GameObject=52:MainPageBtnFriend
+  BoxCollider            object=108 GameObject=42:BtnJoin
+  BoxCollider            object=109 GameObject=31:MainPageBtnClan
+
+NOISE:
+  - UIPaymentSquadTreasureTeammateItem
+  - UIFX_Unlock
+  - UIFX_Flush
+  - CountDownLabel
+  - HeadIcon
+  - ProgressLabelLeft
+  - NameLabel
+  - ProgressLabel
+  - UIFX_Blast 
+
+==========================================================================================
+#21 SCORE=38
+FILE: input/freefire-assets/assets/bin/Data/85531beb18e0a6349b165ea07efe251b
+
+COMPONENT TYPES:
+  BoxCollider: 5
+  MonoBehaviour: 66
+
+HEAD / NECK OBJECTS:
+  - HeadIcon
+  - HeadSprite
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - PlayerImg
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=105 GameObject=47:BtnAddFriend
+  BoxCollider            object=106 GameObject=46:BtnOpenBriefBox
+  BoxCollider            object=107 GameObject=52:MainPageBtnFriend
+  BoxCollider            object=108 GameObject=42:BtnJoin
+  BoxCollider            object=109 GameObject=31:MainPageBtnClan
+
+NOISE:
+  - UIPaymentSquadTreasureTeammateItemSmall
+  - UIFX_Unlock
+  - UIFX_Flush
+  - CountDownLabel
+  - HeadIcon
+  - ProgressLabelLeft
+  - NameLabel
+  - ProgressLabel
+  - UIFX_Blast 
+
+==========================================================================================
+#22 SCORE=35
+FILE: input/freefire-assets/assets/bin/Data/08d7a777c296cb541ad7c873d5d4dca5
+
+COMPONENT TYPES:
+  BoxCollider: 11
+  MonoBehaviour: 158
+
+HEAD / NECK OBJECTS:
+  - HeadIcon
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - AvatarFramePos
+  - AvatarAttributesEntryBtn
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=301 GameObject=3:ReportBtn
+  BoxCollider            object=302 GameObject=15:UIHudNormalMatchResultItem
+  BoxCollider            object=303 GameObject=30:LikeBtn
+  BoxCollider            object=304 GameObject=11:AddFriendBtn
+  BoxCollider            object=305 GameObject=47:BlockBtn
+  BoxCollider            object=306 GameObject=44:InviteBtn
+  BoxCollider            object=307 GameObject=149:ProfileBtn
+  BoxCollider            object=308 GameObject=91:AvatarAttributesEntryBtn
+  BoxCollider            object=309 GameObject=137:bg
+  BoxCollider            object=310 GameObject=43:VisitorBtn
+  BoxCollider            object=311 GameObject=93:BadgeBtn
+
+NOISE:
+  - UIHudNormalMatchResultItem
+  - VFX_Ring
+  - VFX_Shine037_B_001
+  - VFX_Shine004_Clamp_A_007
+  - HeadIcon
+  - VFX_Like
+  - UIFX_UIHudMiniMap_02_glow (1)
+  - UIFX_UIHudMiniMap_02_glow
+  - UIFX_MVPLoseMain
+  - UIFX_Golden
+  - VFX
+  - LabelPercent
+  - UIFX_Silvery
+  - LabelValue
+  - LabelValue
+
+==========================================================================================
+#23 SCORE=35
+FILE: input/freefire-assets/assets/bin/Data/191bf992a18fcf047925c903f620813f
+
+COMPONENT TYPES:
+  BoxCollider: 21
+  MeshCollider: 7
+  MonoBehaviour: 240
+
+HEAD / NECK OBJECTS:
+  - previewHeadAdditive
+  - Headbg
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - SlelctPlayerBtn
+  - NoPlayerInfoLabel
+  - NoPlayerContainer
+  - NoPlayerInfoBg
+
+PHYSICS COMPONENT OWNERS:
+  MeshCollider           object=433 GameObject=8:previewHeadAdditive
+  MeshCollider           object=434 GameObject=156:previewChest
+  MeshCollider           object=435 GameObject=200:previewHair
+  MeshCollider           object=436 GameObject=87:previewlegs
+  MeshCollider           object=437 GameObject=143:previewFace
+  MeshCollider           object=438 GameObject=198:previewFeet
+  MeshCollider           object=439 GameObject=158:previewClothesSet
+  BoxCollider            object=440 GameObject=35:EvopassGotoBtn
+  BoxCollider            object=441 GameObject=15:UnDressBtn
+  BoxCollider            object=442 GameObject=20:SwitchClotFemaleBtn
+  BoxCollider            object=443 GameObject=59:NoPlayerContainer
+  BoxCollider            object=444 GameObject=109:DescendingBtn
+  BoxCollider            object=445 GameObject=41:UnDressBtn
+  BoxCollider            object=446 GameObject=50:UnDressBtn
+  BoxCollider            object=447 GameObject=179:UnDressBtn
+  BoxCollider            object=448 GameObject=111:BtnGoExchange
+  BoxCollider            object=449 GameObject=163:SendGiftBtn
+  BoxCollider            object=450 GameObject=146:BuyBtn
+  BoxCollider            object=451 GameObject=157:UnDressBtn
+  BoxCollider            object=452 GameObject=16:UnDressBtn
+  BoxCollider            object=453 GameObject=93:collectionBg
+  BoxCollider            object=454 GameObject=177:GotoBtn
+  BoxCollider            object=455 GameObject=168:NormalMallToggle
+  BoxCollider            object=456 GameObject=123:UnDressBtn
+  BoxCollider            object=457 GameObject=176:GiftMallToggle
+  BoxCollider            object=458 GameObject=83:SwitchClothMaleBtn
+  BoxCollider            object=459 GameObject=184:GotoBtn
+  BoxCollider            object=460 GameObject=139:AscendingBtn
+
+NOISE:
+  - previewHeadAdditive
+  - equip
+  - Label
+  - LabelWithoutNum
+  - LabelLimitedCount
+  - BuyVoucherLabel
+  - SwitchClothPreviewBtnGroup
+  - ButtonViewContainer
+  - NoPrimeTipsLabel
+  - Label
+  - Label
+  - NoPlayerInfoLabel
+  - Label
+  - previewlegs
+  - equip
+
+==========================================================================================
+#24 SCORE=35
+FILE: input/freefire-assets/assets/bin/Data/3a5d996d20b172f4a945b4b7d0ca7e51
+
+COMPONENT TYPES:
+  BoxCollider: 8
+  MonoBehaviour: 109
+
+HEAD / NECK OBJECTS:
+  - head
+  - HeadSprite
+  - HeadIcon
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - AvatarFramePos
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=187 GameObject=8:CloseBtn
+  BoxCollider            object=188 GameObject=20:BtnNearbySearch
+  BoxCollider            object=189 GameObject=66:SettingBtn
+  BoxCollider            object=190 GameObject=17:head
+  BoxCollider            object=191 GameObject=33:Mask
+  BoxCollider            object=192 GameObject=76:BtnRefresh
+  BoxCollider            object=193 GameObject=41:BtnAddAll
+  BoxCollider            object=194 GameObject=43:QuestionBtn
+
+NOISE:
+  - UIFriendNearbySearchWindow
+  - NearbyWindowLabel
+  - SafePromptLabel
+  - SearchLabel
+  - Label (1)
+  - Label
+  - Label
+  - UIFX_UIFriendNearbySearchWindow_ContentPanel
+  - TokenDescLabel
+  - HeadIcon
+  - Label
+
+==========================================================================================
+#25 SCORE=35
+FILE: input/freefire-assets/assets/bin/Data/3fa9a8f027694084fa7c9c5895291ae8
+
+COMPONENT TYPES:
+  BoxCollider: 6
+  MeshCollider: 1
+  Rigidbody: 1
+  MonoBehaviour: 80
+
+HEAD / NECK OBJECTS:
+  - cAvatarHeadSp
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - cAavatarName
+  - InAvatarProfile
+  - cAvatarHeadSp
+  - AvatarListScrollView
+
+PHYSICS COMPONENT OWNERS:
+  Rigidbody              object=117 GameObject=26:UIUseUpgradeCardWindow
+  MeshCollider           object=118 GameObject=29:Quad_2
+  BoxCollider            object=119 GameObject=22:Reward1
+  BoxCollider            object=120 GameObject=28:UseBtn
+  BoxCollider            object=121 GameObject=4:Reward2
+  BoxCollider            object=122 GameObject=30:LeftBtn
+  BoxCollider            object=123 GameObject=5:GotoBtn
+  BoxCollider            object=124 GameObject=56:RightBtn
+
+NOISE:
+  - TipsLabel
+  - VFX
+  - Label
+  - SkillUpLabel
+  - VFX
+  - UIUseUpgradeCardWindow
+  - RewardLabel
+  - Label
+  - InInventoryLobby
+  - Label
+  - Label
+  - LevelUpLabel
+  - AvatarListScrollView
+
+==========================================================================================
+#26 SCORE=35
+FILE: input/freefire-assets/assets/bin/Data/43d7c0928cda26243bcdaab25a614ceb
+
+COMPONENT TYPES:
+  BoxCollider: 12
+  MonoBehaviour: 208
+
+HEAD / NECK OBJECTS:
+  - HeadPicIcon
+  - HeadPic
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - PlayerInfo
+  - PlayerKDA
+  - AvatarFramePos
+  - PlayerKDATable
+  - PlayerIndexBG
+  - PlayerIndexCon
+  - PlayerIndex
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=379 GameObject=20:NameButton
+  BoxCollider            object=380 GameObject=21:Mask
+  BoxCollider            object=381 GameObject=26:IgnoreToggle
+  BoxCollider            object=382 GameObject=23:clickMask
+  BoxCollider            object=383 GameObject=11:AcceptBtn
+  BoxCollider            object=384 GameObject=27:BtnClose
+  BoxCollider            object=385 GameObject=18:RejectBtn
+  BoxCollider            object=386 GameObject=168:TeamUpRejectExpandBtn
+  BoxCollider            object=387 GameObject=52:JoinTournamentBtn
+  BoxCollider            object=388 GameObject=118:SpecialMissionGotoBtn
+  BoxCollider            object=389 GameObject=45:TournamentCheckInBtn
+  BoxCollider            object=390 GameObject=157:JoinTeamBtn
+
+NOISE:
+  - TipsTypeLabelmask
+  - MessageLabel
+  - TimeLabel
+  - TeamInfoLabel
+  - NameButton
+  - MessageLabel2
+  - IgnoreLabel
+  - TipsTypeLabel
+  - UIInvitationTipsBoxContent
+  - UIFX
+  - Label
+  - CupRankTierLabel
+  - HeadPicIcon
+  - TournamentCheckInLabel
+  - CommonFriendNumLabel
+
+==========================================================================================
+#27 SCORE=35
+FILE: input/freefire-assets/assets/bin/Data/4caf6b6db9ae5324981e76849b8e2baa
+
+COMPONENT TYPES:
+  BoxCollider: 9
+  MonoBehaviour: 126
+
+HEAD / NECK OBJECTS:
+  - HeadIcon
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - AvatarFramePos
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=241 GameObject=59:BlockBtn
+  BoxCollider            object=242 GameObject=19:AddFriendBtn
+  BoxCollider            object=243 GameObject=12:LikeBtn
+  BoxCollider            object=244 GameObject=16:ReportBtn
+  BoxCollider            object=245 GameObject=46:BadgeBtn
+  BoxCollider            object=246 GameObject=79:InviteBtn
+  BoxCollider            object=247 GameObject=50:bg
+  BoxCollider            object=248 GameObject=81:ProfileBtn
+  BoxCollider            object=249 GameObject=99:VisitorBtn
+
+NOISE:
+  - VFX_Ring
+  - HeadIcon
+  - VFX_Shine037_B_001
+  - VFX_Like
+  - UIHudTeamBattleMatchResultItem
+  - VFX_Shine004_Clamp_A_007
+  - LabelValue
+  - UIFX_UIHudMiniMap_02_quan2
+  - IndexLabel
+  - LabelPercent
+  - UIFX_UIHudMiniMap_02_glow
+  - UIFX_MVPLoseMain
+  - UIFX_Silvery
+  - VFX
+  - SelfBadgeNumLabel
+
+==========================================================================================
+#28 SCORE=35
+FILE: input/freefire-assets/assets/bin/Data/4dd09d63fe2dbaa4c9c8f5a38fce4052
+
+COMPONENT TYPES:
+  BoxCollider: 2
+  MonoBehaviour: 93
+
+HEAD / NECK OBJECTS:
+  - HeadIcon
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - AvatarFramePos
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=179 GameObject=11:UIHudTeamBattleMatchResultDataItem
+  BoxCollider            object=180 GameObject=85:ProfileBtn
+
+NOISE:
+  - UIFX_UIHudMiniMap_02_glow (1)
+  - UIHudTeamBattleMatchResultDataItem
+  - UIFX_UIHudMiniMap_02_glow
+  - UIFX_Silvery
+  - HeadIcon
+  - LabelValue
+  - LabelValue
+  - LabelPercent
+  - VFX
+  - LabelValue
+  - LabelPercent
+  - LabelPercent
+  - GradeScroll
+  - LabelValue
+  - UIFX_MVPWinMain
+
+==========================================================================================
+#29 SCORE=35
+FILE: input/freefire-assets/assets/bin/Data/4e54ae037f0a20b49974d81e7c3e8a25
+
+COMPONENT TYPES:
+  BoxCollider: 6
+  MonoBehaviour: 641
+
+HEAD / NECK OBJECTS:
+  - HeadBGSprite
+  - HeadBGSprite
+  - HeadBGSprite
+  - HeadBGSprite
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - UIHudPlayerMarkIconPos
+  - UIHudPlayerMarkIconPos
+  - UIHudPlayerMarkIconPos
+  - UIHudPlayerMarkIconPos
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=1221 GameObject=20:Page2Toggle
+  BoxCollider            object=1222 GameObject=30:Page3Toggle
+  BoxCollider            object=1223 GameObject=42:Page1Toggle
+  BoxCollider            object=1224 GameObject=149:Page4Toggle
+  BoxCollider            object=1225 GameObject=110:MultiRoot
+  BoxCollider            object=1226 GameObject=125:ScoreBoardBtn
+
+NOISE:
+  - UIFX
+  - UIFX_Trailing
+  - Scrollbar
+  - UIFX_Eighth_Sys_Light
+  - Label
+  - UIHudTeammatesInfo
+  - UIFX_UIHudMiniMap_02_glow
+  - buySelfReviveVfx
+  - VFX
+  - VFXRescue
+  - UIFXContainer
+  - UIFX
+  - VFX
+  - UIFX
+  - StateVfx
+
+==========================================================================================
+#30 SCORE=35
+FILE: input/freefire-assets/assets/bin/Data/5a4eea0ced6fb714aa8978fafc526558
+
+COMPONENT TYPES:
+  BoxCollider: 6
+  MonoBehaviour: 641
+
+HEAD / NECK OBJECTS:
+  - HeadBGSprite
+  - HeadBGSprite
+  - HeadBGSprite
+  - HeadBGSprite
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - UIHudPlayerMarkIconPos
+  - UIHudPlayerMarkIconPos
+  - UIHudPlayerMarkIconPos
+  - UIHudPlayerMarkIconPos
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=1221 GameObject=428:Page4Toggle
+  BoxCollider            object=1222 GameObject=361:Page3Toggle
+  BoxCollider            object=1223 GameObject=163:Page1Toggle
+  BoxCollider            object=1224 GameObject=330:MultiRoot
+  BoxCollider            object=1225 GameObject=468:Page2Toggle
+  BoxCollider            object=1226 GameObject=567:ScoreBoardBtn
+
+NOISE:
+  - VFX
+  - VFX
+  - AceVFX
+  - ACEVFXWithKnockDown
+  - ACEVFXWithKnockDown
+  - buySelfReviveVfx
+  - UIFX
+  - Label
+  - VFX
+  - Scrollbar
+  - UIFX
+  - UIFX
+  - ACEVFXWithKnockDown
+  - UIHudPlayerMarkIconPos
+  - UIFX
+
+==========================================================================================
+#31 SCORE=35
+FILE: input/freefire-assets/assets/bin/Data/5cd81595923bbb249affe9f972524c44
+
+COMPONENT TYPES:
+  BoxCollider: 33
+  MonoBehaviour: 240
+
+HEAD / NECK OBJECTS:
+  - HeadPreviewNode
+  - HeadPicNode
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - GotoAvatarProfileBtn
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=413 GameObject=22:UnEquipBtn
+  BoxCollider            object=414 GameObject=12:EquipBtn
+  BoxCollider            object=415 GameObject=21:EmoteCheckboxBtn
+  BoxCollider            object=416 GameObject=23:HelpBtn
+  BoxCollider            object=417 GameObject=5:CallsignCheckboxBtn
+  BoxCollider            object=418 GameObject=102:OpenBtn
+  BoxCollider            object=419 GameObject=139:hideCheck
+  BoxCollider            object=420 GameObject=33:ClothSetRecommend
+  BoxCollider            object=421 GameObject=35:GotoAvatarProfileBtn
+  BoxCollider            object=422 GameObject=31:BtnColorPanel
+  BoxCollider            object=423 GameObject=166:MultiCheckButton
+  BoxCollider            object=424 GameObject=86:BagConfig
+  BoxCollider            object=425 GameObject=127:showCheck
+  BoxCollider            object=426 GameObject=91:CancelBtn
+  BoxCollider            object=427 GameObject=141:GoToBtn
+  BoxCollider            object=428 GameObject=63:MultiSelectTipsBtn
+  BoxCollider            object=429 GameObject=70:EmoteTrashContainer
+  BoxCollider            object=430 GameObject=44:FinalShotGotoBtn
+  BoxCollider            object=431 GameObject=136:ClickMask
+  BoxCollider            object=432 GameObject=89:SkipAnimMaskBtn
+  BoxCollider            object=433 GameObject=172:ClothesSetEquipBtn
+  BoxCollider            object=434 GameObject=123:SetDefaultFollowEmoteBtn
+  BoxCollider            object=435 GameObject=197:BtnGoToDressUp
+  BoxCollider            object=436 GameObject=119:LoveBtn
+  BoxCollider            object=437 GameObject=186:MusicCheckboxBtn
+  BoxCollider            object=438 GameObject=55:TailorBtn
+  BoxCollider            object=439 GameObject=114:ExternalIconHelpBtn
+  BoxCollider            object=440 GameObject=110:BtnSetChangePanel
+  BoxCollider            object=441 GameObject=68:OpenAllBtn
+  BoxCollider            object=442 GameObject=47:ExternalIconCheckboxBtn
+  BoxCollider            object=443 GameObject=178:HyperBookBtn
+  BoxCollider            object=444 GameObject=164:SuperEmoteCheckboxBtn
+  BoxCollider            object=445 GameObject=175:SelectMoreBtn
+
+NOISE:
+  - Label
+  - CallsignPreview
+  - Preview
+  - Label
+  - EquipBtn
+  - UnEquipBtnLabel
+  - LabelHint
+  - EmotePreview
+  - UINewVault
+  - EquipBtnLabel
+  - UnEquipBtn
+  - label
+  - UnEquipBtn
+  - UnEquipBtnLabel
+  - PreviewRightSide
+
+==========================================================================================
+#32 SCORE=35
+FILE: input/freefire-assets/assets/bin/Data/613335139d6b5984399c258264b6149f
+
+COMPONENT TYPES:
+  BoxCollider: 3
+  MonoBehaviour: 152
+
+HEAD / NECK OBJECTS:
+  - HeadIconLeft
+  - HeadSpriteLeft
+  - HeadSpriteRight
+  - headbtnLeft
+  - headbtnRight
+  - HeadIconRight
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - PlayerNameRight
+  - PlayerCheckBtn
+  - PlayerInfo
+  - PlayerNameLeft
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=273 GameObject=52:PlayerCheckBtn
+  BoxCollider            object=274 GameObject=126:headbtnRight
+  BoxCollider            object=275 GameObject=106:headbtnLeft
+
+NOISE:
+  - SecondPlacePointsLabel
+  - UIFX
+  - UIFX_Prime_UIPrimeLeaderBoard_Ranking
+  - upScoreLabel
+  - HeadIconLeft
+  - UIFX_UIPrimeLeaderBoard_Second
+  - upScoreLabel_third
+  - leftScoreLabel
+  - rightScoreLabel
+  - UIFX_UIPrimeLeaderBoard_First
+  - ThirdPlacePointsLabel
+  - UIPeakWeekLeaderboardItem
+  - RankLabel
+  - UIFX_UIPrimeLeaderBoard_Third
+  - UIFX_Prime_UIPrimeLeaderBoard_ThirdPlaceContainer
+
+==========================================================================================
+#33 SCORE=35
+FILE: input/freefire-assets/assets/bin/Data/7eceb614c5d7f1e4f80df2dc3c0129b1
+
+COMPONENT TYPES:
+  BoxCollider: 41
+  MonoBehaviour: 652
+
+HEAD / NECK OBJECTS:
+  - HeadPreviewNode
+  - HeadPicNode
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - UIUGCAvatarEditor
+  - GotoAvatarProfileBtn
+  - AvatarNode
+  - SecondTabsAvatar
+  - TemplateAvatarItem
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=879 GameObject=22:UnEquipBtn
+  BoxCollider            object=880 GameObject=12:EquipBtn
+  BoxCollider            object=881 GameObject=21:EmoteCheckboxBtn
+  BoxCollider            object=882 GameObject=23:HelpBtn
+  BoxCollider            object=883 GameObject=5:CallsignCheckboxBtn
+  BoxCollider            object=884 GameObject=34:TemplateCommonItem
+  BoxCollider            object=885 GameObject=206:OpenBtn
+  BoxCollider            object=886 GameObject=306:hideCheck
+  BoxCollider            object=887 GameObject=60:ClothSetRecommend
+  BoxCollider            object=888 GameObject=62:GotoAvatarProfileBtn
+  BoxCollider            object=889 GameObject=58:BtnColorPanel
+  BoxCollider            object=890 GameObject=311:Thumb
+  BoxCollider            object=891 GameObject=271:BoxCollider
+  BoxCollider            object=892 GameObject=175:BagConfig
+  BoxCollider            object=893 GameObject=269:showCheck
+  BoxCollider            object=894 GameObject=188:CancelBtn
+  BoxCollider            object=895 GameObject=293:Btn
+  BoxCollider            object=896 GameObject=313:GoToBtn
+  BoxCollider            object=897 GameObject=146:EmoteTrashContainer
+  BoxCollider            object=898 GameObject=90:ThirdSubType
+  BoxCollider            object=899 GameObject=196:ThirdMainType
+  BoxCollider            object=900 GameObject=169:TemplateAvatarItem
+  BoxCollider            object=901 GameObject=383:BoxCollider
+  BoxCollider            object=902 GameObject=302:ValueInput
+  BoxCollider            object=903 GameObject=414:SliderBarBg
+  BoxCollider            object=904 GameObject=298:TemplateWeaponItem
+  BoxCollider            object=905 GameObject=235:Button
+  BoxCollider            object=906 GameObject=426:BtnGoToDressUp
+  BoxCollider            object=907 GameObject=256:LoveBtn
+  BoxCollider            object=908 GameObject=262:Btn
+  BoxCollider            object=909 GameObject=407:MusicCheckboxBtn
+  BoxCollider            object=910 GameObject=185:Bg
+  BoxCollider            object=911 GameObject=101:TailorBtn
+  BoxCollider            object=912 GameObject=158:CloseBtn
+  BoxCollider            object=913 GameObject=230:ExternalIconHelpBtn
+  BoxCollider            object=914 GameObject=88:collectionBg
+  BoxCollider            object=915 GameObject=344:Button
+  BoxCollider            object=916 GameObject=144:OpenAllBtn
+  BoxCollider            object=917 GameObject=78:ExternalIconCheckboxBtn
+  BoxCollider            object=918 GameObject=384:SelectMoreBtn
+  BoxCollider            object=919 GameObject=71:Button
+
+NOISE:
+  - Label
+  - CallsignPreview
+  - Preview
+  - Label
+  - EquipBtn
+  - UnEquipBtnLabel
+  - LabelHint
+  - EmotePreview
+  - UIUGCAvatarEditor
+  - EquipBtnLabel
+  - UnEquipBtn
+  - VoucherLabel
+  - ScrollBar
+  - label
+  - NameLabel
+
+==========================================================================================
+#34 SCORE=35
+FILE: input/freefire-assets/assets/bin/Data/905924919545a3648871ab547837242f
+
+COMPONENT TYPES:
+  BoxCollider: 24
+  MonoBehaviour: 189
+
+HEAD / NECK OBJECTS:
+  - OriHeadIcon
+  - AwakenHeadIcon
+  - HeadIcons
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - AvatarProficiencyBtn
+  - DetailAvatarStrategyBtn2
+  - OriAvatarSwitchBtn
+  - AwakenAvatarSwitchBtn
+  - UIAvatarInfoRight
+  - FreeAvatarContainer
+  - FreeAvatarPurchaseBtn
+  - DetailAvatarStrategyBtn
+  - AvatarUGCTutorial
+  - AvatarName
+  - ActivityAvatarContainer
+  - AvatarSkillSlot
+  - NormalAvatarContainer
+  - BriefAvatarStrategyBtn
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=325 GameObject=43:DetailSkillDescLabel
+  BoxCollider            object=326 GameObject=26:AwakenAvatarSwitchBtn
+  BoxCollider            object=327 GameObject=9:clickView
+  BoxCollider            object=328 GameObject=20:OriAvatarSwitchBtn
+  BoxCollider            object=329 GameObject=12:colorSlider
+  BoxCollider            object=330 GameObject=15:Thumb
+  BoxCollider            object=331 GameObject=45:GoposBtn
+  BoxCollider            object=332 GameObject=119:ReplaceBtn
+  BoxCollider            object=333 GameObject=1:AvatarProficiencyBtn
+  BoxCollider            object=334 GameObject=79:FreeBtn
+  BoxCollider            object=335 GameObject=159:BriefAvatarStrategyBtn
+  BoxCollider            object=336 GameObject=77:AvatarUGCTutorial
+  BoxCollider            object=337 GameObject=72:EvopassGotoBtn
+  BoxCollider            object=338 GameObject=63:FreeAvatarPurchaseBtn
+  BoxCollider            object=339 GameObject=81:PurchaseBtn
+  BoxCollider            object=340 GameObject=160:AwakenNavigationBtn
+  BoxCollider            object=341 GameObject=146:ShopBtn
+  BoxCollider            object=342 GameObject=70:DetailAvatarStrategyBtn
+  BoxCollider            object=343 GameObject=74:ReplaceGroupBtn
+  BoxCollider            object=344 GameObject=127:BriefSwitchBtn
+  BoxCollider            object=345 GameObject=52:DetailSwitchBtn2
+  BoxCollider            object=346 GameObject=53:EvopassGotoBtnNormal
+  BoxCollider            object=347 GameObject=5:DetailAvatarStrategyBtn2
+  BoxCollider            object=348 GameObject=101:DetailSwitchBtn
+
+NOISE:
+  - ExpireTimeLabel
+  - Label
+  - OriHeadIcon
+  - StrategyLabel
+  - Label
+  - Label
+  - DetailSkillDescLabel
+  - UIAvatarInfoRight
+  - BottomBtnLabelSelected
+  - AwakenHeadIcon
+  - LevelLabel
+  - BottomBtnLabel
+  - DetailSkillDescScrollView
+  - Label
+  - BottomBtnLabelReplace
+
+==========================================================================================
+#35 SCORE=35
+FILE: input/freefire-assets/assets/bin/Data/a207bf20d80f363498b68cfd8c6725a1
+
+COMPONENT TYPES:
+  BoxCollider: 12
+  MonoBehaviour: 165
+
+HEAD / NECK OBJECTS:
+  - Head
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - AvatarRotateTouchAreaItemRotateTouchArea
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=237 GameObject=35:AvatarRotateTouchAreaItemRotateTouchArea
+  BoxCollider            object=238 GameObject=100:RecruitBtn
+  BoxCollider            object=239 GameObject=81:Highlight
+  BoxCollider            object=240 GameObject=25:SocialTokenButton
+  BoxCollider            object=241 GameObject=23:AutoRecruitToggle
+  BoxCollider            object=242 GameObject=71:GotoBtn
+  BoxCollider            object=243 GameObject=8:SocialBufButton
+  BoxCollider            object=244 GameObject=111:unselected
+  BoxCollider            object=245 GameObject=98:CloseBtn
+  BoxCollider            object=246 GameObject=30:ToggleContainer
+  BoxCollider            object=247 GameObject=47:SocialBufRuleBtn
+  BoxCollider            object=248 GameObject=58:RuleBtn
+
+NOISE:
+  - UIFX_Groupback
+  - UIFX_Groupfront
+  - AutoRecruitLabel
+  - SocialBufButton
+  - label
+  - UIFX_Titlepar01
+  - PreviewBorder
+  - UIFX_LightScroll2
+  - UILuckyBuffBattle
+  - LabelDate
+  - AutoRecruitToggle
+  - Label
+  - SocialTokenButton
+  - Titlelabel
+  - RecruitBtnLabelTitle
+
+==========================================================================================
+#36 SCORE=35
+FILE: input/freefire-assets/assets/bin/Data/afa22b8caaea6734c8d1c8df4f074474
+
+COMPONENT TYPES:
+  BoxCollider: 10
+  MonoBehaviour: 428
+
+HEAD / NECK OBJECTS:
+  - HeadPortrait 
+  - HeadIcon
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - PlayerBG
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=589 GameObject=264:BomberSwitchBtn
+  BoxCollider            object=590 GameObject=278:SniperSwitchBtn
+  BoxCollider            object=591 GameObject=41:StartSeasonBtn
+  BoxCollider            object=592 GameObject=265:OccupationSwitchMaskBtn
+  BoxCollider            object=593 GameObject=189:OccupationSwitchBtn
+  BoxCollider            object=594 GameObject=184:RusherSwitchBtn
+  BoxCollider            object=595 GameObject=200:Drag
+  BoxCollider            object=596 GameObject=53:ShareBtn
+  BoxCollider            object=597 GameObject=92:SupportSwitchBtn
+  BoxCollider            object=598 GameObject=193:RiflerSwitchBtn
+
+NOISE:
+  - UIFX_ScaleSniper
+  - UIFX_ScaleMain
+  - UIFX_ScaleSupportor
+  - UIFX_ScaleRusher
+  - UIFX_ScaleRifler
+  - UIFX_ScaleBomber
+  - UISeasonReplayBattleStyle
+  - UIFX_Ziti_liudong_01
+  - UISeasonReplayBattleStyle_DataContainer_line
+  - IncreaseLabel1
+  - UISeasonReplayBattleStyle_DataContainer_line
+  - IncreaseVFX0
+  - UIFX_Ziti_liudong_02
+  - IncreaseLabel1
+  - UIFX_Ziti_liudong_01
+
+==========================================================================================
+#37 SCORE=35
+FILE: input/freefire-assets/assets/bin/Data/bdb3e0ce6e842f2469d1109ed5d2705f
+
+COMPONENT TYPES:
+  BoxCollider: 17
+  MonoBehaviour: 190
+
+HEAD / NECK OBJECTS:
+  - SpriteColorPanelComponentHeadAdditive
+  - SpriteColorPanelComponentBgHeadAdditive
+  - BtnColorPanelComponentHeadAdditive
+  - SpriteColorPanelCurrentColorHeadAdditive
+  - GoColorPanelUnPickingHeadAdditive
+  - GoSlotHeadAdditive
+  - GoColorPanelPickingHeadAdditive
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - BtnGotoAvatarProfile
+  - LoadingPlayerInfo
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=379 GameObject=86:Scrollable
+  BoxCollider            object=380 GameObject=92:BtnColorPanelComponentHair
+  BoxCollider            object=381 GameObject=127:BtnColorPanelComponentChest
+  BoxCollider            object=382 GameObject=87:BtnColorPanelComponentHeadAdditive
+  BoxCollider            object=383 GameObject=84:BtnColorPanelComponentFeet
+  BoxCollider            object=384 GameObject=104:BtnColorPanelComponentsAll
+  BoxCollider            object=385 GameObject=35:BtnPurchase
+  BoxCollider            object=386 GameObject=89:BtnColorPanelComponentLegs
+  BoxCollider            object=387 GameObject=2:BtnConfirm
+  BoxCollider            object=388 GameObject=133:BtnHideColorPanel
+  BoxCollider            object=389 GameObject=17:BtnGotoAvatarProfile
+  BoxCollider            object=390 GameObject=103:BtnColorPanel
+  BoxCollider            object=391 GameObject=106:BtnColorPanelComponentFace
+  BoxCollider            object=392 GameObject=156:GoPosButton
+  BoxCollider            object=393 GameObject=145:SexChangeBtn
+  BoxCollider            object=394 GameObject=160:ShowGroupAnimBtn
+  BoxCollider            object=395 GameObject=182:GotoVaultBtn
+
+NOISE:
+  - LabelGenderNotMatchTip
+  - LabelName
+  - FeatureScrollView
+  - LabelColorPanelTitle
+  - LabelConfirmTip
+  - LabelPurchaseTitle
+  - UILegendClothVault
+  - LabelConfirmTitle
+  - LabelFeatureTitle
+  - VFX_02 (1)
+  - VFX_02
+  - Scrollable
+  - VFX_01
+  - LabelColorPanelDesc
+  - LabelColorPickTitle
+
+==========================================================================================
+#38 SCORE=35
+FILE: input/freefire-assets/assets/bin/Data/e1c636ce9ad9a694185949a7b4a80291
+
+COMPONENT TYPES:
+  BoxCollider: 5
+  MonoBehaviour: 97
+
+HEAD / NECK OBJECTS:
+  - HeadIcon
+  - HeadLocalIcon
+  - Head
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - AvatarPosFrame
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=167 GameObject=51:mask
+  BoxCollider            object=168 GameObject=38:DragMask
+  BoxCollider            object=169 GameObject=29:Mask
+  BoxCollider            object=170 GameObject=40:BG
+  BoxCollider            object=171 GameObject=43:ButtonClose
+
+NOISE:
+  - UIFX
+  - HeadIcon
+  - Label
+  - ScrollView
+  - ButtonBgSprite
+  - ButtonClose
+  - Label
+  - UIFX
+  - BigEventLabelTypeProfileCustom
+  - UIAchievementMainBigEventCollectionWnd
+  - BigEventLabelTypeShare
+
+==========================================================================================
+#39 SCORE=35
+FILE: input/freefire-assets/assets/bin/Data/e50d4ef450c561c47b6866c109600935
+
+COMPONENT TYPES:
+  BoxCollider: 3
+  MonoBehaviour: 101
+
+HEAD / NECK OBJECTS:
+  - headbtn
+  - HeadIcon
+  - HeadSprite
+  - AnonymousHead
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - PlayerSex
+  - AvatarFramePos
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=165 GameObject=9:headbtn
+  BoxCollider            object=166 GameObject=37:GuideMaskBtn
+  BoxCollider            object=167 GameObject=78:NewVersionBtn
+
+NOISE:
+  - HeadIcon
+  - BadgeCntLabel
+  - UIBaseProfileInfo
+  - NickNameWithGenderLabel
+  - GuideMaskBtn
+  - GuideMaskPanel
+  - Recommendfriendlabel
+  - GuideWidget
+  - OldVersionLabel
+  - NewVersionLabel
+  - AnonymousNameLabel
+  - PrimeLevelLabel
+  - ScrollPanel
+
+==========================================================================================
+#40 SCORE=35
+FILE: input/freefire-assets/assets/bin/Data/f1c7db8c8c22b3c40973a9572898e971
+
+COMPONENT TYPES:
+  BoxCollider: 27
+  MonoBehaviour: 264
+
+HEAD / NECK OBJECTS:
+  - Personheadbtn
+  - Personheadbg
+  - PersonHeadSprite
+  - HeadpicGuideWidget
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - PlayerSex
+  - AvatarFramePos
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=423 GameObject=105:SeasonSwitchBtn
+  BoxCollider            object=424 GameObject=79:PersonBtnSetting
+  BoxCollider            object=425 GameObject=53:ModePrefer
+  BoxCollider            object=426 GameObject=73:OnLineTime
+  BoxCollider            object=427 GameObject=93:ActiveTime
+  BoxCollider            object=428 GameObject=30:PersonRankIconCS
+  BoxCollider            object=429 GameObject=42:RightCollider
+  BoxCollider            object=430 GameObject=74:likebtn
+  BoxCollider            object=431 GameObject=89:BRNotObtainedIcon
+  BoxCollider            object=432 GameObject=91:Guildbtn
+  BoxCollider            object=433 GameObject=49:epbtn
+  BoxCollider            object=434 GameObject=15:Personlevel
+  BoxCollider            object=435 GameObject=68:HeroicMarkBRIcon
+  BoxCollider            object=436 GameObject=14:copybtn
+  BoxCollider            object=437 GameObject=29:HeroicMarkCSIcon
+  BoxCollider            object=438 GameObject=83:CSNotObtainedIcon
+  BoxCollider            object=439 GameObject=65:EPHelperMaskBtn
+  BoxCollider            object=440 GameObject=47:LikeHelperMaskBtn
+  BoxCollider            object=441 GameObject=75:PersonRankIcon
+  BoxCollider            object=442 GameObject=109:LevelGiftButton
+  BoxCollider            object=443 GameObject=106:BtnChangeName
+  BoxCollider            object=444 GameObject=204:DisableMask
+  BoxCollider            object=445 GameObject=150:NoLikeIcon
+  BoxCollider            object=446 GameObject=190:CSPeakTournamentRankContainer
+  BoxCollider            object=447 GameObject=135:ClanPopupBtn
+  BoxCollider            object=448 GameObject=43:Personheadbtn
+  BoxCollider            object=449 GameObject=166:LikeGuideButton
+
+NOISE:
+  - UIFX
+  - UIFX_loop
+  - HeroicMarkLabel
+  - HeroicMarkLabel
+  - IDLabel
+  - UIProfilePersonProfileInfo
+  - likeslabel
+  - Guildbtn
+  - HeadpicGuideWidget
+  - LevelGiftButton
+  - SeaSonBRCSLabel
+  - SeaSonSeasonLabel
+  - SwitchLabel
+  - LikeGuideButton
+  - LikeGuideWidget
+
+==========================================================================================
+#41 SCORE=35
+FILE: input/freefire-assets/assets/bin/Data/ff1e7955c6e7f5c4fbb5b51c6d9c33d2
+
+COMPONENT TYPES:
+  BoxCollider: 7
+  MonoBehaviour: 227
+
+HEAD / NECK OBJECTS:
+  - HistoryHeadShoot
+  - HistoryHeadShootLabel
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - HumanRole
+  - HumanTaskCount
+  - HumanCompleteMergencyTaskCount
+  - HumanVoteRoundCount
+  - HumanVoteSuccessCount
+  - HumanTextRoot
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=277 GameObject=39:HistoryDetailBtn
+  BoxCollider            object=278 GameObject=42:BtnProfileNodeHistoryShare
+  BoxCollider            object=279 GameObject=92:CSRankRatingTip
+  BoxCollider            object=280 GameObject=85:HighLightSavedBtn
+  BoxCollider            object=281 GameObject=90:AchievementIcon
+  BoxCollider            object=282 GameObject=88:CommonGameDragView
+  BoxCollider            object=283 GameObject=74:HighlightBgCdn
+
+NOISE:
+  - historySurvivalLabel
+  - Label4
+  - Label3
+  - Label1
+  - HistoryKillLabel
+  - HistoryHeadShootLabel
+  - Label5
+  - UIProfileHistoryNode
+  - Scroll View
+  - Label2
+  - Label2
+  - Label1
+  - Label
+  - Label3
+  - Label2
+
+==========================================================================================
+#42 SCORE=21
+FILE: input/freefire-assets/assets/bin/Data/level1
+
+COMPONENT TYPES:
+  BoxCollider: 2
+  Animator: 1
+  MonoBehaviour: 80
+
+HEAD / NECK OBJECTS:
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - RootPlayerInfoTip
+  - GridPlayerInfo
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=152 GameObject=16:BG
+  BoxCollider            object=153 GameObject=60:NinthGB
+
+NOISE:
+  - UIRoot
+  - UILoading
+  - DynamicLabel
+  - StaticLabel
+  - UILoading_Effect
+  - SpecialCSModeTitleLabel
+  - UI_touchHint
+  - NinthGBUIFX
+
+==========================================================================================
+#43 SCORE=20
+FILE: input/freefire-assets/assets/bin/Data/05a3fe18808d6624e95f8ee4375e0868
+
+COMPONENT TYPES:
+  BoxCollider: 9
+  MonoBehaviour: 104
+
+HEAD / NECK OBJECTS:
+  - HeadIcon
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=189 GameObject=53:BlockBtn
+  BoxCollider            object=190 GameObject=20:AddFriendBtn
+  BoxCollider            object=191 GameObject=12:LikeBtn
+  BoxCollider            object=192 GameObject=17:ReportBtn
+  BoxCollider            object=193 GameObject=43:BadgeBtn
+  BoxCollider            object=194 GameObject=70:InviteBtn
+  BoxCollider            object=195 GameObject=46:bg
+  BoxCollider            object=196 GameObject=68:ProfileBtn
+  BoxCollider            object=197 GameObject=82:VisitorBtn
+
+NOISE:
+  - VFX_Ring
+  - HeadIcon
+  - VFX_Shine037_B_001
+  - VFX_Like
+  - UIHudUGCTeamBattleMatchResultItem
+  - VFX_Shine004_Clamp_A_007
+  - LabelValue
+  - UIFX_UIHudMiniMap_02_quan2
+  - IndexLabel
+  - LabelPercent
+  - UIFX_UIHudMiniMap_02_glow
+  - VFX
+  - SelfBadgeNumLabel
+  - LabelValue
+  - LabelPercent
+
+==========================================================================================
+#44 SCORE=20
+FILE: input/freefire-assets/assets/bin/Data/10d58d5604b1b9b49b2f5ed573a397af
+
+COMPONENT TYPES:
+  BoxCollider: 1
+  Rigidbody: 1
+  MonoBehaviour: 35
+
+HEAD / NECK OBJECTS:
+  - Head_blue
+  - Head_orange
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  Rigidbody              object=97 GameObject=5:UIHudControlMatchTimeScore
+  BoxCollider            object=98 GameObject=4:btnLeaderboard
+
+NOISE:
+  - UIHudControlMatchTimeScore
+  - VFX
+  - Label
+  - GetScoreVFX_Local
+  - VFX
+  - OccupyVFX_Opp
+  - OccupyVFX_Local
+  - GetScoreVFX_Opp
+  - Label (1)
+  - VFX_Glow
+
+==========================================================================================
+#45 SCORE=20
+FILE: input/freefire-assets/assets/bin/Data/20b1caecbbb628d408ef15aad56bfa93
+
+COMPONENT TYPES:
+  BoxCollider: 1
+  MonoBehaviour: 66
+
+HEAD / NECK OBJECTS:
+  - UIHudBigHeadHypeProcessBar
+  - UIFX_UIHudBigHeadHypeProcessBar
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=155 GameObject=54:BuffIcon
+
+NOISE:
+  - UIFX_LevelDown
+  - UIFX_LevelUp
+  - UIHudBigHeadHypeProcessBar
+  - UIFX
+  - DownLabel
+  - UIFX
+  - UIFX_UIHudBigHeadHypeProcessBar
+  - UpLabel
+  - BuffDescLabel
+  - Label
+
+==========================================================================================
+#46 SCORE=20
+FILE: input/freefire-assets/assets/bin/Data/20f83edfa809984488a3cd52e7b97fe3
+
+COMPONENT TYPES:
+  BoxCollider: 46
+  MonoBehaviour: 397
+
+HEAD / NECK OBJECTS:
+  - HeadContainer
+  - HeadSprite
+  - headbtn
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=563 GameObject=22:BtnUpload
+  BoxCollider            object=564 GameObject=14:BtnSendReport
+  BoxCollider            object=565 GameObject=15:BtnPrivacyPolicy
+  BoxCollider            object=566 GameObject=24:DragScroll
+  BoxCollider            object=567 GameObject=45:BtnTermsOfService
+  BoxCollider            object=568 GameObject=56:BtnWebViewClearCache
+  BoxCollider            object=569 GameObject=61:SyncSettingTip
+  BoxCollider            object=570 GameObject=37:PopBtn
+  BoxCollider            object=571 GameObject=33:ServiceLinkBtn
+  BoxCollider            object=572 GameObject=29:BtnDownload
+  BoxCollider            object=573 GameObject=60:Resotre
+  BoxCollider            object=574 GameObject=86:BtnDMAPolicy
+  BoxCollider            object=575 GameObject=179:BtnAgeGroupCannotChange
+  BoxCollider            object=576 GameObject=212:MinorUnBindBtn
+  BoxCollider            object=577 GameObject=139:MinorBindBtn
+  BoxCollider            object=578 GameObject=120:BtnAgeGroupChildWithVerify
+  BoxCollider            object=579 GameObject=226:AccountBindBtn
+  BoxCollider            object=580 GameObject=141:BtnAgeGroupAdultWithVerify
+  BoxCollider            object=581 GameObject=229:BRChangeBindBtn
+  BoxCollider            object=582 GameObject=57:Sprite
+  BoxCollider            object=583 GameObject=116:LoginHistoryBtn
+  BoxCollider            object=584 GameObject=276:NetworkReportTip
+  BoxCollider            object=585 GameObject=231:MinorCancelBindBtn
+  BoxCollider            object=586 GameObject=75:MinorBindRequestBtn
+  BoxCollider            object=587 GameObject=256:BtnBugReport
+  BoxCollider            object=588 GameObject=58:Sprite
+  BoxCollider            object=589 GameObject=134:BtnDeleteAccount
+  BoxCollider            object=590 GameObject=243:CoolDownTip
+  BoxCollider            object=591 GameObject=197:BtnRebindPhone
+  BoxCollider            object=592 GameObject=186:AccountTipBtn
+  BoxCollider            object=593 GameObject=219:SecurityLevelTip
+  BoxCollider            object=594 GameObject=72:BtnDebugUpload
+  BoxCollider            object=595 GameObject=180:AccountManagementBtn
+  BoxCollider            object=596 GameObject=220:ToggleAdult1
+  BoxCollider            object=597 GameObject=83:AdultManagementBtn
+  BoxCollider            object=598 GameObject=105:AccountReBindBtn
+  BoxCollider            object=599 GameObject=194:BRAgeVerifyBtn
+  BoxCollider            object=600 GameObject=245:ToggleChild1
+  BoxCollider            object=601 GameObject=205:SecurityCenterBtn
+  BoxCollider            object=602 GameObject=224:AccountCancelBindBtn
+  BoxCollider            object=603 GameObject=131:MinorCancelUnBindBtn
+  BoxCollider            object=604 GameObject=140:BtnCannotRebindPhone
+  BoxCollider            object=605 GameObject=81:BRAgeVerifyCDTipsBtn
+  BoxCollider            object=606 GameObject=162:BtnGooglePlaySync
+  BoxCollider            object=607 GameObject=146:AccountUnBindBtn
+  BoxCollider            object=608 GameObject=250:BindAccountBtn
+
+NOISE:
+  - UIFX
+  - SettingScrollView
+  - Label
+  - Label
+  - Label
+  - DragScroll
+  - Label
+  - Label
+  - Label
+  - Label
+  - Label
+  - Label
+  - Label
+  - Label
+  - UIBasicSetting
+
+==========================================================================================
+#47 SCORE=20
+FILE: input/freefire-assets/assets/bin/Data/882cdd641f35a644fbf92a5c46306110
+
+COMPONENT TYPES:
+  BoxCollider: 1
+  Rigidbody: 1
+  MonoBehaviour: 38
+
+HEAD / NECK OBJECTS:
+  - Head_blue
+  - Head_orange
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  Rigidbody              object=109 GameObject=4:UIHudFlagBattleMatchTimeScore
+  BoxCollider            object=110 GameObject=3:btnLeaderboard
+
+NOISE:
+  - UIHudFlagBattleMatchTimeScore
+  - GetScoreVFX_Local
+  - GetScoreVFX_Opp
+  - VFX_FlagBattle_UIFire
+  - VFX_FlagBattle_UIHold
+  - VFX_FlagBattle_UIAppear
+  - VFX_FlagBattle_UIHold
+  - VFX_FlagBattle_UIHold
+  - VFX_FlagBattle_UIHold
+  - VFX_FlagBattle_UIFire
+  - VFX_FlagBattle_UIAppear
+  - VFX_FlagBattle_UIAppear
+  - VFX_FlagBattle_UIAppear
+
+==========================================================================================
+#48 SCORE=20
+FILE: input/freefire-assets/assets/bin/Data/89ce64495f772664ea3916c47d4606cf
+
+COMPONENT TYPES:
+  BoxCollider: 26
+  MonoBehaviour: 282
+
+HEAD / NECK OBJECTS:
+  - HeadShotOnlyGo
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=441 GameObject=178:HexaToggle
+  BoxCollider            object=442 GameObject=77:CancelBtn
+  BoxCollider            object=443 GameObject=60:close
+  BoxCollider            object=444 GameObject=20:QuadToggle
+  BoxCollider            object=445 GameObject=50:BatchToggleBtn
+  BoxCollider            object=446 GameObject=64:DuoToggle
+  BoxCollider            object=447 GameObject=105:bgblack
+  BoxCollider            object=448 GameObject=31:CasualToggleBtn
+  BoxCollider            object=449 GameObject=21:LeagueNormalToggleBtn
+  BoxCollider            object=450 GameObject=73:NameInput
+  BoxCollider            object=451 GameObject=30:CodeInput
+  BoxCollider            object=452 GameObject=39:ConfirmBtn
+  BoxCollider            object=453 GameObject=101:MapItemObj
+  BoxCollider            object=454 GameObject=93:SoloToggle
+  BoxCollider            object=455 GameObject=199:GameSettingDragCollider
+  BoxCollider            object=456 GameObject=135:AdavancedRoomToggle
+  BoxCollider            object=457 GameObject=143:PresetSaveBtn
+  BoxCollider            object=458 GameObject=154:PentaToggle
+  BoxCollider            object=459 GameObject=164:ReOpenBtn
+  BoxCollider            object=460 GameObject=192:NormalRoomToggle
+  BoxCollider            object=461 GameObject=218:CreateRuleCDN
+  BoxCollider            object=462 GameObject=110:OBSettingMask
+  BoxCollider            object=463 GameObject=214:GameSettingMask
+  BoxCollider            object=464 GameObject=216:RoomSettingPanelDragCollider
+  BoxCollider            object=465 GameObject=181:RoomSettingMask
+  BoxCollider            object=466 GameObject=134:HelpeBtn
+
+NOISE:
+  - Label
+  - UICreateRoom
+  - SoloLabelCheckmark
+  - MapScrollView
+  - SoloLabel
+  - DuoLabel
+  - QuadLabel
+  - DescLabel
+  - CountDownLabel
+  - PentaLabel
+  - Label
+  - Label
+  - Label
+  - Label
+  - ConfirmNormalLabel
+
+==========================================================================================
+#49 SCORE=20
+FILE: input/freefire-assets/assets/bin/Data/9c38a35453f183e4a9ffbb04fc78bf92
+
+COMPONENT TYPES:
+  BoxCollider: 2
+  MonoBehaviour: 50
+
+HEAD / NECK OBJECTS:
+  - ItemHeadPicIcon
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=109 GameObject=12:BtnTip
+  BoxCollider            object=110 GameObject=25:ChooseContainer
+
+NOISE:
+  - ItemSuitWeaponIcon
+  - VFX_Award
+  - LimitTimeLabel
+  - VFXback
+  - VFX
+  - VFX_Normal
+  - DropUpLabel
+  - VFX_Red
+  - ObtainedLabel
+  - UIGachaLimitChestSelectRewardItem
+  - VfxRemove
+  - VFXback
+  - VFX
+  - ItemHeadPicIcon
+  - VoucherLabel
+
+==========================================================================================
+#50 SCORE=20
+FILE: input/freefire-assets/assets/bin/Data/9e05d9b18e9d2fb41833b19d506b878a
+
+COMPONENT TYPES:
+  BoxCollider: 22
+  MonoBehaviour: 158
+
+HEAD / NECK OBJECTS:
+  - LeftPlayhead
+  - RightPlayheadTime
+  - Header
+  - LeftPlayheadTime
+  - Playhead
+  - RightPlayhead
+  - Header
+  - PlayHeadView
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=247 GameObject=104:PrevFrame
+  BoxCollider            object=248 GameObject=71:BtnSwitchCamera
+  BoxCollider            object=249 GameObject=107:AddKeyFrameBtn
+  BoxCollider            object=250 GameObject=41:DelKeyClipBtn
+  BoxCollider            object=251 GameObject=106:HintBtn
+  BoxCollider            object=252 GameObject=34:AddKeyClipBtn
+  BoxCollider            object=253 GameObject=75:Pause
+  BoxCollider            object=254 GameObject=51:EmptyBack
+  BoxCollider            object=255 GameObject=61:bg
+  BoxCollider            object=256 GameObject=73:FPVBtn
+  BoxCollider            object=257 GameObject=20:BtnRecording
+  BoxCollider            object=258 GameObject=80:DelTrack
+  BoxCollider            object=259 GameObject=82:AddSubTrack
+  BoxCollider            object=260 GameObject=83:CopyTrack
+  BoxCollider            object=261 GameObject=84:TrackSetting
+  BoxCollider            object=262 GameObject=113:Back
+  BoxCollider            object=263 GameObject=89:DelKeyFrameBtn
+  BoxCollider            object=264 GameObject=97:Play
+  BoxCollider            object=265 GameObject=17:BtnPerformance
+  BoxCollider            object=266 GameObject=21:NextFrame
+  BoxCollider            object=267 GameObject=111:BtnClose
+  BoxCollider            object=268 GameObject=29:Drag
+
+NOISE:
+  - AddKeyClipBtnLabel
+  - DeleteKeyClipLabel
+  - TrackScrollView
+  - AddKeyFrameBtnLabel
+  - EmptyLabel
+  - Preview
+  - UIHudSceneEditTimelineDetailedTrackPanel
+  - Label
+  - DeleteKeyFrameLabel
+  - FPVLabel
+  - Label
+
+==========================================================================================
+#51 SCORE=20
+FILE: input/freefire-assets/assets/bin/Data/a7ced0007d8625a4faf9a18e4a48dc65
+
+COMPONENT TYPES:
+  BoxCollider: 1
+  MonoBehaviour: 122
+
+HEAD / NECK OBJECTS:
+  - HeadIcon
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=207 GameObject=76:UIGachaStandardItemMAX
+
+NOISE:
+  - VFX
+  - VFX_Mesh_UI010 (2)
+  - ExchangePriceLabel
+  - VoucherLabel
+  - SuitWeaponSkinIcon
+  - CanNotEquipTitle
+  - NewLabel
+  - HotLabel
+  - DiscountLabel
+  - EarlyBirdLabel
+  - HeadIcon
+  - GoldOriginalPriceLabel
+  - DiamondOriginalPriceLabel
+  - ActivityLabel
+  - PreviewCommon
+
+==========================================================================================
+#52 SCORE=20
+FILE: input/freefire-assets/assets/bin/Data/aaaea33e26a2b0a499c33c53d3363ce6
+
+COMPONENT TYPES:
+  BoxCollider: 28
+  MonoBehaviour: 516
+
+HEAD / NECK OBJECTS:
+  - HeadShotLabel
+  - HeadShotRatioLabel
+  - HeadShotRatio
+  - HeadShot
+  - HeadShotNode
+  - HeadShotRatioNode
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=747 GameObject=113:bg
+  BoxCollider            object=748 GameObject=221:bg
+  BoxCollider            object=749 GameObject=138:bg
+  BoxCollider            object=750 GameObject=173:bg
+  BoxCollider            object=751 GameObject=187:bg
+  BoxCollider            object=752 GameObject=182:bg
+  BoxCollider            object=753 GameObject=121:detailbtn
+  BoxCollider            object=754 GameObject=190:bg
+  BoxCollider            object=755 GameObject=18:bg
+  BoxCollider            object=756 GameObject=233:CSRankRatingTip
+  BoxCollider            object=757 GameObject=285:bg
+  BoxCollider            object=758 GameObject=326:bg
+  BoxCollider            object=759 GameObject=302:bg
+  BoxCollider            object=760 GameObject=256:bg
+  BoxCollider            object=761 GameObject=291:bg
+  BoxCollider            object=762 GameObject=368:bg
+  BoxCollider            object=763 GameObject=335:bg
+  BoxCollider            object=764 GameObject=223:bg
+  BoxCollider            object=765 GameObject=333:bg
+  BoxCollider            object=766 GameObject=276:bg
+  BoxCollider            object=767 GameObject=334:bg
+  BoxCollider            object=768 GameObject=318:bg
+  BoxCollider            object=769 GameObject=224:RankRatingTip
+  BoxCollider            object=770 GameObject=295:bg
+  BoxCollider            object=771 GameObject=222:bg
+  BoxCollider            object=772 GameObject=232:bg
+  BoxCollider            object=773 GameObject=358:bg
+  BoxCollider            object=774 GameObject=286:bg
+
+NOISE:
+  - AVGDamageLabel
+  - Label
+  - Scroll View
+  - KillVFX
+  - CSWinrateVFX
+  - CSSurvivalVFX2
+  - CSSurvivalVFX3
+  - HeadShotLabel
+  - PointWinRateVfx
+  - RevivesLabel
+  - Label
+  - Label
+  - CSNameLabels
+  - HeadShotRatioLabel
+  - UIProfileFightDataItem
+
+==========================================================================================
+#53 SCORE=20
+FILE: input/freefire-assets/assets/bin/Data/ac092ed3dceeb864983e0634cc5d3cbf
+
+COMPONENT TYPES:
+  BoxCollider: 7
+  MonoBehaviour: 166
+
+HEAD / NECK OBJECTS:
+  - LabelHeadShotsVal
+  - GoHeadShot
+  - LabelHeadShots
+  - SpriteHeadShot
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=253 GameObject=25:BtnJmpToArmory
+  BoxCollider            object=254 GameObject=59:BtnPin
+  BoxCollider            object=255 GameObject=102:Scrollable
+  BoxCollider            object=256 GameObject=115:BtnShare
+  BoxCollider            object=257 GameObject=9:BtnJmpToWeaponLeaderboard
+  BoxCollider            object=258 GameObject=98:EventTrigger
+  BoxCollider            object=259 GameObject=119:LevelUpBtn
+
+NOISE:
+  - LabelHeadShotsVal
+  - LabelTrial
+  - LevelUpLabel
+  - AfterBarVFX
+  - UIFX_Particle03
+  - LabelProgress
+  - LabelProficiencyShare
+  - WeaponProficiencyRankLabel
+  - LabelDamageVal
+  - LabelCureVal
+  - LabelNameShare2
+  - LabelHeadShots
+  - GoVfxUpgrade2
+  - UIWeaponProficiency
+  - WeaponProficiencyRankLabel
+
+==========================================================================================
+#54 SCORE=20
+FILE: input/freefire-assets/assets/bin/Data/be546371c316dec4eb1b7e0ff551b4c5
+
+COMPONENT TYPES:
+  BoxCollider: 8
+  MonoBehaviour: 73
+
+HEAD / NECK OBJECTS:
+  - TableHeader
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=123 GameObject=28:MaskClick
+  BoxCollider            object=124 GameObject=26:ClaimOrSendBtn
+  BoxCollider            object=125 GameObject=32:AddFrinedBtn
+  BoxCollider            object=126 GameObject=21:BG
+  BoxCollider            object=127 GameObject=30:CloseBtn
+  BoxCollider            object=128 GameObject=44:RuleBtn
+  BoxCollider            object=129 GameObject=12:GuideMask
+  BoxCollider            object=130 GameObject=33:LeaderBoardBtn
+
+NOISE:
+  - EXPShareToEXPGainUIFXTrail
+  - UIFX_EXPGain
+  - GuideMask
+  - LevelLabel
+  - TimesLabel
+  - ClaimOrSendLabel
+  - CustomizedLabel
+  - Label
+  - ScrollViewAnchorLeftTopPos
+  - NameLabel
+  - EXPScrollView
+  - GuideMaskPanel
+  - GainLabel
+  - UIBooyahPassEXPShare
+
+==========================================================================================
+#55 SCORE=20
+FILE: input/freefire-assets/assets/bin/Data/cf5bc788e447b604293302c0afd79a02
+
+COMPONENT TYPES:
+  BoxCollider: 20
+  MonoBehaviour: 261
+
+HEAD / NECK OBJECTS:
+  - SlotHead
+  - SingleHeadAdditive
+  - SlotHeadAdditive
+  - SingleHeadAdditiveGrid
+  - BundleHeadAdditiveGrid
+  - BundleHeadAdditive
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=459 GameObject=30:DisplayBtn
+  BoxCollider            object=460 GameObject=220:SlotHair
+  BoxCollider            object=461 GameObject=50:SlotHead
+  BoxCollider            object=462 GameObject=181:SlotLegs
+  BoxCollider            object=463 GameObject=77:BG
+  BoxCollider            object=464 GameObject=71:LockBarTemplete
+  BoxCollider            object=465 GameObject=124:TokenBoxEntrance
+  BoxCollider            object=466 GameObject=130:ToEquipBtn
+  BoxCollider            object=467 GameObject=140:GemUnLockBtn
+  BoxCollider            object=468 GameObject=215:SlotChest
+  BoxCollider            object=469 GameObject=119:GuideFirstClickBtn
+  BoxCollider            object=470 GameObject=134:UnLockBtn
+  BoxCollider            object=471 GameObject=69:SlotHeadAdditive
+  BoxCollider            object=472 GameObject=101:CantEquip
+  BoxCollider            object=473 GameObject=57:ObtainBtn
+  BoxCollider            object=474 GameObject=31:SlotFeet
+  BoxCollider            object=475 GameObject=116:EquipBtn
+  BoxCollider            object=476 GameObject=218:ConditionUnLockBtn
+  BoxCollider            object=477 GameObject=37:LimitedBtn
+  BoxCollider            object=478 GameObject=110:GuideSecondClickBtn
+
+NOISE:
+  - Label
+  - VfxRareReward
+  - ToEquip
+  - Label
+  - Equied
+  - PreviewBorder
+  - Label
+  - UITailorMainPage
+  - Label
+  - Label
+  - CantEquip
+  - Label
+  - GuideSecondClickBtn
+  - EquipBtn
+  - Label
+
+==========================================================================================
+#56 SCORE=20
+FILE: input/freefire-assets/assets/bin/Data/e133425f9ce6f114d9e84caf7777964c
+
+COMPONENT TYPES:
+  BoxCollider: 4
+  MonoBehaviour: 70
+
+HEAD / NECK OBJECTS:
+  - HeadIcon
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=135 GameObject=48:bg
+  BoxCollider            object=136 GameObject=36:AddFriendBtn
+  BoxCollider            object=137 GameObject=28:ReportBtn
+  BoxCollider            object=138 GameObject=21:LikeBtn
+
+NOISE:
+  - LabelValue
+  - LabelPercent
+  - LabelValue
+  - HeadIcon
+  - VFX_Ring
+  - VFX_Shine037_B_001
+  - VFX_Like
+  - VFX_Shine004_Clamp_A_007
+  - UIHUDUGC_TwoTeamResultItem
+  - LabelPercent
+  - IndexLabel
+  - GradeScroll
+  - LabelPercent
+  - label
+  - LabelValue
+
+==========================================================================================
+#57 SCORE=20
+FILE: input/freefire-assets/assets/bin/Data/e81c3c619dfa374459dedf90b7065dfd
+
+COMPONENT TYPES:
+  BoxCollider: 6
+  MonoBehaviour: 342
+
+HEAD / NECK OBJECTS:
+  - SelfHeadIcon
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=493 GameObject=18:UISeasonReplaySocial
+  BoxCollider            object=494 GameObject=86:TakePhotoBtn
+  BoxCollider            object=495 GameObject=108:SummaryBtn
+  BoxCollider            object=496 GameObject=218:ScorllBtn
+  BoxCollider            object=497 GameObject=100:LikeBtn
+  BoxCollider            object=498 GameObject=196:MainBtn (1)
+
+NOISE:
+  - UIFX_Dot3
+  - UIFX_Dot2
+  - UIFX_StarL
+  - UIFX_Line_Right
+  - UIFX_Boom
+  - UIFX_Line_Left
+  - UIFX_BGPlane
+  - UIFX_Dot1
+  - UIFX_Dot4
+  - UIFX_SelectGlow
+  - UIFX_NoiseGlow
+  - UIFX_StarR
+  - UISeasonReplaySocial
+  - Label
+  - UIFX_SeasonLabel
+
+==========================================================================================
+#58 SCORE=20
+FILE: input/freefire-assets/assets/bin/Data/ef79e2d0a0c5bb0408cf4bdf2a3648d5
+
+COMPONENT TYPES:
+  BoxCollider: 1
+  MonoBehaviour: 123
+
+HEAD / NECK OBJECTS:
+  - HeadIcon
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=213 GameObject=70:UITopUpEventStandardItem
+
+NOISE:
+  - HotLabel
+  - LimitedLabel
+  - PreviewMale
+  - SuitWeaponSkinIcon
+  - ActivityLabel
+  - GoldPriceLabel
+  - VoucherLabel
+  - NewLabel
+  - LimitedPurchaseLabel
+  - PreviewFemale
+  - DiscountLabel
+  - ExchangePriceLabel
+  - EarlyBirdLabel
+  - VFX
+  - UITopUpEventStandardItem
+
+==========================================================================================
+#59 SCORE=20
+FILE: input/freefire-assets/assets/bin/Data/f11a6152e099b0440b4e0625b60d1aa6
+
+COMPONENT TYPES:
+  BoxCollider: 7
+  MonoBehaviour: 75
+
+HEAD / NECK OBJECTS:
+  - HiddenPageHeadVFXRoot
+  - BookHiddenPageHead
+  - HiddenPageHeadLabel
+
+PLAYER / BODY / SKELETON OBJECTS:
+
+PHYSICS COMPONENT OWNERS:
+  BoxCollider            object=237 GameObject=113:GotoStoreBtn
+  BoxCollider            object=238 GameObject=36:GuideMask
+  BoxCollider            object=239 GameObject=89:PageHelpBtn
+  BoxCollider            object=240 GameObject=86:DragBox
+  BoxCollider            object=241 GameObject=24:FunctionBtn
+  BoxCollider            object=242 GameObject=37:EquipBtn
+  BoxCollider            object=243 GameObject=4:GotoLockedPageBtn
+
+NOISE:
+  - vfx_right
+  - VFX_book_fanshu
+  - vfx_left
+  - HiddenPageHeadVFXRoot
+  - UnlockProgessTokenLabel
+  - PageIndexLabel
+  - RemainSpinCountLabel
+  - GuideMaskPanel
+  - VFX_Book_saoguang2
+  - VFX_weapon_change
+  - UIHyperBookContentNavigation
+  - VFX_xuli_sphere1 (1)
+  - GuideMask
+  - EquipBtn
+  - VFX_Zcom_Noise024
+
+==========================================================================================
+#60 SCORE=20
+FILE: input/freefire-assets/assets/bin/Data/level34
+
+COMPONENT TYPES:
+  CapsuleCollider: 16
+  BoxCollider: 712
+  MeshCollider: 1
+  MonoBehaviour: 464
+
+HEAD / NECK OBJECTS:
+
+PLAYER / BODY / SKELETON OBJECTS:
+  - PlayerSpawnPoint
+  - PlayerSpawnPoint_Group2
+
+PHYSICS COMPONENT OWNERS:
+  MeshCollider           object=2611 GameObject=803:IIV_GP_Stone001_Cols
+  BoxCollider            object=2612 GameObject=52:NoPlacementTrigger (11)
+  BoxCollider            object=2613 GameObject=71:NoPlacementTrigger (16)
+  BoxCollider            object=2614 GameObject=120:col (301)
+  BoxCollider            object=2615 GameObject=220:NoPlacementTrigger (4)
+  BoxCollider            object=2616 GameObject=303:NoPlacementTrigger (3)
+  BoxCollider            object=2617 GameObject=382:NoPlacementTrigger (1)
+  BoxCollider            object=2618 GameObject=391:NoPlacementTrigger (2)
+  BoxCollider            object=2619 GameObject=406:NoPlacementTrigger (5)
+  BoxCollider            object=2620 GameObject=440:NoPlacementTrigger (8)
+  BoxCollider            object=2621 GameObject=456:NoPlacementTrigger (14)
+  BoxCollider            object=2622 GameObject=500:NoPlacementTrigger (15)
+  BoxCollider            object=2623 GameObject=1044:IIV_GP_WoodLamp001_Collider045
+  BoxCollider            object=2624 GameObject=764:IIV_GP_StoneLamp001_Collider021
+  BoxCollider            object=2625 GameObject=644:IIV_GP_StoneLamp001_Collider014
+  BoxCollider            object=2626 GameObject=1226:IIV_GP_StoneLamp001_Collider023
+  BoxCollider            object=2627 GameObject=862:IIV_GP_WoodLamp001_Collider024
+  BoxCollider            object=2628 GameObject=861:IIV_GP_WoodLamp001_Collider024
+  BoxCollider            object=2629 GameObject=860:IIV_GP_WoodLamp001_Collider024
+  BoxCollider            object=2630 GameObject=1117:IIV_GP_WoodLamp001_Collider032
+  BoxCollider            object=2631 GameObject=1118:IIV_GP_WoodLamp001_Collider032
+  BoxCollider            object=2632 GameObject=1119:IIV_GP_WoodLamp001_Collider032
+  BoxCollider            object=2633 GameObject=873:IIV_GP_StoneLamp001_Collider020
+  BoxCollider            object=2634 GameObject=931:IIV_GP_StoneLamp001_Collider004
+  BoxCollider            object=2635 GameObject=1139:Cube (31)
+  BoxCollider            object=2636 GameObject=1203:Cube (4)
+  BoxCollider            object=2637 GameObject=1019:IIV_GP_WoodLamp001_Collider021
+  BoxCollider            object=2638 GameObject=1018:IIV_GP_WoodLamp001_Collider021
+  BoxCollider            object=2639 GameObject=1017:IIV_GP_WoodLamp001_Collider021
+  BoxCollider            object=2640 GameObject=1020:Cube (18)
+  BoxCollider            object=2641 GameObject=600:IIV_GP_WoodLamp001_Collider055
+  BoxCollider            object=2642 GameObject=512:IIV_GP_WoodLamp001_Collider028
+  BoxCollider            object=2643 GameObject=1002:IIV_GP_StoneLamp001_Collider030
+  BoxCollider            object=2644 GameObject=636:IIV_GP_WoodLamp001_Collider023
+  BoxCollider            object=2645 GameObject=1083:IIV_GP_WoodLamp001_Collider052
+  BoxCollider            object=2646 GameObject=1007:IIV_GP_StoneLamp001_Collider011
+  BoxCollider            object=2647 GameObject=875:Cube (121)
+  BoxCollider            object=2648 GameObject=1004:IIV_GP_StoneLamp001_Collider013
+  BoxCollider            object=2649 GameObject=551:IIV_GP_WoodLamp001_Collider040
+  BoxCollider            object=2650 GameObject=550:IIV_GP_WoodLamp001_Collider040
+  BoxCollider            object=2651 GameObject=549:IIV_GP_WoodLamp001_Collider040
+  BoxCollider            object=2652 GameObject=520:IIV_GP_WoodLamp001_Collider057
+  BoxCollider            object=2653 GameObject=705:IIV_GP_Foundation001_Collider108
+  BoxCollider            object=2654 GameObject=632:IIV_GP_StoneLamp001_Collider006
+  BoxCollider            object=2655 GameObject=1172:Cube (96)
+  BoxCollider            object=2656 GameObject=536:IIV_GP_WoodLamp001_Collider012
+  BoxCollider            object=2657 GameObject=538:IIV_GP_WoodLamp001_Collider012
+  BoxCollider            object=2658 GameObject=537:IIV_GP_WoodLamp001_Collider012
+  BoxCollider            object=2659 GameObject=1194:Cube (32)
+  BoxCollider            object=2660 GameObject=611:Cube (70)
+  BoxCollider            object=2661 GameObject=974:IIV_GP_StoneLamp001_Collider031
+  BoxCollider            object=2662 GameObject=1042:IIV_GP_StoneLamp001_Collider003
+  BoxCollider            object=2663 GameObject=893:IIV_GP_StoneLamp001_Collider022
+  BoxCollider            object=2664 GameObject=1013:IIV_GP_StoneLamp001_Collider032
+  BoxCollider            object=2665 GameObject=970:IIV_GP_StoneLamp001_Collider002
+  BoxCollider            object=2666 GameObject=1128:IIV_GP_WoodLamp001_Collider041
+  BoxCollider            object=2667 GameObject=1081:Cube (100)
+  BoxCollider            object=2668 GameObject=1107:IIV_GP_Foundation001_Collider135
+  BoxCollider            object=2669 GameObject=791:IIV_GP_Flowerbeds002_Collider009
+  BoxCollider            object=2670 GameObject=713:IIV_GP_WoodLamp001_Collider051
+  BoxCollider            object=2671 GameObject=716:IIV_GP_WoodLamp001_Collider009
+  BoxCollider            object=2672 GameObject=717:IIV_GP_WoodLamp001_Collider009
+  BoxCollider            object=2673 GameObject=718:IIV_GP_WoodLamp001_Collider009
+  BoxCollider            object=2674 GameObject=806:Cube (50)
+  BoxCollider            object=2675 GameObject=1201:IIV_GP_Foundation001_Collider082
+  BoxCollider            object=2676 GameObject=548:IIV_GP_Foundation001_Collider080
+  BoxCollider            object=2677 GameObject=1030:IIV_GP_Foundation001_Collider136
+  BoxCollider            object=2678 GameObject=1008:Cube (44)
+  BoxCollider            object=2679 GameObject=707:IIV_GP_Flowerbeds002_Collider012
+  BoxCollider            object=2680 GameObject=1021:Cube (110)
+  BoxCollider            object=2681 GameObject=1212:IIV_GP_Flowerbeds002_Collider007
+  BoxCollider            object=2682 GameObject=991:IIV_GP_WoodLamp001_Collider018
+  BoxCollider            object=2683 GameObject=989:IIV_GP_WoodLamp001_Collider018
+  BoxCollider            object=2684 GameObject=990:IIV_GP_WoodLamp001_Collider018
+  BoxCollider            object=2685 GameObject=840:IIV_GP_WoodLamp001_Collider035
+  BoxCollider            object=2686 GameObject=841:IIV_GP_WoodLamp001_Collider035
+  BoxCollider            object=2687 GameObject=842:IIV_GP_WoodLamp001_Collider035
+  BoxCollider            object=2688 GameObject=574:IIV_GP_WoodLamp001_Collider016
+  BoxCollider            object=2689 GameObject=1225:IIV_GP_StoneLamp001_Collider033
+  BoxCollider            object=2690 GameObject=1067:IIV_GP_WoodLamp001_Collider019
+
+NOISE:
+  - LevelDynamicCollider1009 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+  - SpawnPoint_TechBuildPoint#9
+  - LevelDynamicCollider1022 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+  - TechBuildRoot
+  - SeafoodGate1001 (Missing Prefab with guid: 6d9d2152ec2518144b4dc02578e955f4)
+  - SpawnPoint_TechBuildGroup#10
+  - LevelDynamicCollider1016 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+  - BloodmoonGP_Center#1_Ruins_1
+  - LevelDynamicCollider1017 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+  - LevelDynamicCollider1007 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+  - SpawnPoint_TechBuildGroup#7
+  - Ruins
+  - SpawnPoint_TechBuildGroup#6
+  - LevelDynamicCollider1010 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+  - LevelDynamicCollider1026 (Missing Prefab with guid: 677371789e4063745ac6e05bac82f902)
+
+
+==========================================================================================
+STRICT SHORTLIST
+==========================================================================================
+Strict candidates: 5
+
+[1] SCORE=105
+FILE: input/freefire-assets/assets/bin/Data/level43
+TYPES: CharacterController=0 CapsuleCollider=0 SphereCollider=0 BoxCollider=199 Animator=20 SkinnedMeshRenderer=104
+HEAD: male_lobby_cos_no1_head_001 | male_cos_no1_head_001 | bone_Neck | bone_Head | bone_Head | bone_Neck | male_cos_no1_head_001 | male_lobby_cos_no1_head_001 | bone_Head | bone_Neck
+BODY: PlayerSpawnRegion | bone_Root | bone_Spine1 | bone_Spine | Bip01 Footsteps | bone_Left_Spine_Backpack | bone_Left_Spine_Weapon | bone_Right_Spine_Weapon | Bip01 | Bip01
+
+[2] SCORE=85
+FILE: input/freefire-assets/assets/bin/Data/98981e8def17f514daf7c8bfae596533
+TYPES: CharacterController=0 CapsuleCollider=0 SphereCollider=0 BoxCollider=22 Animator=1 SkinnedMeshRenderer=0
+HEAD: HeadshotRemote | HeadshotLocal | PlayerHeadshot | HeadshotDefault | BannedPersonheadbg | BannedPersonHeadSprite | Personhead
+BODY: PlayerID | PlayerHeadshot | PlayerNickname
+
+[3] SCORE=85
+FILE: input/freefire-assets/assets/bin/Data/9ca587f10a284664899b64f7f1b0096c
+TYPES: CharacterController=0 CapsuleCollider=0 SphereCollider=0 BoxCollider=41 Animator=1 SkinnedMeshRenderer=0
+HEAD: TeamHeadIcon_L | TeamHeadIcon_R
+BODY: LeftTitlePlayerTxt | RightTitlePlayerTxt | DataPlayerList | DataPlayerItemInfo4 | DataPlayerItemInfo2 | AvatarPageBtn | AvatarPageBG | DataPlayerInfoTitle | DataPlayerInfoTitleRoot | DataPlayerItemInfo3
+
+[4] SCORE=85
+FILE: input/freefire-assets/assets/bin/Data/b4b7372f75cdf284aae23218caec0956
+TYPES: CharacterController=0 CapsuleCollider=0 SphereCollider=0 BoxCollider=4 Animator=1 SkinnedMeshRenderer=0
+HEAD: HeadSprite
+BODY: PlayerInfo
+
+[5] SCORE=85
+FILE: input/freefire-assets/assets/bin/Data/e514234058d689e40ac7bb4b8be38776
+TYPES: CharacterController=0 CapsuleCollider=0 SphereCollider=0 BoxCollider=18 Animator=3 SkinnedMeshRenderer=0
+HEAD: PlayerHeadPicSelect | PlayerHeadPic | myHeadPic
+BODY: PlayerHeadPicSelect | PlayerHeadPic | MyPlayerInfo

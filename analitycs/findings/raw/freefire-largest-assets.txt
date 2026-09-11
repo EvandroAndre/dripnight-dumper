@@ -1,0 +1,14 @@
+55740360	/workspaces/dripnight-dumper/input/freefire-assets/assets/bin/Data/Managed/Metadata/global-metadata.dat
+34728044	/workspaces/dripnight-dumper/input/freefire-assets/assets/bin/Data/globalgamemanagers
+4179731	/workspaces/dripnight-dumper/input/freefire-assets/META-INF/BNDLTOOL.SF
+4179623	/workspaces/dripnight-dumper/input/freefire-assets/META-INF/MANIFEST.MF
+2838428	/workspaces/dripnight-dumper/input/freefire-assets/assets/bin/Data/8f9b18f4ce2d3714fb9b889faa8454d8
+2648472	/workspaces/dripnight-dumper/input/freefire-assets/assets/bin/Data/750aebad4e4d7194186dd31701b736a9
+1543684	/workspaces/dripnight-dumper/input/freefire-assets/assets/bin/Data/6375c8a4cf2063248b6aa39d2f5bb3b1
+1121184	/workspaces/dripnight-dumper/input/freefire-assets/assets/bin/Data/unity default resources
+1102032	/workspaces/dripnight-dumper/input/freefire-assets/assets/bin/Data/e8e5d89621455c342b79eabaf222d64d
+1088504	/workspaces/dripnight-dumper/input/freefire-assets/assets/bin/Data/7991cb0da2c757c4e88291cd7d0868d0
+1058792	/workspaces/dripnight-dumper/input/freefire-assets/assets/bin/Data/f68d16b2de30d7e4cbf3b35f96ffa582
+1048860	/workspaces/dripnight-dumper/input/freefire-assets/assets/bin/Data/d8882cab385778c47be596c6ef1f0a41
+1048856	/workspaces/dripnight-dumper/input/freefire-assets/assets/bin/Data/834b6bf1296b3bc4195a31fd11e745f5
+1048852	/workspaces/dripnight-dumper/input/freefire-assets/assets/bin/Data/ec8afbc44b151a044981d9862639ca99

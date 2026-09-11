@@ -1,0 +1,17 @@
+============================================================
+UNITY ASSET TARGETED STRING SCAN
+============================================================
+
+========== HitDetectColliderHelper ==========
+
+========== BigHeadComponent ==========
+
+========== CapsuleHuman ==========
+
+========== HeadBonesScale ==========
+
+========== HeadShotDamageScale ==========
+
+========== ColliderType ==========
+
+========== GetHeadTF ==========
