@@ -1,0 +1,6 @@
+input/
+output/
+tools/
+*.log
+*.zip
+*.tar.gz
