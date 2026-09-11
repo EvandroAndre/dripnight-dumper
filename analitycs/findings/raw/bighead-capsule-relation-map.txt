@@ -1,0 +1,422 @@
+============================================================
+BIG HEAD / CAPSULE COLLIDER RELATION MAP
+============================================================
+
+========== BIGHEADCOMPONENT REFERENCES ==========
+output/csharp-decompiled/COW.GamePlay/Player.cs:892:		private BigHeadComponent KHMHJPMEHND;
+output/csharp-decompiled/COW.GamePlay/Player.cs:927:		public void UpdateBigHeadScale(float GPFPIAMCEMI)
+output/csharp-decompiled/COW.GamePlay/Player.cs:931:		public void SetBigHeadNeckRevertScaleMult(Vector3 FDOKAOIEDFD)
+output/csharp-decompiled/COW.GamePlay/Player.cs:4569:	protected BigHeadComponent KHMHJPMEHND;
+output/csharp-decompiled/COW.GamePlay/BigHeadComponent.cs:5:public class BigHeadComponent : MonoBehaviour
+
+========== HEAD SCALE REFERENCES ==========
+output/csharp-decompiled/COW.GamePlay/Player.cs:927:		public void UpdateBigHeadScale(float GPFPIAMCEMI)
+output/csharp-decompiled/COW.GamePlay/Player.cs:16872:	public bool IsInBigHeadScale()
+output/csharp-decompiled/COW.GamePlay/Player.cs:16877:	public bool ApplyBigHeadScalePreHangLateUpdate()
+output/csharp-decompiled/COW.GamePlay/Player.cs:21310:	public bool IsHeadScaleUp(uint CLLNGCEEBDL)
+output/csharp-decompiled/COW.GamePlay/Player.cs:21315:	public bool IsHeadScaleDown(uint CLLNGCEEBDL)
+output/csharp-decompiled/message/MFHOLGEKNLI.cs:99:	EBuffBehavior_WeaponHeadShotDamageScale,
+output/csharp-decompiled/message/NEIBGAFJNMN.cs:39:	EDamageCalcType_Buff_WeaponHeadShotDamageScale,
+output/csharp-decompiled/COW/BigHeadData.cs:10:	public float HeadScale;
+output/csharp-decompiled/COW/BigHeadData.cs:12:	public float HeadShotDamageScale;
+output/csharp-decompiled/COW/BigHeadDataConfig.cs:18:	public float GetHeadShotDamageScale(int level)
+output/csharp-decompiled/COW/BigHeadDataConfig.cs:23:	public float GetHeadScale(int level)
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:108:	public const int PROP_ID_HEADBONESSCALE = -14049;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:212:	public Action<Vector3> OnHeadBonesScaleChangeEvent;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:302:	private Vector3 _003CHeadBonesScale_003Ek__BackingField;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:584:	public Vector3 HeadBonesScale
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:588:			return _003CHeadBonesScale_003Ek__BackingField;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:592:			_003CHeadBonesScale_003Ek__BackingField = value;
+output/csharp-decompiled/COW/UIModelMatch.cs:2206:	public void OnTeammateHeadScaleChange(BHGGAEEHJCO pid, float scale)
+output/csharp-decompiled/COW/PlayerData.cs:86:	public float headScale;
+
+========== CAPSULEHUMAN REFERENCES ==========
+output/csharp-decompiled/IFix/ILFixDynamicMethodWrapper.cs:67255:	public CapsuleHuman __Gen_Wrap_14090(object P0)
+output/csharp-decompiled/COW.GamePlay/Player.cs:4947:	protected CapsuleHuman JCIOGODKHPP;
+output/csharp-decompiled/COW.GamePlay/Player.cs:8425:	public CapsuleHuman DBAHLEDEMPO => null;
+output/csharp-decompiled/COW.GamePlay/Player.cs:11429:	public void CreateCapsuleHuman()
+output/csharp-decompiled/COW.GamePlay/Player.cs:13358:	public virtual void ResizeCapsuleCollider(float IFDHHGECCCM, float NMEEAHMNACE = -1f, float JJIAFNNDEFP = 0f, float JDLBJHACCAD = 0f)
+output/csharp-decompiled/COW.GamePlay/CapsuleHuman.cs:5:internal class CapsuleHuman : MonoBehaviour
+output/csharp-decompiled/COW.GamePlay/CapsuleHuman.cs:38:	public void ResizeCapsuleCollider(float IFDHHGECCCM, float NMEEAHMNACE, float PMLKPAIPJHB)
+
+========== PLAYER BIGHEAD CONTEXT 840-970 ==========
+		}
+
+		public void _003C_003EiFixBaseProxy_KNOJLLAMIIM(IGJPHDANPJD P0)
+		{
+		}
+
+		public void _003C_003EiFixBaseProxy_GPJGONKFEAG(IGJPHDANPJD P0, EOGPGNIDOKF P1)
+		{
+		}
+	}
+
+	private enum GDIEANOJNGP
+	{
+		None,
+		SpeedLow,
+		SpeedUp,
+		SpeedMax
+	}
+
+	private enum OIBKLAKMFOL
+	{
+		None,
+		AccUp,
+		AccDown
+	}
+
+	public class AvatarTransformer : MonoBehaviour
+	{
+		public GameObject root;
+
+		public bool playerRawIsFemale;
+
+		public AvatarEffect rawAvateaEffect;
+
+		public PlayerAudioComponent rawAudioComponent;
+
+		public AvatarTransformData transformData;
+
+		private Renderer[] APKCOKLHJAO;
+
+		private Animator[] APLOJDNMABG;
+
+		private SkinnedMeshRenderer[] CLDKMJKKAAM;
+
+		private ParticleSystemRenderer[] DNMFLFNJECO;
+
+		private MeshRenderer[] CJEPEJBIAIB;
+
+		public ResourceID modelResId;
+
+		public Player owner;
+
+		private BigHeadComponent KHMHJPMEHND;
+
+		private string OLCGLJCCPPL;
+
+		private Dictionary<int, HELBFMHHPBI> OKNNIAGCGBG;
+
+		private int? OJPDMHKPPGO;
+
+		private Dictionary<int, int> LEJLOHPNNMG;
+
+		private int OGPPPAMFCJB;
+
+		private int HNKIFFMGMOH => 0;
+
+		public void SetVisible(bool GPFPIAMCEMI)
+		{
+		}
+
+		public void Clear()
+		{
+		}
+
+		public Vector3 GetLocalPosition()
+		{
+			return default(Vector3);
+		}
+
+		public void ResetLocalPosition()
+		{
+		}
+
+		public void SetLocalPosition(Vector3 GPFPIAMCEMI)
+		{
+		}
+
+		public void UpdateBigHeadScale(float GPFPIAMCEMI)
+		{
+		}
+
+		public void SetBigHeadNeckRevertScaleMult(Vector3 FDOKAOIEDFD)
+		{
+		}
+
+		public void SwitchEffect(UMAData.EffectType DHJMMGHNCKJ)
+		{
+		}
+
+		public void SetShader(string NKOEPMIECFC, HELBFMHHPBI IGGPKOIHLJE = null, Shader BGBLINMCBGD = null)
+		{
+		}
+
+		public void RevertToDefaultShader()
+		{
+		}
+
+		public void SetRenderQ(int MMNAILAPJFN, bool IDCHCEECMBE = false, bool MNMOFPDPGGN = false)
+		{
+		}
+
+		public void RevertToDefaultRenderQ(bool OKEOCDOOHAF = true)
+		{
+		}
+
+		public SkinnedMeshRenderer[] GetRenderer()
+		{
+			return null;
+		}
+
+		public void MakeAllTransformEffectVisible(bool PIDINBNGILH)
+		{
+		}
+
+		public bool IsFirstRendererEnabled()
+		{
+			return false;
+		}
+
+		public void SetThermalView(bool HCLGHJNEFIC)
+		{
+
+========== PLAYER BIGHEAD FIELDS 4510-4600 ==========
+
+	protected ITransformNode DIDHPFKMJJE;
+
+	protected ITransformNode KAKOKIHEPCF;
+
+	protected ITransformNode GCEICMOOFIA;
+
+	protected ITransformNode CLOEKEADCHD;
+
+	protected ITransformNode KNFKIDHJCCO;
+
+	protected ITransformNode HNFBCFKKCJP;
+
+	protected ITransformNode BOHFCEHMJBD;
+
+	protected ITransformNode BIPBNNIFCNO;
+
+	protected ITransformNode JLLMBADGKJP;
+
+	protected ITransformNode INHGPBHOKPF;
+
+	protected ITransformNode OEHAGFIGILO;
+
+	protected Transform OKOLMFJKGEC;
+
+	protected ITransformNode NBHOEOOCIIG;
+
+	protected ITransformNode OEJFBHIIBBG;
+
+	protected ITransformNode DIHJDDNIJHP;
+
+	protected ITransformNode PNPBBNDANEM;
+
+	protected ITransformNode KMIANNCLNOJ;
+
+	protected ITransformNode KNBJLEHOPIL;
+
+	protected Collider NFDNMIOPILM;
+
+	protected OMELKCOGCBK LPEALCPGJBL;
+
+	protected DLGEOEOEDBC KGHHPFINNLP;
+
+	protected AFBNBKPGOGO LOIJOEBOEKE;
+
+	private bool MPJBMKODJMF;
+
+	protected NewPlayerAnimationSystemComponent DGNAGHGGMCA;
+
+	protected PlayerAttributes KDJHNBAECLM;
+
+	protected AvatarManager KPMDIPJINJO;
+
+	protected AvatarDynamicEffectManager BPFDJKJMBFJ;
+
+	protected AvatarPropManager HGJDEIPHCGN;
+
+	protected PropertyData AJBLKLFDNHC;
+
+	protected BigHeadComponent KHMHJPMEHND;
+
+	protected BigHeadDataConfig IHHAAEMCFFL;
+
+	protected float AKMAAACGLNF;
+
+	protected bool MCHDPBAAFLG;
+
+	protected GameObject JKPPJJHKLPI;
+
+	private IceWallMakerData IBPHBBMGJEC;
+
+	private bool _003CLOFPJDKBDNC_003Ek__BackingField;
+
+	private bool _003CKINIABJKLEL_003Ek__BackingField;
+
+	protected NavMeshAgent PDHEAKFNCFE;
+
+	private NetworkPet _003CJPFIJGBLCAN_003Ek__BackingField;
+
+	private bool KHGPIFCFBMK;
+
+	public bool PetForceHide;
+
+	private bool LNNCGAEJOGC;
+
+	private bool _003CIJJBDCMHHAN_003Ek__BackingField;
+
+	private bool LJFDNAEOLHC;
+
+	private bool _003CJGMMBEILBBL_003Ek__BackingField;
+
+
+========== PLAYER BIGHEAD METHODS 16820-16920 ==========
+	}
+
+	private void EJBDPPHIDDK(AvatarTransformData ICHJBEPFCOO, ResourceID HLIDHMEGAKI, GameObject ADDGINGLHBN)
+	{
+	}
+
+	public void QuitAvatarTransformer(bool HJBPPGHOPHA = false)
+	{
+	}
+
+	public void RebindAnimStatusWhenUGCAvatarChanged()
+	{
+	}
+
+	private void DCOOFAAOMIJ(AvatarTransformData ICHJBEPFCOO, GameObject ADDGINGLHBN)
+	{
+	}
+
+	private void GDCBIJPOOLO()
+	{
+	}
+
+	public void RebindWeaponAnimController()
+	{
+	}
+
+	public bool canShowAvatarTransform(AvatarTransformData JCONDDPFBKK)
+	{
+		return false;
+	}
+
+	private void HFHBNPOFLEL()
+	{
+	}
+
+	public virtual void OnTransformerChanged(Transform FPMLOHFMGLP)
+	{
+	}
+
+	private void EHDHLJPENPG()
+	{
+	}
+
+	private void GLBMEKLEIEP()
+	{
+	}
+
+	private bool LFIFEHJJHIF()
+	{
+		return false;
+	}
+
+	public bool IsInBigHeadScale()
+	{
+		return false;
+	}
+
+	public bool ApplyBigHeadScalePreHangLateUpdate()
+	{
+		return false;
+	}
+
+	private PlayerBigHeadPreHangUpdater LDGKMJOGJNB()
+	{
+		return null;
+	}
+
+	public void RegisterLocalPlayerBTFishTailCallback(Action<int> CEHELPAIELA)
+	{
+	}
+
+	public void UnregisterBTFishTailCallback()
+	{
+	}
+
+	public void UpdateLocalFishTail(bool JNKFCEOKLKD)
+	{
+	}
+
+	public bool CanFishing()
+	{
+		return false;
+	}
+
+	public void SetFishSlientTime()
+	{
+	}
+
+	public bool InIsSimFishSlient()
+	{
+		return false;
+	}
+
+	public void PlayBTFishingPoolAnimation(bool AOGGADPEFCC, Vector3 BAFIFNKBHLC = default(Vector3))
+	{
+	}
+
+	private IEnumerator CENDEKFHCLI(Vector3 BAFIFNKBHLC)
+	{
+		return null;
+	}
+
+========== UGC HEAD BONES SCALE ==========
+	public string CurrentCameraConfig
+	{
+		get
+		{
+			return _003CCurrentCameraConfig_003Ek__BackingField;
+		}
+		private set
+		{
+			_003CCurrentCameraConfig_003Ek__BackingField = value;
+		}
+	}
+
+	public float CustomGravity
+	{
+		get
+		{
+			return _003CCustomGravity_003Ek__BackingField;
+		}
+		private set
+		{
+			_003CCustomGravity_003Ek__BackingField = value;
+		}
+	}
+
+	public Vector3 HeadBonesScale
+	{
+		get
+		{
+			return _003CHeadBonesScale_003Ek__BackingField;
+		}
+		private set
+		{
+			_003CHeadBonesScale_003Ek__BackingField = value;
+		}
+	}
+
+	public Vector3 BodyBonesScale
+	{
+		get
+		{
+			return _003CBodyBonesScale_003Ek__BackingField;
+		}
+		private set
+		{
+			_003CBodyBonesScale_003Ek__BackingField = value;
+		}
+	}
+
+	public Vector3 LimbBonesScale
+	{
+		get

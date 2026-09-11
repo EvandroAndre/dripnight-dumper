@@ -1,0 +1,27 @@
+============================================================
+BIGHEAD COMPONENT STRUCTURAL USERS
+============================================================
+output/csharp-decompiled/COW.GamePlay/LevelTechBuildSafeZoneController.cs:17:	private GameObject BPDOBCNIHLF;
+output/csharp-decompiled/COW.GamePlay/DuoEmoteInviteCollider.cs:10:	private SphereCollider BPDOBCNIHLF;
+output/csharp-decompiled/COW.GamePlay/LevelObjectHypercrate.cs:32:	private GameObject BPDOBCNIHLF;
+output/csharp-decompiled/COW.GamePlay/LevelJumpPad.cs:88:	private SphereCollider BPDOBCNIHLF;
+output/csharp-decompiled/COW.GamePlay/LevelObjectMapScanMachine.cs:29:	private GameObject BPDOBCNIHLF;
+output/csharp-decompiled/COW.GamePlay/LevelObjectKingSword.cs:31:	private GameObject BPDOBCNIHLF;
+output/csharp-decompiled/COW.GamePlay/LevelFootball.cs:35:	private SphereCollider BPDOBCNIHLF;
+output/csharp-decompiled/COW.GamePlay/SuperEmoteCollider.cs:10:	private SphereCollider BPDOBCNIHLF;
+output/csharp-decompiled/COW.GamePlay/BlueTearBubble.cs:27:	public void UpdateScale(float GLPLIHEECAP, float EEFLCGEOIFN)
+output/csharp-decompiled/COW.GamePlay/LPCGGIPAKHF.cs:13:	private ResourceID BPDOBCNIHLF;
+output/csharp-decompiled/COW.GamePlay/BigHeadComponent.cs:9:	private Transform CHEDPICHEPN;
+output/csharp-decompiled/COW.GamePlay/BigHeadComponent.cs:11:	private CapsuleCollider BPDOBCNIHLF;
+output/csharp-decompiled/COW.GamePlay/BigHeadComponent.cs:17:	public void UpdateScale(float GKKELMDDGBJ)
+output/csharp-decompiled/COW.GamePlay/BigHeadComponent.cs:33:	private void LFGHBHHKMMH()
+output/csharp-decompiled/COW.GamePlay/BigHeadComponent.cs:37:	public void SetNeckRevertScaleMult(Vector3 FDOKAOIEDFD)
+output/csharp-decompiled/COW.GamePlay/BigHeadComponent.cs:41:	private void PGMAPJNCHHI(float GKKELMDDGBJ)
+output/csharp-decompiled/COW.GamePlay/FollowMoveEmoteTrigger.cs:10:	private SphereCollider BPDOBCNIHLF;
+output/csharp-decompiled/COW.GamePlay/LevelEnergyDeviceBattery.cs:32:	private Collider BPDOBCNIHLF;
+output/csharp-decompiled/COW.GamePlay/EmoteLeaderCollider.cs:10:	private SphereCollider BPDOBCNIHLF;
+output/csharp-decompiled/COW.GamePlay/CooperateEmoteCollider.cs:10:	private SphereCollider BPDOBCNIHLF;
+output/csharp-decompiled/COW.HUD/UIHudLockedTargetScaledController.cs:75:	private void UpdateScale()
+output/csharp-decompiled/COW.Gameplay.UGC/UGCTimelineEditorHelper.cs:298:	public static void AddOrUpdateScaleKeyFrame(UGCTimelineEditorEntityTrackWarp track, float time, Vector3 value, bool refreshPreview = true)
+output/csharp-decompiled/COW/UIBigMapObEventController.cs:38:	public void UpdateScale(Vector3 mapIconScale)
+output/csharp-decompiled/COW/UIHudCrosshairsController.cs:538:	private void UpdateScaleTween()

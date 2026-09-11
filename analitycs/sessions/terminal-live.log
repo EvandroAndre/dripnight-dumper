@@ -2481,4 +2481,1799 @@ output/csharp-decompiled/COW/CheckBoxPlayerOverlapTrigger.cs:7:	private GMPGMPFN
 [7mgit push origin main[27m[A[A[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ git add -f analitycs
 git commit -m "Add physics hit and head collider findings"
 git push origin main
+[?2004l[main 142aafc5] Add physics hit and head collider findings
+ 7 files changed, 4880 insertions(+)
+ create mode 100644 analitycs/findings/raw/head-collider-deep-scan.txt
+ create mode 100644 analitycs/findings/raw/head-transform-collider-scan.txt
+ create mode 100644 analitycs/findings/raw/hit-result-construction.txt
+ create mode 100644 analitycs/findings/raw/physics-raycast-hitinfo-deep-scan.txt
+ create mode 100644 analitycs/findings/semantic-aliases-current.json
+Enumerating objects: 19, done.
+Counting objects:   5% (1/19)Counting objects:  10% (2/19)Counting objects:  15% (3/19)Counting objects:  21% (4/19)Counting objects:  26% (5/19)Counting objects:  31% (6/19)Counting objects:  36% (7/19)Counting objects:  42% (8/19)Counting objects:  47% (9/19)Counting objects:  52% (10/19)Counting objects:  57% (11/19)Counting objects:  63% (12/19)Counting objects:  68% (13/19)Counting objects:  73% (14/19)Counting objects:  78% (15/19)Counting objects:  84% (16/19)Counting objects:  89% (17/19)Counting objects:  94% (18/19)Counting objects: 100% (19/19)Counting objects: 100% (19/19), done.
+Delta compression using up to 2 threads
+Compressing objects:   7% (1/13)Compressing objects:  15% (2/13)Compressing objects:  23% (3/13)Compressing objects:  30% (4/13)Compressing objects:  38% (5/13)Compressing objects:  46% (6/13)Compressing objects:  53% (7/13)Compressing objects:  61% (8/13)Compressing objects:  69% (9/13)Compressing objects:  76% (10/13)Compressing objects:  84% (11/13)Compressing objects:  92% (12/13)Compressing objects: 100% (13/13)Compressing objects: 100% (13/13), done.
+Writing objects:   7% (1/13)Writing objects:  15% (2/13)Writing objects:  23% (3/13)Writing objects:  30% (4/13)Writing objects:  38% (5/13)Writing objects:  46% (6/13)Writing objects:  61% (8/13)Writing objects:  69% (9/13)Writing objects:  76% (10/13)Writing objects:  84% (11/13)Writing objects:  92% (12/13)Writing objects: 100% (13/13)Writing objects: 100% (13/13), 38.85 KiB | 4.86 MiB/s, done.
+Total 13 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+[Kremote: Resolving deltas:   0% (0/4)[Kremote: Resolving deltas:  25% (1/4)[Kremote: Resolving deltas:  50% (2/4)[Kremote: Resolving deltas:  75% (3/4)[Kremote: Resolving deltas: 100% (4/4)[Kremote: Resolving deltas: 100% (4/4), completed with 3 local objects.
+To https://github.com/EvandroAndre/dripnight-dumper
+   633052a7..142aafc5  main -> main
+[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ clear
+[?2004l[H[2J[3J[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ [7mcd /workspaces/dripnight-dumper[27m 
+
+[7mif ps -p "$PPID" -o comm= | grep -qx "script"; then[27m
+[7m    echo "[ANALITYCS] gravação do terminal já está ativa"[27m
+[7melse[27m
+[7m    echo "[ANALITYCS] iniciando gravação integral do terminal"[27m
+[7m    script -qaf analitycs/sessions/terminal-live.log[27m
+[7mfi[27m[A[A[A[A[A[A[A[A[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ cd /workspaces/dripnight-dumper 
+
+if ps -p "$PPID" -o comm= | grep -qx "script"; then
+    echo "[ANALITYCS] gravação do terminal já está ativa"
+else
+    echo "[ANALITYCS] iniciando gravação integral do terminal"
+    script -qaf analitycs/sessions/terminal-live.log
+fi
+[?2004l[ANALITYCS] gravação do terminal já está ativa
+[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ cd /workspaces/dripnight-dumper 
+
+mkdir -p analitycs/findings/raw
+
+{
+echo "============================================================"
+echo "RAYCAST -> HITOBJECTINFO -> COLLIDER DEEP MAP"
+echo "============================================================"
+
+echo
+echo "========== PHYSICS UTILITY STRUCTURE =========="
+sed -n '1,430p' \
+output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.cs
+
+echo
+echo "========== METHODS THAT RECEIVE RAYCASTHIT =========="
+grep -nE \'RaycastHit|GMPGMPFNMFP|Collider' \output/csharp-decompiled/COW.GamePlay/HPFKOGPDBBE.csechoecho "========== AUTOFIRE RAYCAST BRIDGE =========="grep -RniE \'MBLEOAIJBBL|AutoFireWeapon' \output/csharp-decompiled \| head -300echoecho "========== CAPSULE HUMAN =========="cat \output/csharp-decompiled/COW.GamePlay/CapsuleHuman.csechoecho "========== PLAYER WATCHING HEAD =========="sed -n '60,125p' \output/csharp-decompiled/COW.GamePlay/Player_Watching.csechoecho "========== BIG HEAD COMPONENT =========="cat \output/csharp-decompiled/COW.GamePlay/BigHeadComponent.csechoecho "========== BIG HEAD DATA =========="cat \output/csharp-decompiled/COW/BigHeadData.csechocat \output/csharp-decompiled/COW/BigHeadDataConfig.cs[7mecho[27m[7mecho "========== HIT DETECT HELPER USERS WITH CONTEXT =========="[27m[7mfor f in \[27m[7m  COW.GamePlay/JNHIOHFMPFN.cs \[27m[7m  COW.GamePlay/PIFLODLPKEO.cs \[27m[7m  COW.GamePlay/FDAEPHMIEPC.cs \[27m[7m  COW.GamePlay/NetworkAIHoloweenBoss.cs[27m[7mdo[27m[7m    echo[27m[7m    echo "---------------- $f ----------------"[27m[7m    grep -n -C 8 'HitDetectColliderHelper' \[27m[7m      "output/csharp-decompiled/$f"[27m[7mdone[27m[7m} | tee analitycs/findings/raw/raycast-to-head-region-map.txt[27mechoecho "========== HIT DETECT HELPER USERS WITH CONTEXT =========="for f in \  COW.GamePlay/JNHIOHFMPFN.cs \  COW.GamePlay/PIFLODLPKEO.cs \  COW.GamePlay/FDAEPHMIEPC.cs \  COW.GamePlay/NetworkAIHoloweenBoss.csdo    echo    echo "---------------- $f ----------------"    grep -n -C 8 'HitDetectColliderHelper' \      "output/csharp-decompiled/$f"done} | tee analitycs/findings/raw/raycast-to-head-region-map.txt
+[?2004l============================================================
+RAYCAST -> HITOBJECTINFO -> COLLIDER DEEP MAP
+============================================================
+
+========== PHYSICS UTILITY STRUCTURE ==========
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace COW.GamePlay;
+
+public class HPFKOGPDBBE
+{
+	public static readonly float GEPNDAKMJIO;
+
+	public static readonly uint FDIPNMIILNP;
+
+	public static readonly uint NLCLBIMBELC;
+
+	public static readonly uint HIAGNPFLOEO;
+
+	public static readonly uint CDCKLABLPLB;
+
+	public static readonly uint KJPLFFKCDBC;
+
+	public static readonly uint OHDAJJKGFBI;
+
+	public static readonly uint NCFMAEPHEJI;
+
+	public static readonly uint EFAJFEPKGJJ;
+
+	public static readonly uint LAHLICPLONF;
+
+	public static readonly uint CKHCKALEGGF;
+
+	public static readonly uint IDKNBAOCKMI;
+
+	public static readonly uint GDIOFNDECLL;
+
+	public static readonly uint HBIKNPEMDFL;
+
+	public static readonly uint LMGDBOPJFEC;
+
+	public static readonly uint DFLDDEJBHAK;
+
+	public static readonly uint PEHCHGLJOFE;
+
+	public static readonly uint LJIALPAGCED;
+
+	public static readonly uint APIMEAOACIM;
+
+	public static readonly uint DGNFOFANILO;
+
+	public static readonly uint BJMAOBANAFH;
+
+	public static readonly uint EPBEKKGGLGG;
+
+	public static readonly uint GFMAFEMAGKJ;
+
+	public static float HKAHLECJOGI;
+
+	private const float BFODBLDHGBE = 0.01f;
+
+	private const int ANKEHCMKBNE = 20;
+
+	private static RaycastHit[] PNAKLODKMGD;
+
+	private static RaycastHit[] AIHCCOJOEKB;
+
+	private static Collider[] GBABODKBHMP;
+
+	public static void ALHMHIAJDCD()
+	{
+	}
+
+	public static void NHKFCNJMFJN()
+	{
+	}
+
+	public static bool IFJABDOPGED(Vector3 OENCHMFCMMO, Vector3 MHAIPDKIHNL, float NMEEAHMNACE, uint CBCKBCPFOAI, ref Vector3 GKDIOHCMHBG)
+	{
+		return false;
+	}
+
+	public static bool IFJABDOPGED(Vector3 OENCHMFCMMO, Vector3 MHAIPDKIHNL, float NMEEAHMNACE, uint CBCKBCPFOAI, ref Vector3 GKDIOHCMHBG, ref Vector3 IJKBFICPDNF)
+	{
+		return false;
+	}
+
+	public static bool IFJABDOPGED(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float NMEEAHMNACE, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref Vector3 GKDIOHCMHBG, ref Vector3 IJKBFICPDNF)
+	{
+		return false;
+	}
+
+	public static bool IFJABDOPGED(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float NMEEAHMNACE, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ)
+	{
+		return false;
+	}
+
+	public static bool NCKILGEKGPJ(Vector3 LMOGBFCEONO, Vector3 IGJFHDCGCFO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI)
+	{
+		return false;
+	}
+
+	public static bool FOHHPOKDOND(Vector3 OENCHMFCMMO, Vector3 MHAIPDKIHNL, uint CBCKBCPFOAI, string AEPLIJGJLJC, ref GMPGMPFNMFP NKEPDPFIOFJ)
+	{
+		return false;
+	}
+
+	public static bool FOHHPOKDOND(Vector3 OENCHMFCMMO, Vector3 MHAIPDKIHNL, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ)
+	{
+		return false;
+	}
+
+	public static bool KPEIJLDPGEJ(Vector3 OENCHMFCMMO, Vector3 MHAIPDKIHNL, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ)
+	{
+		return false;
+	}
+
+	public static bool KIMJCEFLPPB(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, ref GMPGMPFNMFP NKEPDPFIOFJ, int NDJPACKNMOG, GameObject KOBFCJKEFNH, Func<Collider, bool> OKFPMOMLOOH = null)
+	{
+		return false;
+	}
+
+	public static bool KIMJCEFLPPB(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ, int NDJPACKNMOG)
+	{
+		return false;
+	}
+
+	public static bool FOHHPOKDOND(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ)
+	{
+		return false;
+	}
+
+	public static GameObject ENLDCOCBDCD(Collider KHDAJCLICDL)
+	{
+		return null;
+	}
+
+	public static void CNPAKEBOGHO(RaycastHit LMHJIDCOHLD, Vector3 BAFIFNKBHLC, List<GMPGMPFNMFP> HMBEKOKEHKE)
+	{
+	}
+
+	public static void GCLDHMBHCPA(RaycastHit LMHJIDCOHLD, List<GMPGMPFNMFP> HMBEKOKEHKE)
+	{
+	}
+
+	public static bool FOHHPOKDOND(Vector3 OENCHMFCMMO, Vector3 MHAIPDKIHNL, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ, GameObject KOBFCJKEFNH)
+	{
+		return false;
+	}
+
+	private static bool BCFHCGEIFPP(GMPGMPFNMFP NKEPDPFIOFJ)
+	{
+		return false;
+	}
+
+	public static bool AJLDFGJGKIB(GMPGMPFNMFP NKEPDPFIOFJ, HashSet<uint> ICEDNEMFHLG)
+	{
+		return false;
+	}
+
+	public static bool FBFNKGGOEHF(GMPGMPFNMFP AJLPMBIGCPO, HashSet<uint> PLFOOEIBPFG)
+	{
+		return false;
+	}
+
+	public static bool AMBJPJFCMIB(GMPGMPFNMFP AJLPMBIGCPO, bool BGFLFBDJCGM = false)
+	{
+		return false;
+	}
+
+	public static bool BOEJALMNJNJ(GMPGMPFNMFP AJLPMBIGCPO)
+	{
+		return false;
+	}
+
+	public static bool HLECILAAEEA(GMPGMPFNMFP AJLPMBIGCPO)
+	{
+		return false;
+	}
+
+	public static bool MCGMKBCECGK(GMPGMPFNMFP AJLPMBIGCPO)
+	{
+		return false;
+	}
+
+	public static bool PFBAMJBJEHI(Vector3 LOPJCNOKJDO, Vector3 LAMJPPGCONK, Vector3 MADAAIOAKOO, Vector3 IDDNHKMOEMD)
+	{
+		return false;
+	}
+
+	public static bool MDNBBOHKHKF(Vector3 LOPJCNOKJDO, Vector3 LAMJPPGCONK, Vector3 MADAAIOAKOO, Vector3 EGAIMNHBPDM)
+	{
+		return false;
+	}
+
+	public static bool HBIACGJOLIO(Vector3 PNCKNICINKF, float NMEEAHMNACE, Vector3 LAMJPPGCONK, Vector3 MADAAIOAKOO, Vector3 IDDNHKMOEMD)
+	{
+		return false;
+	}
+
+	public static bool PHMHKPAPLGG(Vector3 LLJCLCHBBBG, float EJGHOMJNBBA, float ALEKBCJAMCJ, Vector3 LAMJPPGCONK, Vector3 MADAAIOAKOO, Vector3 IDDNHKMOEMD)
+	{
+		return false;
+	}
+
+	public static bool ACHNCIIGIHH(Vector3 CFKJNFFOOBG, Vector3 NNDKLPKEIPD)
+	{
+		return false;
+	}
+
+	public static bool EFHINEOIIBK(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ, GameObject KOBFCJKEFNH, ref List<GMPGMPFNMFP> PJNOMOFGJBK, ref List<GMPGMPFNMFP> HMBEKOKEHKE)
+	{
+		return false;
+	}
+
+	public static bool DEGKKEPOJLH(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ, GameObject KOBFCJKEFNH, ref List<GMPGMPFNMFP> PJNOMOFGJBK, ref List<GMPGMPFNMFP> HMBEKOKEHKE)
+	{
+		return false;
+	}
+
+	public static bool JECBGLLGJCG(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ, GameObject KOBFCJKEFNH, ref List<GMPGMPFNMFP> PJNOMOFGJBK, ref List<GMPGMPFNMFP> HMBEKOKEHKE)
+	{
+		return false;
+	}
+
+	public static bool JEEKABKBDEN(GMPGMPFNMFP DKLOHOCENPN, GMPGMPFNMFP KGLBAJCFANP, bool BGFLFBDJCGM = false)
+	{
+		return false;
+	}
+
+	public static bool HJDINPLIMEB(GameObject GPEALPADFBA, GameObject BKNIPGCGEAH)
+	{
+		return false;
+	}
+
+	private static void FFEHKEGDKGH(GMPGMPFNMFP POGCPNKGOMJ, GMPGMPFNMFP NKEPDPFIOFJ)
+	{
+	}
+
+	public static bool KHGDIBEFMKP(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP HFAKMBIJGEF, GameObject KOBFCJKEFNH, ref List<GMPGMPFNMFP> PJNOMOFGJBK, ref List<GMPGMPFNMFP> IKLEPNGEFIN, ref List<GMPGMPFNMFP> HMBEKOKEHKE, bool BGFLFBDJCGM = false, Func<Collider, bool> OKFPMOMLOOH = null)
+	{
+		return false;
+	}
+
+	public static bool EPGNGBNPCHB(GMPGMPFNMFP OHMOIFPABPC, Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, Vector3 CNGBHLLKOFA, float LKFAJHMHJON, HashSet<uint> MPICMELEJLD, HashSet<uint> BNCLKDOIPKH, ref List<GMPGMPFNMFP> IKLEPNGEFIN)
+	{
+		return false;
+	}
+
+	private static bool FMGLFDKOAFB(GMPGMPFNMFP AICLJKKMMPF, GMPGMPFNMFP DCLKDFBAABJ)
+	{
+		return false;
+	}
+
+	public static bool ABBHJIHFPFF(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP HFAKMBIJGEF, GameObject KOBFCJKEFNH, ref List<GMPGMPFNMFP> PJNOMOFGJBK, ref List<GMPGMPFNMFP> IKLEPNGEFIN, ref List<GMPGMPFNMFP> HMBEKOKEHKE, HashSet<uint> MPICMELEJLD = null, HashSet<uint> BNCLKDOIPKH = null)
+	{
+		return false;
+	}
+
+	public static bool IGFMBBDFIHB(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP HFAKMBIJGEF, GameObject KOBFCJKEFNH, ref List<GMPGMPFNMFP> PJNOMOFGJBK, ref List<GMPGMPFNMFP> IKLEPNGEFIN, ref List<GMPGMPFNMFP> HMBEKOKEHKE, HashSet<uint> MPICMELEJLD = null, HashSet<uint> BNCLKDOIPKH = null)
+	{
+		return false;
+	}
+
+	public static bool KNLMFOFIHCJ(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP HFAKMBIJGEF, GameObject KOBFCJKEFNH, ref List<GMPGMPFNMFP> PJNOMOFGJBK, ref List<GMPGMPFNMFP> DCCEIMDJAHK, ref List<GMPGMPFNMFP> HMBEKOKEHKE)
+	{
+		return false;
+	}
+
+	public static bool JPFJMILDGBG(ref GMPGMPFNMFP AJLPMBIGCPO, RaycastHit IHGHIONENFM, Vector3 OMKGIPPPAKB, Vector3 OENCHMFCMMO, ref Vector3 JBKDKPCDGBB, ref List<GMPGMPFNMFP> PJNOMOFGJBK, Vector3 CNGBHLLKOFA, float LKFAJHMHJON, ref float CEMJPNGDFBM, ref float CGGPBJKCDEG, int NDJPACKNMOG, ref bool NLFKHDJIODI, List<GMPGMPFNMFP> HMBEKOKEHKE)
+	{
+		return false;
+	}
+
+	public static bool BNBIFAKMHNM(ref GMPGMPFNMFP AJLPMBIGCPO, RaycastHit IHGHIONENFM, Vector3 OMKGIPPPAKB, Vector3 OENCHMFCMMO, ref Vector3 JBKDKPCDGBB, ref List<GMPGMPFNMFP> PJNOMOFGJBK, Vector3 CNGBHLLKOFA, float LKFAJHMHJON, ref float CEMJPNGDFBM, ref float CGGPBJKCDEG, int NDJPACKNMOG, int CKCIEENHABE, ref bool NLFKHDJIODI, List<GMPGMPFNMFP> HMBEKOKEHKE, bool EPLDFIAEIIC = false)
+	{
+		return false;
+	}
+
+	public static bool GLGFCNIONLD(ref GMPGMPFNMFP AJLPMBIGCPO, RaycastHit IHGHIONENFM, Vector3 OMKGIPPPAKB, Vector3 OENCHMFCMMO, ref Vector3 JBKDKPCDGBB, ref List<GMPGMPFNMFP> PJNOMOFGJBK, Vector3 CNGBHLLKOFA, float LKFAJHMHJON, ref float CEMJPNGDFBM, ref float CGGPBJKCDEG, int NDJPACKNMOG, int CKCIEENHABE, ref bool NLFKHDJIODI, List<GMPGMPFNMFP> HMBEKOKEHKE, bool EPLDFIAEIIC = false)
+	{
+		return false;
+	}
+
+	private static Player ECPDOBFLKEA(GameObject HACIJIFIDKM)
+	{
+		return null;
+	}
+
+	private static void DHODALGJGLM(ref RaycastHit LMHJIDCOHLD, GMPGMPFNMFP NKEPDPFIOFJ)
+	{
+	}
+
+	private static void APNDNGOECMI(GMPGMPFNMFP DPNDJMMENDJ, GMPGMPFNMFP EFEHDKCHGKE)
+	{
+	}
+
+	private static bool FAGBEGKBDLO(ref int PNLDKNOFPNG)
+	{
+		return false;
+	}
+
+	public static bool KPEIJLDPGEJ(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ, GameObject KOBFCJKEFNH, Func<Collider, bool> OKFPMOMLOOH = null)
+	{
+		return false;
+	}
+
+	public static bool FOHHPOKDOND(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ, GameObject KOBFCJKEFNH, Func<Collider, bool> OKFPMOMLOOH = null)
+	{
+		return false;
+	}
+
+	public static bool HAOHMLJFLKG(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, Vector3 BBDNMILKLAK, int EOHOFEIBCPH, ref GMPGMPFNMFP NKEPDPFIOFJ)
+	{
+		return false;
+	}
+
+	public static bool NEGIBPBHJJE(Vector3 FPOAMOKFCMF, float NKAIJOJBONE, Vector3 CJFHGJHBCAL, Vector3 MBBOODFAJLN, float MPFMCPKLCAD, ref PLHGHDGOPBN NKEPDPFIOFJ)
+	{
+		return false;
+	}
+
+	public static float EILMJDJOAJB(Vector3 FKJMCGEFJMD)
+	{
+		return 0f;
+	}
+
+	public static bool FLODOINMPEI(Vector3 LMOGBFCEONO, Quaternion IPKKCHLDJMA, float IFDHHGECCCM, float NKAIJOJBONE, Vector3 CJFHGJHBCAL, Vector3 DPODJPNKEBD, ref PLHGHDGOPBN NKEPDPFIOFJ)
+	{
+		return false;
+	}
+
+	public static bool FLODOINMPEI(CapsuleCollider NDJKGFGHOPH, Transform GJDLFMIFHMG, Vector3 CJFHGJHBCAL, Vector3 DPODJPNKEBD, ref PLHGHDGOPBN NKEPDPFIOFJ)
+	{
+		return false;
+	}
+
+	public static bool HAKLPHPOJLL(Vector3 OENCHMFCMMO, Vector3 MHAIPDKIHNL, uint CBCKBCPFOAI, ref List<GMPGMPFNMFP> AKECDKJDHKP, bool LNAKJGHFKHA = false)
+	{
+		return false;
+	}
+
+	public static bool HAKLPHPOJLL(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref List<GMPGMPFNMFP> AKECDKJDHKP, bool LNAKJGHFKHA = false)
+	{
+		return false;
+	}
+
+	public static void EHPCFLNBBEO(List<GMPGMPFNMFP> AKECDKJDHKP)
+	{
+	}
+
+	public static int EBAIILAHCIE(uint CBCKBCPFOAI)
+	{
+		return 0;
+	}
+
+	public static Vector3 APIMNDJONMK(Vector3 OCLFLNINDAP)
+	{
+		return default(Vector3);
+	}
+
+	public static bool IHGDBDOAMMH(Collider NFOAOEHOFCH, Transform GJDLFMIFHMG, Vector3 AOGGADPEFCC, Vector3 AGOPFPDMIBM, ref PLHGHDGOPBN EMANEBGLLJG)
+	{
+		return false;
+	}
+
+	public static bool HCBKBLMDIIA(CapsuleCollider NFOAOEHOFCH, Transform GJDLFMIFHMG, Vector3 AOGGADPEFCC, Vector3 AGOPFPDMIBM, ref PLHGHDGOPBN HDGIHCBAOEN, bool CBMAHJHOABA = true)
+	{
+		return false;
+	}
+
+	public static bool FPIDAEIGEKO(BoxCollider NFOAOEHOFCH, Transform GJDLFMIFHMG, Vector3 AOGGADPEFCC, Vector3 AGOPFPDMIBM, ref PLHGHDGOPBN HDGIHCBAOEN, bool CBLCENNBDNI = false)
+	{
+		return false;
+	}
+
+	public static bool OPDBEFGOICN(Vector3 LMOGBFCEONO, Vector3 ENPKFOFGNBG, Vector3 AOGGADPEFCC, Vector3 AGOPFPDMIBM, out float MHIIGJIHBMP)
+	{
+		MHIIGJIHBMP = default(float);
+		return false;
+	}
+
+	public static bool FECAIANENOB(Vector3 COGCLFOAKMC, Vector3 JFELINLEGHL, float MPHCMNMIIAI)
+	{
+		return false;
+	}
+
+	public static bool EIPAGEBLKHE(Vector3 JBJGKFICFEG, Vector3 LJADOJKNALD, ref GMPGMPFNMFP NKEPDPFIOFJ)
+	{
+		return false;
+	}
+
+	public static bool EGDOCMAFDJL()
+	{
+		return false;
+	}
+
+	public static RaycastHit[] GHGIHIJBAPO()
+	{
+		return null;
+	}
+
+	public static Collider[] IDLBEJOIHOK()
+	{
+		return null;
+	}
+}
+
+========== METHODS THAT RECEIVE RAYCASTHIT ==========
+61:	private static RaycastHit[] PNAKLODKMGD;
+63:	private static RaycastHit[] AIHCCOJOEKB;
+65:	private static Collider[] GBABODKBHMP;
+90:	public static bool IFJABDOPGED(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float NMEEAHMNACE, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ)
+100:	public static bool FOHHPOKDOND(Vector3 OENCHMFCMMO, Vector3 MHAIPDKIHNL, uint CBCKBCPFOAI, string AEPLIJGJLJC, ref GMPGMPFNMFP NKEPDPFIOFJ)
+105:	public static bool FOHHPOKDOND(Vector3 OENCHMFCMMO, Vector3 MHAIPDKIHNL, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ)
+110:	public static bool KPEIJLDPGEJ(Vector3 OENCHMFCMMO, Vector3 MHAIPDKIHNL, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ)
+115:	public static bool KIMJCEFLPPB(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, ref GMPGMPFNMFP NKEPDPFIOFJ, int NDJPACKNMOG, GameObject KOBFCJKEFNH, Func<Collider, bool> OKFPMOMLOOH = null)
+120:	public static bool KIMJCEFLPPB(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ, int NDJPACKNMOG)
+125:	public static bool FOHHPOKDOND(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ)
+130:	public static GameObject ENLDCOCBDCD(Collider KHDAJCLICDL)
+135:	public static void CNPAKEBOGHO(RaycastHit LMHJIDCOHLD, Vector3 BAFIFNKBHLC, List<GMPGMPFNMFP> HMBEKOKEHKE)
+139:	public static void GCLDHMBHCPA(RaycastHit LMHJIDCOHLD, List<GMPGMPFNMFP> HMBEKOKEHKE)
+143:	public static bool FOHHPOKDOND(Vector3 OENCHMFCMMO, Vector3 MHAIPDKIHNL, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ, GameObject KOBFCJKEFNH)
+148:	private static bool BCFHCGEIFPP(GMPGMPFNMFP NKEPDPFIOFJ)
+153:	public static bool AJLDFGJGKIB(GMPGMPFNMFP NKEPDPFIOFJ, HashSet<uint> ICEDNEMFHLG)
+158:	public static bool FBFNKGGOEHF(GMPGMPFNMFP AJLPMBIGCPO, HashSet<uint> PLFOOEIBPFG)
+163:	public static bool AMBJPJFCMIB(GMPGMPFNMFP AJLPMBIGCPO, bool BGFLFBDJCGM = false)
+168:	public static bool BOEJALMNJNJ(GMPGMPFNMFP AJLPMBIGCPO)
+173:	public static bool HLECILAAEEA(GMPGMPFNMFP AJLPMBIGCPO)
+178:	public static bool MCGMKBCECGK(GMPGMPFNMFP AJLPMBIGCPO)
+208:	public static bool EFHINEOIIBK(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ, GameObject KOBFCJKEFNH, ref List<GMPGMPFNMFP> PJNOMOFGJBK, ref List<GMPGMPFNMFP> HMBEKOKEHKE)
+213:	public static bool DEGKKEPOJLH(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ, GameObject KOBFCJKEFNH, ref List<GMPGMPFNMFP> PJNOMOFGJBK, ref List<GMPGMPFNMFP> HMBEKOKEHKE)
+218:	public static bool JECBGLLGJCG(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ, GameObject KOBFCJKEFNH, ref List<GMPGMPFNMFP> PJNOMOFGJBK, ref List<GMPGMPFNMFP> HMBEKOKEHKE)
+223:	public static bool JEEKABKBDEN(GMPGMPFNMFP DKLOHOCENPN, GMPGMPFNMFP KGLBAJCFANP, bool BGFLFBDJCGM = false)
+233:	private static void FFEHKEGDKGH(GMPGMPFNMFP POGCPNKGOMJ, GMPGMPFNMFP NKEPDPFIOFJ)
+237:	public static bool KHGDIBEFMKP(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP HFAKMBIJGEF, GameObject KOBFCJKEFNH, ref List<GMPGMPFNMFP> PJNOMOFGJBK, ref List<GMPGMPFNMFP> IKLEPNGEFIN, ref List<GMPGMPFNMFP> HMBEKOKEHKE, bool BGFLFBDJCGM = false, Func<Collider, bool> OKFPMOMLOOH = null)
+242:	public static bool EPGNGBNPCHB(GMPGMPFNMFP OHMOIFPABPC, Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, Vector3 CNGBHLLKOFA, float LKFAJHMHJON, HashSet<uint> MPICMELEJLD, HashSet<uint> BNCLKDOIPKH, ref List<GMPGMPFNMFP> IKLEPNGEFIN)
+247:	private static bool FMGLFDKOAFB(GMPGMPFNMFP AICLJKKMMPF, GMPGMPFNMFP DCLKDFBAABJ)
+252:	public static bool ABBHJIHFPFF(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP HFAKMBIJGEF, GameObject KOBFCJKEFNH, ref List<GMPGMPFNMFP> PJNOMOFGJBK, ref List<GMPGMPFNMFP> IKLEPNGEFIN, ref List<GMPGMPFNMFP> HMBEKOKEHKE, HashSet<uint> MPICMELEJLD = null, HashSet<uint> BNCLKDOIPKH = null)
+257:	public static bool IGFMBBDFIHB(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP HFAKMBIJGEF, GameObject KOBFCJKEFNH, ref List<GMPGMPFNMFP> PJNOMOFGJBK, ref List<GMPGMPFNMFP> IKLEPNGEFIN, ref List<GMPGMPFNMFP> HMBEKOKEHKE, HashSet<uint> MPICMELEJLD = null, HashSet<uint> BNCLKDOIPKH = null)
+262:	public static bool KNLMFOFIHCJ(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP HFAKMBIJGEF, GameObject KOBFCJKEFNH, ref List<GMPGMPFNMFP> PJNOMOFGJBK, ref List<GMPGMPFNMFP> DCCEIMDJAHK, ref List<GMPGMPFNMFP> HMBEKOKEHKE)
+267:	public static bool JPFJMILDGBG(ref GMPGMPFNMFP AJLPMBIGCPO, RaycastHit IHGHIONENFM, Vector3 OMKGIPPPAKB, Vector3 OENCHMFCMMO, ref Vector3 JBKDKPCDGBB, ref List<GMPGMPFNMFP> PJNOMOFGJBK, Vector3 CNGBHLLKOFA, float LKFAJHMHJON, ref float CEMJPNGDFBM, ref float CGGPBJKCDEG, int NDJPACKNMOG, ref bool NLFKHDJIODI, List<GMPGMPFNMFP> HMBEKOKEHKE)
+272:	public static bool BNBIFAKMHNM(ref GMPGMPFNMFP AJLPMBIGCPO, RaycastHit IHGHIONENFM, Vector3 OMKGIPPPAKB, Vector3 OENCHMFCMMO, ref Vector3 JBKDKPCDGBB, ref List<GMPGMPFNMFP> PJNOMOFGJBK, Vector3 CNGBHLLKOFA, float LKFAJHMHJON, ref float CEMJPNGDFBM, ref float CGGPBJKCDEG, int NDJPACKNMOG, int CKCIEENHABE, ref bool NLFKHDJIODI, List<GMPGMPFNMFP> HMBEKOKEHKE, bool EPLDFIAEIIC = false)
+277:	public static bool GLGFCNIONLD(ref GMPGMPFNMFP AJLPMBIGCPO, RaycastHit IHGHIONENFM, Vector3 OMKGIPPPAKB, Vector3 OENCHMFCMMO, ref Vector3 JBKDKPCDGBB, ref List<GMPGMPFNMFP> PJNOMOFGJBK, Vector3 CNGBHLLKOFA, float LKFAJHMHJON, ref float CEMJPNGDFBM, ref float CGGPBJKCDEG, int NDJPACKNMOG, int CKCIEENHABE, ref bool NLFKHDJIODI, List<GMPGMPFNMFP> HMBEKOKEHKE, bool EPLDFIAEIIC = false)
+287:	private static void DHODALGJGLM(ref RaycastHit LMHJIDCOHLD, GMPGMPFNMFP NKEPDPFIOFJ)
+291:	private static void APNDNGOECMI(GMPGMPFNMFP DPNDJMMENDJ, GMPGMPFNMFP EFEHDKCHGKE)
+300:	public static bool KPEIJLDPGEJ(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ, GameObject KOBFCJKEFNH, Func<Collider, bool> OKFPMOMLOOH = null)
+305:	public static bool FOHHPOKDOND(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref GMPGMPFNMFP NKEPDPFIOFJ, GameObject KOBFCJKEFNH, Func<Collider, bool> OKFPMOMLOOH = null)
+310:	public static bool HAOHMLJFLKG(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, Vector3 BBDNMILKLAK, int EOHOFEIBCPH, ref GMPGMPFNMFP NKEPDPFIOFJ)
+330:	public static bool FLODOINMPEI(CapsuleCollider NDJKGFGHOPH, Transform GJDLFMIFHMG, Vector3 CJFHGJHBCAL, Vector3 DPODJPNKEBD, ref PLHGHDGOPBN NKEPDPFIOFJ)
+335:	public static bool HAKLPHPOJLL(Vector3 OENCHMFCMMO, Vector3 MHAIPDKIHNL, uint CBCKBCPFOAI, ref List<GMPGMPFNMFP> AKECDKJDHKP, bool LNAKJGHFKHA = false)
+340:	public static bool HAKLPHPOJLL(Vector3 OENCHMFCMMO, Vector3 BAFIFNKBHLC, float CGGPBJKCDEG, uint CBCKBCPFOAI, ref List<GMPGMPFNMFP> AKECDKJDHKP, bool LNAKJGHFKHA = false)
+345:	public static void EHPCFLNBBEO(List<GMPGMPFNMFP> AKECDKJDHKP)
+359:	public static bool IHGDBDOAMMH(Collider NFOAOEHOFCH, Transform GJDLFMIFHMG, Vector3 AOGGADPEFCC, Vector3 AGOPFPDMIBM, ref PLHGHDGOPBN EMANEBGLLJG)
+364:	public static bool HCBKBLMDIIA(CapsuleCollider NFOAOEHOFCH, Transform GJDLFMIFHMG, Vector3 AOGGADPEFCC, Vector3 AGOPFPDMIBM, ref PLHGHDGOPBN HDGIHCBAOEN, bool CBMAHJHOABA = true)
+369:	public static bool FPIDAEIGEKO(BoxCollider NFOAOEHOFCH, Transform GJDLFMIFHMG, Vector3 AOGGADPEFCC, Vector3 AGOPFPDMIBM, ref PLHGHDGOPBN HDGIHCBAOEN, bool CBLCENNBDNI = false)
+385:	public static bool EIPAGEBLKHE(Vector3 JBJGKFICFEG, Vector3 LJADOJKNALD, ref GMPGMPFNMFP NKEPDPFIOFJ)
+395:	public static RaycastHit[] GHGIHIJBAPO()
+400:	public static Collider[] IDLBEJOIHOK()
+
+========== AUTOFIRE RAYCAST BRIDGE ==========
+output/csharp-decompiled/IFix/ILFixDynamicMethodWrapper.cs:68769:	public AutoFireWeaponData __Gen_Wrap_14405(object P0)
+output/csharp-decompiled/IFix/ILFixDynamicMethodWrapper.cs:70929:	public Dictionary<int, List<AutoFireWeapon>> __Gen_Wrap_14852(object P0)
+output/csharp-decompiled/COW.GamePlay/HKGAJCJCMPE.cs:124:	private Dictionary<int, List<AutoFireWeapon>> PEIAKGKPEJO;
+output/csharp-decompiled/COW.GamePlay/HKGAJCJCMPE.cs:374:	public void GLMCJHNBKOG(AutoFireWeapon DNNNJDJIBMP)
+output/csharp-decompiled/COW.GamePlay/HKGAJCJCMPE.cs:378:	public void IPOOOHGCLHG(AutoFireWeapon DNNNJDJIBMP)
+output/csharp-decompiled/COW.GamePlay/HKGAJCJCMPE.cs:382:	public Dictionary<int, List<AutoFireWeapon>> FIKJFFBMFBF()
+output/csharp-decompiled/COW.GamePlay/MBGJGAKOJFH.cs:18:	private Dictionary<int, List<AutoFireWeapon>> PEIAKGKPEJO;
+output/csharp-decompiled/COW.GamePlay/AutoFireWeapon.cs:9:public class AutoFireWeapon : Entity
+output/csharp-decompiled/COW.GamePlay/AutoFireWeapon.cs:17:		public AutoFireWeapon KOKNHFGCGLN;
+output/csharp-decompiled/COW.GamePlay/AutoFireWeapon.cs:47:	private AutoFireWeaponData GFBHKKMBJLJ;
+output/csharp-decompiled/COW.GamePlay/AutoFireWeapon.cs:84:	private void MBLEOAIJBBL(ref RaycastHit LMHJIDCOHLD, GMPGMPFNMFP NKEPDPFIOFJ)
+output/csharp-decompiled/COW.GamePlay/AutoFireWeapon.cs:92:	public AutoFireWeaponData GetData()
+output/csharp-decompiled/COW/AutoFireWeaponData.cs:5:public class AutoFireWeaponData : MonoBehaviour
+
+========== CAPSULE HUMAN ==========
+using UnityEngine;
+
+namespace COW.GamePlay;
+
+internal class CapsuleHuman : MonoBehaviour
+{
+	private Player _003CMALAOHNCOBI_003Ek__BackingField;
+
+	public CapsuleCollider collider;
+
+	public Player NKPFAEIGJLB
+	{
+		get
+		{
+			return null;
+		}
+		protected set
+		{
+		}
+	}
+
+	public void Init(Player LDCIMNAAGNO)
+	{
+	}
+
+	public void OnTriggerEnter(Collider GLJGHEAPBOF)
+	{
+	}
+
+	public void OnTriggerStay(Collider GLJGHEAPBOF)
+	{
+	}
+
+	public void OnTriggerExit(Collider GLJGHEAPBOF)
+	{
+	}
+
+	public void ResizeCapsuleCollider(float IFDHHGECCCM, float NMEEAHMNACE, float PMLKPAIPJHB)
+	{
+	}
+}
+
+========== PLAYER WATCHING HEAD ==========
+	{
+	}
+
+	public override Vector3 GetCharacterControllerTopPosition()
+	{
+		return default(Vector3);
+	}
+
+	public override void PostUpdate(float OKJIFBCMDAD, float HOGHEFNINAE)
+	{
+	}
+
+	public override void UpdatePendingReviveState(float OKJIFBCMDAD, float HOGHEFNINAE)
+	{
+	}
+
+	public override void OnUpdate(float OKJIFBCMDAD, float HOGHEFNINAE)
+	{
+	}
+
+	public override bool IsLocalTeammate(bool EPNFBEJFGPE = false)
+	{
+		return false;
+	}
+
+	protected override Vector3 HEPDPEHIINF()
+	{
+		return default(Vector3);
+	}
+
+	public override Vector3 GetAttackableCenterWS()
+	{
+		return default(Vector3);
+	}
+
+	public override Transform GetHeadTF()
+	{
+		return null;
+	}
+
+	public override Transform GetHipTF()
+	{
+		return null;
+	}
+
+	public override Vector3 GetHitDamagePos()
+	{
+		return default(Vector3);
+	}
+
+	public override void SetVisible(uint PIDINBNGILH, bool NDGMENGEGIE)
+	{
+	}
+
+	private void JGBPPEHDOHG(DAPOIBANHEH JKPPNGPCCHN)
+	{
+	}
+
+	private void PAEPCFCMDCC(DAPOIBANHEH JKPPNGPCCHN)
+	{
+	}
+
+	private void BNACAEBNPFJ(DAPOIBANHEH JKPPNGPCCHN)
+	{
+	}
+
+
+========== BIG HEAD COMPONENT ==========
+using UnityEngine;
+
+namespace COW.GamePlay;
+
+public class BigHeadComponent : MonoBehaviour
+{
+	private float EPAGLNIIICM;
+
+	private Transform CHEDPICHEPN;
+
+	private CapsuleCollider BPDOBCNIHLF;
+
+	private Vector3 OHABKHMKLOJ;
+
+	public float EIDECPPHMGP => 0f;
+
+	public void UpdateScale(float GKKELMDDGBJ)
+	{
+	}
+
+	public void OnVisibleChange(bool OGECPGHMIHA)
+	{
+	}
+
+	private void Start()
+	{
+	}
+
+	private void LateUpdate()
+	{
+	}
+
+	private void LFGHBHHKMMH()
+	{
+	}
+
+	public void SetNeckRevertScaleMult(Vector3 FDOKAOIEDFD)
+	{
+	}
+
+	private void PGMAPJNCHHI(float GKKELMDDGBJ)
+	{
+	}
+}
+
+========== BIG HEAD DATA ==========
+using System.Collections.Generic;
+using GCommon;
+
+namespace COW;
+
+public class BigHeadData : CSVBaseData
+{
+	public uint Lv;
+
+	public float HeadScale;
+
+	public float HeadShotDamageScale;
+
+	public int KillScore;
+
+	public int HeadKillScore;
+
+	public int BoostKillScore;
+
+	public uint HeadAvatar;
+
+	public int NeedKillCount;
+
+	public List<uint> BuffIDs;
+
+	public ResourceID EffectID;
+
+	public ResourceID HeadIcon;
+
+	public ResourceID LightHeadIcon;
+
+	public ResourceID LightOffHeadIcon;
+
+	public string Name;
+
+	public override string GetPrimaryKey()
+	{
+		return null;
+	}
+
+	public override void ParseData(long index, int fieldCount, string[] headers, string[] values)
+	{
+	}
+
+	public string _003C_003EiFixBaseProxy_GetPrimaryKey()
+	{
+		return null;
+	}
+
+	public void _003C_003EiFixBaseProxy_ParseData(long P0, int P1, string[] P2, string[] P3)
+	{
+	}
+}
+
+using System.Collections.Generic;
+
+namespace COW;
+
+public class BigHeadDataConfig
+{
+	private List<BigHeadData> m_DataList;
+
+	public BigHeadDataConfig(List<BigHeadData> list)
+	{
+	}
+
+	public BigHeadData GetData(int level)
+	{
+		return null;
+	}
+
+	public float GetHeadShotDamageScale(int level)
+	{
+		return 0f;
+	}
+
+	public float GetHeadScale(int level)
+	{
+		return 0f;
+	}
+}
+
+========== HIT DETECT HELPER USERS WITH CONTEXT ==========
+
+---------------- COW.GamePlay/JNHIOHFMPFN.cs ----------------
+153-	{
+154-	}
+155-
+156-	private bool DOFHABFGFGC(GMPGMPFNMFP NKEPDPFIOFJ)
+157-	{
+158-		return false;
+159-	}
+160-
+161:	private bool EDOGHMPCCOP(GMPGMPFNMFP NKEPDPFIOFJ, HitDetectColliderHelper MLAOIHOMKHL)
+162-	{
+163-		return false;
+164-	}
+165-
+166-	private Vector3 EDACEELFPPA()
+167-	{
+168-		return default(Vector3);
+169-	}
+
+---------------- COW.GamePlay/PIFLODLPKEO.cs ----------------
+95-		return false;
+96-	}
+97-
+98-	private static bool GOCDEDDGEJA(GameObject DLJLLLHBHAH)
+99-	{
+100-		return false;
+101-	}
+102-
+103:	private static bool MNHAFFBICBD(HitDetectColliderHelper MLAOIHOMKHL)
+104-	{
+105-		return false;
+106-	}
+107-
+108-	public float _003C_003EiFixBaseProxy_CGFPKFGGLIE()
+109-	{
+110-		return 0f;
+111-	}
+
+---------------- COW.GamePlay/FDAEPHMIEPC.cs ----------------
+3474-	{
+3475-	}
+3476-
+3477-	public static bool HPLFONKAKMP(DBENAPILEBC CCNBNLAPJFM)
+3478-	{
+3479-		return false;
+3480-	}
+3481-
+3482:	private ResourceID GKGHOEIMIIC(HitDetectColliderHelper PCAMLNIKFPO)
+3483-	{
+3484-		return default(ResourceID);
+3485-	}
+3486-
+3487:	private void DDOAOJAMCGA(OKEAMEELLBB NNHKGODKFCL, HitDetectColliderHelper MLAOIHOMKHL, GLLLEDKLLDA PMMCGNJHOOA, bool FNKILOAEFMC)
+3488-	{
+3489-	}
+3490-
+3491-	private void FCFBBJNNOLO(Player PFJFADHEJLJ)
+3492-	{
+3493-	}
+3494-
+3495-	protected virtual ResourceID HMBPLAHNNAP()
+
+---------------- COW.GamePlay/NetworkAIHoloweenBoss.cs ----------------
+50-	private const float PFCIKEPJPEF = 1f;
+51-
+52-	private GameObject FELADDGKMFP;
+53-
+54-	private float KHIJOMMGCIL;
+55-
+56-	private bool BAPNICNNLCO;
+57-
+58:	private List<HitDetectColliderHelper> NPNPPFBODOC;
+59-
+60-	private HalloweenBossColliderHelper OGBCMNFHCEM;
+61-
+62-	private List<Collider> HLNJOJBKKMI;
+63-
+64-	private Dictionary<BHGGAEEHJCO, Player> EKDEMEIOCEB;
+65-
+66-	private const uint NKJOPCJDKBJ = 20u;
+[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ [7m{[27m
+[7mecho "============================================================"[27m
+[7mecho "HEAD BONE / TRANSFORM SEARCH"[27m
+[7mecho "============================================================"[27m
+
+[7mgrep -RniEi \[27m
+[7m'HeadTF|HeadBone|HeadNode|Bip.*Head|Bip01.*Head|Bone.*Head|Head.*Bone|head_transform|[27m[7mh[27m[7meadtransform|Neck|Bip.*Neck' \ [27m
+[7moutput/csharp-decompiled/COW.GamePlay \[27m
+[7moutput/csharp-decompiled/COW \[27m
+[7m| head -800[27m
+
+[7m} | tee analitycs/findings/raw/head-bone-transform-search.txt[27m[A[A[A[A[A[A[A[A[A[A[A[A{
+echo "============================================================"
+echo "HEAD BONE / TRANSFORM SEARCH"
+echo "============================================================"
+
+grep -RniEi \
+'HeadTF|HeadBone|HeadNode|Bip.*Head|Bip01.*Head|Bone.*Head|Head.*Bone|head_transform|headtransform|Neck|Bip.*Neck' \
+output/csharp-decompiled/COW.GamePlay \
+output/csharp-decompiled/COW \
+| head -800
+
+} | tee analitycs/findings/raw/head-bone-transform-search.txt
+[?2004l============================================================
+HEAD BONE / TRANSFORM SEARCH
+============================================================
+output/csharp-decompiled/COW.GamePlay/PlayerNetwork.cs:1359:	private void NGAFNECKBAH(IGJPHDANPJD GCJPAAPKMMA, EOGPGNIDOKF KCMJONOCMPN, BHPADHHHPNN APHHNHEDHKD)
+output/csharp-decompiled/COW.GamePlay/CENNCIIJNFK.cs:18:	public void GGFMNECKDHG(int KJDOCDKKAPO)
+output/csharp-decompiled/COW.GamePlay/NetworkAIPawnAnimComponent_BossDragon.cs:18:	public DynamicBone LeftHeadDynamicBone;
+output/csharp-decompiled/COW.GamePlay/NetworkAIPawnAnimComponent_BossDragon.cs:20:	public DynamicBone RightHeadDynamicBone;
+output/csharp-decompiled/COW.GamePlay/Player_Watching.cs:95:	public override Transform GetHeadTF()
+output/csharp-decompiled/COW.GamePlay/Player_Watching.cs:240:	public Transform _003C_003EiFixBaseProxy_GetHeadTF()
+output/csharp-decompiled/COW.GamePlay/IPANJGHFEFP.cs:13:	public const int HIFNAMNECKD = 4;
+output/csharp-decompiled/COW.GamePlay/BKOEKIJGHEJ.cs:113:	private ResourceID HNECKEDNLOG;
+output/csharp-decompiled/COW.GamePlay/Player.cs:931:		public void SetBigHeadNeckRevertScaleMult(Vector3 FDOKAOIEDFD)
+output/csharp-decompiled/COW.GamePlay/Player.cs:4245:	protected uint BENDIENECKM;
+output/csharp-decompiled/COW.GamePlay/Player.cs:13378:	public virtual Transform GetHeadTF()
+output/csharp-decompiled/COW.GamePlay/ILDAMIIJDGI.cs:11:	private float AEKNNNECKIC;
+output/csharp-decompiled/COW.GamePlay/FFMOIGKIEPE.cs:171:		internal void ECDHHKNECKO()
+output/csharp-decompiled/COW.GamePlay/FollowEmoteCamera.cs:19:	private int ALEDNECKAFL;
+output/csharp-decompiled/COW.GamePlay/BigHeadComponent.cs:37:	public void SetNeckRevertScaleMult(Vector3 FDOKAOIEDFD)
+output/csharp-decompiled/COW.GamePlay/SceneEditObjectBase.cs:211:	protected Material PPNECKCAAPP;
+output/csharp-decompiled/COW.GamePlay/FDAEPHMIEPC.cs:130:		LobbySocialDeformNeck = 119,
+output/csharp-decompiled/COW/GameVarDef.cs:10607:	public static float SocialLobbyPrivilegeDeformNeckMultiplier;
+output/csharp-decompiled/COW/ResourceIDDef.cs:774:	public static readonly ResourceID UI_UIHUDKUILLED_BIGHEADNODE;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:108:	public const int PROP_ID_HEADBONESSCALE = -14049;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:212:	public Action<Vector3> OnHeadBonesScaleChangeEvent;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:302:	private Vector3 _003CHeadBonesScale_003Ek__BackingField;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:584:	public Vector3 HeadBonesScale
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:588:			return _003CHeadBonesScale_003Ek__BackingField;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:592:			_003CHeadBonesScale_003Ek__BackingField = value;
+output/csharp-decompiled/COW/LobbyAvatarLookAtComponent.cs:34:		public float neckRatio;
+output/csharp-decompiled/COW/LobbyAvatarLookAtComponent.cs:50:		public float m_curNeck;
+output/csharp-decompiled/COW/LobbyAvatarLookAtComponent.cs:52:		public float m_tarNeck;
+output/csharp-decompiled/COW/LobbyAvatarLookAtComponent.cs:106:	private Transform m_boneNeck;
+output/csharp-decompiled/COW/UIStatedAvatar.cs:38:	protected Transform m_HeadTF;
+output/csharp-decompiled/COW/LobbySocialPropType.cs:15:	DeformNeckPrivilege,
+output/csharp-decompiled/COW/UIHudKilledBigHeadNode.cs:5:public class UIHudKilledBigHeadNode : MonoBehaviour
+output/csharp-decompiled/COW/UIHudKilledController.cs:46:	private UIHudKilledBigHeadNode m_BigheadNode;
+[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ cat >> analitycs/findings/headshot-hit-detection.md <<'EOF' 
+
+# Update - Raycast and Player Head Structure
+
+## AutoFireWeapon
+
+AutoFireWeapon contém:
+
+private void MBLEOAIJBBL(
+    ref RaycastHit LMHJIDCOHLD,
+    GMPGMPFNMFP NKEPDPFIOFJ
+)
+
+Isso estabelece uma relação estrutural direta entre:
+
+Unity RaycastHit
+GMPGMPFNMFP / HitObjectInfo## GMPGMPFNMFPO alias HitObjectInfo ganhou confiança alta.Contém diretamente:GameObjectColliderVector3 x váriosfloatintJKCLPFEFMNGPhysicMaterialflags booleanasdados adicionais de shieldJKCLPFEFMNG contém:DefaultHeadBodyTambém existem campos legíveis em outras classes:m_HitObjectInfom_CacheHitInfom_HitObjectInfoCachePortanto GMPGMPFNMFP representa informação de impacto/resultado físico.O nome original exato continua desconhecido.## Player head and collider infrastructurePlayer contém:GetHeadTF()GetHipTF()InitCollider()CreateCapsuleHuman()SetSniperFireCollider()EnableSniperCollider()EnableCharactorCollider()ResizeSniperFireCollider()ResizeCapsuleCollider()GetCharacterControllerTopPosition()GetCharacterHeight()GetCharacterCenterY()Isso demonstra infraestrutura separada para:- transforms corporais- character collider- sniper/fire collider- redimensionamento de capsule colliderGetHeadTF confirma um transform específico da cabeça.Ainda não há evidência suficiente para afirmar que GetHeadTF,sozinho, define os limites físicos da hitbox de headshot.## BigHeadPlayer possui BigHeadComponent e BigHeadDataConfig.BigHeadData possui HeadShotDamageScale.Esses tipos parecem relacionados a uma mecânica/modo de alteraçãode tamanho de cabeça e dano de headshot.Não devem ser tratados automaticamente como a implementação da hitboxnormal do jogador.## Current structural mapPhysics / Raycast        ↓HPFKOGPDBBE / PhysicsRaycastUtility        ↓RaycastHit        ↓GMPGMPFNMFP / HitObjectInfo        ├── Collider[7m        ├── GameObject[27m[7m        ├── contact/position vectors[27m[7m        └── JKCLPFEFMNG Default / Head / Body[27m[7m                ↓[27m[7mHitDetectColliderHelper[27m[7m        └── ColliderType : LLEDPGIGCMO[27m[7m                ├── Head[27m[7m                ├── Body[27m[7m                ├── Limb[27m[7m                └── outros attackable types[27m[7m                        ↓[27m[7mGLLLEDKLLDA / DamageContext[27m[7m                        ↓[27m[7mEECMIDPHCKN / DamageEvaluationContext[27m[7m                        ↓[27m[7mPlayer.CheckDamageHitHead(...)[27m[7mEOF[27m        ├── GameObject        ├── contact/position vectors        └── JKCLPFEFMNG Default / Head / Body                ↓HitDetectColliderHelper        └── ColliderType : LLEDPGIGCMO                ├── Head                ├── Body                ├── Limb                └── outros attackable types                        ↓GLLLEDKLLDA / DamageContext                        ↓EECMIDPHCKN / DamageEvaluationContext                        ↓Player.CheckDamageHitHead(...)EOF
+[?2004l[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ clear
+[?2004l[H[2J[3J[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ [7mcd /workspaces/dripnight-dumper[27m 
+
+[7mecho "========== FINAL DO RELATÓRIO =========="[27m
+[7mtail -n 140 analitycs/findings/headshot-hit-detection.md[27m[A[A[A[Acd /workspaces/dripnight-dumper 
+
+echo "========== FINAL DO RELATÓRIO =========="
+tail -n 140 analitycs/findings/headshot-hit-detection.md
+[?2004l========== FINAL DO RELATÓRIO ==========
+- grande quantidade de métodos recebendo origem/direção/distância
+- recebe RaycastHit
+- recebe Collider
+- recebe Func<Collider,bool>
+- preenche GMPGMPFNMFP por referência
+- produz listas de GMPGMPFNMFP
+
+Player contém:
+
+GetHeadTF()
+InitCollider()
+CreateCapsuleHuman()
+SetSniperFireCollider()
+EnableSniperCollider()
+EnableCharactorCollider()
+ResizeSniperFireCollider()
+ResizeCapsuleCollider()
+
+Isso confirma que existe infraestrutura explícita para:
+- transform da cabeça
+- collider do personagem
+- collider usado durante disparo
+
+Ainda não está confirmado que GetHeadTF define diretamente a hitbox de headshot.
+
+# Update - Raycast and Player Head Structure
+
+## AutoFireWeapon
+
+AutoFireWeapon contém:
+
+private void MBLEOAIJBBL(
+    ref RaycastHit LMHJIDCOHLD,
+    GMPGMPFNMFP NKEPDPFIOFJ
+)
+
+Isso estabelece uma relação estrutural direta entre:
+
+Unity RaycastHit
+GMPGMPFNMFP / HitObjectInfo
+
+## GMPGMPFNMFP
+
+O alias HitObjectInfo ganhou confiança alta.
+
+Contém diretamente:
+
+GameObject
+Collider
+Vector3 x vários
+float
+int
+JKCLPFEFMNG
+PhysicMaterial
+flags booleanas
+dados adicionais de shield
+
+JKCLPFEFMNG contém:
+
+Default
+Head
+Body
+
+Também existem campos legíveis em outras classes:
+
+m_HitObjectInfo
+m_CacheHitInfo
+m_HitObjectInfoCache
+
+Portanto GMPGMPFNMFP representa informação de impacto/resultado físico.
+
+O nome original exato continua desconhecido.
+
+## Player head and collider infrastructure
+
+Player contém:
+
+GetHeadTF()
+GetHipTF()
+InitCollider()
+CreateCapsuleHuman()
+SetSniperFireCollider()
+EnableSniperCollider()
+EnableCharactorCollider()
+ResizeSniperFireCollider()
+ResizeCapsuleCollider()
+GetCharacterControllerTopPosition()
+GetCharacterHeight()
+GetCharacterCenterY()
+
+Isso demonstra infraestrutura separada para:
+
+- transforms corporais
+- character collider
+- sniper/fire collider
+- redimensionamento de capsule collider
+
+GetHeadTF confirma um transform específico da cabeça.
+
+Ainda não há evidência suficiente para afirmar que GetHeadTF,
+sozinho, define os limites físicos da hitbox de headshot.
+
+## BigHead
+
+Player possui BigHeadComponent e BigHeadDataConfig.
+
+BigHeadData possui HeadShotDamageScale.
+
+Esses tipos parecem relacionados a uma mecânica/modo de alteração
+de tamanho de cabeça e dano de headshot.
+
+Não devem ser tratados automaticamente como a implementação da hitbox
+normal do jogador.
+
+## Current structural map
+
+Physics / Raycast
+        ↓
+HPFKOGPDBBE / PhysicsRaycastUtility
+        ↓
+RaycastHit
+        ↓
+GMPGMPFNMFP / HitObjectInfo
+        ├── Collider
+        ├── GameObject
+        ├── contact/position vectors
+        └── JKCLPFEFMNG Default / Head / Body
+                ↓
+HitDetectColliderHelper
+        └── ColliderType : LLEDPGIGCMO
+                ├── Head
+                ├── Body
+                ├── Limb
+                └── outros attackable types
+                        ↓
+GLLLEDKLLDA / DamageContext
+                        ↓
+EECMIDPHCKN / DamageEvaluationContext
+                        ↓
+Player.CheckDamageHitHead(...)
+[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ cd /workspaces/dripnight-dumper 
+
+mkdir -p analitycs/findings/raw
+
+{
+echo "============================================================"
+echo "BIG HEAD / CAPSULE COLLIDER RELATION MAP"
+echo "============================================================"
+
+echo
+echo "========== BIGHEADCOMPONENT REFERENCES =========="
+grep -RniE \
+'\bBigHeadComponent\b|UpdateBigHeadScale|SetBigHeadNeckRevertScaleMult' \
+output/csharp-decompiled \
+| head -500
+
+echoecho "========== HEAD SCALE REFERENCES =========="grep -RniE \'HeadScale|HeadBonesScale|HeadShotDamageScale|GetHeadScale|GetHeadShotDamageScale' \output/csharp-decompiled \| head -700echoecho "========== CAPSULEHUMAN REFERENCES =========="grep -RniE \'\bCapsuleHuman\b|CreateCapsuleHuman|ResizeCapsuleCollider' \output/csharp-decompiled \| head -500echoecho "========== PLAYER BIGHEAD CONTEXT 840-970 =========="sed -n '840,970p' \output/csharp-decompiled/COW.GamePlay/Player.cs[7mecho[27m[7mecho "========== PLAYER BIGHEAD FIELDS 4510-4600 =========="[27m[7msed -n '4510,4600p' \[27m[7moutput/csharp-decompiled/COW.GamePlay/Player.cs[27m[7mecho[27m[7mecho "========== PLAYER BIGHEAD METHODS 16820-16920 =========="[27m[7msed -n '16820,16920p' \[27m[7moutput/csharp-decompiled/COW.GamePlay/Player.cs[27m[7mecho[27m[7mecho "========== UGC HEAD BONES SCALE =========="[27m[7msed -n '560,610p' \[27m[7moutput/csharp-decompiled/COW/UGCPlayerRepItem.cs[27m[7m} | tee analitycs/findings/raw/bighead-capsule-relation-map.txt[27mechoecho "========== PLAYER BIGHEAD FIELDS 4510-4600 =========="sed -n '4510,4600p' \output/csharp-decompiled/COW.GamePlay/Player.csechoecho "========== PLAYER BIGHEAD METHODS 16820-16920 =========="sed -n '16820,16920p' \output/csharp-decompiled/COW.GamePlay/Player.csechoecho "========== UGC HEAD BONES SCALE =========="sed -n '560,610p' \output/csharp-decompiled/COW/UGCPlayerRepItem.cs} | tee analitycs/findings/raw/bighead-capsule-relation-map.txt
+[?2004l============================================================
+BIG HEAD / CAPSULE COLLIDER RELATION MAP
+============================================================
+
+========== BIGHEADCOMPONENT REFERENCES ==========
+output/csharp-decompiled/COW.GamePlay/Player.cs:892:		private BigHeadComponent KHMHJPMEHND;
+output/csharp-decompiled/COW.GamePlay/Player.cs:927:		public void UpdateBigHeadScale(float GPFPIAMCEMI)
+output/csharp-decompiled/COW.GamePlay/Player.cs:931:		public void SetBigHeadNeckRevertScaleMult(Vector3 FDOKAOIEDFD)
+output/csharp-decompiled/COW.GamePlay/Player.cs:4569:	protected BigHeadComponent KHMHJPMEHND;
+output/csharp-decompiled/COW.GamePlay/BigHeadComponent.cs:5:public class BigHeadComponent : MonoBehaviour
+
+========== HEAD SCALE REFERENCES ==========
+output/csharp-decompiled/COW.GamePlay/Player.cs:927:		public void UpdateBigHeadScale(float GPFPIAMCEMI)
+output/csharp-decompiled/COW.GamePlay/Player.cs:16872:	public bool IsInBigHeadScale()
+output/csharp-decompiled/COW.GamePlay/Player.cs:16877:	public bool ApplyBigHeadScalePreHangLateUpdate()
+output/csharp-decompiled/COW.GamePlay/Player.cs:21310:	public bool IsHeadScaleUp(uint CLLNGCEEBDL)
+output/csharp-decompiled/COW.GamePlay/Player.cs:21315:	public bool IsHeadScaleDown(uint CLLNGCEEBDL)
+output/csharp-decompiled/message/MFHOLGEKNLI.cs:99:	EBuffBehavior_WeaponHeadShotDamageScale,
+output/csharp-decompiled/message/NEIBGAFJNMN.cs:39:	EDamageCalcType_Buff_WeaponHeadShotDamageScale,
+output/csharp-decompiled/COW/BigHeadData.cs:10:	public float HeadScale;
+output/csharp-decompiled/COW/BigHeadData.cs:12:	public float HeadShotDamageScale;
+output/csharp-decompiled/COW/BigHeadDataConfig.cs:18:	public float GetHeadShotDamageScale(int level)
+output/csharp-decompiled/COW/BigHeadDataConfig.cs:23:	public float GetHeadScale(int level)
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:108:	public const int PROP_ID_HEADBONESSCALE = -14049;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:212:	public Action<Vector3> OnHeadBonesScaleChangeEvent;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:302:	private Vector3 _003CHeadBonesScale_003Ek__BackingField;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:584:	public Vector3 HeadBonesScale
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:588:			return _003CHeadBonesScale_003Ek__BackingField;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:592:			_003CHeadBonesScale_003Ek__BackingField = value;
+output/csharp-decompiled/COW/UIModelMatch.cs:2206:	public void OnTeammateHeadScaleChange(BHGGAEEHJCO pid, float scale)
+output/csharp-decompiled/COW/PlayerData.cs:86:	public float headScale;
+
+========== CAPSULEHUMAN REFERENCES ==========
+output/csharp-decompiled/IFix/ILFixDynamicMethodWrapper.cs:67255:	public CapsuleHuman __Gen_Wrap_14090(object P0)
+output/csharp-decompiled/COW.GamePlay/Player.cs:4947:	protected CapsuleHuman JCIOGODKHPP;
+output/csharp-decompiled/COW.GamePlay/Player.cs:8425:	public CapsuleHuman DBAHLEDEMPO => null;
+output/csharp-decompiled/COW.GamePlay/Player.cs:11429:	public void CreateCapsuleHuman()
+output/csharp-decompiled/COW.GamePlay/Player.cs:13358:	public virtual void ResizeCapsuleCollider(float IFDHHGECCCM, float NMEEAHMNACE = -1f, float JJIAFNNDEFP = 0f, float JDLBJHACCAD = 0f)
+output/csharp-decompiled/COW.GamePlay/CapsuleHuman.cs:5:internal class CapsuleHuman : MonoBehaviour
+output/csharp-decompiled/COW.GamePlay/CapsuleHuman.cs:38:	public void ResizeCapsuleCollider(float IFDHHGECCCM, float NMEEAHMNACE, float PMLKPAIPJHB)
+
+========== PLAYER BIGHEAD CONTEXT 840-970 ==========
+		}
+
+		public void _003C_003EiFixBaseProxy_KNOJLLAMIIM(IGJPHDANPJD P0)
+		{
+		}
+
+		public void _003C_003EiFixBaseProxy_GPJGONKFEAG(IGJPHDANPJD P0, EOGPGNIDOKF P1)
+		{
+		}
+	}
+
+	private enum GDIEANOJNGP
+	{
+		None,
+		SpeedLow,
+		SpeedUp,
+		SpeedMax
+	}
+
+	private enum OIBKLAKMFOL
+	{
+		None,
+		AccUp,
+		AccDown
+	}
+
+	public class AvatarTransformer : MonoBehaviour
+	{
+		public GameObject root;
+
+		public bool playerRawIsFemale;
+
+		public AvatarEffect rawAvateaEffect;
+
+		public PlayerAudioComponent rawAudioComponent;
+
+		public AvatarTransformData transformData;
+
+		private Renderer[] APKCOKLHJAO;
+
+		private Animator[] APLOJDNMABG;
+
+		private SkinnedMeshRenderer[] CLDKMJKKAAM;
+
+		private ParticleSystemRenderer[] DNMFLFNJECO;
+
+		private MeshRenderer[] CJEPEJBIAIB;
+
+		public ResourceID modelResId;
+
+		public Player owner;
+
+		private BigHeadComponent KHMHJPMEHND;
+
+		private string OLCGLJCCPPL;
+
+		private Dictionary<int, HELBFMHHPBI> OKNNIAGCGBG;
+
+		private int? OJPDMHKPPGO;
+
+		private Dictionary<int, int> LEJLOHPNNMG;
+
+		private int OGPPPAMFCJB;
+
+		private int HNKIFFMGMOH => 0;
+
+		public void SetVisible(bool GPFPIAMCEMI)
+		{
+		}
+
+		public void Clear()
+		{
+		}
+
+		public Vector3 GetLocalPosition()
+		{
+			return default(Vector3);
+		}
+
+		public void ResetLocalPosition()
+		{
+		}
+
+		public void SetLocalPosition(Vector3 GPFPIAMCEMI)
+		{
+		}
+
+		public void UpdateBigHeadScale(float GPFPIAMCEMI)
+		{
+		}
+
+		public void SetBigHeadNeckRevertScaleMult(Vector3 FDOKAOIEDFD)
+		{
+		}
+
+		public void SwitchEffect(UMAData.EffectType DHJMMGHNCKJ)
+		{
+		}
+
+		public void SetShader(string NKOEPMIECFC, HELBFMHHPBI IGGPKOIHLJE = null, Shader BGBLINMCBGD = null)
+		{
+		}
+
+		public void RevertToDefaultShader()
+		{
+		}
+
+		public void SetRenderQ(int MMNAILAPJFN, bool IDCHCEECMBE = false, bool MNMOFPDPGGN = false)
+		{
+		}
+
+		public void RevertToDefaultRenderQ(bool OKEOCDOOHAF = true)
+		{
+		}
+
+		public SkinnedMeshRenderer[] GetRenderer()
+		{
+			return null;
+		}
+
+		public void MakeAllTransformEffectVisible(bool PIDINBNGILH)
+		{
+		}
+
+		public bool IsFirstRendererEnabled()
+		{
+			return false;
+		}
+
+		public void SetThermalView(bool HCLGHJNEFIC)
+		{
+
+========== PLAYER BIGHEAD FIELDS 4510-4600 ==========
+
+	protected ITransformNode DIDHPFKMJJE;
+
+	protected ITransformNode KAKOKIHEPCF;
+
+	protected ITransformNode GCEICMOOFIA;
+
+	protected ITransformNode CLOEKEADCHD;
+
+	protected ITransformNode KNFKIDHJCCO;
+
+	protected ITransformNode HNFBCFKKCJP;
+
+	protected ITransformNode BOHFCEHMJBD;
+
+	protected ITransformNode BIPBNNIFCNO;
+
+	protected ITransformNode JLLMBADGKJP;
+
+	protected ITransformNode INHGPBHOKPF;
+
+	protected ITransformNode OEHAGFIGILO;
+
+	protected Transform OKOLMFJKGEC;
+
+	protected ITransformNode NBHOEOOCIIG;
+
+	protected ITransformNode OEJFBHIIBBG;
+
+	protected ITransformNode DIHJDDNIJHP;
+
+	protected ITransformNode PNPBBNDANEM;
+
+	protected ITransformNode KMIANNCLNOJ;
+
+	protected ITransformNode KNBJLEHOPIL;
+
+	protected Collider NFDNMIOPILM;
+
+	protected OMELKCOGCBK LPEALCPGJBL;
+
+	protected DLGEOEOEDBC KGHHPFINNLP;
+
+	protected AFBNBKPGOGO LOIJOEBOEKE;
+
+	private bool MPJBMKODJMF;
+
+	protected NewPlayerAnimationSystemComponent DGNAGHGGMCA;
+
+	protected PlayerAttributes KDJHNBAECLM;
+
+	protected AvatarManager KPMDIPJINJO;
+
+	protected AvatarDynamicEffectManager BPFDJKJMBFJ;
+
+	protected AvatarPropManager HGJDEIPHCGN;
+
+	protected PropertyData AJBLKLFDNHC;
+
+	protected BigHeadComponent KHMHJPMEHND;
+
+	protected BigHeadDataConfig IHHAAEMCFFL;
+
+	protected float AKMAAACGLNF;
+
+	protected bool MCHDPBAAFLG;
+
+	protected GameObject JKPPJJHKLPI;
+
+	private IceWallMakerData IBPHBBMGJEC;
+
+	private bool _003CLOFPJDKBDNC_003Ek__BackingField;
+
+	private bool _003CKINIABJKLEL_003Ek__BackingField;
+
+	protected NavMeshAgent PDHEAKFNCFE;
+
+	private NetworkPet _003CJPFIJGBLCAN_003Ek__BackingField;
+
+	private bool KHGPIFCFBMK;
+
+	public bool PetForceHide;
+
+	private bool LNNCGAEJOGC;
+
+	private bool _003CIJJBDCMHHAN_003Ek__BackingField;
+
+	private bool LJFDNAEOLHC;
+
+	private bool _003CJGMMBEILBBL_003Ek__BackingField;
+
+
+========== PLAYER BIGHEAD METHODS 16820-16920 ==========
+	}
+
+	private void EJBDPPHIDDK(AvatarTransformData ICHJBEPFCOO, ResourceID HLIDHMEGAKI, GameObject ADDGINGLHBN)
+	{
+	}
+
+	public void QuitAvatarTransformer(bool HJBPPGHOPHA = false)
+	{
+	}
+
+	public void RebindAnimStatusWhenUGCAvatarChanged()
+	{
+	}
+
+	private void DCOOFAAOMIJ(AvatarTransformData ICHJBEPFCOO, GameObject ADDGINGLHBN)
+	{
+	}
+
+	private void GDCBIJPOOLO()
+	{
+	}
+
+	public void RebindWeaponAnimController()
+	{
+	}
+
+	public bool canShowAvatarTransform(AvatarTransformData JCONDDPFBKK)
+	{
+		return false;
+	}
+
+	private void HFHBNPOFLEL()
+	{
+	}
+
+	public virtual void OnTransformerChanged(Transform FPMLOHFMGLP)
+	{
+	}
+
+	private void EHDHLJPENPG()
+	{
+	}
+
+	private void GLBMEKLEIEP()
+	{
+	}
+
+	private bool LFIFEHJJHIF()
+	{
+		return false;
+	}
+
+	public bool IsInBigHeadScale()
+	{
+		return false;
+	}
+
+	public bool ApplyBigHeadScalePreHangLateUpdate()
+	{
+		return false;
+	}
+
+	private PlayerBigHeadPreHangUpdater LDGKMJOGJNB()
+	{
+		return null;
+	}
+
+	public void RegisterLocalPlayerBTFishTailCallback(Action<int> CEHELPAIELA)
+	{
+	}
+
+	public void UnregisterBTFishTailCallback()
+	{
+	}
+
+	public void UpdateLocalFishTail(bool JNKFCEOKLKD)
+	{
+	}
+
+	public bool CanFishing()
+	{
+		return false;
+	}
+
+	public void SetFishSlientTime()
+	{
+	}
+
+	public bool InIsSimFishSlient()
+	{
+		return false;
+	}
+
+	public void PlayBTFishingPoolAnimation(bool AOGGADPEFCC, Vector3 BAFIFNKBHLC = default(Vector3))
+	{
+	}
+
+	private IEnumerator CENDEKFHCLI(Vector3 BAFIFNKBHLC)
+	{
+		return null;
+	}
+
+========== UGC HEAD BONES SCALE ==========
+	public string CurrentCameraConfig
+	{
+		get
+		{
+			return _003CCurrentCameraConfig_003Ek__BackingField;
+		}
+		private set
+		{
+			_003CCurrentCameraConfig_003Ek__BackingField = value;
+		}
+	}
+
+	public float CustomGravity
+	{
+		get
+		{
+			return _003CCustomGravity_003Ek__BackingField;
+		}
+		private set
+		{
+			_003CCustomGravity_003Ek__BackingField = value;
+		}
+	}
+
+	public Vector3 HeadBonesScale
+	{
+		get
+		{
+			return _003CHeadBonesScale_003Ek__BackingField;
+		}
+		private set
+		{
+			_003CHeadBonesScale_003Ek__BackingField = value;
+		}
+	}
+
+	public Vector3 BodyBonesScale
+	{
+		get
+		{
+			return _003CBodyBonesScale_003Ek__BackingField;
+		}
+		private set
+		{
+			_003CBodyBonesScale_003Ek__BackingField = value;
+		}
+	}
+
+	public Vector3 LimbBonesScale
+	{
+		get
+[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ [7m{[27m
+[7mecho "============================================================"[27m
+[7mecho "BIGHEAD COMPONENT STRUCTURAL USERS"[27m
+[7mecho "============================================================"[27m
+
+[7mgrep -RniE \[27m
+[7m'BPDOBCNIHLF|CHEDPICHEPN|PGMAPJNCHHI|LFGHBHHKMMH|SetNeckRevertScaleMult|UpdateScale' [27m[7m\[27m[7m [27m
+[7moutput/csharp-decompiled \[27m
+[7m| head -500[27m
+
+[7m} | tee analitycs/findings/raw/bighead-component-internals.txt[27m[A[A[A[A[A[A[A[A[A[A[A{
+echo "============================================================"
+echo "BIGHEAD COMPONENT STRUCTURAL USERS"
+echo "============================================================"
+
+grep -RniE \
+'BPDOBCNIHLF|CHEDPICHEPN|PGMAPJNCHHI|LFGHBHHKMMH|SetNeckRevertScaleMult|UpdateScale' \
+output/csharp-decompiled \
+| head -500
+
+} | tee analitycs/findings/raw/bighead-component-internals.txt
+[?2004l============================================================
+BIGHEAD COMPONENT STRUCTURAL USERS
+============================================================
+output/csharp-decompiled/COW.GamePlay/LevelTechBuildSafeZoneController.cs:17:	private GameObject BPDOBCNIHLF;
+output/csharp-decompiled/COW.GamePlay/DuoEmoteInviteCollider.cs:10:	private SphereCollider BPDOBCNIHLF;
+output/csharp-decompiled/COW.GamePlay/LevelObjectHypercrate.cs:32:	private GameObject BPDOBCNIHLF;
+output/csharp-decompiled/COW.GamePlay/LevelJumpPad.cs:88:	private SphereCollider BPDOBCNIHLF;
+output/csharp-decompiled/COW.GamePlay/LevelObjectMapScanMachine.cs:29:	private GameObject BPDOBCNIHLF;
+output/csharp-decompiled/COW.GamePlay/LevelObjectKingSword.cs:31:	private GameObject BPDOBCNIHLF;
+output/csharp-decompiled/COW.GamePlay/LevelFootball.cs:35:	private SphereCollider BPDOBCNIHLF;
+output/csharp-decompiled/COW.GamePlay/SuperEmoteCollider.cs:10:	private SphereCollider BPDOBCNIHLF;
+output/csharp-decompiled/COW.GamePlay/BlueTearBubble.cs:27:	public void UpdateScale(float GLPLIHEECAP, float EEFLCGEOIFN)
+output/csharp-decompiled/COW.GamePlay/LPCGGIPAKHF.cs:13:	private ResourceID BPDOBCNIHLF;
+output/csharp-decompiled/COW.GamePlay/BigHeadComponent.cs:9:	private Transform CHEDPICHEPN;
+output/csharp-decompiled/COW.GamePlay/BigHeadComponent.cs:11:	private CapsuleCollider BPDOBCNIHLF;
+output/csharp-decompiled/COW.GamePlay/BigHeadComponent.cs:17:	public void UpdateScale(float GKKELMDDGBJ)
+output/csharp-decompiled/COW.GamePlay/BigHeadComponent.cs:33:	private void LFGHBHHKMMH()
+output/csharp-decompiled/COW.GamePlay/BigHeadComponent.cs:37:	public void SetNeckRevertScaleMult(Vector3 FDOKAOIEDFD)
+output/csharp-decompiled/COW.GamePlay/BigHeadComponent.cs:41:	private void PGMAPJNCHHI(float GKKELMDDGBJ)
+output/csharp-decompiled/COW.GamePlay/FollowMoveEmoteTrigger.cs:10:	private SphereCollider BPDOBCNIHLF;
+output/csharp-decompiled/COW.GamePlay/LevelEnergyDeviceBattery.cs:32:	private Collider BPDOBCNIHLF;
+output/csharp-decompiled/COW.GamePlay/EmoteLeaderCollider.cs:10:	private SphereCollider BPDOBCNIHLF;
+output/csharp-decompiled/COW.GamePlay/CooperateEmoteCollider.cs:10:	private SphereCollider BPDOBCNIHLF;
+output/csharp-decompiled/COW.HUD/UIHudLockedTargetScaledController.cs:75:	private void UpdateScale()
+output/csharp-decompiled/COW.Gameplay.UGC/UGCTimelineEditorHelper.cs:298:	public static void AddOrUpdateScaleKeyFrame(UGCTimelineEditorEntityTrackWarp track, float time, Vector3 value, bool refreshPreview = true)
+output/csharp-decompiled/COW/UIBigMapObEventController.cs:38:	public void UpdateScale(Vector3 mapIconScale)
+output/csharp-decompiled/COW/UIHudCrosshairsController.cs:538:	private void UpdateScaleTween()
+[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ clear
+[?2004l[H[2J[3J[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ cd /workspaces/dripnight-dumper 
+
+mkdir -p analitycs/findings/raw
+
+{
+echo "============================================================"
+echo "FINAL HEADSHOT METADATA RELATION SCAN"
+echo "============================================================"
+
+echo
+echo "========== CHECKDAMAGEHITHEAD REFERENCES =========="
+grep -RniE \
+'\bCheckDamageHitHead\b' \
+output/csharp-decompiled \
+| head -300
+
+echoecho "========== ISINNOHEADSHOTSTATE REFERENCES =========="grep -RniE \'\bIsInNoHeadShotState\b' \output/csharp-decompiled \| head -300echoecho "========== ACCUMULATED DAMAGE INFO REFERENCES =========="grep -RniE \'\bAccumulatedDamageInfo\b|headShotCount|ColliderType' \output/csharp-decompiled/COW \output/csharp-decompiled/COW.GamePlay \output/csharp-decompiled/COW.HUD \| head -700echoecho "========== HIT OBJECT REGION ENUM REFERENCES =========="grep -RniE \'\bJKCLPFEFMNG\b|FLCLOHCBJEI' \output/csharp-decompiled \[7m| head -400[27m[7mecho[27m[7mecho "========== HEAD TRANSFORM REFERENCES =========="[27m[7mgrep -RniE \[27m[7m'\bGetHeadTF\b|HeadBonesScale|BodyBonesScale|LimbBonesScale' \[27m[7moutput/csharp-decompiled \[27m[7m| head -600[27m[7mecho[27m[7mecho "========== ATTACKABLE CENTER / HIT DAMAGE POSITION =========="[27m[7mgrep -RniE \[27m[7m'\bGetAttackableCenterWS\b|\bGetHitDamagePos\b|\bGetAttackableRadius\b' \[27m[7moutput/csharp-decompiled/COW.GamePlay \[27m[7m| head -600[27m[7m} | tee analitycs/findings/raw/final-headshot-metadata-relations.txt[27m| head -400echoecho "========== HEAD TRANSFORM REFERENCES =========="grep -RniE \'\bGetHeadTF\b|HeadBonesScale|BodyBonesScale|LimbBonesScale' \output/csharp-decompiled \| head -600echoecho "========== ATTACKABLE CENTER / HIT DAMAGE POSITION =========="grep -RniE \'\bGetAttackableCenterWS\b|\bGetHitDamagePos\b|\bGetAttackableRadius\b' \output/csharp-decompiled/COW.GamePlay \| head -600} | tee analitycs/findings/raw/final-headshot-metadata-relations.txt
+[?2004l============================================================
+FINAL HEADSHOT METADATA RELATION SCAN
+============================================================
+
+========== CHECKDAMAGEHITHEAD REFERENCES ==========
+output/csharp-decompiled/COW.GamePlay/Player.cs:17456:	public bool CheckDamageHitHead(EECMIDPHCKN JCONDDPFBKK)
+
+========== ISINNOHEADSHOTSTATE REFERENCES ==========
+output/csharp-decompiled/COW.GamePlay/Player.cs:14799:	public bool IsInNoHeadShotState()
+
+========== ACCUMULATED DAMAGE INFO REFERENCES ==========
+output/csharp-decompiled/COW/AccumulatedDamageInfo.cs:7:internal class AccumulatedDamageInfo
+output/csharp-decompiled/COW/AccumulatedDamageInfo.cs:21:	public LLEDPGIGCMO ColliderType;
+output/csharp-decompiled/COW/AccumulatedDamageInfo.cs:39:	public int headShotCount;
+output/csharp-decompiled/COW/AccumulateDamageEvent.cs:11:	public int HeadShotCount;
+output/csharp-decompiled/COW/AccumulateDamageEvent.cs:17:	public GEvent Reset(bool needShow, int pelletCount, int headShotCount, float hitTime, float fireInterval)
+output/csharp-decompiled/COW.GamePlay/LevelDynamicCollider.cs:20:	public LMEPCDHNOAO colliderType;
+output/csharp-decompiled/COW.GamePlay/LevelRestrictedArea.cs:59:	public static ResourceID GetResourceIDByColliderType(int KHLIJODOLOF)
+output/csharp-decompiled/COW.GamePlay/HitDetectColliderHelper.cs:7:	public LLEDPGIGCMO ColliderType;
+output/csharp-decompiled/COW.HUD/UIHudNameController.cs:645:	protected override void SetupHitLabel(GameObject cloneLabelGO, AttackableEntity attackTarget, AccumulatedDamageInfo info, bool isDamageLabelType1, ref int xOff, ref int yOff)
+output/csharp-decompiled/COW.HUD/UIHudNameController.cs:715:	public void _003C_003EiFixBaseProxy_SetupHitLabel(GameObject P0, AttackableEntity P1, AccumulatedDamageInfo P2, bool P3, ref int P4, ref int P5)
+output/csharp-decompiled/COW.HUD/UIHudNameEnemyController.cs:311:	protected override void SetupHitLabel(GameObject cloneLabelGO, AttackableEntity attackTarget, AccumulatedDamageInfo info, bool isDamageLabelType1, ref int xOff, ref int yOff)
+output/csharp-decompiled/COW.HUD/UIHudNameEnemyController.cs:349:	public void _003C_003EiFixBaseProxy_SetupHitLabel(GameObject P0, AttackableEntity P1, AccumulatedDamageInfo P2, bool P3, ref int P4, ref int P5)
+output/csharp-decompiled/COW.HUD/UIHudNameDamageController.cs:74:	private AccumulatedDamageInfo m_AccumulatedDamageInfo;
+output/csharp-decompiled/COW.HUD/UIHudNameDamageController.cs:100:	protected AccumulatedDamageInfo GetAccumylateInfo()
+output/csharp-decompiled/COW.HUD/UIHudNameDamageController.cs:109:	protected void ShowAccumulatedDamageLabel(AttackableEntity attackTarget, Player player, AccumulatedDamageInfo info, bool merge, float delay)
+output/csharp-decompiled/COW.HUD/UIHudNameDamageController.cs:118:	protected virtual void SetupHitLabel(GameObject cloneLabelGO, AttackableEntity attackTarget, AccumulatedDamageInfo info, bool isDamageLabelType1, ref int xOff, ref int yOff)
+
+========== HIT OBJECT REGION ENUM REFERENCES ==========
+output/csharp-decompiled/COW.GamePlay/GMPGMPFNMFP.cs:28:	public JKCLPFEFMNG FLCLOHCBJEI;
+output/csharp-decompiled/COW.GamePlay/JKCLPFEFMNG.cs:3:public enum JKCLPFEFMNG
+
+========== HEAD TRANSFORM REFERENCES ==========
+output/csharp-decompiled/COW.GamePlay/Player_Watching.cs:95:	public override Transform GetHeadTF()
+output/csharp-decompiled/COW.GamePlay/Player.cs:13378:	public virtual Transform GetHeadTF()
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:108:	public const int PROP_ID_HEADBONESSCALE = -14049;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:110:	public const int PROP_ID_BODYBONESSCALE = -14050;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:112:	public const int PROP_ID_LIMBBONESSCALE = -14051;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:212:	public Action<Vector3> OnHeadBonesScaleChangeEvent;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:214:	public Action<Vector3> OnBodyBonesScaleChangeEvent;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:216:	public Action<Vector3> OnLimbBonesScaleChangeEvent;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:302:	private Vector3 _003CHeadBonesScale_003Ek__BackingField;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:304:	private Vector3 _003CBodyBonesScale_003Ek__BackingField;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:306:	private Vector3 _003CLimbBonesScale_003Ek__BackingField;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:584:	public Vector3 HeadBonesScale
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:588:			return _003CHeadBonesScale_003Ek__BackingField;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:592:			_003CHeadBonesScale_003Ek__BackingField = value;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:596:	public Vector3 BodyBonesScale
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:600:			return _003CBodyBonesScale_003Ek__BackingField;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:604:			_003CBodyBonesScale_003Ek__BackingField = value;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:608:	public Vector3 LimbBonesScale
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:612:			return _003CLimbBonesScale_003Ek__BackingField;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:616:			_003CLimbBonesScale_003Ek__BackingField = value;
+
+========== ATTACKABLE CENTER / HIT DAMAGE POSITION ==========
+output/csharp-decompiled/COW.GamePlay/UGCAttackableMiniSentry.cs:39:	public override Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/LevelAutoPathBomb.cs:242:	public override float GetAttackableRadius()
+output/csharp-decompiled/COW.GamePlay/LevelObjectWukongIllusion.cs:93:	public override float GetAttackableRadius()
+output/csharp-decompiled/COW.GamePlay/LevelObjectWukongIllusion.cs:103:	public override Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/AttackableEntity.cs:41:	public virtual Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/AttackableEntity.cs:46:	public virtual float GetAttackableRadius()
+output/csharp-decompiled/COW.GamePlay/AttackableEntity.cs:51:	public virtual Vector3 GetHitDamagePos()
+output/csharp-decompiled/COW.GamePlay/Player_Watching.cs:90:	public override Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/Player_Watching.cs:105:	public override Vector3 GetHitDamagePos()
+output/csharp-decompiled/COW.GamePlay/LevelPocketRevivePoint.cs:154:	public float GetAttackableRadius()
+output/csharp-decompiled/COW.GamePlay/LevelPocketRevivePoint.cs:159:	public Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/LevelPocketRevivePoint.cs:164:	public Vector3 GetHitDamagePos()
+output/csharp-decompiled/COW.GamePlay/LevelHitAndExplodeGiftBox.cs:107:	public float GetAttackableRadius()
+output/csharp-decompiled/COW.GamePlay/LevelHitAndExplodeGiftBox.cs:112:	public Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/LevelHitAndExplodeGiftBox.cs:117:	public Vector3 GetHitDamagePos()
+output/csharp-decompiled/COW.GamePlay/Player.cs:11132:	public override Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/Player.cs:11137:	public override float GetAttackableRadius()
+output/csharp-decompiled/COW.GamePlay/PlayerUGCOffline.cs:58:	public override Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/LevelDynamicColliderAttackScript.cs:69:	public Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/LevelDynamicColliderAttackScript.cs:74:	public float GetAttackableRadius()
+output/csharp-decompiled/COW.GamePlay/LevelDynamicColliderAttackScript.cs:79:	public Vector3 GetHitDamagePos()
+output/csharp-decompiled/COW.GamePlay/PlayerUGCCommon.cs:98:	public override Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/NetworkAIPawn.cs:599:	public override Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/NetworkAIPawn.cs:604:	public override float GetAttackableRadius()
+output/csharp-decompiled/COW.GamePlay/NetworkAIPawn.cs:614:	public override Vector3 GetHitDamagePos()
+output/csharp-decompiled/COW.GamePlay/LevelTeleportKnockDownDummy.cs:84:	public override float GetAttackableRadius()
+output/csharp-decompiled/COW.GamePlay/PlayerReaper.cs:190:	public override Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/UGCAimAssistEntity.cs:67:	public virtual Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/UGCAimAssistEntity.cs:72:	public virtual float GetAttackableRadius()
+output/csharp-decompiled/COW.GamePlay/UGCAimAssistEntity.cs:77:	public virtual Vector3 GetHitDamagePos()
+output/csharp-decompiled/COW.GamePlay/AttackableBaseLevelObject.cs:41:	public virtual Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/AttackableBaseLevelObject.cs:46:	public virtual float GetAttackableRadius()
+output/csharp-decompiled/COW.GamePlay/AttackableBaseLevelObject.cs:51:	public virtual Vector3 GetHitDamagePos()
+output/csharp-decompiled/COW.GamePlay/Vehicle.cs:1433:	public override Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/OKEAMEELLBB.cs:27:	float GetAttackableRadius();
+output/csharp-decompiled/COW.GamePlay/OKEAMEELLBB.cs:29:	Vector3 GetAttackableCenterWS();
+output/csharp-decompiled/COW.GamePlay/OKEAMEELLBB.cs:31:	Vector3 GetHitDamagePos();
+output/csharp-decompiled/COW.GamePlay/LevelDummy.cs:22:	public override Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/MovableShootingTarget.cs:70:	public override float GetAttackableRadius()
+output/csharp-decompiled/COW.GamePlay/MovableShootingTarget.cs:75:	public override Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/MovableShootingTarget.cs:80:	public override Vector3 GetHitDamagePos()
+output/csharp-decompiled/COW.GamePlay/LevelObjectSpawnedAttackable.cs:69:	public virtual float GetAttackableRadius()
+output/csharp-decompiled/COW.GamePlay/LevelObjectSpawnedAttackable.cs:74:	public virtual Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/LevelObjectSpawnedAttackable.cs:79:	public virtual Vector3 GetHitDamagePos()
+[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ cat >> analitycs/findings/headshot-hit-detection.md <<'EOF' 
+
+# Update - Head/Body physical classification
+
+## Physics query layer
+
+HPFKOGPDBBE possui:
+
+- buffers RaycastHit[]
+- buffer Collider[]
+- métodos recebendo RaycastHit
+- métodos recebendo CapsuleCollider
+- métodos recebendo BoxCollider
+- métodos recebendo Func<Collider,bool>
+- métodos produzindo GMPGMPFNMFP
+- métodos produzindo listas de GMPGMPFNMFPAlias de análise:HPFKOGPDBBE -> PhysicsRaycastUtilityConfiança: alta.## Hit result layerGMPGMPFNMFP possui diretamente:- GameObject- Collider- múltiplos Vector3- PhysicMaterial- JKCLPFEFMNG- flags e informações adicionaisO tipo aparece em campos legíveis chamados:m_HitObjectInfom_CacheHitInfom_HitObjectInfoCacheAlias:GMPGMPFNMFP -> HitObjectInfoConfiança: alta.## Hit object regionJKCLPFEFMNG:DefaultHeadBodyAlias provisório:JKCLPFEFMNG -> HitObjectRegionConfiança: média/alta.## Physical player colliderCapsuleHuman possui:CapsuleCollider colliderPlayer ownere:Init(Player)OnTriggerEnterOnTriggerStayOnTriggerExitResizeCapsuleColliderIsso aparenta representar uma capsule física/trigger geral do Player,não uma hitbox exclusiva da cabeça.## Big HeadBigHeadComponent possui:TransformCapsuleColliderUpdateScale(float)SetNeckRevertScaleMult(Vector3)BigHeadData possui:HeadScaleHeadShotDamageScaleIsso confirma que a mecânica Big Head altera uma estrutura visual/físicaassociada à cabeça.Não está comprovado que o CapsuleCollider interno do BigHeadComponentseja a hitbox normal utilizada fora dessa mecânica.## UGC bone scalingUGCPlayerRepItem contém:HeadBonesScaleBodyBonesScaleLimbBonesScaleIsso demonstra suporte para escalas independentes das regiões do esqueleto.Não implica automaticamente alteração equivalente das hitboxes normais.## Current confidence mapPhysicsRaycastUtility    ↓RaycastHit    ↓HitObjectInfo    ├── Collider    ├── GameObject    ├── vectors / material    └── HitObjectRegion          ├── Default          ├── Head          └── Body    ↓[7mHitDetectColliderHelper[27m[7m    └── HitRegionType[27m[7m          ├── Head[27m[7m          ├── Body[27m[7m          ├── Limb[27m[7m          └── other attackable regions[27m[7m    ↓[27m[7mDamageContext[27m[7m    ↓[27m[7mDamageEvaluationContext[27m[7m    ↓[27m[7mCheckDamageHitHead[27m[7m    ↓[27m[7mdamage/headshot modifier taxonomy[27m[7mExact method execution logic is unavailable in the metadata-only reconstruction.[27m[7mEOF[27mHitDetectColliderHelper    └── HitRegionType          ├── Head          ├── Body          ├── Limb          └── other attackable regions    ↓DamageContext    ↓DamageEvaluationContext    ↓CheckDamageHitHead    ↓damage/headshot modifier taxonomyExact method execution logic is unavailable in the metadata-only reconstruction.EOF
+[?2004l[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ cat >> analitycs/findings/headshot-hit-detection.md <<'EOF' 
+
+# Update - Head/Body physical classification
+
+## Physics query layer
+
+HPFKOGPDBBE possui:
+
+- buffers RaycastHit[]
+- buffer Collider[]
+- métodos recebendo RaycastHit
+- métodos recebendo CapsuleCollider
+- métodos recebendo BoxCollider
+- métodos recebendo Func<Collider,bool>
+- métodos produzindo GMPGMPFNMFP
+- métodos produzindo listas de GMPGMPFNMFPAlias de análise:HPFKOGPDBBE -> PhysicsRaycastUtilityConfiança: alta.## Hit result layerGMPGMPFNMFP possui diretamente:- GameObject- Collider- múltiplos Vector3- PhysicMaterial- JKCLPFEFMNG- flags e informações adicionaisO tipo aparece em campos legíveis chamados:m_HitObjectInfom_CacheHitInfom_HitObjectInfoCacheAlias:GMPGMPFNMFP -> HitObjectInfoConfiança: alta.## Hit object regionJKCLPFEFMNG:DefaultHeadBodyAlias provisório:JKCLPFEFMNG -> HitObjectRegionConfiança: média/alta.## Physical player colliderCapsuleHuman possui:CapsuleCollider colliderPlayer ownere:Init(Player)OnTriggerEnterOnTriggerStayOnTriggerExitResizeCapsuleColliderIsso aparenta representar uma capsule física/trigger geral do Player,não uma hitbox exclusiva da cabeça.## Big HeadBigHeadComponent possui:TransformCapsuleColliderUpdateScale(float)SetNeckRevertScaleMult(Vector3)BigHeadData possui:HeadScaleHeadShotDamageScaleIsso confirma que a mecânica Big Head altera uma estrutura visual/físicaassociada à cabeça.Não está comprovado que o CapsuleCollider interno do BigHeadComponentseja a hitbox normal utilizada fora dessa mecânica.## UGC bone scalingUGCPlayerRepItem contém:HeadBonesScaleBodyBonesScaleLimbBonesScaleIsso demonstra suporte para escalas independentes das regiões do esqueleto.Não implica automaticamente alteração equivalente das hitboxes normais.## Current confidence mapPhysicsRaycastUtility    ↓RaycastHit    ↓HitObjectInfo    ├── Collider    ├── GameObject    ├── vectors / material    └── HitObjectRegion          ├── Default          ├── Head          └── Body    ↓[7mHitDetectColliderHelper[27m[7m    └── HitRegionType[27m[7m          ├── Head[27m[7m          ├── Body[27m[7m          ├── Limb[27m[7m          └── other attackable regions[27m[7m    ↓[27m[7mDamageContext[27m[7m    ↓[27m[7mDamageEvaluationContext[27m[7m    ↓[27m[7mCheckDamageHitHead[27m[7m    ↓[27m[7mdamage/headshot modifier taxonomy[27m[7mExact method execution logic is unavailable in the metadata-only reconstruction.[27m[7mEOF[27mHitDetectColliderHelper    └── HitRegionType          ├── Head          ├── Body          ├── Limb          └── other attackable regions    ↓DamageContext    ↓DamageEvaluationContext    ↓CheckDamageHitHead    ↓damage/headshot modifier taxonomyExact method execution logic is unavailable in the metadata-only reconstruction.EOF
+[?2004l[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ clear
+[?2004l[H[2J[3J[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ cd /workspaces/dripnight-dumper 
+
+python3 - <<'PY'
+[7mfrom pathlib import Path[27m
+
+[7mp = Path("analitycs/findings/headshot-hit-detection.md")[27m
+[7mtext = p.read_text()[27m
+
+[7mmarker = "# Update - Head/Body physical classification"[27m
+
+[7mfirst = text.find(marker)[27m
+[7msecond = text.find(marker, first + len(marker)) if first != -1 else -1[27m
+
+[7mif second != -1:[27m
+[7m    text = text[:second].rstrip() + "\n"[27m
+[7m    p.write_text(text)[27m
+[7m    print("Seção duplicada removida.")[27m[7melse:[27m[7m    print("Nenhuma duplicação encontrada.")[27m[7mPY[27m[A[A[A[A[A[A[A[A[A[A[A[A[Afrom pathlib import Path
+
+p = Path("analitycs/findings/headshot-hit-detection.md")
+text = p.read_text()
+
+marker = "# Update - Head/Body physical classification"
+
+first = text.find(marker)
+second = text.find(marker, first + len(marker)) if first != -1 else -1
+
+if second != -1:
+    text = text[:second].rstrip() + "\n"
+    p.write_text(text)
+    print("Seção duplicada removida.")else:    print("Nenhuma duplicação encontrada.")PY
+[?2004lSeção duplicada removida.
+[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ cat >> analitycs/findings/headshot-hit-detection.md <<'EOF' 
+
+# Metadata headshot analysis - final status
+
+## Managed references
+
+CheckDamageHitHead(EECMIDPHCKN) aparece somente em sua própria declaração.
+
+IsInNoHeadShotState() aparece somente em sua própria declaração.
+
+Isso significa que o metadata reconstruído não contém evidência suficiente
+para reconstruir seus callers ou sua implementação original.
+
+## Accumulated headshot information
+
+AccumulatedDamageInfo possui:- LLEDPGIGCMO ColliderType- int headShotCount- int TotalDamage- int TotalShieldDamage- int PelletCount- int WeaponIDAccumulateDamageEvent possui:- HeadShotCountA HUD recebe AccumulatedDamageInfo em SetupHitLabel.Portanto existe uma etapa posterior do pipeline que acumula a classificaçãodo impacto e a quantidade de headshots antes da apresentação na HUD.## HitObjectRegionJKCLPFEFMNG contém:DefaultHeadBodyNo metadata reconstruído, sua referência visível principal é:GMPGMPFNMFP.FLCLOHCBJEINão há atribuições visíveis no C# reconstruído.A lógica que atribui Head/Body provavelmente estava nos corpos IL2CPPnativos que não foram recuperados pelo modo metadata-only.## Player transformsGetHeadTF está declarado em Player e sobrescrito em Player_Watching.O metadata não mostra o corpo original dessas funções.Não foi possível determinar por metadata-only qual bone/path exato éretornado por GetHeadTF.## ConclusionA reconstrução C# metadata-only chegou ao seu limite para a lógica deheadshot.Foi possível reconstruir a arquitetura de:Physics queryRaycastHitHitObjectInfo[7mCollider[27m[7mHit region[27m[7mDamage context[27m[7mDamage evaluation[27m[7mHeadshot classification[27m[7mAccumulated headshot information[27m[7mHUD[27m[7mNão foi possível reconstruir por esta fonte:[27m[7m- condições internas exatas[27m[7m- atribuições de Head/Body dentro dos métodos nativos[27m[7m- dimensões normais da hitbox[27m[7m- bone/path exato da cabeça[27m[7m- fórmulas originais de dano[27m[7m- ordem exata de branches internos[27m[7mEOF[27mColliderHit regionDamage contextDamage evaluationHeadshot classificationAccumulated headshot informationHUDNão foi possível reconstruir por esta fonte:- condições internas exatas- atribuições de Head/Body dentro dos métodos nativos- dimensões normais da hitbox- bone/path exato da cabeça- fórmulas originais de dano- ordem exata de branches internosEOF
+[?2004l[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ [7mpython3 - <<'PY'[27m
+[7mimport json[27m
+[7mfrom pathlib import Path[27m
+
+[7mpaths = [[27m
+[7m    Path("output/semantic-aliases.json"),[27m
+[7m    Path("analitycs/findings/semantic-aliases-current.json")[27m
+[7m][27m
+
+[7mfor p in paths:[27m
+[7m    data = json.loads(p.read_text())[27m
+[7m    data["JKCLPFEFMNG"] = "HitObjectRegion"[27m
+[7m    p.write_text(json.dumps(data, indent=2) + "\n")[27m
+
+[7mprint("JKCLPFEFMNG -> HitObjectRegion")[27m
+[7mPY[27m[A[A[A[A[A[A[A[A[A[A[A[A[A[A[A[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ python3 - <<'PY'
+import json
+from pathlib import Path
+
+paths = [
+    Path("output/semantic-aliases.json"),
+    Path("analitycs/findings/semantic-aliases-current.json")
+]
+
+for p in paths:
+    data = json.loads(p.read_text())
+    data["JKCLPFEFMNG"] = "HitObjectRegion"
+    p.write_text(json.dumps(data, indent=2) + "\n")
+
+print("JKCLPFEFMNG -> HitObjectRegion")
+PY
+[?2004lJKCLPFEFMNG -> HitObjectRegion
+[?2004h[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ [7mgit add -f analitycs output/sem[27m[7ma[27m[7mntic-aliases.json [27m
+[7mgit commit -m "Finalize metadata headshot architecture analysis"[27m
+[7mgit push origin main[27m[A[A[A[0;32m@EvandroAndre [0m➜ [1;34m/workspaces/dripnight-dumper [0;36m([1;31mmain[0;36m) [0m$ git add -f analitycs output/semantic-aliases.json
+git commit -m "Finalize metadata headshot architecture analysis"
+git push origin main
 [?2004l

@@ -277,3 +277,343 @@ Isso confirma que existe infraestrutura explícita para:
 - collider usado durante disparo
 
 Ainda não está confirmado que GetHeadTF define diretamente a hitbox de headshot.
+
+# Update - Raycast and Player Head Structure
+
+## AutoFireWeapon
+
+AutoFireWeapon contém:
+
+private void MBLEOAIJBBL(
+    ref RaycastHit LMHJIDCOHLD,
+    GMPGMPFNMFP NKEPDPFIOFJ
+)
+
+Isso estabelece uma relação estrutural direta entre:
+
+Unity RaycastHit
+GMPGMPFNMFP / HitObjectInfo
+
+## GMPGMPFNMFP
+
+O alias HitObjectInfo ganhou confiança alta.
+
+Contém diretamente:
+
+GameObject
+Collider
+Vector3 x vários
+float
+int
+JKCLPFEFMNG
+PhysicMaterial
+flags booleanas
+dados adicionais de shield
+
+JKCLPFEFMNG contém:
+
+Default
+Head
+Body
+
+Também existem campos legíveis em outras classes:
+
+m_HitObjectInfo
+m_CacheHitInfo
+m_HitObjectInfoCache
+
+Portanto GMPGMPFNMFP representa informação de impacto/resultado físico.
+
+O nome original exato continua desconhecido.
+
+## Player head and collider infrastructure
+
+Player contém:
+
+GetHeadTF()
+GetHipTF()
+InitCollider()
+CreateCapsuleHuman()
+SetSniperFireCollider()
+EnableSniperCollider()
+EnableCharactorCollider()
+ResizeSniperFireCollider()
+ResizeCapsuleCollider()
+GetCharacterControllerTopPosition()
+GetCharacterHeight()
+GetCharacterCenterY()
+
+Isso demonstra infraestrutura separada para:
+
+- transforms corporais
+- character collider
+- sniper/fire collider
+- redimensionamento de capsule collider
+
+GetHeadTF confirma um transform específico da cabeça.
+
+Ainda não há evidência suficiente para afirmar que GetHeadTF,
+sozinho, define os limites físicos da hitbox de headshot.
+
+## BigHead
+
+Player possui BigHeadComponent e BigHeadDataConfig.
+
+BigHeadData possui HeadShotDamageScale.
+
+Esses tipos parecem relacionados a uma mecânica/modo de alteração
+de tamanho de cabeça e dano de headshot.
+
+Não devem ser tratados automaticamente como a implementação da hitbox
+normal do jogador.
+
+## Current structural map
+
+Physics / Raycast
+        ↓
+HPFKOGPDBBE / PhysicsRaycastUtility
+        ↓
+RaycastHit
+        ↓
+GMPGMPFNMFP / HitObjectInfo
+        ├── Collider
+        ├── GameObject
+        ├── contact/position vectors
+        └── JKCLPFEFMNG Default / Head / Body
+                ↓
+HitDetectColliderHelper
+        └── ColliderType : LLEDPGIGCMO
+                ├── Head
+                ├── Body
+                ├── Limb
+                └── outros attackable types
+                        ↓
+GLLLEDKLLDA / DamageContext
+                        ↓
+EECMIDPHCKN / DamageEvaluationContext
+                        ↓
+Player.CheckDamageHitHead(...)
+
+# Update - Head/Body physical classification
+
+## Physics query layer
+
+HPFKOGPDBBE possui:
+
+- buffers RaycastHit[]
+- buffer Collider[]
+- métodos recebendo RaycastHit
+- métodos recebendo CapsuleCollider
+- métodos recebendo BoxCollider
+- métodos recebendo Func<Collider,bool>
+- métodos produzindo GMPGMPFNMFP
+- métodos produzindo listas de GMPGMPFNMFP
+
+Alias de análise:
+
+HPFKOGPDBBE -> PhysicsRaycastUtility
+
+Confiança: alta.
+
+## Hit result layer
+
+GMPGMPFNMFP possui diretamente:
+
+- GameObject
+- Collider
+- múltiplos Vector3
+- PhysicMaterial
+- JKCLPFEFMNG
+- flags e informações adicionais
+
+O tipo aparece em campos legíveis chamados:
+
+m_HitObjectInfo
+m_CacheHitInfo
+m_HitObjectInfoCache
+
+Alias:
+
+GMPGMPFNMFP -> HitObjectInfo
+
+Confiança: alta.
+
+## Hit object region
+
+JKCLPFEFMNG:
+
+Default
+Head
+Body
+
+Alias provisório:
+
+JKCLPFEFMNG -> HitObjectRegion
+
+Confiança: média/alta.
+
+## Physical player collider
+
+CapsuleHuman possui:
+
+CapsuleCollider collider
+Player owner
+
+e:
+
+Init(Player)
+OnTriggerEnter
+OnTriggerStay
+OnTriggerExit
+ResizeCapsuleCollider
+
+Isso aparenta representar uma capsule física/trigger geral do Player,
+não uma hitbox exclusiva da cabeça.
+
+## Big Head
+
+BigHeadComponent possui:
+
+Transform
+CapsuleCollider
+UpdateScale(float)
+SetNeckRevertScaleMult(Vector3)
+
+BigHeadData possui:
+
+HeadScale
+HeadShotDamageScale
+
+Isso confirma que a mecânica Big Head altera uma estrutura visual/física
+associada à cabeça.
+
+Não está comprovado que o CapsuleCollider interno do BigHeadComponent
+seja a hitbox normal utilizada fora dessa mecânica.
+
+## UGC bone scaling
+
+UGCPlayerRepItem contém:
+
+HeadBonesScale
+BodyBonesScale
+LimbBonesScale
+
+Isso demonstra suporte para escalas independentes das regiões do esqueleto.
+
+Não implica automaticamente alteração equivalente das hitboxes normais.
+
+## Current confidence map
+
+PhysicsRaycastUtility
+    ↓
+RaycastHit
+    ↓
+HitObjectInfo
+    ├── Collider
+    ├── GameObject
+    ├── vectors / material
+    └── HitObjectRegion
+          ├── Default
+          ├── Head
+          └── Body
+    ↓
+HitDetectColliderHelper
+    └── HitRegionType
+          ├── Head
+          ├── Body
+          ├── Limb
+          └── other attackable regions
+    ↓
+DamageContext
+    ↓
+DamageEvaluationContext
+    ↓
+CheckDamageHitHead
+    ↓
+damage/headshot modifier taxonomy
+
+Exact method execution logic is unavailable in the metadata-only reconstruction.
+
+# Metadata headshot analysis - final status
+
+## Managed references
+
+CheckDamageHitHead(EECMIDPHCKN) aparece somente em sua própria declaração.
+
+IsInNoHeadShotState() aparece somente em sua própria declaração.
+
+Isso significa que o metadata reconstruído não contém evidência suficiente
+para reconstruir seus callers ou sua implementação original.
+
+## Accumulated headshot information
+
+AccumulatedDamageInfo possui:
+
+- LLEDPGIGCMO ColliderType
+- int headShotCount
+- int TotalDamage
+- int TotalShieldDamage
+- int PelletCount
+- int WeaponID
+
+AccumulateDamageEvent possui:
+
+- HeadShotCount
+
+A HUD recebe AccumulatedDamageInfo em SetupHitLabel.
+
+Portanto existe uma etapa posterior do pipeline que acumula a classificação
+do impacto e a quantidade de headshots antes da apresentação na HUD.
+
+## HitObjectRegion
+
+JKCLPFEFMNG contém:
+
+Default
+Head
+Body
+
+No metadata reconstruído, sua referência visível principal é:
+
+GMPGMPFNMFP.FLCLOHCBJEI
+
+Não há atribuições visíveis no C# reconstruído.
+
+A lógica que atribui Head/Body provavelmente estava nos corpos IL2CPP
+nativos que não foram recuperados pelo modo metadata-only.
+
+## Player transforms
+
+GetHeadTF está declarado em Player e sobrescrito em Player_Watching.
+
+O metadata não mostra o corpo original dessas funções.
+
+Não foi possível determinar por metadata-only qual bone/path exato é
+retornado por GetHeadTF.
+
+## Conclusion
+
+A reconstrução C# metadata-only chegou ao seu limite para a lógica de
+headshot.
+
+Foi possível reconstruir a arquitetura de:
+
+Physics query
+RaycastHit
+HitObjectInfo
+Collider
+Hit region
+Damage context
+Damage evaluation
+Headshot classification
+Accumulated headshot information
+HUD
+
+Não foi possível reconstruir por esta fonte:
+
+- condições internas exatas
+- atribuições de Head/Body dentro dos métodos nativos
+- dimensões normais da hitbox
+- bone/path exato da cabeça
+- fórmulas originais de dano
+- ordem exata de branches internos

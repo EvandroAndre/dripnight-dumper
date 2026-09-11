@@ -1,0 +1,99 @@
+============================================================
+FINAL HEADSHOT METADATA RELATION SCAN
+============================================================
+
+========== CHECKDAMAGEHITHEAD REFERENCES ==========
+output/csharp-decompiled/COW.GamePlay/Player.cs:17456:	public bool CheckDamageHitHead(EECMIDPHCKN JCONDDPFBKK)
+
+========== ISINNOHEADSHOTSTATE REFERENCES ==========
+output/csharp-decompiled/COW.GamePlay/Player.cs:14799:	public bool IsInNoHeadShotState()
+
+========== ACCUMULATED DAMAGE INFO REFERENCES ==========
+output/csharp-decompiled/COW/AccumulatedDamageInfo.cs:7:internal class AccumulatedDamageInfo
+output/csharp-decompiled/COW/AccumulatedDamageInfo.cs:21:	public LLEDPGIGCMO ColliderType;
+output/csharp-decompiled/COW/AccumulatedDamageInfo.cs:39:	public int headShotCount;
+output/csharp-decompiled/COW/AccumulateDamageEvent.cs:11:	public int HeadShotCount;
+output/csharp-decompiled/COW/AccumulateDamageEvent.cs:17:	public GEvent Reset(bool needShow, int pelletCount, int headShotCount, float hitTime, float fireInterval)
+output/csharp-decompiled/COW.GamePlay/LevelDynamicCollider.cs:20:	public LMEPCDHNOAO colliderType;
+output/csharp-decompiled/COW.GamePlay/LevelRestrictedArea.cs:59:	public static ResourceID GetResourceIDByColliderType(int KHLIJODOLOF)
+output/csharp-decompiled/COW.GamePlay/HitDetectColliderHelper.cs:7:	public LLEDPGIGCMO ColliderType;
+output/csharp-decompiled/COW.HUD/UIHudNameController.cs:645:	protected override void SetupHitLabel(GameObject cloneLabelGO, AttackableEntity attackTarget, AccumulatedDamageInfo info, bool isDamageLabelType1, ref int xOff, ref int yOff)
+output/csharp-decompiled/COW.HUD/UIHudNameController.cs:715:	public void _003C_003EiFixBaseProxy_SetupHitLabel(GameObject P0, AttackableEntity P1, AccumulatedDamageInfo P2, bool P3, ref int P4, ref int P5)
+output/csharp-decompiled/COW.HUD/UIHudNameEnemyController.cs:311:	protected override void SetupHitLabel(GameObject cloneLabelGO, AttackableEntity attackTarget, AccumulatedDamageInfo info, bool isDamageLabelType1, ref int xOff, ref int yOff)
+output/csharp-decompiled/COW.HUD/UIHudNameEnemyController.cs:349:	public void _003C_003EiFixBaseProxy_SetupHitLabel(GameObject P0, AttackableEntity P1, AccumulatedDamageInfo P2, bool P3, ref int P4, ref int P5)
+output/csharp-decompiled/COW.HUD/UIHudNameDamageController.cs:74:	private AccumulatedDamageInfo m_AccumulatedDamageInfo;
+output/csharp-decompiled/COW.HUD/UIHudNameDamageController.cs:100:	protected AccumulatedDamageInfo GetAccumylateInfo()
+output/csharp-decompiled/COW.HUD/UIHudNameDamageController.cs:109:	protected void ShowAccumulatedDamageLabel(AttackableEntity attackTarget, Player player, AccumulatedDamageInfo info, bool merge, float delay)
+output/csharp-decompiled/COW.HUD/UIHudNameDamageController.cs:118:	protected virtual void SetupHitLabel(GameObject cloneLabelGO, AttackableEntity attackTarget, AccumulatedDamageInfo info, bool isDamageLabelType1, ref int xOff, ref int yOff)
+
+========== HIT OBJECT REGION ENUM REFERENCES ==========
+output/csharp-decompiled/COW.GamePlay/GMPGMPFNMFP.cs:28:	public JKCLPFEFMNG FLCLOHCBJEI;
+output/csharp-decompiled/COW.GamePlay/JKCLPFEFMNG.cs:3:public enum JKCLPFEFMNG
+
+========== HEAD TRANSFORM REFERENCES ==========
+output/csharp-decompiled/COW.GamePlay/Player_Watching.cs:95:	public override Transform GetHeadTF()
+output/csharp-decompiled/COW.GamePlay/Player.cs:13378:	public virtual Transform GetHeadTF()
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:108:	public const int PROP_ID_HEADBONESSCALE = -14049;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:110:	public const int PROP_ID_BODYBONESSCALE = -14050;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:112:	public const int PROP_ID_LIMBBONESSCALE = -14051;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:212:	public Action<Vector3> OnHeadBonesScaleChangeEvent;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:214:	public Action<Vector3> OnBodyBonesScaleChangeEvent;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:216:	public Action<Vector3> OnLimbBonesScaleChangeEvent;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:302:	private Vector3 _003CHeadBonesScale_003Ek__BackingField;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:304:	private Vector3 _003CBodyBonesScale_003Ek__BackingField;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:306:	private Vector3 _003CLimbBonesScale_003Ek__BackingField;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:584:	public Vector3 HeadBonesScale
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:588:			return _003CHeadBonesScale_003Ek__BackingField;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:592:			_003CHeadBonesScale_003Ek__BackingField = value;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:596:	public Vector3 BodyBonesScale
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:600:			return _003CBodyBonesScale_003Ek__BackingField;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:604:			_003CBodyBonesScale_003Ek__BackingField = value;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:608:	public Vector3 LimbBonesScale
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:612:			return _003CLimbBonesScale_003Ek__BackingField;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:616:			_003CLimbBonesScale_003Ek__BackingField = value;
+
+========== ATTACKABLE CENTER / HIT DAMAGE POSITION ==========
+output/csharp-decompiled/COW.GamePlay/UGCAttackableMiniSentry.cs:39:	public override Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/LevelAutoPathBomb.cs:242:	public override float GetAttackableRadius()
+output/csharp-decompiled/COW.GamePlay/LevelObjectWukongIllusion.cs:93:	public override float GetAttackableRadius()
+output/csharp-decompiled/COW.GamePlay/LevelObjectWukongIllusion.cs:103:	public override Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/AttackableEntity.cs:41:	public virtual Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/AttackableEntity.cs:46:	public virtual float GetAttackableRadius()
+output/csharp-decompiled/COW.GamePlay/AttackableEntity.cs:51:	public virtual Vector3 GetHitDamagePos()
+output/csharp-decompiled/COW.GamePlay/Player_Watching.cs:90:	public override Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/Player_Watching.cs:105:	public override Vector3 GetHitDamagePos()
+output/csharp-decompiled/COW.GamePlay/LevelPocketRevivePoint.cs:154:	public float GetAttackableRadius()
+output/csharp-decompiled/COW.GamePlay/LevelPocketRevivePoint.cs:159:	public Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/LevelPocketRevivePoint.cs:164:	public Vector3 GetHitDamagePos()
+output/csharp-decompiled/COW.GamePlay/LevelHitAndExplodeGiftBox.cs:107:	public float GetAttackableRadius()
+output/csharp-decompiled/COW.GamePlay/LevelHitAndExplodeGiftBox.cs:112:	public Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/LevelHitAndExplodeGiftBox.cs:117:	public Vector3 GetHitDamagePos()
+output/csharp-decompiled/COW.GamePlay/Player.cs:11132:	public override Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/Player.cs:11137:	public override float GetAttackableRadius()
+output/csharp-decompiled/COW.GamePlay/PlayerUGCOffline.cs:58:	public override Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/LevelDynamicColliderAttackScript.cs:69:	public Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/LevelDynamicColliderAttackScript.cs:74:	public float GetAttackableRadius()
+output/csharp-decompiled/COW.GamePlay/LevelDynamicColliderAttackScript.cs:79:	public Vector3 GetHitDamagePos()
+output/csharp-decompiled/COW.GamePlay/PlayerUGCCommon.cs:98:	public override Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/NetworkAIPawn.cs:599:	public override Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/NetworkAIPawn.cs:604:	public override float GetAttackableRadius()
+output/csharp-decompiled/COW.GamePlay/NetworkAIPawn.cs:614:	public override Vector3 GetHitDamagePos()
+output/csharp-decompiled/COW.GamePlay/LevelTeleportKnockDownDummy.cs:84:	public override float GetAttackableRadius()
+output/csharp-decompiled/COW.GamePlay/PlayerReaper.cs:190:	public override Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/UGCAimAssistEntity.cs:67:	public virtual Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/UGCAimAssistEntity.cs:72:	public virtual float GetAttackableRadius()
+output/csharp-decompiled/COW.GamePlay/UGCAimAssistEntity.cs:77:	public virtual Vector3 GetHitDamagePos()
+output/csharp-decompiled/COW.GamePlay/AttackableBaseLevelObject.cs:41:	public virtual Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/AttackableBaseLevelObject.cs:46:	public virtual float GetAttackableRadius()
+output/csharp-decompiled/COW.GamePlay/AttackableBaseLevelObject.cs:51:	public virtual Vector3 GetHitDamagePos()
+output/csharp-decompiled/COW.GamePlay/Vehicle.cs:1433:	public override Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/OKEAMEELLBB.cs:27:	float GetAttackableRadius();
+output/csharp-decompiled/COW.GamePlay/OKEAMEELLBB.cs:29:	Vector3 GetAttackableCenterWS();
+output/csharp-decompiled/COW.GamePlay/OKEAMEELLBB.cs:31:	Vector3 GetHitDamagePos();
+output/csharp-decompiled/COW.GamePlay/LevelDummy.cs:22:	public override Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/MovableShootingTarget.cs:70:	public override float GetAttackableRadius()
+output/csharp-decompiled/COW.GamePlay/MovableShootingTarget.cs:75:	public override Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/MovableShootingTarget.cs:80:	public override Vector3 GetHitDamagePos()
+output/csharp-decompiled/COW.GamePlay/LevelObjectSpawnedAttackable.cs:69:	public virtual float GetAttackableRadius()
+output/csharp-decompiled/COW.GamePlay/LevelObjectSpawnedAttackable.cs:74:	public virtual Vector3 GetAttackableCenterWS()
+output/csharp-decompiled/COW.GamePlay/LevelObjectSpawnedAttackable.cs:79:	public virtual Vector3 GetHitDamagePos()

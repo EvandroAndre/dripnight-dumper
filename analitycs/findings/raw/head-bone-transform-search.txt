@@ -1,0 +1,36 @@
+============================================================
+HEAD BONE / TRANSFORM SEARCH
+============================================================
+output/csharp-decompiled/COW.GamePlay/PlayerNetwork.cs:1359:	private void NGAFNECKBAH(IGJPHDANPJD GCJPAAPKMMA, EOGPGNIDOKF KCMJONOCMPN, BHPADHHHPNN APHHNHEDHKD)
+output/csharp-decompiled/COW.GamePlay/CENNCIIJNFK.cs:18:	public void GGFMNECKDHG(int KJDOCDKKAPO)
+output/csharp-decompiled/COW.GamePlay/NetworkAIPawnAnimComponent_BossDragon.cs:18:	public DynamicBone LeftHeadDynamicBone;
+output/csharp-decompiled/COW.GamePlay/NetworkAIPawnAnimComponent_BossDragon.cs:20:	public DynamicBone RightHeadDynamicBone;
+output/csharp-decompiled/COW.GamePlay/Player_Watching.cs:95:	public override Transform GetHeadTF()
+output/csharp-decompiled/COW.GamePlay/Player_Watching.cs:240:	public Transform _003C_003EiFixBaseProxy_GetHeadTF()
+output/csharp-decompiled/COW.GamePlay/IPANJGHFEFP.cs:13:	public const int HIFNAMNECKD = 4;
+output/csharp-decompiled/COW.GamePlay/BKOEKIJGHEJ.cs:113:	private ResourceID HNECKEDNLOG;
+output/csharp-decompiled/COW.GamePlay/Player.cs:931:		public void SetBigHeadNeckRevertScaleMult(Vector3 FDOKAOIEDFD)
+output/csharp-decompiled/COW.GamePlay/Player.cs:4245:	protected uint BENDIENECKM;
+output/csharp-decompiled/COW.GamePlay/Player.cs:13378:	public virtual Transform GetHeadTF()
+output/csharp-decompiled/COW.GamePlay/ILDAMIIJDGI.cs:11:	private float AEKNNNECKIC;
+output/csharp-decompiled/COW.GamePlay/FFMOIGKIEPE.cs:171:		internal void ECDHHKNECKO()
+output/csharp-decompiled/COW.GamePlay/FollowEmoteCamera.cs:19:	private int ALEDNECKAFL;
+output/csharp-decompiled/COW.GamePlay/BigHeadComponent.cs:37:	public void SetNeckRevertScaleMult(Vector3 FDOKAOIEDFD)
+output/csharp-decompiled/COW.GamePlay/SceneEditObjectBase.cs:211:	protected Material PPNECKCAAPP;
+output/csharp-decompiled/COW.GamePlay/FDAEPHMIEPC.cs:130:		LobbySocialDeformNeck = 119,
+output/csharp-decompiled/COW/GameVarDef.cs:10607:	public static float SocialLobbyPrivilegeDeformNeckMultiplier;
+output/csharp-decompiled/COW/ResourceIDDef.cs:774:	public static readonly ResourceID UI_UIHUDKUILLED_BIGHEADNODE;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:108:	public const int PROP_ID_HEADBONESSCALE = -14049;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:212:	public Action<Vector3> OnHeadBonesScaleChangeEvent;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:302:	private Vector3 _003CHeadBonesScale_003Ek__BackingField;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:584:	public Vector3 HeadBonesScale
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:588:			return _003CHeadBonesScale_003Ek__BackingField;
+output/csharp-decompiled/COW/UGCPlayerRepItem.cs:592:			_003CHeadBonesScale_003Ek__BackingField = value;
+output/csharp-decompiled/COW/LobbyAvatarLookAtComponent.cs:34:		public float neckRatio;
+output/csharp-decompiled/COW/LobbyAvatarLookAtComponent.cs:50:		public float m_curNeck;
+output/csharp-decompiled/COW/LobbyAvatarLookAtComponent.cs:52:		public float m_tarNeck;
+output/csharp-decompiled/COW/LobbyAvatarLookAtComponent.cs:106:	private Transform m_boneNeck;
+output/csharp-decompiled/COW/UIStatedAvatar.cs:38:	protected Transform m_HeadTF;
+output/csharp-decompiled/COW/LobbySocialPropType.cs:15:	DeformNeckPrivilege,
+output/csharp-decompiled/COW/UIHudKilledBigHeadNode.cs:5:public class UIHudKilledBigHeadNode : MonoBehaviour
+output/csharp-decompiled/COW/UIHudKilledController.cs:46:	private UIHudKilledBigHeadNode m_BigheadNode;
